@@ -12,7 +12,7 @@ The commits currently form a recoverable chain from the Astro baseline through t
 ## Required publish sequence
 
 1. Fetch `origin/main` and record its commit SHA before editing or publishing.
-2. Run the production check from the lockfile: `npm ci && npm run build`.
+2. Run the production check: `npm install --no-audit --no-fund && npm run build`.
 3. Commit one coherent work package with an imperative message.
 4. Fast-forward `main` only from the fetched parent. Never force-push.
 5. Fetch `origin/main` again and verify the exact commit SHA and changed paths.
@@ -24,7 +24,7 @@ When a normal local Git identity and credential helper are available, the equiva
 git fetch origin main
 git switch -c work/<package> origin/main
 # edit and test
-npm ci && npm run build
+npm install --no-audit --no-fund && npm run build
 git add <files>
 git commit -m "Describe the work package"
 git push -u origin work/<package>
@@ -45,3 +45,7 @@ For the currently authorized direct-to-`main` path, the final command is instead
 Direct `main` commits are currently allowed by owner instruction. They must still be small, built, and verified. If collaboration expands, switch to a protected-main policy requiring the `Verify site / Astro production build` check and a pull request before merge.
 
 The workflow at `.github/workflows/verify.yml` has only `contents: read` permission. It deliberately does not access secrets, publish deployments, write repository content, or invoke AI agents.
+
+## Lockfile note
+
+The repository currently validates with an ordinary npm install because the original local lockfile could not be transferred intact through the connector's large-output limit. Do not commit a partial or binary lockfile. Once a normal authenticated Git push is available in the execution environment, add the verified `package-lock.json`, switch the workflow back to `npm ci`, and restore the lockfile command in this policy.
