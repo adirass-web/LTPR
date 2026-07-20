@@ -1,7 +1,7 @@
 # Canonical Implementation Brief — cyberdrtabansky.com
 
 **Status:** Active source of truth for implementation  
-**Version:** 2.1  
+**Version:** 2.2
 **Updated:** 2026-07-20  
 **Repository:** `adirass-web/LTPR`  
 **Production domain:** `https://cyberdrtabansky.com`  
@@ -45,7 +45,7 @@ The following decisions are final unless the owner changes them explicitly:
 
 These remain deliberately unresolved:
 
-- final visual reference and art direction within the locked style constraints;
+- final typography selection and color-palette tuning within the approved layout direction;
 - final hero portrait;
 - real contact email;
 - RAI highlight edit, subtitle approval, and hosting location;
@@ -159,7 +159,7 @@ Each essay requires a dedicated reading route, source-grounded drafting, indepen
 
 ## 8. Visual implementation constraints
 
-The design reference is still open. Every proposed direction must nevertheless preserve:
+The approved layout direction combines Pojo Frame/Firma for the main-site tone with Zapa for Writing and Media architecture. The semantic layout system and responsive behavior are productionized. Typography selection and color-palette tuning are explicitly deferred. Every later refinement must preserve:
 
 - restrained, editorial, covert-premium character;
 - strong typographic hierarchy and generous whitespace;
@@ -172,7 +172,7 @@ The design reference is still open. Every proposed direction must nevertheless p
 - mobile-first behavior and correct RTL mirroring;
 - clean print/PDF behavior where practical.
 
-The current global CSS is only a functional baseline. It is not an approved final design.
+The current global CSS is the approved production layout system. Its typography and color tokens remain provisional until the owner opens the deferred fine-tuning phase.
 
 ## 9. Asset, rights, and media rules
 
@@ -234,12 +234,13 @@ Not yet verified by CI. No dependency lockfile is committed. The optional `@clau
 
 Known product gaps:
 
-- three missing Hebrew routes and dead Hebrew nav destinations;
+- Hebrew About, Media, and Writing routes exist as RTL-safe translation placeholders; final native copy is still missing;
 - placeholder portrait, email, media embeds, press links, and press kit;
 - text-only logo/media walls;
 - no production asset/data model;
+- final typography selection and color-palette tuning are deferred;
 - no essay reading routes or completed essays;
-- incomplete responsive, accessibility, SEO, structured-data, performance, link, rights, and deployment QA.
+- responsive and baseline accessibility implementation is complete; final visual, SEO, structured-data, performance, link, rights, and deployment QA remains for the real production assets.
 
 ## 12. Work packages and gates
 

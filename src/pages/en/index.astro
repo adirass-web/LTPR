@@ -3,39 +3,95 @@ import Base from '../../layouts/Base.astro';
 const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <Base title="Dr. Lior Tabansky — Defense Innovation, AI & Digital Trust" description="Dr. Lior Tabansky advises governments and investors on defense innovation, AI, and digital trust — first-principles strategy, applied in the field." lang="en" dir="ltr">
-  <section class="hero"><div class="wrap">
-    <div class="portrait">portrait</div>
-    <h1>First-principles strategy for defense innovation, AI, and digital trust.</h1>
-    <p class="sub">Strategy is choosing what not to do. For two decades I've helped governments and investors turn deep expertise into the few decisions that create advantage — in the field, not the seminar room.</p>
-    <a class="link" href="mailto:[email]">Private inquiries →</a>
-  </div></section>
-  <section><div class="wrap">
-    <div class="logos"><span>World Bank</span><span>Cyber Security Agency of Singapore</span><span>IISS</span><span>Israel Aerospace Industries</span></div>
-    <p class="cap">National cyber and defense-innovation capacity building for governments across Africa, the Caucasus, and Asia.</p>
-  </div></section>
-  <section><div class="wrap">
-    <div class="pillar"><h3>Defense innovation</h3><p>I analyze how technology and organization combine to create advantage in defense and security — and what those dynamics reveal about innovation in civilian markets.</p></div>
-    <div class="pillar"><h3>AI</h3><p>AI already delivers insight, decision support, and autonomy. The challenge is no longer whether the capability exists, but whether organizations can use it: successful adoption is an organizational problem, not a model problem.</p></div>
-    <div class="pillar"><h3>Cybersecurity capacity building</h3><p>National strategies, sectoral resilience, and institutional capability designed to endure — not another one-off report.</p></div>
-  </div></section>
-  <section><div class="wrap">
-    <p class="eyebrow">First principles</p>
-    <p class="lead">The doctorate isn't decoration. It's the discipline to reason from first principles when the playbooks don't fit — to see the whole system, separate signal from noise, and, as Michael Porter put it, decide what not to do. Where the ground shifts and the stakes are national, that rigor is the difference between motion and progress.</p>
-  </div></section>
-  <section><div class="wrap">
-    <p class="eyebrow">Media</p>
-    <div class="embed">RAI — “Codice: La vita è digitale” (clip)</div>
-    <p class="cap">On RAI, Italy's public broadcaster — Codice: La vita è digitale.</p>
-    <p class="eyebrow" style="margin-top:1.6rem">As featured in</p>
-    <div class="wall"><span>Financial Times</span><span>The Washington Post / AP</span><span>Le Figaro</span><span>La Repubblica</span><span>Il Sole 24 Ore</span><span>NRC Handelsblad</span><span>Newsweek</span></div>
-    <p style="margin-top:1rem"><a class="link" href={`${root}en/media/`}>See all media →</a></p>
-  </div></section>
-  <section><div class="wrap">
-    <p class="eyebrow">Selected engagements</p>
-    <p>I authored the vision, goals, and 70+ recommendations behind Singapore's National Cybersecurity Strategy, and led cyber-resilience capacity work with the World Bank across a dozen countries. Most engagements are private.</p>
-  </div></section>
-  <section><div class="wrap">
-    <p class="eyebrow">Quiet credibility</p>
-    <p class="muted">Author, <em>Cybersecurity in Israel</em> (Springer, with Maj. Gen. Isaac Ben-Israel) · PhD, Tel Aviv University · Adjunct Associate Professor, Coller School of Management · Work presented at NATO CCDCOE, national parliaments, and international forums.</p>
-  </div></section>
+  <div class="page page--home">
+    <section class="page-section hero-section home-hero" aria-labelledby="home-title">
+      <div class="site-container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Defense innovation · AI · Digital trust</p>
+          <h1 id="home-title">First-principles strategy for defense innovation, AI, and digital trust.</h1>
+          <p class="subhead">Strategy is choosing what not to do. For two decades I've helped governments and investors turn deep expertise into the few decisions that create advantage — in the field, not the seminar room.</p>
+          <a class="text-link" href="https://www.linkedin.com/in/ltaba/">Private inquiries <span class="directional-arrow" aria-hidden="true">→</span></a>
+        </div>
+        <figure class="portrait-figure">
+          <div class="portrait-frame" aria-hidden="true"><span>Portrait selected later</span></div>
+          <figcaption class="visually-hidden">Portrait of Dr. Lior Tabansky. Final image selection is pending.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="page-section proof-section" aria-labelledby="institutional-proof-title">
+      <div class="site-container">
+        <h2 id="institutional-proof-title" class="visually-hidden">Selected institutions</h2>
+        <ul class="institution-grid" aria-label="Selected institutions">
+          <li>World Bank</li>
+          <li>Cyber Security Agency of Singapore</li>
+          <li>IISS</li>
+          <li>Israel Aerospace Industries</li>
+        </ul>
+        <p class="section-caption">National cyber and defense-innovation capacity building for governments across Africa, the Caucasus, and Asia.</p>
+      </div>
+    </section>
+
+    <section class="page-section pillars-section" aria-labelledby="pillars-title">
+      <div class="site-container section-grid">
+        <header class="section-heading">
+          <p class="eyebrow">Three pillars</p>
+          <h2 id="pillars-title">Where strategy becomes capability.</h2>
+        </header>
+        <ol class="pillar-list">
+          <li class="pillar-item"><h3>Defense innovation</h3><p>I analyze how technology and organization combine to create advantage in defense and security — and what those dynamics reveal about innovation in civilian markets.</p></li>
+          <li class="pillar-item"><h3>AI</h3><p>AI already delivers insight, decision support, and autonomy. The challenge is no longer whether the capability exists, but whether organizations can use it: successful adoption is an organizational problem, not a model problem.</p></li>
+          <li class="pillar-item"><h3>Cybersecurity capacity building</h3><p>National strategies, sectoral resilience, and institutional capability designed to endure — not another one-off report.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="page-section statement-section" aria-labelledby="first-principles-title">
+      <div class="site-container statement-layout">
+        <h2 id="first-principles-title" class="eyebrow">First principles</h2>
+        <p class="statement">The doctorate isn't decoration. It's the discipline to reason from first principles when the playbooks don't fit — to see the whole system, separate signal from noise, and, as Michael Porter put it, decide what not to do. Where the ground shifts and the stakes are national, that rigor is the difference between motion and progress.</p>
+      </div>
+    </section>
+
+    <section class="page-section media-section" aria-labelledby="featured-media-title">
+      <div class="site-container">
+        <header class="section-heading section-heading--wide">
+          <p class="eyebrow">Media</p>
+          <h2 id="featured-media-title">Selected appearances and coverage.</h2>
+        </header>
+        <figure class="featured-media">
+          <div class="media-placeholder" aria-hidden="true"><span>RAI</span><small>Clip in preparation</small></div>
+          <figcaption>On <strong>RAI</strong>, Italy's public broadcaster — <cite>Codice: La vita è digitale</cite>.</figcaption>
+        </figure>
+        <div class="press-block">
+          <h3 class="eyebrow">As featured in</h3>
+          <ul class="brand-grid">
+            <li>Financial Times</li><li>The Washington Post / AP</li><li>Le Figaro</li><li>La Repubblica</li><li>Il Sole 24 Ore</li><li>NRC Handelsblad</li><li>Newsweek</li>
+          </ul>
+        </div>
+        <a class="text-link section-link" href={`${root}en/media/`}>See all media <span class="directional-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="page-section engagements-section" aria-labelledby="engagements-title">
+      <div class="site-container section-grid">
+        <header class="section-heading"><p class="eyebrow">Selected engagements</p><h2 id="engagements-title">Public proof. Private work.</h2></header>
+        <p class="feature-copy">I authored the vision, goals, and 70+ recommendations behind Singapore's National Cybersecurity Strategy, and led cyber-resilience capacity work with the World Bank across a dozen countries. Most engagements are private.</p>
+      </div>
+    </section>
+
+    <section class="page-section credentials-section" aria-labelledby="credibility-title">
+      <div class="site-container section-grid">
+        <h2 id="credibility-title" class="eyebrow">Quiet credibility</h2>
+        <p class="credential-line">Author, <cite>Cybersecurity in Israel</cite> (Springer, with Maj. Gen. Isaac Ben-Israel) · PhD, Tel Aviv University · Adjunct Associate Professor, Coller School of Management · Work presented at NATO CCDCOE, national parliaments, and international forums.</p>
+      </div>
+    </section>
+
+    <section class="page-section inquiry-section" aria-labelledby="inquiry-title">
+      <div class="site-container inquiry-layout">
+        <h2 id="inquiry-title">For work that benefits from discretion.</h2>
+        <a class="text-link" href="https://www.linkedin.com/in/ltaba/">Private inquiries <span class="directional-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </div>
 </Base>
