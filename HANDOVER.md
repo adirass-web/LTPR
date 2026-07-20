@@ -24,4 +24,4 @@ Deploy `dist/` to any static host (Netlify / Vercel / Cloudflare Pages / GitHub 
 - [ ] Add `ANTHROPIC_API_KEY` repo secret to enable `.github/workflows/claude.yml` (`@claude`).
 
 ## Guardrails (full in CLAUDE.md)
-Restrained/covert-premium - no selling (soft "Private inquiries") - media leads - PhD as first-principles edge (attribute Porter) - three pillars. Fact-fidelity: Singapore = "vision, goals & 70+ recommendations"; World Bank = "World Bank-backed"; IAF unit unnamed; The National Interest = byline (Writing), not the press wall.
+Restrained/covert-premium - no selling (soft "Private inquiries") - media leads - PhD as first-principles edge (attribute Porter). Identity: defense innovation, AI, and digital trust. Pillars: defense innovation, AI, and cybersecurity capacity building. Fact-fidelity: Singapore = "vision, goals & 70+ recommendations"; World Bank = "World Bank-backed"; IAF unit unnamed; The National Interest = byline (Writing), not the press wall.

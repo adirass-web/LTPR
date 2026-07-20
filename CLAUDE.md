@@ -3,10 +3,10 @@
 Personal-authority hub for **Dr. Lior Tabansky**. Astro static, EN + Hebrew (RTL), mobile-first.
 
 ## Positioning (locked)
-- Identity: **first-principles strategy for defense innovation, AI, and national resilience.**
+- Identity: **first-principles strategy for defense innovation, AI, and digital trust.**
 - Subline (Porter): *"Strategy is choosing what not to do."* Attribute Michael Porter where the aphorism appears.
-- Three pillars: **defense innovation - AI - capacity building** (governments AND investors).
-- AI thesis: AI is an **organizational problem, not a model problem** (insight / decision support / autonomy).
+- Three pillars: **defense innovation - AI - cybersecurity capacity building** (governments AND investors).
+- AI thesis: AI already delivers **insight, decision support, and autonomy**; successful adoption is an **organizational problem, not a model problem**.
 
 ## Voice & rules
 Restrained, premium, "almost covert," non-bragging, first-person, spare. **No selling** (one soft *Private inquiries*). Academia is quiet ballast: every credential tied to a payoff. **Discretion:** public anchors = Singapore National Cybersecurity Strategy + World Bank; else "most engagements private." Media/logos do the boasting.

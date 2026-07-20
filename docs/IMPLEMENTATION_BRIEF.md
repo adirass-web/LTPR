@@ -1,10 +1,10 @@
 # Canonical Implementation Brief — cyberdrtabansky.com
 
 **Status:** Active source of truth for implementation  
-**Version:** 2.0  
+**Version:** 2.1  
 **Updated:** 2026-07-20  
 **Repository:** `adirass-web/LTPR`  
-**Production domain:** `https://www.cyberdrtabansky.com`  
+**Production domain:** `https://cyberdrtabansky.com`  
 **Stack:** Astro static site; English and Hebrew; mobile-first
 
 ## 1. Purpose and authority
@@ -62,7 +62,7 @@ Do not silently decide these through implementation.
 
 ### Primary identity
 
-**First-principles strategy for AI, cybersecurity, and digital trust.**
+**First-principles strategy for defense innovation, AI, and digital trust.**
 
 ### Supporting idea
 
@@ -70,9 +70,9 @@ Do not silently decide these through implementation.
 
 ### Three pillars
 
-1. **Defense innovation** — how technology and organization combine to produce strategic advantage in defense and security domains. Signal parallel to civilian commercial innovation.
-2. **AI** — AI already provides insight, decision support, and autonomy. AI is a present capability, not distant future. But successful adoption is an organizational problem rather than a model problem.
-3. **Capacity building** — national and sectoral cybersecurity and AI capability that remains after the engagement, not another one-off report.
+1. **Defense innovation** — how technology and organization combine to create advantage in defense and security, and what those dynamics reveal about innovation in civilian markets.
+2. **AI** — AI already delivers insight, decision support, and autonomy. The challenge is whether organizations can use it: successful adoption is an organizational problem, not a model problem.
+3. **Cybersecurity capacity building** — national strategies, sectoral resilience, and institutional capability designed to endure, not another one-off report.
 
 ### Order of persuasion
 
@@ -95,10 +95,13 @@ Mandatory claim controls:
 
 | Subject | Permitted formulation | Prohibited drift |
 |---|---|---|
-| Singapore | Authored the vision, ends and means behind Singapore’s National Cybersecurity Strategy | “Authored Singapore’s Strategy” |
+| Singapore | Authored the vision, goals, and 70+ recommendations behind Singapore’s National Cybersecurity Strategy | “Authored Singapore’s Strategy” |
 | World Bank | World Bank-backed critical-infrastructure resilience/capacity work across a dozen countries | “Ran a World Bank program” |
 | Israel Air Force | Served in an elite Israel Air Force technology unit | Naming the unit |
 | Private work | Most engagements are private; selected public work shown | Fabricated or implied client roster |
+| *The National Interest* | His bylined commentary/publication, shown under Writing | Press coverage of him or a press-wall logo |
+
+An earlier asset list included *The National Interest* among premium press. The later copy QA and `CLAUDE.md` correction control: it must remain outside the press wall.
 
 ## 6. Canonical sitemap and route contract
 
@@ -119,7 +122,7 @@ Navigation is Home · Media · About · Writing · EN/עברית. It must be res
 
 1. Portrait hero, canonical identity, Porter subline, and quiet inquiry link.
 2. Four-logo client strip and approved regional capacity-building line.
-3. Defense innovation, AI, and capacity-building pillars.
+3. Defense innovation, AI, and cybersecurity-capacity-building pillars.
 4. First-principles/PhD-as-edge block.
 5. Featured RAI appearance and linked press wall.
 6. Singapore and World Bank-backed public anchors plus discretion line.
@@ -191,17 +194,18 @@ Legal handling:
 - do not republish complete articles, clipping PDFs, or scans;
 - link outlet logos to original articles or clips;
 - use only limited fair-use thumbnails or short pull-quotes where justified;
+- verify photo, logo, video, and subtitle rights before release;
 - frame Pegasus/NSO coverage as independent expert analysis, not industry affiliation.
 
 ## 10. Copy status
 
 | Deliverable | Status | Rule |
 |---|---|---|
-| Home EN | Locked | Preserve unless an approved factual correction is required |
-| About EN | Locked | Preserve |
+| Home EN | Revised and approved 2026-07-20 | Preserve the approved identity and three-pillar revision |
+| About EN | Revised and approved 2026-07-20 | Preserve the approved identity and AI revision |
 | Media EN | Locked | Build gate remains for Newsweek and AP/WaPo links |
-| Writing EN page | Locked frame | Full essays remain outstanding |
-| Home HE | First draft | Requires parity, bidi, and native review |
+| Writing EN page | Revised frame approved 2026-07-20 | Full essays remain outstanding |
+| Home HE | Revised first draft | Requires parity, bidi, and native review |
 | About HE | Missing | Translate from locked EN; review and back-translate |
 | Media HE | Missing | Translate from locked EN; review and back-translate |
 | Writing HE | Missing | Translate page after English content state is confirmed |
