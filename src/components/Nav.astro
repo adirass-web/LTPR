@@ -1,0 +1,18 @@
+---
+const { lang = 'en' } = Astro.props;
+const en = lang === 'en';
+const base = en ? '/en' : '/he';
+const t = en ? { home:'Home', media:'Media', about:'About', writing:'Writing' } : { home:'בית', media:'תקשורת', about:'אודות', writing:'כתיבה' };
+---
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href={`${base}/`}>Dr. Lior Tabansky</a>
+    <nav>
+      <a href={`${base}/`}>{t.home}</a>
+      <a href={`${base}/media`}>{t.media}</a>
+      <a href={`${base}/about`}>{t.about}</a>
+      <a href={`${base}/writing`}>{t.writing}</a>
+      <span class="langs"><a href="/en/">EN</a> · <a href="/he/">עב</a></span>
+    </nav>
+  </div>
+</header>
