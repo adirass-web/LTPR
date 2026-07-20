@@ -1,19 +1,64 @@
-# Implementation Brief — cyberdrtabansky.com
+# Canonical Implementation Brief — cyberdrtabansky.com
 
-**Status:** Canonical implementation brief  
+**Status:** Active source of truth for implementation  
+**Version:** 2.0  
 **Updated:** 2026-07-20  
 **Repository:** `adirass-web/LTPR`  
-**Stack:** Astro static site, English + Hebrew, mobile-first
+**Production domain:** `https://cyberdrtabansky.com`  
+**Stack:** Astro static site; English and Hebrew; mobile-first
 
-This document reconciles the project handover, positioning brief, benchmark/template review, content architecture, asset plan, locked English copy, Hebrew Home draft, and the merged Astro baseline. It governs implementation work. It does not replace the source copy files, and it does not authorize factual additions that are not supported by the source material.
+## 1. Purpose and authority
 
-## 1. Project outcome
+This brief converts the approved planning work into build rules for the public repository. It reconciles the positioning brief, content architecture, asset plan, locked English copy, Hebrew Home draft, handovers, `CLAUDE.md`, and the merged Astro baseline.
 
-Build a restrained, premium, almost-covert personal-authority hub for Dr. Lior Tabansky. The site should communicate, within five seconds, applied authority in defense innovation, artificial intelligence, cyber-power, and national resilience to governments, investors, boards, journalists, and senior commercial principals.
+Use this order when sources conflict:
 
-The site is a credibility hub, not a services funnel, speaker-booking site, academic CV, or venture landing page.
+1. The owner’s latest explicit instruction.
+2. Approved factual corrections and fact-fidelity rules.
+3. Locked page copy for exact published wording.
+4. This implementation brief and `CLAUDE.md`.
+5. Content architecture and asset plan.
+6. Older positioning drafts and handovers.
 
-## 2. Canonical positioning
+This brief governs implementation. It does not unlock the English copy for rewriting and does not authorize new factual claims.
+
+## 2. Resolved decisions
+
+The following decisions are final unless the owner changes them explicitly:
+
+- The later positioning refinement supersedes the original G1 identity line.
+- Canonical identity: **First-principles strategy for defense innovation, AI, and national resilience.**
+- Three pillars: **defense innovation · AI · capacity building**.
+- Audience emphasis: governments and investors/commercial principals. Boards, media, event organizers, and senior peers are supporting audiences.
+- Site role: a personal-authority and credibility hub, not a services funnel, academic CV, venture directory, or speaker-booking site.
+- Voice: restrained, premium, almost covert, non-bragging, first-person, and spare.
+- Conversion: one quiet **Private inquiries** path. No pricing, services menu, calendar funnel, or “book a call.”
+- Ventures remain unnamed and unlinked unless the owner reverses the venture-agnostic decision.
+- English and Hebrew must have equivalent page coverage and materially equivalent claims.
+- Contact remains in the footer/CTA; there is no Contact page.
+- Writing is a top-level page and a curated collection, not a blog feed.
+- The public client strip contains World Bank, Singapore CSA, IISS, and IAI in uniform grayscale.
+- Georgia and Sierra Leone are not separate marquee logos; their contribution is captured through the approved regional capacity-building line.
+- The site remains static Astro and owns its code.
+
+## 3. Open decisions
+
+These remain deliberately unresolved:
+
+- final visual reference and art direction within the locked style constraints;
+- final hero portrait;
+- real contact email;
+- RAI highlight edit, subtitle approval, and hosting location;
+- final 5–8 YouTube appearances;
+- verified press deep-links;
+- inclusion and wording of any harder executive-education commercial proof;
+- final Hebrew wording after native review;
+- essay source packages and publication order after the AI essay;
+- static hosting provider, analytics choice, and deployment access.
+
+Do not silently decide these through implementation.
+
+## 4. Positioning and message hierarchy
 
 ### Primary identity
 
@@ -21,174 +66,241 @@ The site is a credibility hub, not a services funnel, speaker-booking site, acad
 
 ### Supporting idea
 
-“Strategy is choosing what not to do,” attributed to Michael Porter where used. The doctorate is presented as a practical discipline: first-principles reasoning that produces clarity, prioritization, and better decisions when existing playbooks fail.
+“Strategy is choosing what not to do,” attributed to Michael Porter where it appears. The doctorate is practical ballast: the discipline to reason from first principles, distinguish signal from noise, map the whole system, and identify the few decisions that create advantage.
 
 ### Three pillars
 
-1. **Defense innovation** — from an elite Israel Air Force technology unit and cyber-power theory to the translation of technology and organization into strategic advantage.
-2. **AI** — insight, decision support, and autonomy depend on organizational conditions. The core thesis is that AI is an organizational problem, not a model problem.
-3. **Capacity building** — national cyber resilience, sectoral capability, and durable capability-maturity work that leaves capacity behind rather than another report.
+1. **Defense innovation** — how technology and organization combine to produce strategic advantage.
+2. **AI** — AI can provide insight, decision support, and autonomy, but successful adoption is an organizational problem rather than a model problem.
+3. **Capacity building** — national and sectoral capability that remains after the engagement, not another one-off report.
 
-### Audience
+### Order of persuasion
 
-Primary: governments and agencies; investors and strategic funds; boards and senior executives; journalists, producers, and conference organizers.  
-Secondary: senior professional peers.  
-Not primary: students, procurement audiences, or an academic readership.
+Applied value → verifiable proof → three areas of substance → first-principles rigor → discreet credentials → private contact.
 
-## 3. Non-negotiable editorial rules
+Media and institutional proof should carry more visual weight than academic credentials.
 
-- Preserve the restrained, first-person, spare, confident voice.
-- Do not add overt selling, pricing, service menus, funnels, or “book a call” language.
-- Use one quiet **Private inquiries** path for advisory, investment, and media inquiries.
-- Let media, institutions, and logos provide proof; do not inflate claims with adjectives.
-- Keep academia subordinate. Every credential must connect to practical judgment or outcomes.
-- Keep most engagements private; name only approved public anchors.
-- Use logical CSS and correct bidirectional handling for Hebrew, Latin names, numerals, arrows, and URLs.
-- Preserve locked English copy unless an editorial or factual problem is presented for approval.
-- Every new essay or translated page requires independent factual and guardrail review before publication.
+## 5. Editorial and factual guardrails
 
-## 4. Fact-fidelity rules
+- Preserve locked English copy. If a locked passage conflicts with a factual guardrail, flag it for approval rather than silently rewriting it.
+- Tie every credential to a practical payoff; never lead with academic status.
+- Name only approved public anchors. Do not invent or imply a confidential client roster.
+- Keep most engagements private and state that discretion plainly.
+- Avoid promotional adjectives, jargon dumps, inflated authority claims, and generic consultant language.
+- Use “Dr. Lior Tabansky” consistently.
+- Attribute the Porter formulation where used and avoid unnecessary repetition across pages.
+- Do not describe the current essay deks as completed essays.
 
-These formulations are mandatory:
+Mandatory claim controls:
 
-- **Singapore:** Dr. Tabansky authored the vision, goals, and 70+ recommendations behind Singapore’s National Cybersecurity Strategy. Do not say he authored the Strategy itself.
-- **World Bank:** describe World Bank-backed critical-infrastructure resilience roadmaps/capacity work across a dozen countries. Do not say he ran the World Bank or a World Bank program.
-- **Israel Air Force:** use “elite Israel Air Force technology unit”; do not name the unit.
-- **The National Interest:** it is his byline/commentary, not press coverage of him. Keep it in Writing/publications, not the press wall.
-- **Private work:** do not fabricate a client roster. Use “most engagements are private” or equivalent approved wording.
-- **Logos:** use only logos and institutional references approved in the asset plan, with appropriate links and rights treatment.
+| Subject | Permitted formulation | Prohibited drift |
+|---|---|---|
+| Singapore | Authored the vision, goals, and 70+ recommendations behind Singapore’s National Cybersecurity Strategy | “Authored Singapore’s Strategy” |
+| World Bank | World Bank-backed critical-infrastructure resilience/capacity work across a dozen countries | “Ran a World Bank program” |
+| Israel Air Force | Served in an elite Israel Air Force technology unit | Naming the unit |
+| Private work | Most engagements are private; selected public work shown | Fabricated or implied client roster |
+| *The National Interest* | His bylined commentary/publication, shown under Writing | Press coverage of him or a press-wall logo |
 
-## 5. Information architecture
+An earlier asset list included *The National Interest* among premium press. The later copy QA and `CLAUDE.md` correction control: it must remain outside the press wall.
 
-Each page must exist in both English and Hebrew:
+## 6. Canonical sitemap and route contract
 
-| Page | English | Hebrew | Purpose |
+| Page | English | Hebrew | Current state |
 |---|---|---|---|
-| Home | `/en/` | `/he/` | Complete authority story in one restrained scroll |
-| Media | `/en/media/` | `/he/media/` | TV, video, press, speaking, and press kit |
-| About | `/en/about/` | `/he/about/` | Applied narrative, method, engagements, credentials |
-| Writing | `/en/writing/` | `/he/writing/` | Three cornerstone arguments, book, selected publications |
+| Home | `/en/` | `/he/` | EN implemented; HE draft implemented |
+| Media | `/en/media/` | `/he/media/` | EN implemented; HE missing |
+| About | `/en/about/` | `/he/about/` | EN implemented; HE missing |
+| Writing | `/en/writing/` | `/he/writing/` | EN frame implemented; HE missing; essays unfinished |
 
-`/` remains a lightweight redirect to `/en/`. Contact is not a standalone page; it is the footer and recurring Private inquiries CTA.
+`/` redirects to `/en/`. The language toggle should map visitors to the equivalent page when that route exists, not always return them to the language homepage.
 
-Global navigation: Home, Media, About, Writing, and EN/עברית. It should remain minimal, responsive, keyboard-accessible, and usable in RTL.
+Navigation is Home · Media · About · Writing · EN/עברית. It must be responsive, keyboard-accessible, RTL-safe, and free of links to nonexistent pages at release.
 
-## 6. Page requirements
+## 7. Page contracts
 
 ### Home
 
-Order of persuasion:
-
-1. Portrait hero, canonical identity line, Porter subline, Private inquiries.
-2. Grayscale client strip: World Bank, Singapore CSA, IISS, IAI.
-3. Three pillars with short payoff-framed descriptions.
-4. First-principles / PhD-as-edge block.
-5. Featured RAI appearance and “As featured in” press wall.
-6. Selected public engagements: Singapore and World Bank-backed capacity work.
-7. Compact credibility ballast: book, PhD, Coller School, selected work.
-8. Quiet private-inquiries close.
+1. Portrait hero, canonical identity, Porter subline, and quiet inquiry link.
+2. Four-logo client strip and approved regional capacity-building line.
+3. Defense innovation, AI, and capacity-building pillars.
+4. First-principles/PhD-as-edge block.
+5. Featured RAI appearance and linked press wall.
+6. Singapore and World Bank-backed public anchors plus discretion line.
+7. Compact book, PhD, Coller, and selected-work ballast.
+8. Private-inquiries close.
 
 ### Media
 
-1. Lead RAI video with poster frame, runtime, and EN/HE subtitles.
-2. Curated 5–8 appearance grid from the YouTube channel, including i24 and international broadcasts where verified.
-3. Press/logo wall linking to original articles or clips.
-4. Speaking log using institutions and dates, not promotional adjectives.
-5. Press kit with approved portrait, short/long bios, headshots, and media contact.
+1. RAI lead video with poster, caption, runtime, and EN/HE subtitles.
+2. Curated 5–8 video appearances with outlet, topic, and runtime.
+3. Linked international and regional press wall using verified original URLs.
+4. Restrained, dated speaking record using institutions rather than adjectives.
+5. Press kit with approved headshots, short and long EN/HE bios, and media contact.
 
 ### About
 
-1. Applied opening: strategy that survives contact with reality.
-2. Arc: Israel Air Force technology unit → cyber-power theory → Singapore and World Bank-backed work → government and investor advice.
-3. First-principles method and proprietary sectoral capability-maturity framework.
-4. Selected engagements and discretion line.
+1. Applied opening and operational-to-strategic narrative.
+2. Israel Air Force technology-unit grounding, cyber-power theory, Singapore, World Bank-backed work, and current government/investor relevance.
+3. First-principles method and sectoral capability-maturity framework.
+4. Selected public engagements and discretion.
 5. Compact credentials ballast.
 6. Private inquiries.
 
 ### Writing
 
-The page is curated, not a news feed. It must contain:
+The page is curated and must distinguish finished work from planned work:
 
-1. **AI is an organizational problem, not a model problem.**
-2. **From cybersecurity to cyber-power.**
-3. **Capacity that outlasts the report.**
-4. *Cybersecurity in Israel* book link and selected publications.
+1. **AI is an organizational problem, not a model problem** — cornerstone essay, not yet written.
+2. **From cybersecurity to cyber-power** — not yet written/adapted.
+3. **Capacity that outlasts the report** — not yet written.
+4. *Cybersecurity in Israel* and a restrained selected-publications list.
 
-The three full essays are not yet written. Do not publish the current deks as if they were finished essays.
+Each essay requires a dedicated reading route, source-grounded drafting, independent fact/guardrail review, and owner approval before publication.
 
-## 7. Visual direction
+## 8. Visual implementation constraints
 
-The approved direction is restrained/covert-premium editorial minimalism:
+The design reference is still open. Every proposed direction must nevertheless preserve:
 
+- restrained, editorial, covert-premium character;
+- strong typographic hierarchy and generous whitespace;
 - one controlled accent color;
-- strong serif/sans hierarchy;
-- generous air and compact paragraphs;
-- portrait and media as evidence, not decoration;
-- article bodies unboxed;
-- monochrome/grayscale logo treatment;
-- no decorative stock imagery, noisy animation, or marketing-card clutter;
-- mobile-first layouts with graceful single-column degradation;
-- easy PDF/print rendering.
+- portrait and media used as evidence rather than decoration;
+- unboxed article bodies;
+- uniform grayscale/monochrome logo treatment;
+- no stock imagery, decorative clutter, loud gradients, or sales-site card grids;
+- limited purposeful motion with reduced-motion support;
+- mobile-first behavior and correct RTL mirroring;
+- clean print/PDF behavior where practical.
 
-The current CSS is a functional baseline only. A design direction must be selected and then implemented consistently across all pages.
+The current global CSS is only a functional baseline. It is not an approved final design.
 
-## 8. Asset and legal gate
+## 9. Asset, rights, and media rules
 
-Priority assets:
+Required production assets:
 
-- one approved hero portrait, treated consistently in grayscale/duotone;
-- RAI “Codice — La vita è digitale” highlight cut, 60–90 seconds, hosted externally;
-- four approved client logos in uniform grayscale;
-- 5–8 curated TV/YouTube appearances;
-- verified article deep-links and outlet logos;
-- approved book cover and press-kit assets.
+- one approved high-resolution portrait;
+- World Bank, Singapore CSA, IISS, and IAI logos prepared consistently;
+- a 60–90 second RAI highlight with poster frame and approved subtitles;
+- 5–8 selected video appearances;
+- verified press URLs and normalized outlet logos;
+- approved book-cover image;
+- approved press-kit headshots and biographies;
+- optional approved event images with credits/permissions.
 
-Do not commit or host the 1.1 GB RAI source file. Do not republish full press clippings or PDFs. Use outlet logos linking to originals and only limited fair-use thumbnails or pull-quotes where legally appropriate. Verify image, event-photo, logo, and video rights before launch.
+Legal handling:
 
-## 9. Current repository state
+- do not commit the 1.1 GB RAI master;
+- host the short RAI cut externally and embed it;
+- do not republish complete articles, clipping PDFs, or scans;
+- link outlet logos to original articles or clips;
+- use only limited fair-use thumbnails or short pull-quotes where justified;
+- verify photo, logo, video, and subtitle rights before release;
+- frame Pegasus/NSO coverage as independent expert analysis, not industry affiliation.
 
-The merged Astro baseline contains:
+## 10. Copy status
 
-- `src/pages/en/index.astro`, `about.astro`, `media.astro`, `writing.astro`;
-- `src/pages/he/index.astro` only;
+| Deliverable | Status | Rule |
+|---|---|---|
+| Home EN | Locked | Preserve unless an approved factual correction is required |
+| About EN | Locked | Preserve |
+| Media EN | Locked | Build gate remains for Newsweek and AP/WaPo links |
+| Writing EN page | Locked frame | Full essays remain outstanding |
+| Home HE | First draft | Requires parity, bidi, and native review |
+| About HE | Missing | Translate from locked EN; review and back-translate |
+| Media HE | Missing | Translate from locked EN; review and back-translate |
+| Writing HE | Missing | Translate page after English content state is confirmed |
+
+One potential wording conflict must be reviewed during copy integration: some locked Home wording says work “with the World Bank,” while the governing fact rule prefers “World Bank-backed.” Do not change it without presenting the exact proposed correction.
+
+## 11. Verified repository state
+
+Current `main` includes:
+
+- four English Astro pages;
+- Hebrew Home only;
 - shared `Base`, `Nav`, and `Footer` components;
-- global CSS and Astro configuration;
-- `CLAUDE.md`, `HANDOVER.md`, `README.md`, and `package.json`;
-- the original `cdt-personal.zip` retained as source reference.
+- global CSS and Astro/i18n configuration;
+- `site: 'https://cyberdrtabansky.com'` in Astro configuration;
+- the original ZIP retained at repository root;
+- project guardrails and handover files.
 
-Known implementation gaps:
+Verified locally on 2026-07-20:
 
-- Hebrew About, Media, and Writing routes are missing.
-- Portrait, email, RAI, YouTube, and press links remain placeholders.
-- The navigation currently points to missing Hebrew routes.
-- Media and press walls are text placeholders, not asset-backed components.
-- No production asset directory, press data model, essay reading template, or press-kit download exists.
-- Accessibility, performance, SEO, structured data, and responsive QA are not complete.
+- dependency installation completed;
+- Astro static production build completed successfully;
+- generated routes included four English pages, Hebrew Home, and the root redirect.
 
-## 10. Implementation sequence
+Not yet verified by CI. No dependency lockfile is committed. The optional `@claude` workflow from the ZIP was not committed; the current handover’s references to that workflow and an unverified local build are stale.
 
-1. Complete source and asset inventory; record unresolved factual, legal, and input dependencies.
-2. Produce and approve two or three visual homepage directions.
-3. Implement the selected design system and reusable components.
-4. Replace English placeholders with approved assets and links without rewriting locked copy.
-5. Add and review all Hebrew routes with RTL/bidi QA and native sign-off.
-6. Draft, fact-check, and publish the three essays from supplied source material.
-7. Integrate media, press, speaking, and press-kit data.
-8. Run full responsive, accessibility, performance, metadata, link, and legal QA.
-9. Deploy to a static host and connect `cyberdrtabansky.com`.
+Known product gaps:
 
-## 11. Required owner inputs
+- three missing Hebrew routes and dead Hebrew nav destinations;
+- placeholder portrait, email, media embeds, press links, and press kit;
+- text-only logo/media walls;
+- no production asset/data model;
+- no essay reading routes or completed essays;
+- incomplete responsive, accessibility, SEO, structured-data, performance, link, rights, and deployment QA.
+
+## 12. Work packages and gates
+
+### WP1 — Source and dependency register
+
+Inventory every available asset and source; record owner, intended use, rights status, factual status, link status, and missing inputs.  
+**Gate:** every required page slot is marked ready, pending, excluded, or blocked.
+
+### WP2 — Visual directions
+
+Produce two or three homepage directions using the same locked content and asset assumptions.  
+**Gate:** owner selects one direction and resolves portrait assumptions.
+
+### WP3 — Design system and shell
+
+Implement typography, spacing, color, responsive navigation, language routing, layout primitives, media treatments, and print/reduced-motion rules.  
+**Gate:** Home shell approved on desktop and mobile in EN and RTL.
+
+### WP4 — English production integration
+
+Replace placeholders with approved assets, links, data, embeds, metadata, and press-kit structures while preserving locked copy.  
+**Gate:** all four English pages are complete and link-valid.
+
+### WP5 — Hebrew completion
+
+Create About, Media, and Writing; revise Home; run parity, back-translation, bidi, and native review.  
+**Gate:** four Hebrew pages approved with no dead routes.
+
+### WP6 — Essays
+
+Draft from supplied sources, review independently, revise once, and obtain owner approval.  
+**Gate:** three finished essays and their reading pages.
+
+### WP7 — Production QA and deployment
+
+Run build, responsive/RTL, accessibility, performance, metadata, structured-data, link, rights, and deployment checks.  
+**Gate:** production domain passes the release checklist.
+
+## 13. Required owner inputs
 
 - final hero portrait;
 - real contact email;
-- verified press URLs, especially Newsweek and Washington Post/AP;
+- press deep-links, particularly Newsweek and Washington Post/AP;
 - selected YouTube appearances;
-- RAI clip/hosting decision and subtitle review;
+- RAI clip/hosting and subtitle decisions;
 - essay source material;
-- image/logo/video rights confirmations;
-- native Hebrew review;
-- hosting and domain access.
+- photo/logo/video rights confirmations;
+- native Hebrew approval;
+- visual-direction selection;
+- hosting, analytics, and domain access.
 
-## 12. Definition of done
+## 14. Definition of done
 
-The project is complete only when all eight routes work, no placeholders remain, EN/HE claims are materially equivalent, RTL is correct, assets and links are verified, the three essays are finished, legal presentation is acceptable, the static production build passes, and the deployed domain is tested on mobile and desktop.
+The site is complete only when:
+
+- all eight language/page routes and the root redirect work;
+- no user-facing placeholder remains;
+- language toggles preserve page context;
+- English and Hebrew claims are materially equivalent and RTL/bidi behavior is correct;
+- all images, logos, videos, captions, and links are approved and rights-checked;
+- all three essays are complete and source-grounded;
+- accessibility, responsive, performance, metadata, structured-data, and link QA pass;
+- the static production build passes reproducibly;
+- the deployed domain is tested on representative mobile and desktop browsers.
