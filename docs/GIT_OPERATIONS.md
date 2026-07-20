@@ -48,4 +48,4 @@ The workflow at `.github/workflows/verify.yml` has only `contents: read` permiss
 
 ## Lockfile note
 
-The repository currently validates with an ordinary npm install because the original local lockfile could not be transferred intact through the connector's large-output limit. Do not commit a partial or binary lockfile. Once a normal authenticated Git push is available in the execution environment, add the verified `package-lock.json`, switch the workflow back to `npm ci`, and restore the lockfile command in this policy.
+The repository currently validates with an ordinary npm install because no verified dependency lockfile is committed. Do not commit a partial or binary lockfile. Once a verified `package-lock.json` is available, switch the workflow back to `npm ci` and restore the lockfile command in this policy.
