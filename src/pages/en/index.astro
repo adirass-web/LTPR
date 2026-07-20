@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <Base title="Dr. Lior Tabansky — Defense Innovation, AI & Digital Trust" description="Dr. Lior Tabansky advises governments and investors on defense innovation, AI, and digital trust — first-principles strategy, applied in the field." lang="en" dir="ltr">
   <section class="hero"><div class="wrap">
@@ -27,7 +28,7 @@ import Base from '../../layouts/Base.astro';
     <p class="cap">On RAI, Italy's public broadcaster — Codice: La vita è digitale.</p>
     <p class="eyebrow" style="margin-top:1.6rem">As featured in</p>
     <div class="wall"><span>Financial Times</span><span>The Washington Post / AP</span><span>Le Figaro</span><span>La Repubblica</span><span>Il Sole 24 Ore</span><span>NRC Handelsblad</span><span>Newsweek</span></div>
-    <p style="margin-top:1rem"><a class="link" href="/en/media">See all media →</a></p>
+    <p style="margin-top:1rem"><a class="link" href={`${root}en/media/`}>See all media →</a></p>
   </div></section>
   <section><div class="wrap">
     <p class="eyebrow">Selected engagements</p>

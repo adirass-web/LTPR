@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <Base title="Media — Dr. Lior Tabansky" description="Selected television, press, and speaking — Dr. Lior Tabansky on RAI, in the Financial Times, Le Figaro, The Washington Post, and at NATO and national parliaments." lang="en" dir="ltr">
   <section class="hero"><div class="wrap">
@@ -17,7 +18,7 @@ import Base from '../../layouts/Base.astro';
     <p class="cap">Outlet logos link to the original article.</p>
     <div class="wall"><span>Financial Times</span><span>The Washington Post / AP</span><span>Le Figaro</span><span>La Repubblica</span><span>Il Sole 24 Ore</span><span>NRC Handelsblad</span><span>Newsweek</span></div>
     <div class="wall" style="margin-top:.6rem;opacity:.85"><span>The Jerusalem Post</span><span>The Times of Israel</span><span>Haaretz</span><span>Il Giornale</span><span>Gazeta Wyborcza</span><span>CyberDefence24</span></div>
-    <p class="cap" style="margin-top:.8rem">By-lined commentary (his own writing, not coverage): The National Interest — see <a class="link" href="/en/writing">Writing</a>.</p>
+    <p class="cap" style="margin-top:.8rem">By-lined commentary (his own writing, not coverage): The National Interest — see <a class="link" href={`${root}en/writing/`}>Writing</a>.</p>
   </div></section>
   <section><div class="wrap">
     <p class="eyebrow">Speaking</p>
