@@ -4,7 +4,7 @@
 **Version:** 2.0  
 **Updated:** 2026-07-20  
 **Repository:** `adirass-web/LTPR`  
-**Production domain:** `https://cyberdrtabansky.com`  
+**Production domain:** `https://www.cyberdrtabansky.com`  
 **Stack:** Astro static site; English and Hebrew; mobile-first
 
 ## 1. Purpose and authority
@@ -27,8 +27,8 @@ This brief governs implementation. It does not unlock the English copy for rewri
 The following decisions are final unless the owner changes them explicitly:
 
 - The later positioning refinement supersedes the original G1 identity line.
-- Canonical identity: **First-principles strategy for defense innovation, AI, and national resilience.**
-- Three pillars: **defense innovation · AI · capacity building**.
+- Canonical identity: **First-principles strategy for defense innovation, AI, and digital trust.**
+- Three pillars: **defense innovation · AI · cybersecurity capacity building**.
 - Audience emphasis: governments and investors/commercial principals. Boards, media, event organizers, and senior peers are supporting audiences.
 - Site role: a personal-authority and credibility hub, not a services funnel, academic CV, venture directory, or speaker-booking site.
 - Voice: restrained, premium, almost covert, non-bragging, first-person, and spare.
@@ -62,17 +62,17 @@ Do not silently decide these through implementation.
 
 ### Primary identity
 
-**First-principles strategy for defense innovation, AI, and national resilience.**
+**First-principles strategy for AI, cybersecurity, and digital trust.**
 
 ### Supporting idea
 
-“Strategy is choosing what not to do,” attributed to Michael Porter where it appears. The doctorate is practical ballast: the discipline to reason from first principles, distinguish signal from noise, map the whole system, and identify the few decisions that create advantage.
+“Strategy is choosing what not to do,” attributed to Michael Porter where it appears. The doctorate in national cybersecurity is practical ballast: the discipline to reason from first principles, distinguish signal from noise, map the whole system, and identify the few decisions that create advantage.
 
 ### Three pillars
 
-1. **Defense innovation** — how technology and organization combine to produce strategic advantage.
-2. **AI** — AI can provide insight, decision support, and autonomy, but successful adoption is an organizational problem rather than a model problem.
-3. **Capacity building** — national and sectoral capability that remains after the engagement, not another one-off report.
+1. **Defense innovation** — how technology and organization combine to produce strategic advantage in defense and security domains. Signal parallel to civilian commercial innovation.
+2. **AI** — AI already provides insight, decision support, and autonomy. AI is a present capability, not distant future. But successful adoption is an organizational problem rather than a model problem.
+3. **Capacity building** — national and sectoral cybersecurity and AI capability that remains after the engagement, not another one-off report.
 
 ### Order of persuasion
 
@@ -95,13 +95,10 @@ Mandatory claim controls:
 
 | Subject | Permitted formulation | Prohibited drift |
 |---|---|---|
-| Singapore | Authored the vision, goals, and 70+ recommendations behind Singapore’s National Cybersecurity Strategy | “Authored Singapore’s Strategy” |
+| Singapore | Authored the vision, ends and means behind Singapore’s National Cybersecurity Strategy | “Authored Singapore’s Strategy” |
 | World Bank | World Bank-backed critical-infrastructure resilience/capacity work across a dozen countries | “Ran a World Bank program” |
 | Israel Air Force | Served in an elite Israel Air Force technology unit | Naming the unit |
 | Private work | Most engagements are private; selected public work shown | Fabricated or implied client roster |
-| *The National Interest* | His bylined commentary/publication, shown under Writing | Press coverage of him or a press-wall logo |
-
-An earlier asset list included *The National Interest* among premium press. The later copy QA and `CLAUDE.md` correction control: it must remain outside the press wall.
 
 ## 6. Canonical sitemap and route contract
 
@@ -194,7 +191,6 @@ Legal handling:
 - do not republish complete articles, clipping PDFs, or scans;
 - link outlet logos to original articles or clips;
 - use only limited fair-use thumbnails or short pull-quotes where justified;
-- verify photo, logo, video, and subtitle rights before release;
 - frame Pegasus/NSO coverage as independent expert analysis, not industry affiliation.
 
 ## 10. Copy status
