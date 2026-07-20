@@ -46,7 +46,6 @@ The following decisions are final unless the owner changes them explicitly:
 These remain deliberately unresolved:
 
 - final typography selection and color-palette tuning within the approved layout direction;
-- final hero portrait;
 - real contact email;
 - RAI highlight edit, subtitle approval, and hosting location;
 - final 5–8 YouTube appearances;
@@ -178,7 +177,7 @@ The current global CSS is the approved production layout system. Its typography 
 
 Required production assets:
 
-- one approved high-resolution portrait;
+- approved square (1:1) and vertical (2:3) high-resolution portraits;
 - World Bank, Singapore CSA, IISS, and IAI logos prepared consistently;
 - a 60–90 second RAI highlight with poster frame and approved subtitles;
 - 5–8 selected video appearances;
@@ -235,7 +234,7 @@ Not yet verified by CI. No dependency lockfile is committed. The optional `@clau
 Known product gaps:
 
 - Hebrew About, Media, and Writing routes exist as RTL-safe translation placeholders; final native copy is still missing;
-- placeholder portrait, email, media embeds, press links, and press kit;
+- placeholder email, media embeds, press links, and press kit;
 - text-only logo/media walls;
 - no production asset/data model;
 - final typography selection and color-palette tuning are deferred;
@@ -252,7 +251,7 @@ Inventory every available asset and source; record owner, intended use, rights s
 ### WP2 — Visual directions
 
 Produce two or three homepage directions using the same locked content and asset assumptions.  
-**Gate:** owner selects one direction and resolves portrait assumptions.
+**Gate:** owner selects one direction and resolves portrait assumptions. **Complete:** the layout direction and both portrait ratios are approved.
 
 ### WP3 — Design system and shell
 
@@ -281,7 +280,6 @@ Run build, responsive/RTL, accessibility, performance, metadata, structured-data
 
 ## 13. Required owner inputs
 
-- final hero portrait;
 - real contact email;
 - press deep-links, particularly Newsweek and Washington Post/AP;
 - selected YouTube appearances;

@@ -1,0 +1,33 @@
+---
+interface Props {
+  variant: 'vertical' | 'square';
+  alt: string;
+  priority?: boolean;
+}
+
+const { variant, alt, priority = false } = Astro.props;
+const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const isVertical = variant === 'vertical';
+const stem = isVertical ? 'lior-tabansky-portrait-2x3' : 'lior-tabansky-portrait-square';
+const widths = isVertical ? [480, 720, 960, 1280] : [320, 640, 960];
+const srcset = (format: 'avif' | 'webp' | 'jpg') => widths.map((width) => `${root}images/portraits/${stem}-${width}.${format} ${width}w`).join(', ');
+const fallbackWidth = isVertical ? 960 : 640;
+const fallbackHeight = isVertical ? 1440 : 640;
+const sizes = isVertical ? '(min-width: 48rem) 21rem, 14rem' : '(min-width: 48rem) 16rem, 12rem';
+---
+
+<picture class:list={['portrait-picture', isVertical ? 'portrait-picture--2x3' : 'portrait-picture--square']}>
+  <source type="image/avif" srcset={srcset('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={srcset('webp')} sizes={sizes} />
+  <img
+    src={`${root}images/portraits/${stem}-${fallbackWidth}.jpg`}
+    srcset={srcset('jpg')}
+    sizes={sizes}
+    width={fallbackWidth}
+    height={fallbackHeight}
+    alt={alt}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    decoding="async"
+  />
+</picture>

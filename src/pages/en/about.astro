@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Portrait from '../../components/Portrait.astro';
 ---
 <Base title="About — Dr. Lior Tabansky" description="Dr. Lior Tabansky works where defense innovation, AI, and digital trust meet — turning deep expertise into decisions governments and investors can act on." lang="en" dir="ltr">
   <div class="page page--about">
@@ -9,7 +10,10 @@ import Base from '../../layouts/Base.astro';
           <p class="eyebrow">About</p>
           <h1>Strategy that survives contact with reality.</h1>
         </div>
-        <p class="subhead">I work at the meeting point of defense innovation, artificial intelligence, and digital trust — for governments and investors who need judgment they can act on, not another report.</p>
+        <div class="page-header__aside">
+          <Portrait variant="square" alt="Dr. Lior Tabansky" />
+          <p class="subhead">I work at the meeting point of defense innovation, artificial intelligence, and digital trust — for governments and investors who need judgment they can act on, not another report.</p>
+        </div>
       </div>
     </header>
 

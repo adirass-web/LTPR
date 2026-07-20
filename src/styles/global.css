@@ -371,27 +371,37 @@ body:dir(rtl) .brand {
   max-inline-size: 21rem;
 }
 
-.portrait-frame {
-  display: grid;
+.portrait-picture {
+  display: block;
   inline-size: 100%;
-  aspect-ratio: 4 / 5;
-  place-items: center;
-  padding: 1.25rem;
-  box-sizing: border-box;
-  background: linear-gradient(145deg, #d5ddd4, #aebbb1 62%, #d8d2c5);
+  overflow: hidden;
+  background: #d5ddd4;
   box-shadow: 1.25rem 1.25rem 0 #dce5de;
-  color: #30433b;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-body:dir(rtl) .portrait-frame {
-  background: linear-gradient(215deg, #d5ddd4, #aebbb1 62%, #d8d2c5);
+.portrait-picture--2x3 {
+  aspect-ratio: 2 / 3;
+}
+
+.portrait-picture--square {
+  max-inline-size: 16rem;
+  aspect-ratio: 1;
+}
+
+.portrait-picture img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+body:dir(rtl) .portrait-picture {
   box-shadow: -1.25rem 1.25rem 0 #dce5de;
-  letter-spacing: normal;
+}
+
+.page-header__aside {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
 }
 
 /* Institutional proof and brand references */
@@ -831,7 +841,7 @@ body:dir(rtl) .book-placeholder {
 }
 
 @media (forced-colors: active) {
-  .portrait-frame,
+  .portrait-picture,
   .media-placeholder,
   .book-placeholder {
     border: 0.0625rem solid CanvasText;

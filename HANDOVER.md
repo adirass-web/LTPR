@@ -22,11 +22,12 @@ Deploy `dist/` to any static host (Netlify / Vercel / Cloudflare Pages / GitHub 
 - [x] Four English routes populated with approved copy and explicit pending states for unavailable assets.
 - [x] LTR/RTL parity implemented through shared classes, CSS logical properties, equivalent locale routes, and route-aware language switching.
 - [x] Semantic/accessibility pass: skip link, landmarks, heading hierarchy, lists, figures, focus-visible treatment, coarse-pointer targets, forced-colors and print fallbacks.
+- [x] Approved 1:1 and 2:3 portraits integrated on EN/HE Home and About with responsive AVIF, WebP, and JPEG sources.
 - [x] Astro production and GitHub Pages-target builds pass with all eight localized routes.
 - [ ] **Deferred by owner:** final typography selection and color-palette tuning. Current approved preview values remain temporary design tokens.
 
 ## Open tasks
-- [ ] Fill placeholders: `public/portrait`, RAI + YouTube embeds, press **deep-links**, contact **email**.
+- [ ] Fill remaining placeholders: RAI + YouTube embeds, press **deep-links**, contact **email**.
 - [ ] Complete and native-review Hebrew About/Media/Writing copy; routes and RTL layouts are already in place.
 - [ ] Run visual QA with approved production assets at desktop and mobile sizes.
 - [ ] Replace provisional typography and colors only after the owner opens the deferred fine-tuning phase.
