@@ -1,51 +1,45 @@
 # Git Operations and Recovery Policy
 
 **Applies to:** `adirass-web/LTPR`  
-**Purpose:** preserve a recoverable, verifiable history while direct implementation to `main` remains authorized.
+**Purpose:** preserve a recoverable, verifiable history while Codex implements and releases from the sandbox.
 
-## What is already backed up
+## Operating authority and durable record
 
-Every published change is a normal Git commit on GitHub's `main` branch. The GitHub connector creates the same durable Git objects a `git push` would create: a blob/tree/commit followed by a fast-forward update of `main`.
+Codex is the sole Git operator. The sandbox is the active working copy; GitHub is the durable recovery record. The user does not run Git, npm, authentication, file-transfer, or conflict-resolution commands for this project.
 
-The commits currently form a recoverable chain from the Astro baseline through the source register and Field Notes art direction. GitHub's commit history permits rollback, compare, restore, or cherry-pick of any of those checkpoints.
+`pre-astrowind-rebuild-20260723` is an immutable, annotated remote recovery tag for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. Its tag object is `aa446bed3ba0047d33067d18dd9f214e4d41ed6d`. It is the recovery point for the pre-rebuild production tree.
 
-## Required publish sequence
+## Branch and checkpoint model
 
-1. Fetch `origin/main` and record its commit SHA before editing or publishing.
-2. Run the production check: `npm install --no-audit --no-fund && npm run build`.
-3. Commit one coherent work package with an imperative message.
-4. Fast-forward `main` only from the fetched parent. Never force-push.
-5. Fetch `origin/main` again and verify the exact commit SHA and changed paths.
-6. GitHub Actions runs the same clean install and build after every push to `main`.
+- `main`: protected production branch. No direct pushes.
+- `rebuild/astrowind`: single long-lived integration branch and the only writable rebuild worktree.
+- `experiment/<slug>`: optional, short-lived and clearly bounded; must be remotely published before handoff. It never deploys or merges to `main` directly.
+- `rollback/<timestamp>`: created only for a production rollback PR.
 
-When a normal local Git identity and credential helper are available, the equivalent command-line sequence is:
+Before starting or resuming any work, Codex fetches the relevant remote branch, records local and remote SHAs, and inspects `git status`. Codex never overwrites an unexpected remote advance.
 
-```bash
-git fetch origin main
-git switch -c work/<package> origin/main
-# edit and test
-npm install --no-audit --no-fund && npm run build
-git add <files>
-git commit -m "Describe the work package"
-git push -u origin work/<package>
-```
+No meaningful work may be left only in the sandbox. At the end of every testable slice or session, Codex stages only the scoped files, commits them, and fast-forward publishes the checkpoint to GitHub. A checkpoint commit is not a release approval; it prevents work loss. `git stash`, `git reset --hard`, `git clean`, rebasing a published branch, amending a published commit, and force-pushes are prohibited.
 
-For the currently authorized direct-to-`main` path, the final command is instead a non-force fast-forward push after a fresh fetch. The GitHub connector is used only when the local CLI cannot authenticate.
+## Commit and tag policy
 
-## Checkpoints and recovery
+- Each commit has a narrow imperative subject and contains only one task’s source, configuration, documentation, or asset changes.
+- Before commit: inspect status and diff; run the checks applicable to that slice; record the changed paths and results.
+- After publish: verify the remote SHA and tree; record it in the relevant WP evidence.
+- Milestone tags are annotated and immutable: `rebuild-wp<N>-complete-YYYYMMDD`, `rebuild-rc-YYYYMMDD.N`, and `production-YYYYMMDD`.
+- Every tag is confirmed locally and by `git ls-remote --tags` before it is reported. If the Codex environment cannot create a required remote tag, that release gate stops; a branch is not a substitute.
 
-- Create an annotated milestone tag after each completed release gate, e.g. `v0.1.0-art-direction`.
-- To undo a published change, create a new revert commit; do not rewrite `main` history.
-- To restore selected work, cherry-pick its known commit onto a new branch or revert the later commit deliberately.
-- Keep the production deployment tied to a recorded commit SHA, so a host rollback can target the prior verified commit.
-- Before launch, create a second private mirror or scheduled encrypted `git bundle` archive outside the primary GitHub account. That requires selecting a backup destination and credentials; it is not enabled by this repository alone.
+## Pull request, CI, and deployment policy
 
-## Main-branch policy
+The draft PR originates at `rebuild/astrowind` and targets `main`. It is opened after the first implementation package is ready for review, and remains draft until WP6 passes. If `main` advances, Codex merges the latest `main` into the rebuild branch, reruns the required checks, and never rebases published work.
 
-Direct `main` commits are currently allowed by owner instruction. They must still be small, built, and verified. If collaboration expands, switch to a protected-main policy requiring the `Verify site / Astro production build` check and a pull request before merge.
+CI failures block the relevant gate. They are fixed by a new commit; no check is bypassed. The release PR records the baseline tag, candidate SHA, `main` SHA, required-check results, deployment target, and rollback target. Codex asks for explicit user release approval before marking the PR ready or merging.
 
-The workflow at `.github/workflows/verify.yml` has only `contents: read` permission. It deliberately does not access secrets, publish deployments, write repository content, or invoke AI agents.
+The release must use a merge commit. Production deploys only from the resulting `main` SHA. A manual deployment dispatch may not target a candidate branch. After deployment, Codex records the workflow run, deployed SHA, production URL, and live verification result.
 
-## Lockfile note
+## Rollback
 
-The repository currently validates with an ordinary npm install because no verified dependency lockfile is committed. Do not commit a partial or binary lockfile. Once a verified `package-lock.json` is available, switch the workflow back to `npm ci` and restore the lockfile command in this policy.
+For a verified production defect, Codex creates `rollback/<timestamp>` from current `main`, reverts the release merge, opens a rollback PR, and verifies CI and the restored production deployment. No history is rewritten; the pre-rebuild tag remains untouched. The rollback commit, PR, workflow run, and resulting deployment SHA are recorded.
+
+## Current CI and lockfile state
+
+The pre-rebuild `main` workflow is baseline-only: Node 20 and `npm install --no-audit --no-fund`. WP1 replaces it with the Astrowind-required Node 22.12+ runtime and a verified `package-lock.json` using `npm ci`. The verification workflow is read-only and does not access secrets or publish repository content. Pages deployment continues to be a `main`-only action unless WP5 deliberately adds an approved, isolated comparison-preview mechanism.
