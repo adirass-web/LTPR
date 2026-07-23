@@ -2,9 +2,9 @@
 
 **Project:** `adirass-web/LTPR` / `cyberdrtabansky.com`
 **Status:** Locked for execution
-**Version:** 1.2
+**Version:** 1.3
 **Date:** 2026-07-23
-**Execution state:** WP0 recovery point and sandbox Git governance established; implementation remains on `rebuild/astrowind`
+**Execution state:** Sandbox Git governance established; WP0 remains blocked pending creation of the required remote recovery tag
 
 ## 1. Purpose
 
@@ -79,7 +79,7 @@ The earlier visual implementation is not a source to migrate. Git history preser
 
 #### 4.1.2 Remote checkpoint, tag, and handoff policy
 
-- The remote annotated tag `pre-astrowind-rebuild-20260723` is the immutable recovery point for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. It must never be moved, deleted, or recreated.
+- The required remote annotated tag `pre-astrowind-rebuild-20260723` must point to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11` and, once created, must never be moved, deleted, or recreated. It is currently blocked: the Codex connector cannot create tag refs and direct sandbox Git has no GitHub credential. A local tag is not a remote recovery point.
 - The sandbox is the active canonical working copy; GitHub is the durable recovery record. Sandbox storage alone is never treated as a backup.
 - Before starting or resuming work, Codex fetches the active branch, records `HEAD` and `origin/<branch>`, and inspects the worktree. If the remote branch advanced unexpectedly, Codex stops to reconcile it without overwriting either history.
 - No meaningful work may be left only in the sandbox at a session handoff. Each completed, testable slice is committed on `rebuild/astrowind` and fast-forward published to GitHub before handoff, even when the work package itself has not yet passed its approval gate. Such commits are implementation checkpoints, not release approvals.
