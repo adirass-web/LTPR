@@ -3,6 +3,7 @@
 **Status:** Complete
 **Target branch:** `rebuild/astrowind`
 **Upstream pin:** `arthelokyo/astrowind@522530a242f5855f22a44a001f7b2e199669073d`
+**Published foundation checkpoint:** `60f3566d10bd7bb103d17cf1ae49d5d6e0d6f744`
 
 ## Retained foundation
 
