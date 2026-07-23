@@ -1,7 +1,6 @@
 ---
-import Foundation from '~/layouts/Foundation.astro';
+const destination = new URL('./en/', Astro.url);
 ---
 
-<Foundation>
-  <p class="text-sm tracking-[0.2em] uppercase">Lior Tabansky</p>
-</Foundation>
+<meta http-equiv="refresh" content={`0;url=${destination.pathname}`} />
+<a href={destination.pathname}>English</a>

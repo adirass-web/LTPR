@@ -1,0 +1,60 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import { pageKeys, pagePath, siteContent, type Locale, type PageKey } from '~/content/site';
+
+interface Props {
+  locale: Locale;
+  page: PageKey;
+}
+
+const { locale, page } = Astro.props;
+const alternateLocale = locale === 'en' ? 'he' : 'en';
+const content = siteContent[locale];
+const current = content.pages[page];
+const dir = locale === 'he' ? 'rtl' : 'ltr';
+---
+
+<Foundation
+  lang={locale}
+  dir={dir}
+  title={`${current.title} | Lior Tabansky`}
+  description={current.description}
+  canonicalPath={pagePath(locale, page)}
+  alternatePath={pagePath(alternateLocale, page)}
+  alternateLang={alternateLocale}
+>
+  <header class="border-b border-black">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5"
+      aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}
+    >
+      <a class="font-medium" href={pagePath(locale, 'home')}><bdi>Lior Tabansky</bdi></a>
+      <div class="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm">
+        {
+          pageKeys.map((item) => (
+            <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
+              {content.pages[item].nav}
+            </a>
+          ))
+        }
+        <a
+          class="border-s border-black ps-5"
+          href={pagePath(alternateLocale, page)}
+          lang={alternateLocale}
+          dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}
+        >
+          {content.switchLabel}
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="mx-auto min-h-[70vh] max-w-7xl px-6 py-16 md:py-24">
+    <slot />
+  </main>
+  <footer class="border-t border-black">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 text-sm">
+      <bdi>Lior Tabansky</bdi>
+      <span>{content.privateInquiries}</span>
+    </div>
+  </footer>
+</Foundation>

@@ -2,12 +2,18 @@
 import '../assets/styles/tailwind.css';
 
 interface Props {
-  lang?: 'en' | 'he';
-  dir?: 'ltr' | 'rtl';
-  title?: string;
+  lang: 'en' | 'he';
+  dir: 'ltr' | 'rtl';
+  title: string;
+  description?: string;
+  canonicalPath: string;
+  alternatePath: string;
+  alternateLang: 'en' | 'he';
 }
 
-const { lang = 'en', dir = 'ltr', title = 'Lior Tabansky' } = Astro.props;
+const { lang, dir, title, description, canonicalPath, alternatePath, alternateLang } = Astro.props;
+const canonicalUrl = new URL(canonicalPath, Astro.site);
+const alternateUrl = new URL(alternatePath, Astro.site);
 ---
 
 <!doctype html>
@@ -16,10 +22,13 @@ const { lang = 'en', dir = 'ltr', title = 'Lior Tabansky' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/en/', Astro.site)} />
   </head>
-  <body class="bg-white text-black">
-    <main class="mx-auto min-h-screen max-w-7xl px-6 py-12">
-      <slot />
-    </main>
+  <body class="bg-white text-black antialiased">
+    <slot />
   </body>
 </html>
