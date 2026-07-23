@@ -409,26 +409,48 @@ body:dir(rtl) .portrait-picture {
   background: var(--color-paper);
 }
 
-.institution-grid,
+.client-logo-grid,
 .brand-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.0625rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.institution-grid li {
-  display: flex;
-  min-block-size: 5.75rem;
-  align-items: center;
-  padding: 1.2rem;
-  background: var(--color-bg);
-  color: #354139;
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 0.9rem + 0.28vw, 1.16rem);
-  font-weight: 500;
+.client-logo {
+  display: grid;
+  min-block-size: 5.5rem;
+  place-items: center;
+  padding: 1rem;
+  border-block: 0.0625rem solid var(--color-line);
+}
+
+.client-logo img {
+  display: block;
+  inline-size: auto;
+  max-inline-size: 100%;
+  block-size: auto;
+  max-block-size: 3.1rem;
+  object-fit: contain;
+}
+
+.client-logo--world-bank img {
+  inline-size: min(100%, 11.5rem);
+}
+
+.client-logo--csa img {
+  inline-size: min(100%, 10.5rem);
+}
+
+.client-logo--iiss img {
+  inline-size: min(100%, 8.5rem);
+}
+
+.client-logo--iai img {
+  inline-size: min(100%, 8rem);
 }
 
 .brand-grid {
@@ -758,8 +780,8 @@ body:dir(rtl) .book-placeholder {
 }
 
 @container page-section (min-width: 42rem) {
-  .institution-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .client-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .pillar-item {

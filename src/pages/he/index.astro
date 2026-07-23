@@ -22,7 +22,20 @@ const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     <section class="page-section proof-section" aria-labelledby="institutional-proof-title">
       <div class="site-container">
         <h2 id="institutional-proof-title" class="visually-hidden">מוסדות נבחרים</h2>
-        <ul class="institution-grid" aria-label="מוסדות נבחרים"><li>הבנק העולמי</li><li>סוכנות הסייבר של סינגפור</li><li><bdi>IISS</bdi></li><li>התעשייה האווירית לישראל</li></ul>
+        <ul class="client-logo-grid" aria-label="מוסדות נבחרים">
+          <li class="client-logo client-logo--world-bank">
+            <img src={`${root}images/client-strip/world-bank.svg`} alt="הבנק העולמי" width="182" height="36" />
+          </li>
+          <li class="client-logo client-logo--csa">
+            <img src={`${root}images/client-strip/singapore-csa.png`} alt="סוכנות הסייבר של סינגפור" width="1999" height="957" />
+          </li>
+          <li class="client-logo client-logo--iiss">
+            <img src={`${root}images/client-strip/iiss.png`} alt="המכון הבינלאומי למחקרים אסטרטגיים (IISS)" width="525" height="323" />
+          </li>
+          <li class="client-logo client-logo--iai">
+            <img src={`${root}images/client-strip/iai.svg`} alt="התעשייה האווירית לישראל" width="200" height="134" />
+          </li>
+        </ul>
         <p class="section-caption">בניית יכולת סייבר וחדשנות ביטחונית לאומית עבור ממשלות באפריקה, בקווקז ובאסיה.</p>
       </div>
     </section>
