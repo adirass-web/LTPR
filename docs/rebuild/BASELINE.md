@@ -12,8 +12,8 @@
 | Remote `main` commit | `260abd7a96ab3ba516820e50c0f9f17e04bc2d11` |
 | Subject | `Add EN and HE institutional client logo strip` |
 | Recovery branch | `rebuild/astrowind` at the exact baseline commit |
-| Local recovery tag | Annotated `pre-astrowind-rebuild-20260723` at the exact baseline commit |
-| Remote recovery tag | Verified 2026-07-23: annotated tag object `aa446bed3ba0047d33067d18dd9f214e4d41ed6d`, dereferencing to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11` |
+| Local recovery tag | Annotated `pre-astrowind-rebuild-20260723` at the exact baseline commit in the original sandbox clone only |
+| Remote recovery tag | Not created. Verified 2026-07-23: the GitHub connector exposes no tag-ref mutation and direct sandbox Git cannot authenticate to push the tag. Do not treat the local tag as recovery. |
 | Runtime used for verification | Node `v24.14.0`, npm `11.9.0`, Git `2.51.1` |
 | Current baseline toolchain | Astro `4.16.19`; no committed lockfile |
 
@@ -41,4 +41,4 @@ Both builds generated the eight contracted locale routes and the root route:
 
 ## Recovery procedure
 
-Restore the production tree from the immutable remote annotated tag `pre-astrowind-rebuild-20260723`, which resolves to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. Before every release gate, Codex must confirm the tag locally and with `git ls-remote --tags`; it must never be moved, deleted, or recreated. This verification occurs in the Codex sandbox; no user-operated checkout is part of the process.
+WP0 cannot pass until the immutable remote annotated tag `pre-astrowind-rebuild-20260723` resolves to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. The local tag is not sufficient. When Codex has an approved remote tag-ref operation, it must create the tag, confirm it with `git ls-remote --tags`, and record the tag-object SHA before any rebuild package begins. No user-operated checkout is part of this process.
