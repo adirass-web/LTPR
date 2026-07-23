@@ -7,11 +7,14 @@
 
 Codex is the sole Git operator. The sandbox is the active working copy; GitHub is the durable recovery record. The user does not run Git, npm, authentication, file-transfer, or conflict-resolution commands for this project.
 
-`pre-astrowind-rebuild-20260723` is required as an immutable, annotated remote recovery tag for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. A local-only copy exists in an older sandbox clone, but it is not a recovery point. The configured connector cannot create tag refs and direct sandbox Git has no GitHub credential; therefore WP0 and every release gate requiring the tag remain blocked until Codex obtains an approved remote tag-ref operation.
+The approved temporary WP0 recovery point is remote branch `recovery/pre-astrowind-20260723` at `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. It authorizes implementation through WP5 only and must never be repointed or deleted. It is not treated as a tag. The configured GitHub integration cannot apply branch-protection rules; Codex therefore verifies this remote ref against the recorded SHA before every risky operation and release gate.
+
+`pre-astrowind-rebuild-20260723` remains required as an immutable, annotated remote recovery tag for the same commit before WP6 release readiness, merge, or production cutover. A local-only copy exists in an older sandbox clone, but it is not a recovery point. The configured connector cannot create tag refs and direct sandbox Git has no GitHub credential; that limitation blocks only the release-tag gate, not WP1–WP5 implementation.
 
 ## Branch and checkpoint model
 
 - `main`: protected production branch. No direct pushes.
+- `recovery/pre-astrowind-20260723`: approved temporary WP0 recovery branch at the production baseline. It is read-only in practice and is never used for development, deployment, or merge targets.
 - `rebuild/astrowind`: single long-lived integration branch and the only writable rebuild worktree.
 - `experiment/<slug>`: optional, short-lived and clearly bounded; must be remotely published before handoff. It never deploys or merges to `main` directly.
 - `rollback/<timestamp>`: created only for a production rollback PR.
@@ -26,13 +29,13 @@ No meaningful work may be left only in the sandbox. At the end of every testable
 - Before commit: inspect status and diff; run the checks applicable to that slice; record the changed paths and results.
 - After publish: verify the remote SHA and tree; record it in the relevant WP evidence.
 - Milestone tags are annotated and immutable: `rebuild-wp<N>-complete-YYYYMMDD`, `rebuild-rc-YYYYMMDD.N`, and `production-YYYYMMDD`.
-- Every tag is confirmed locally and by `git ls-remote --tags` before it is reported. If the Codex environment cannot create a required remote tag, that release gate stops; a branch is not a substitute.
+- Every tag is confirmed locally and by `git ls-remote --tags` before it is reported. If the Codex environment cannot create a required remote tag, that release gate stops. The approved recovery branch is a limited WP0 exception and is not a substitute for the mandatory release tag.
 
 ## Pull request, CI, and deployment policy
 
 The draft PR originates at `rebuild/astrowind` and targets `main`. It is opened after the first implementation package is ready for review, and remains draft until WP6 passes. If `main` advances, Codex merges the latest `main` into the rebuild branch, reruns the required checks, and never rebases published work.
 
-CI failures block the relevant gate. They are fixed by a new commit; no check is bypassed. The release PR records the baseline tag, candidate SHA, `main` SHA, required-check results, deployment target, and rollback target. Codex asks for explicit user release approval before marking the PR ready or merging.
+CI failures block the relevant gate. They are fixed by a new commit; no check is bypassed. The release PR records the recovery branch, baseline tag, candidate SHA, `main` SHA, required-check results, deployment target, and rollback target. Codex asks for explicit user release approval before marking the PR ready or merging.
 
 The release must use a merge commit. Production deploys only from the resulting `main` SHA. A manual deployment dispatch may not target a candidate branch. After deployment, Codex records the workflow run, deployed SHA, production URL, and live verification result.
 
