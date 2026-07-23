@@ -1,6 +1,6 @@
 # Rebuild asset manifest
 
-**Baseline commit:** `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`  
+**Baseline commit:** `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`
 **Checksum file:** [`ASSET_CHECKSUMS.sha256`](ASSET_CHECKSUMS.sha256)
 
 ## Binary assets

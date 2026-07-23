@@ -1,8 +1,8 @@
 # Astrowind rebuild baseline
 
-**Recorded:** 2026-07-23  
-**Repository:** `adirass-web/LTPR`  
-**Canonical production URL:** `https://cyberdrtabansky.com`  
+**Recorded:** 2026-07-23
+**Repository:** `adirass-web/LTPR`
+**Canonical production URL:** `https://cyberdrtabansky.com`
 **GitHub Pages preview:** `https://adirass-web.github.io/LTPR/`
 
 ## Resolved production baseline
@@ -13,7 +13,7 @@
 | Subject | `Add EN and HE institutional client logo strip` |
 | Recovery branch | `rebuild/astrowind` at the exact baseline commit |
 | Local recovery tag | `pre-astrowind-rebuild-20260723` at the exact baseline commit |
-| Remote recovery tag | Pending: this shell has no GitHub credential helper and the available GitHub connector cannot create tags. Do not treat the local tag as a remote backup. |
+| Remote recovery tag | Pending: sandbox-side GitHub write authority must be available to Codex before it can be created. Do not treat the local tag as a remote backup. |
 | Runtime used for verification | Node `v24.14.0`, npm `11.9.0`, Git `2.51.1` |
 | Current baseline toolchain | Astro `4.16.19`; no committed lockfile |
 
@@ -41,4 +41,4 @@ Both builds generated the eight contracted locale routes and the root route:
 
 ## Recovery procedure
 
-Until the remote tag is created, restore the production tree by checking out the documented commit or the remote `rebuild/astrowind` branch at its initial commit. Before cutover, create and verify the remote tag `pre-astrowind-rebuild-20260723` pointing to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`.
+Until the remote tag is created, restore the production tree by checking out the documented commit or the remote `rebuild/astrowind` branch at its initial commit. Before cutover, Codex must create and verify the remote tag `pre-astrowind-rebuild-20260723` pointing to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. This must occur from the Codex sandbox; do not transfer this Git step to a user-operated local checkout.

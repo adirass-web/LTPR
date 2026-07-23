@@ -1,10 +1,10 @@
 # LTPR Astrowind Rebuild — Locked Work-Package Specification
 
-**Project:** `adirass-web/LTPR` / `cyberdrtabansky.com`  
-**Status:** Locked for execution  
-**Version:** 1.0  
-**Date:** 2026-07-23  
-**Execution state:** Planning complete; rebuild not yet started under this specification
+**Project:** `adirass-web/LTPR` / `cyberdrtabansky.com`
+**Status:** Locked for execution
+**Version:** 1.1
+**Date:** 2026-07-23
+**Execution state:** Planning complete; execution uses the Codex-managed sandbox Git workspace only
 
 ## 1. Purpose
 
@@ -55,12 +55,27 @@ The earlier visual implementation is not a source to migrate. Git history preser
 - Rebuild inside `adirass-web/LTPR`; do not create a replacement production repository.
 - Preserve the existing Git history.
 - Keep `main` deployable until cutover.
+- Codex is the sole operator for every Git action: repository setup, fetch, worktree creation, branch changes, commits, tags, pushes, PR creation, merge coordination, deployment checks, and rollback verification.
+- The Codex sandbox is the canonical working copy for this rebuild. The user does not maintain, operate, or synchronize a Windows-local working copy for this project.
+- All implementation, builds, QA, commits, and release evidence originate in the sandbox. GitHub is the source-of-record boundary and the only synchronization target.
+- The user must not be asked to run Git, Node, or package-manager commands, resolve conflicts, authenticate a CLI, copy files, or transport credentials for this rebuild.
+- GitHub write access must use the configured Codex environment or approved connected integration. Credentials, personal access tokens, and browser/device-login codes are never requested in chat or stored in the repository.
 - No force-pushes.
 - No destructive replacement of the repository root or `.git` history.
 - The canonical production domain remains `https://cyberdrtabansky.com` without `www`.
 - Static output remains the target; no SPA routing.
 - Build output is `dist/`.
 - The production build command is `npm run build`.
+
+#### 4.1.1 Sandbox Git operating model
+
+- Maintain one clean canonical clone in the Codex sandbox.
+- Maintain a read-only `main` checkout or detached worktree for baseline and comparison builds.
+- Maintain one writable `rebuild/astrowind` worktree for implementation. No rebuild file is edited in `main`.
+- Before every commit, Codex inspects status and stages only task-scoped files; unrelated or pre-existing changes remain untouched.
+- Each work package ends in an intentional local commit with a narrow message and recorded SHA. Remote publication follows only after the package’s stated gate passes.
+- Branches and tags are pushed by Codex only. `main` advances only through the reviewed PR described in WP6; no direct push to `main` is permitted.
+- If sandbox-side GitHub write access or a required repository permission is unavailable, Codex stops before the remote mutation, retains the verified local checkpoint, and reports the precise platform authorization blocker. The user is not redirected to a local terminal as a workaround.
 
 ### 4.2 Route contract
 
@@ -126,7 +141,7 @@ Model assignment is based on consequence and judgment, not task size.
 |---|---|---:|---|
 | Tier A — Critical | `gpt-5.6-sol` | xhigh | Architecture, bilingual behavior, identity decisions, final release judgment |
 | Tier B — Production | `gpt-5.6-sol` | high | Complex implementation, component systems, page construction, migration |
-| Tier C — Bounded | `gpt-5.6-terra` | high | Procedural Git, CI, inventory, preview assembly, mechanical verification |
+| Tier C — Bounded | `gpt-5.6-terra` | high | Codex-managed procedural Git, CI, inventory, preview assembly, mechanical verification |
 
 Model tier does not authorize autonomous scope expansion. Each WP remains bound by its gate.
 
@@ -159,6 +174,7 @@ Create a provable recovery point and a controlled rebuild branch without changin
 **In scope**
 
 - Fetch the remote repository.
+- Establish the clean sandbox clone and the sanctioned `main` baseline checkout before examining or changing source.
 - Resolve the actual remote `main` HEAD at execution time.
 - Record the commit SHA, deployment URL, workflow state, Node/npm versions, and successful build result.
 
@@ -166,6 +182,7 @@ Create a provable recovery point and a controlled rebuild branch without changin
 
 - Assuming an earlier SHA is still current.
 - Editing source files.
+- Using, requesting, or relying on a user-operated local checkout.
 
 **Deliverable**
 
@@ -178,6 +195,7 @@ Create a provable recovery point and a controlled rebuild branch without changin
 - Tag the resolved `main` HEAD as `pre-astrowind-rebuild-20260723`, or use the actual execution date if work begins later.
 - Push the tag without rewriting history.
 - Create `rebuild/astrowind` from that exact commit.
+- Create the writable sandbox worktree for `rebuild/astrowind`; all subsequent package work occurs there.
 
 **Out of scope**
 
@@ -187,6 +205,7 @@ Create a provable recovery point and a controlled rebuild branch without changin
 **Deliverable**
 
 - Remote recovery tag and remote rebuild branch.
+- Recorded sandbox worktree paths and baseline/rebuild SHAs in `docs/rebuild/BASELINE.md`.
 
 #### WP0.3 — Pin the template source
 
@@ -228,6 +247,7 @@ WP0 passes only when:
 
 - Current production can be restored from a named remote tag.
 - The rebuild branch exists remotely.
+- The Codex sandbox contains an isolated writable rebuild worktree and a separately reproducible baseline checkout.
 - The current production build passes.
 - The baseline SHA and asset checksums are recorded.
 - `main` has not been modified by WP0.
@@ -724,8 +744,8 @@ Allow direct review of the existing production implementation and the rebuild wi
 
 **In scope**
 
-- Build the protected current `main` from a detached worktree or clean checkout.
-- Build `rebuild/astrowind` separately.
+- Build the protected current `main` from the Codex-managed baseline worktree or detached checkout.
+- Build `rebuild/astrowind` from the separately managed writable sandbox worktree.
 - Give the candidate the correct nested Pages base path.
 
 **Out of scope**
@@ -867,6 +887,7 @@ Required:
 **In scope**
 
 - Freeze candidate SHA.
+- Record the candidate SHA and the target `main` SHA before opening the PR.
 - Open a focused PR from `rebuild/astrowind` to `main`.
 - Review the complete diff against the baseline and locked spec.
 - Merge without force.
@@ -893,6 +914,7 @@ Required:
 - `docs/rebuild/ASSET_AND_RIGHTS_FINAL.md`
 - `docs/rebuild/ROLLBACK.md`
 - Merged PR and verified production SHA.
+- Git audit record containing the recovery-tag SHA, branch SHA, PR URL, merge SHA, deployment SHA, and rollback target.
 
 ### WP6 gate
 
@@ -929,6 +951,7 @@ Stop and request a decision when:
 - A logo lacks an approved asset or rights status.
 - Hebrew copy is not native-reviewed at the production gate.
 - A release check requires bypassing protection or rewriting Git history.
+- Codex sandbox GitHub write access or required repository permission is unavailable. This is a platform-authorization blocker; do not transfer Git work to the user’s local machine.
 
 ## 8. Explicit TODO register
 
@@ -948,6 +971,7 @@ These items do not block WP0–WP3 unless noted, but they block affected product
 The rebuild is done only when:
 
 - The old site remains recoverable from a remote tag.
+- Every Git mutation was performed and recorded by Codex from the sandbox, with `main` advanced only through the reviewed PR.
 - Astrowind demo identity and content are absent.
 - The site uses the locked three-token palette.
 - Every surface has 0px radius.
@@ -978,5 +1002,6 @@ A change requires an explicit written decision if it affects:
 - Primary institutional proof-strip membership.
 - Approved copy or factual claims.
 - Work-package gate or model tier.
+- Codex-managed sandbox Git workflow, branch policy, or release authority.
 
 Mechanical implementation details may change without a formal change order only when they do not alter the locked behavior, identity, content, or acceptance criteria.
