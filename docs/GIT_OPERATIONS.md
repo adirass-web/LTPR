@@ -7,7 +7,7 @@
 
 Codex is the sole Git operator. The sandbox is the active working copy; GitHub is the durable recovery record. The user does not run Git, npm, authentication, file-transfer, or conflict-resolution commands for this project.
 
-`pre-astrowind-rebuild-20260723` is an immutable, annotated remote recovery tag for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. Its tag object is `aa446bed3ba0047d33067d18dd9f214e4d41ed6d`. It is the recovery point for the pre-rebuild production tree.
+`pre-astrowind-rebuild-20260723` is required as an immutable, annotated remote recovery tag for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. A local-only copy exists in an older sandbox clone, but it is not a recovery point. The configured connector cannot create tag refs and direct sandbox Git has no GitHub credential; therefore WP0 and every release gate requiring the tag remain blocked until Codex obtains an approved remote tag-ref operation.
 
 ## Branch and checkpoint model
 
