@@ -2,9 +2,9 @@
 
 **Project:** `adirass-web/LTPR` / `cyberdrtabansky.com`
 **Status:** Locked for execution
-**Version:** 1.1
+**Version:** 1.2
 **Date:** 2026-07-23
-**Execution state:** Planning complete; execution uses the Codex-managed sandbox Git workspace only
+**Execution state:** WP0 recovery point and sandbox Git governance established; implementation remains on `rebuild/astrowind`
 
 ## 1. Purpose
 
@@ -76,6 +76,28 @@ The earlier visual implementation is not a source to migrate. Git history preser
 - Each work package ends in an intentional local commit with a narrow message and recorded SHA. Remote publication follows only after the package’s stated gate passes.
 - Branches and tags are pushed by Codex only. `main` advances only through the reviewed PR described in WP6; no direct push to `main` is permitted.
 - If sandbox-side GitHub write access or a required repository permission is unavailable, Codex stops before the remote mutation, retains the verified local checkpoint, and reports the precise platform authorization blocker. The user is not redirected to a local terminal as a workaround.
+
+#### 4.1.2 Remote checkpoint, tag, and handoff policy
+
+- The remote annotated tag `pre-astrowind-rebuild-20260723` is the immutable recovery point for `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. It must never be moved, deleted, or recreated.
+- The sandbox is the active canonical working copy; GitHub is the durable recovery record. Sandbox storage alone is never treated as a backup.
+- Before starting or resuming work, Codex fetches the active branch, records `HEAD` and `origin/<branch>`, and inspects the worktree. If the remote branch advanced unexpectedly, Codex stops to reconcile it without overwriting either history.
+- No meaningful work may be left only in the sandbox at a session handoff. Each completed, testable slice is committed on `rebuild/astrowind` and fast-forward published to GitHub before handoff, even when the work package itself has not yet passed its approval gate. Such commits are implementation checkpoints, not release approvals.
+- Codex does not use `git stash` as preservation. It does not reset, clean, amend, rebase, or force-update a published rebuild branch. A conflicting or unexpected worktree state is inspected and resolved by a new commit or a new explicitly named branch.
+- Before any risky Git operation, Codex creates and verifies a recoverable remote checkpoint. Existing remote branches or tags are never repointed as a substitute for a checkpoint.
+- Tags are annotated and immutable. Naming is: `rebuild-wp<N>-complete-YYYYMMDD` after a passed work-package gate, `rebuild-rc-YYYYMMDD.N` for a frozen release candidate, and `production-YYYYMMDD` for the merged, live-verified release. Each tag must be checked both locally and with `git ls-remote --tags` before it is recorded as complete.
+- If the configured Codex environment cannot create or verify a required remote tag, Codex records the limitation and stops at the affected release gate. A branch is not represented as an equivalent tag.
+
+#### 4.1.3 Branch, PR, CI, deployment, and rollback policy
+
+- `main` is the production branch. It receives no direct pushes and is changed only through a reviewed release PR.
+- `rebuild/astrowind` is the sole long-lived integration branch. It is the only writable rebuild worktree. A short-lived `experiment/<slug>` branch may be used only for a clearly bounded alternative and must be published before handoff; it never deploys or merges to `main` directly.
+- A draft PR from `rebuild/astrowind` to `main` is opened when the first implementation package is ready for shared review. It remains draft until WP6 has passed. A changed `main` is incorporated by a normal merge into `rebuild/astrowind`, followed by the full required checks; published rebuild history is not rebased.
+- Every published checkpoint records its parent SHA, changed paths, checks run, results, and remote SHA. CI failures block the relevant gate; they are diagnosed and corrected in a new commit rather than bypassed.
+- The release PR records the baseline-tag SHA, candidate SHA, target `main` SHA, required checks, deployment target, and rollback target. Codex requests explicit user release approval before marking it ready or merging.
+- The release uses a merge commit so that one deliberate revert can restore the pre-release tree. If repository settings make that impossible, Codex stops and requests an explicit approved alternative before merging.
+- Production deploys only from the merged `main` SHA. Manual deployment dispatches may not target a candidate branch. Codex records the workflow run, deployed SHA, production URL, and post-deploy verification result.
+- A production defect triggers a `rollback/<timestamp>` branch and a revert PR against `main`; no history is rewritten and no tag is moved. The rollback is verified in CI and in production, then recorded with its resulting deployment SHA.
 
 ### 4.2 Route contract
 
