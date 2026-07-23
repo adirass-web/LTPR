@@ -2,9 +2,9 @@
 
 **Project:** `adirass-web/LTPR` / `cyberdrtabansky.com`
 **Status:** Locked for execution
-**Version:** 1.3
+**Version:** 1.4
 **Date:** 2026-07-23
-**Execution state:** Sandbox Git governance established; WP0 remains blocked pending creation of the required remote recovery tag
+**Execution state:** WP0 recovery branch approved and verified; implementation may begin. The remote recovery tag remains a WP6 release-gate requirement.
 
 ## 1. Purpose
 
@@ -79,14 +79,16 @@ The earlier visual implementation is not a source to migrate. Git history preser
 
 #### 4.1.2 Remote checkpoint, tag, and handoff policy
 
-- The required remote annotated tag `pre-astrowind-rebuild-20260723` must point to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11` and, once created, must never be moved, deleted, or recreated. It is currently blocked: the Codex connector cannot create tag refs and direct sandbox Git has no GitHub credential. A local tag is not a remote recovery point.
+- **Approved temporary WP0 recovery point:** remote branch `recovery/pre-astrowind-20260723` points to `260abd7a96ab3ba516820e50c0f9f17e04bc2d11`. It was verified from the sandbox on 2026-07-23 and must never be repointed or deleted. It authorizes WP1–WP5 implementation only; it is not represented as a tag and does not satisfy the release-tag gate.
+- The configured GitHub integration cannot apply branch-protection rules. Its immutability is therefore enforced by the no-repoint/no-delete policy and by checking the remote ref against the recorded SHA before every risky operation and release gate.
+- The required remote annotated tag `pre-astrowind-rebuild-20260723` must point to the same baseline commit and, once created, must never be moved, deleted, or recreated. It is currently unavailable because the Codex connector cannot create tag refs and direct sandbox Git has no GitHub credential. A local tag is not a remote recovery point. The tag remains mandatory before WP6 release readiness, merge, or production cutover.
 - The sandbox is the active canonical working copy; GitHub is the durable recovery record. Sandbox storage alone is never treated as a backup.
 - Before starting or resuming work, Codex fetches the active branch, records `HEAD` and `origin/<branch>`, and inspects the worktree. If the remote branch advanced unexpectedly, Codex stops to reconcile it without overwriting either history.
 - No meaningful work may be left only in the sandbox at a session handoff. Each completed, testable slice is committed on `rebuild/astrowind` and fast-forward published to GitHub before handoff, even when the work package itself has not yet passed its approval gate. Such commits are implementation checkpoints, not release approvals.
 - Codex does not use `git stash` as preservation. It does not reset, clean, amend, rebase, or force-update a published rebuild branch. A conflicting or unexpected worktree state is inspected and resolved by a new commit or a new explicitly named branch.
 - Before any risky Git operation, Codex creates and verifies a recoverable remote checkpoint. Existing remote branches or tags are never repointed as a substitute for a checkpoint.
 - Tags are annotated and immutable. Naming is: `rebuild-wp<N>-complete-YYYYMMDD` after a passed work-package gate, `rebuild-rc-YYYYMMDD.N` for a frozen release candidate, and `production-YYYYMMDD` for the merged, live-verified release. Each tag must be checked both locally and with `git ls-remote --tags` before it is recorded as complete.
-- If the configured Codex environment cannot create or verify a required remote tag, Codex records the limitation and stops at the affected release gate. A branch is not represented as an equivalent tag.
+- If the configured Codex environment cannot create or verify a required remote tag, Codex records the limitation and stops at the affected release gate. This approved recovery branch is a deliberately bounded WP0 exception, not an equivalent tag.
 
 #### 4.1.3 Branch, PR, CI, deployment, and rollback policy
 
@@ -94,7 +96,7 @@ The earlier visual implementation is not a source to migrate. Git history preser
 - `rebuild/astrowind` is the sole long-lived integration branch. It is the only writable rebuild worktree. A short-lived `experiment/<slug>` branch may be used only for a clearly bounded alternative and must be published before handoff; it never deploys or merges to `main` directly.
 - A draft PR from `rebuild/astrowind` to `main` is opened when the first implementation package is ready for shared review. It remains draft until WP6 has passed. A changed `main` is incorporated by a normal merge into `rebuild/astrowind`, followed by the full required checks; published rebuild history is not rebased.
 - Every published checkpoint records its parent SHA, changed paths, checks run, results, and remote SHA. CI failures block the relevant gate; they are diagnosed and corrected in a new commit rather than bypassed.
-- The release PR records the baseline-tag SHA, candidate SHA, target `main` SHA, required checks, deployment target, and rollback target. Codex requests explicit user release approval before marking it ready or merging.
+- The release PR records the recovery-branch SHA, baseline-tag SHA, candidate SHA, target `main` SHA, required checks, deployment target, and rollback target. Codex requests explicit user release approval before marking it ready or merging.
 - The release uses a merge commit so that one deliberate revert can restore the pre-release tree. If repository settings make that impossible, Codex stops and requests an explicit approved alternative before merging.
 - Production deploys only from the merged `main` SHA. Manual deployment dispatches may not target a candidate branch. Codex records the workflow run, deployed SHA, production URL, and post-deploy verification result.
 - A production defect triggers a `rollback/<timestamp>` branch and a revert PR against `main`; no history is rewritten and no tag is moved. The rollback is verified in CI and in production, then recorded with its resulting deployment SHA.
@@ -214,8 +216,8 @@ Create a provable recovery point and a controlled rebuild branch without changin
 
 **In scope**
 
-- Tag the resolved `main` HEAD as `pre-astrowind-rebuild-20260723`, or use the actual execution date if work begins later.
-- Push the tag without rewriting history.
+- Create and verify `recovery/pre-astrowind-20260723` at the resolved `main` HEAD. This temporary remote recovery branch is approved for WP0–WP5 only and must not be repointed or deleted.
+- Create and verify annotated tag `pre-astrowind-rebuild-20260723` at the same commit when Codex receives tag-ref authority. It is mandatory before WP6 release readiness, merge, or production cutover.
 - Create `rebuild/astrowind` from that exact commit.
 - Create the writable sandbox worktree for `rebuild/astrowind`; all subsequent package work occurs there.
 
@@ -226,7 +228,7 @@ Create a provable recovery point and a controlled rebuild branch without changin
 
 **Deliverable**
 
-- Remote recovery tag and remote rebuild branch.
+- Verified remote recovery branch and remote rebuild branch; remote tag status recorded.
 - Recorded sandbox worktree paths and baseline/rebuild SHAs in `docs/rebuild/BASELINE.md`.
 
 #### WP0.3 — Pin the template source
@@ -265,14 +267,16 @@ Create a provable recovery point and a controlled rebuild branch without changin
 
 ### WP0 gate
 
-WP0 passes only when:
+WP0 passes for implementation only when:
 
-- Current production can be restored from a named remote tag.
+- Current production can be restored from the approved immutable remote recovery branch.
 - The rebuild branch exists remotely.
 - The Codex sandbox contains an isolated writable rebuild worktree and a separately reproducible baseline checkout.
 - The current production build passes.
 - The baseline SHA and asset checksums are recorded.
 - `main` has not been modified by WP0.
+
+The remote annotated baseline tag remains a WP6 release gate. No merge or production cutover may proceed without it.
 
 ---
 
