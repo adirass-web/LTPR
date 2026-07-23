@@ -5,31 +5,35 @@ import { pageKeys, pagePath, siteContent, type Locale, type PageKey } from '~/co
 interface Props {
   locale: Locale;
   page: PageKey;
+  home?: boolean;
+  canonicalPath?: string;
+  alternatePath?: string;
+  noindex?: boolean;
 }
 
-const { locale, page } = Astro.props;
+const { locale, page, home = false, canonicalPath, alternatePath, noindex = false } = Astro.props;
 const alternateLocale = locale === 'en' ? 'he' : 'en';
 const content = siteContent[locale];
 const current = content.pages[page];
 const dir = locale === 'he' ? 'rtl' : 'ltr';
+const path = canonicalPath ?? pagePath(locale, page);
 ---
 
 <Foundation
   lang={locale}
   dir={dir}
-  title={`${current.title} | Lior Tabansky`}
+  title={`${current.title} | Dr. Lior Tabansky`}
   description={current.description}
-  canonicalPath={pagePath(locale, page)}
-  alternatePath={pagePath(alternateLocale, page)}
+  canonicalPath={path}
+  alternatePath={alternatePath ?? pagePath(alternateLocale, page)}
   alternateLang={alternateLocale}
+  noindex={noindex}
 >
-  <header class="border-b border-black">
-    <nav
-      class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5"
-      aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}
-    >
-      <a class="font-medium" href={pagePath(locale, 'home')}><bdi>Lior Tabansky</bdi></a>
-      <div class="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm">
+  <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}>
+      <a class="site-name" href={pagePath(locale, 'home')}><bdi>Dr. Lior Tabansky</bdi></a>
+      <div class="site-nav__links">
         {
           pageKeys.map((item) => (
             <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
@@ -38,7 +42,7 @@ const dir = locale === 'he' ? 'rtl' : 'ltr';
           ))
         }
         <a
-          class="border-s border-black ps-5"
+          class="site-nav__locale"
           href={pagePath(alternateLocale, page)}
           lang={alternateLocale}
           dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}
@@ -48,13 +52,13 @@ const dir = locale === 'he' ? 'rtl' : 'ltr';
       </div>
     </nav>
   </header>
-  <main class="mx-auto min-h-[70vh] max-w-7xl px-6 py-16 md:py-24">
+  <main id="content" class:list={['site-main', { 'site-main--home': home }]}>
     <slot />
   </main>
-  <footer class="border-t border-black">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 text-sm">
-      <bdi>Lior Tabansky</bdi>
-      <span>{content.privateInquiries}</span>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <bdi>Dr. Lior Tabansky</bdi>
+      <a href="https://www.linkedin.com/in/ltaba/">{content.privateInquiries}</a>
     </div>
   </footer>
 </Foundation>

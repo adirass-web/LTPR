@@ -12,8 +12,8 @@ const content = siteContent[locale].pages[page];
 ---
 
 <SiteShell locale={locale} page={page}>
-  <div class="max-w-3xl">
-    <p class="mb-6 text-sm uppercase tracking-[0.16em]">{content.nav}</p>
-    <h1 class="text-5xl leading-[0.95] font-normal tracking-[-0.04em] md:text-7xl">{content.title}</h1>
-  </div>
+  <section class="page-intro">
+    <p class="eyebrow">{content.nav}</p>
+    <h1>{content.title}</h1>
+  </section>
 </SiteShell>

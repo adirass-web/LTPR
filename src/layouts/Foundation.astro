@@ -9,9 +9,10 @@ interface Props {
   canonicalPath: string;
   alternatePath: string;
   alternateLang: 'en' | 'he';
+  noindex?: boolean;
 }
 
-const { lang, dir, title, description, canonicalPath, alternatePath, alternateLang } = Astro.props;
+const { lang, dir, title, description, canonicalPath, alternatePath, alternateLang, noindex = false } = Astro.props;
 const canonicalUrl = new URL(canonicalPath, Astro.site);
 const alternateUrl = new URL(alternatePath, Astro.site);
 ---
@@ -27,8 +28,9 @@ const alternateUrl = new URL(alternatePath, Astro.site);
     <link rel="alternate" hreflang={lang} href={canonicalUrl} />
     <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
     <link rel="alternate" hreflang="x-default" href={new URL('/en/', Astro.site)} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
   </head>
-  <body class="bg-white text-black antialiased">
+  <body>
     <slot />
   </body>
 </html>

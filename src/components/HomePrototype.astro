@@ -1,0 +1,244 @@
+---
+import SiteShell from '~/components/SiteShell.astro';
+import type { Locale } from '~/content/site';
+
+interface Props {
+  locale: Locale;
+  direction: 'editorial' | 'evidence';
+  canonicalPath?: string;
+}
+
+const { locale, direction, canonicalPath } = Astro.props;
+const isHebrew = locale === 'he';
+const root = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const copy = isHebrew
+  ? {
+      eyebrow: 'חדשנות ביטחונית · בינה מלאכותית · אמון דיגיטלי',
+      title: 'אסטרטגיה מעקרונות יסוד — לחדשנות ביטחונית, לבינה מלאכותית ולאמון דיגיטלי.',
+      standfirst:
+        'אסטרטגיה היא הבחירה במה לא לעשות. במשך שני עשורים סייעתי לממשלות ולמשקיעים להפוך מומחיות עמוקה למעט ההחלטות שמייצרות יתרון — בשטח, לא באולם ההרצאות.',
+      inquiry: 'פניות פרטיות',
+      proof: 'בניית יכולת סייבר וחדשנות ביטחונית לאומית עבור ממשלות באפריקה, בקווקז ובאסיה.',
+      pillarsLabel: 'שלושה עוגנים',
+      pillarsTitle: 'המקום שבו אסטרטגיה הופכת ליכולת.',
+      pillars: [
+        [
+          'חדשנות ביטחונית',
+          'אני מנתח כיצד טכנולוגיה וארגון משתלבים ליצירת יתרון בתחומי הביטחון וההגנה — ומה הדינמיקה הזאת מלמדת על חדשנות בשווקים האזרחיים.',
+        ],
+        [
+          'בינה מלאכותית',
+          'בינה מלאכותית כבר מספקת תובנות, תמיכה בקבלת החלטות ואוטונומיה. האתגר אינו עוד אם היכולת קיימת, אלא אם ארגונים יודעים להשתמש בה: אימוץ מוצלח הוא בעיה ארגונית, לא בעיה של מודל.',
+        ],
+        ['בניית יכולות סייבר', 'אסטרטגיות לאומיות, חוסן מגזרי ויכולת מוסדית שנועדו להחזיק מעמד — לא עוד דוח חד־פעמי.'],
+      ],
+      firstPrinciplesLabel: 'עקרונות יסוד',
+      firstPrinciples:
+        'הדוקטורט אינו קישוט. הוא המשמעת לחשוב מעקרונות יסוד כשספרי ההוראות אינם מתאימים — לראות את המערכת כולה, להפריד את האות מן הרעש, וכפי שניסח מייקל פורטר, להחליט במה לא לעשות. במקום שבו הקרקע זזה והסיכון לאומי, הקפדנות הזו היא ההבדל בין תנועה להתקדמות.',
+      mediaLabel: 'תקשורת',
+      mediaTitle: 'הופעות וסיקור נבחרים.',
+      mediaCaption: 'ב־RAI, השידור הציבורי של איטליה — Codice: La vita è digitale.',
+      mediaStatus: 'הקטע בהכנה',
+      mediaLink: 'לכל התקשורת',
+      writingLabel: 'כתיבה',
+      writingTitle: 'טיעונים בפיתוח.',
+      writingHeading: 'בינה מלאכותית היא בעיה ארגונית, לא בעיה של מודל.',
+      writingText:
+        'בינה מלאכותית כבר מספקת תובנות, תמיכה בקבלת החלטות ואוטונומיה. האתגר הוא אם ארגונים יכולים להשתמש בה: אימוץ מוצלח הוא בעיה ארגונית, לא בעיה של מודל.',
+      writingLink: 'לכתיבה',
+      publicLabel: 'עבודות נבחרות',
+      publicTitle: 'עשייה ציבורית. עבודה פרטית.',
+      publicText:
+        'כתבתי את החזון, המטרות ולמעלה מ־70 ההמלצות שבבסיס האסטרטגיה הלאומית לאבטחת סייבר של סינגפור, והובלתי עבודת חוסן לתשתיות קריטיות במימון הבנק העולמי בכתריסר מדינות. מרבית עבודתי היא פרטית.',
+      close: 'לפניות בענייני ייעוץ, השקעות או תקשורת.',
+      logos: [
+        'הבנק העולמי',
+        'סוכנות הסייבר של סינגפור',
+        'המכון הבינלאומי למחקרים אסטרטגיים (IISS)',
+        'התעשייה האווירית לישראל',
+      ],
+    }
+  : {
+      eyebrow: 'Defense innovation · AI · Digital trust',
+      title: 'First-principles strategy for defense innovation, AI, and digital trust.',
+      standfirst:
+        "Strategy is choosing what not to do. For two decades I've helped governments and investors turn deep expertise into the few decisions that create advantage — in the field, not the seminar room.",
+      inquiry: 'Private inquiries',
+      proof:
+        'National cyber and defense-innovation capacity building for governments across Africa, the Caucasus, and Asia.',
+      pillarsLabel: 'Three pillars',
+      pillarsTitle: 'Where strategy becomes capability.',
+      pillars: [
+        [
+          'Defense innovation',
+          'I analyze how technology and organization combine to create advantage in defense and security — and what those dynamics reveal about innovation in civilian markets.',
+        ],
+        [
+          'AI',
+          'AI already delivers insight, decision support, and autonomy. The challenge is no longer whether the capability exists, but whether organizations can use it: successful adoption is an organizational problem, not a model problem.',
+        ],
+        [
+          'Cybersecurity capacity building',
+          'National strategies, sectoral resilience, and institutional capability designed to endure — not another one-off report.',
+        ],
+      ],
+      firstPrinciplesLabel: 'First principles',
+      firstPrinciples:
+        "The doctorate isn't decoration. It's the discipline to reason from first principles when the playbooks don't fit — to see the whole system, separate signal from noise, and, as Michael Porter put it, decide what not to do. Where the ground shifts and the stakes are national, that rigor is the difference between motion and progress.",
+      mediaLabel: 'Media',
+      mediaTitle: 'Selected appearances and coverage.',
+      mediaCaption: "On RAI, Italy's public broadcaster — Codice: La vita è digitale.",
+      mediaStatus: 'Clip in preparation',
+      mediaLink: 'See all media',
+      writingLabel: 'Writing',
+      writingTitle: 'Arguments in development.',
+      writingHeading: 'AI is an organizational problem, not a model problem.',
+      writingText:
+        'AI already delivers insight, decision support, and autonomy. The challenge is whether organizations can use it: successful adoption is an organizational problem, not a model problem.',
+      writingLink: 'See all writing',
+      publicLabel: 'Selected engagements',
+      publicTitle: 'Public proof. Private work.',
+      publicText:
+        "I authored the vision, goals, and 70+ recommendations behind Singapore's National Cybersecurity Strategy, and led cyber-resilience capacity work with the World Bank across a dozen countries. Most engagements are private.",
+      close: 'For work that benefits from discretion.',
+      logos: [
+        'World Bank',
+        'Cyber Security Agency of Singapore',
+        'International Institute for Strategic Studies (IISS)',
+        'Israel Aerospace Industries',
+      ],
+    };
+
+const logoAssets = ['world-bank.svg', 'singapore-csa.png', 'iiss.png', 'iai.svg'];
+const directionClass = `home--${direction}`;
+const isPrivatePrototype = Boolean(canonicalPath);
+const alternatePrototypePath = isPrivatePrototype ? `/prototype/evidence/${locale === 'en' ? 'he' : 'en'}/` : undefined;
+---
+
+<SiteShell
+  locale={locale}
+  page="home"
+  home
+  canonicalPath={canonicalPath}
+  alternatePath={alternatePrototypePath}
+  noindex={isPrivatePrototype}
+>
+  <div class:list={['home', directionClass]}>
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          <p class="eyebrow">{copy.eyebrow}</p>
+          <h1 id="home-title">{copy.title}</h1>
+          <p class="home-hero__standfirst">{copy.standfirst}</p>
+          <a class="cta cta--accent" href="https://www.linkedin.com/in/ltaba/">{copy.inquiry}</a>
+        </div>
+        <figure class="home-portrait">
+          <picture>
+            <source
+              srcset={`${root}images/portraits/lior-tabansky-portrait-2x3-720.avif 720w, ${root}images/portraits/lior-tabansky-portrait-2x3-960.avif 960w, ${root}images/portraits/lior-tabansky-portrait-2x3-1280.avif 1280w`}
+              sizes="(max-width: 799px) 100vw, 45vw"
+              type="image/avif"
+            />
+            <source
+              srcset={`${root}images/portraits/lior-tabansky-portrait-2x3-720.webp 720w, ${root}images/portraits/lior-tabansky-portrait-2x3-960.webp 960w, ${root}images/portraits/lior-tabansky-portrait-2x3-1280.webp 1280w`}
+              sizes="(max-width: 799px) 100vw, 45vw"
+              type="image/webp"
+            />
+            <img
+              src={`${root}images/portraits/lior-tabansky-portrait-2x3-960.jpg`}
+              width="1365"
+              height="2048"
+              alt={isHebrew ? 'ד״ר ליאור טבנסקי' : 'Dr. Lior Tabansky'}
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label={isHebrew ? 'מוסדות נבחרים' : 'Selected institutions'}>
+      <div class="proof-strip__inner">
+        <ul class="proof-strip__marks">
+          {
+            logoAssets.map((asset, index) => (
+              <li>
+                <img src={`${root}images/client-strip/${asset}`} alt={copy.logos[index]} />
+              </li>
+            ))
+          }
+        </ul>
+        <p>{copy.proof}</p>
+      </div>
+    </section>
+
+    <section class="home-section home-section--pillars" aria-labelledby="pillars-title">
+      <div class="home-section__header">
+        <p class="eyebrow">{copy.pillarsLabel}</p>
+        <h2 id="pillars-title">{copy.pillarsTitle}</h2>
+      </div>
+      <ol class="pillar-list">
+        {
+          copy.pillars.map(([title, text], index) => (
+            <li>
+              <span aria-hidden="true">0{index + 1}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="home-section home-section--statement" aria-labelledby="first-principles-title">
+      <p class="eyebrow">{copy.firstPrinciplesLabel}</p>
+      <h2 id="first-principles-title">{copy.firstPrinciples}</h2>
+    </section>
+
+    <section class="home-section home-section--media" aria-labelledby="media-title">
+      <div class="home-section__header">
+        <p class="eyebrow">{copy.mediaLabel}</p>
+        <h2 id="media-title">{copy.mediaTitle}</h2>
+      </div>
+      <div class="media-feature">
+        <div class="media-feature__frame" aria-hidden="true">
+          <span>RAI</span>
+          <small>{copy.mediaStatus}</small>
+        </div>
+        <div class="media-feature__copy">
+          <p>{copy.mediaCaption}</p>
+          <a class="text-link" href={`/${locale}/media/`}>{copy.mediaLink}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-section--writing" aria-labelledby="writing-title">
+      <div class="home-section__header">
+        <p class="eyebrow">{copy.writingLabel}</p>
+        <h2 id="writing-title">{copy.writingTitle}</h2>
+      </div>
+      <article class="writing-preview">
+        <p class="eyebrow">01 · {isHebrew ? 'מאמר יסוד' : 'Cornerstone essay'}</p>
+        <h3>{copy.writingHeading}</h3>
+        <p>{copy.writingText}</p>
+        <a class="text-link" href={`/${locale}/writing/`}>{copy.writingLink}</a>
+      </article>
+    </section>
+
+    <section class="home-section home-section--public" aria-labelledby="public-title">
+      <div class="home-section__header">
+        <p class="eyebrow">{copy.publicLabel}</p>
+        <h2 id="public-title">{copy.publicTitle}</h2>
+      </div>
+      <p class="public-proof">{copy.publicText}</p>
+    </section>
+
+    <section class="home-close" aria-labelledby="close-title">
+      <h2 id="close-title">{copy.close}</h2>
+      <a class="cta cta--outline" href="https://www.linkedin.com/in/ltaba/">{copy.inquiry}</a>
+    </section>
+  </div>
+</SiteShell>
