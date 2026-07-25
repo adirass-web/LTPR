@@ -1,0 +1,52 @@
+---
+import MonochromePortrait from '~/components/MonochromePortrait.astro';
+import SiteShell from '~/components/SiteShell.astro';
+import { homeV3 } from '~/content/en-v3';
+---
+
+<SiteShell locale="en" page="home" home noindex>
+  <div class="home home--v3">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          <h1 id="home-title">{homeV3.hero.title}</h1>
+          <p class="home-hero__standfirst">{homeV3.hero.subhead}</p>
+          <a class="cta cta--accent" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
+        </div>
+        <MonochromePortrait variant="2x3" alt="Dr. Lior Tabansky" priority />
+      </div>
+    </section>
+
+    <section class="home-section home-section--pillars" aria-labelledby="problems-title">
+      <div class="home-section__header">
+        <h2 id="problems-title">The three problems I work</h2>
+      </div>
+      <ol class="pillar-list">
+        {
+          homeV3.problems.map((problem, index) => (
+            <li data-citation-slots={problem.citations.join('; ') || undefined}>
+              <span aria-hidden="true">0{index + 1}</span>
+              <div>
+                <h3>{problem.title}</h3>
+                <p>{problem.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="home-section home-section--proof" aria-labelledby="proof-title">
+      <p class="eyebrow">Twenty years, briefly</p>
+      <p id="proof-title" class="quiet-proof">{homeV3.proof}</p>
+    </section>
+
+    <section class="home-close" aria-labelledby="inquiries-title">
+      <div>
+        <p class="eyebrow">Private inquiries</p>
+        <h2 id="inquiries-title">{homeV3.close}</h2>
+      </div>
+      <a class="cta cta--outline" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
+    </section>
+  </div>
+</SiteShell>

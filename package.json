@@ -14,9 +14,12 @@
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check src .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
+    "fix:eslint": "eslint . --fix",
+    "fix:prettier": "prettier --write src .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
     "fix": "npm run fix:eslint && npm run fix:prettier"
   },
   "dependencies": {
+    "@fontsource/heebo": "^5.2.8",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.2"
   },

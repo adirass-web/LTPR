@@ -11,9 +11,10 @@ const { locale, page } = Astro.props;
 const content = siteContent[locale].pages[page];
 ---
 
-<SiteShell locale={locale} page={page}>
+<SiteShell locale={locale} page={page} noindex>
   <section class="page-intro">
     <p class="eyebrow">{content.nav}</p>
     <h1>{content.title}</h1>
+    <p>{locale === 'he' ? 'תוכן העמוד נמצא בהכנה.' : 'Page content is in preparation.'}</p>
   </section>
 </SiteShell>

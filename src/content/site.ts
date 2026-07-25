@@ -16,10 +16,24 @@ export const siteContent: Record<Locale, LocaleContent> = {
     switchLabel: 'עברית',
     privateInquiries: 'Private inquiries',
     pages: {
-      home: { nav: 'Home', title: 'Lior Tabansky', description: 'National cybersecurity and defense innovation.' },
-      about: { nav: 'About', title: 'About', description: 'Professional background and selected credentials.' },
+      home: {
+        nav: 'Home',
+        title: 'Dr. Lior Tabansky — strategy for defense innovation, AI, and national resilience',
+        description:
+          "For twenty years, one question: how a government or a company turns technology into power. The answer is never the technology — it's how you organize around it.",
+      },
+      about: {
+        nav: 'About',
+        title: 'About — Dr. Lior Tabansky',
+        description:
+          'For twenty years, one question: why capable states and companies stay insecure — and how defense innovation, AI, and national resilience actually get built.',
+      },
       media: { nav: 'Media', title: 'Media', description: 'Selected appearances and commentary.' },
-      writing: { nav: 'Writing', title: 'Writing', description: 'Selected writing and analysis.' },
+      writing: {
+        nav: 'Writing',
+        title: 'Writing — Dr. Lior Tabansky',
+        description: 'A few arguments on AI, cyber-power, and national resilience — the thinking behind the work.',
+      },
     },
   },
   he: {

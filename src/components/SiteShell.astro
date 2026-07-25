@@ -22,7 +22,7 @@ const path = canonicalPath ?? pagePath(locale, page);
 <Foundation
   lang={locale}
   dir={dir}
-  title={`${current.title} | Dr. Lior Tabansky`}
+  title={current.title}
   description={current.description}
   canonicalPath={path}
   alternatePath={alternatePath ?? pagePath(alternateLocale, page)}
@@ -55,7 +55,7 @@ const path = canonicalPath ?? pagePath(locale, page);
   <main id="content" class:list={['site-main', { 'site-main--home': home }]}>
     <slot />
   </main>
-  <footer class="site-footer">
+  <footer id="inquiries" class="site-footer">
     <div class="site-footer__inner">
       <bdi>Dr. Lior Tabansky</bdi>
       <a href="https://www.linkedin.com/in/ltaba/">{content.privateInquiries}</a>

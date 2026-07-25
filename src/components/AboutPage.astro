@@ -1,0 +1,41 @@
+---
+import MonochromePortrait from '~/components/MonochromePortrait.astro';
+import SiteShell from '~/components/SiteShell.astro';
+import { aboutV3 } from '~/content/en-v3';
+---
+
+<SiteShell locale="en" page="about" noindex>
+  <article class="longform-page about-page">
+    <header class="longform-opening">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1>{aboutV3.opening.title}</h1>
+        <p>{aboutV3.opening.text}</p>
+      </div>
+      <MonochromePortrait variant="square" alt="Dr. Lior Tabansky" />
+    </header>
+
+    <div class="longform-sections">
+      {
+        aboutV3.sections.map((section) => (
+          <section class="longform-section" data-citation-slots={section.citations.join('; ') || undefined}>
+            <div class="longform-section__label">
+              {section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}
+              <h2>{section.label}</h2>
+            </div>
+            <div class="longform-section__copy">
+              {section.paragraphs.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+              {section.label === 'On discretion' && (
+                <a class="text-link" href="#inquiries">
+                  Private inquiries <span aria-hidden="true">→</span>
+                </a>
+              )}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </article>
+</SiteShell>

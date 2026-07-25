@@ -1,0 +1,24 @@
+---
+interface Props {
+  variant: '2x3' | 'square';
+  alt: string;
+  priority?: boolean;
+}
+
+const { variant, alt, priority = false } = Astro.props;
+
+/*
+ * The only approved portrait treatment is the separate refined monochrome
+ * derivative made on 2026-07-23. It is not available in the repository or
+ * this workspace. Do not substitute the retained colour files or a CSS filter.
+ */
+---
+
+<figure
+  class:list={['monochrome-portrait', `monochrome-portrait--${variant}`]}
+  data-asset-state="awaiting-approved-file"
+>
+  <div class="monochrome-portrait__pending" role="img" aria-label={alt} data-priority={priority ? 'high' : undefined}>
+    <span>Approved monochrome portrait asset pending restoration.</span>
+  </div>
+</figure>
