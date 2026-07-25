@@ -1,3 +1,5 @@
+import { sources } from '~/content/sources';
+
 export const homeV3 = {
   hero: {
     title: 'Advantage is created, not bought.',
@@ -8,7 +10,7 @@ export const homeV3 = {
     {
       title: 'Defense innovation — the edge was never the machine.',
       text: "Nations don't become cyber powers by guarding the perimeter; they do it by how they organize innovation. I set out why in “Towards a Theory of Cyber Power,” presented at NATO's CCDCOE. Israel is the case study — but the argument travels.",
-      citations: ['CyCon/CCDCOE paper URL'],
+      citations: [sources.cyberPower.url],
     },
     {
       title: 'AI — an organizational problem, not a model problem.',
@@ -18,7 +20,11 @@ export const homeV3 = {
     {
       title: 'Capacity building — capability that outlasts the report.',
       text: "Most “capacity building” evaporates the week the consultants fly home. PROGRESS, my sectoral method, treats a whole sector as one living system; the World Bank's own maturity model draws on it. Eleven countries, four critical sectors, capability that stays.",
-      citations: ['World Bank SCMM URL', 'PROGRESS DOIs'],
+      citations: [
+        sources.sectoralCybersecurityMaturityModel.url,
+        sources.progressInternationalJournal.url,
+        sources.progressJournalOfCyberPolicy.url,
+      ],
     },
   ],
   proof:
@@ -39,14 +45,18 @@ export const aboutV3 = {
         "I didn't arrive at this from a lecture hall. I began in an Israel Air Force technology unit built around a single hard bet on multi-domain warfare, and learned early that the advantage was never the machine — it was how people and institutions arranged themselves around it. I've pulled on that thread ever since.",
         "I turned it into a theory — “Towards a Theory of Cyber Power,” presented at NATO's CCDCOE — and into a book, Cybersecurity in Israel, written with Major General Isaac Ben-Israel. The argument, in a line: cyber power isn't the sum of your tools; it's what you can make those tools do. Israel is the case — cyber turned into economic growth, and into cyber operations aimed at slowing Iran's nuclear program. As Lawrence Freedman puts it, strategy is the art of creating power.",
       ],
-      citations: ['CyCon/CCDCOE paper URL', 'SpringerLink book URL'],
+      citations: [sources.cyberPower.url, sources.cybersecurityInIsrael.url],
     },
     {
       label: 'The method',
       paragraphs: [
         "Then I wanted a method — something that held up in the field, not only in a journal. I call it PROGRESS. It reads an entire sector as one living system, combining the science of complex systems, established cybersecurity frameworks, and two decades of critical-infrastructure operations. It's peer-reviewed twice over — and the part I'm proud of: the World Bank's own Sectoral Cybersecurity Maturity Model draws on it. Working alongside the World Bank, I used PROGRESS to build cyber capability across energy, health, digital infrastructure, and finance in eleven emerging economies in Africa and Asia.",
       ],
-      citations: ['World Bank SCMM URL', 'PROGRESS DOIs'],
+      citations: [
+        sources.sectoralCybersecurityMaturityModel.url,
+        sources.progressInternationalJournal.url,
+        sources.progressJournalOfCyberPolicy.url,
+      ],
     },
     {
       label: 'On AI',
@@ -100,26 +110,50 @@ export const writingV3 = {
       title: 'AI is an organizational problem, not a model problem.',
       text: "Clients ask for “a hundred units of AI” and can't say what for. Buying the model is the easy part; becoming an organization that can actually use one is the work — and it's the part that decides who compounds and who writes the money off.",
       citations: [],
+      sources: [],
     },
     {
       title: 'From cybersecurity to cyber-power.',
       text: "Israel didn't become a cyber power by playing defense. In “Towards a Theory of Cyber Power” (NATO CCDCOE) I argue that national advantage comes from what you make the technology do — from how a country organizes innovation — not from how well it guards the perimeter. It's the argument behind my book and my work at NATO.",
-      citations: ['CyCon/CCDCOE paper URL'],
+      citations: [sources.cyberPower.url],
+      sources: [sources.cyberPower],
     },
     {
       title: 'Capacity that outlasts the report.',
       text: "I've watched a great deal of “capacity building” evaporate the week the consultants fly home. PROGRESS — my sectoral method, which the World Bank's own maturity model draws on — builds capability like a living system, not a document. Eleven countries, and one finding I refused to soften.",
-      citations: ['World Bank SCMM URL', 'PROGRESS DOIs'],
+      citations: [
+        sources.sectoralCybersecurityMaturityModel.url,
+        sources.progressInternationalJournal.url,
+        sources.progressJournalOfCyberPolicy.url,
+      ],
+      sources: [
+        sources.sectoralCybersecurityMaturityModel,
+        sources.progressInternationalJournal,
+        sources.progressJournalOfCyberPolicy,
+      ],
     },
   ],
   book: {
     title: 'Cybersecurity in Israel',
     text: "Springer, with Major General Isaac Ben-Israel. How a small country became a cyber power: the strategy, the institutions, and the innovation ecosystem underneath it. It's where the theory started.",
-    citations: ['SpringerLink URL'],
+    citations: [sources.cybersecurityInIsrael.url],
+    source: sources.cybersecurityInIsrael,
   },
   publications: [
-    '“Towards a Theory of Cyber Power” — NATO CCDCOE, Conference on Cyber Conflict (CyCon)',
-    '“Incorporating Systems Thinking into a Cyber Resilience Maturity Model” — IEEE Engineering Management Review',
-    '“Can Cyber Intelligence Collection Support Human Rights?” — The National Interest',
+    {
+      title: '“Towards a Theory of Cyber Power”',
+      publication: 'NATO CCDCOE, Conference on Cyber Conflict (CyCon)',
+      source: sources.cyberPower,
+    },
+    {
+      title: '“Incorporating Systems Thinking into a Cyber Resilience Maturity Model”',
+      publication: 'IEEE Engineering Management Review',
+      source: sources.systemsThinking,
+    },
+    {
+      title: '“Can Cyber Intelligence Collection Support Human Rights?”',
+      publication: 'The National Interest',
+      source: sources.humanRights,
+    },
   ],
 };

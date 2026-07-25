@@ -57,5 +57,6 @@ export const paths: Record<PageKey, string> = {
 };
 
 export function pagePath(locale: Locale, page: PageKey): string {
-  return `/${locale}/${paths[page]}`;
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+  return `${base}${locale}/${paths[page]}`;
 }

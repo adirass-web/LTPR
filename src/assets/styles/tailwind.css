@@ -241,24 +241,19 @@ a:hover {
   background: transparent;
   color: var(--ink);
 }
-.monochrome-portrait {
+.color-portrait {
   align-self: stretch;
   margin: 0;
   border-inline-start: var(--rule);
 }
-.monochrome-portrait__pending {
-  display: grid;
-  place-items: end start;
+.color-portrait picture,
+.color-portrait img {
+  display: block;
   block-size: 100%;
   inline-size: 100%;
-  min-block-size: 24rem;
-  padding: 1rem;
-  background: var(--canvas);
-  color: var(--ink);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
-  text-transform: uppercase;
+}
+.color-portrait img {
+  object-fit: cover;
 }
 
 .proof-strip__inner {
@@ -523,7 +518,7 @@ html:dir(rtl) .text-link span {
   html:dir(rtl) .home-hero__copy {
     padding: 2.25rem 1rem 3.5rem;
   }
-  .monochrome-portrait {
+  .color-portrait {
     aspect-ratio: 2 / 3;
     border-block-end: var(--rule);
     border-inline-start: 0;
@@ -742,6 +737,19 @@ html:dir(rtl) .text-link span {
 .text-link--pending {
   opacity: 0.55;
 }
+.citation-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.citation-links .text-link {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
 .publication-list li {
   max-inline-size: 46rem;
   padding-block: 1.1rem;
@@ -751,6 +759,10 @@ html:dir(rtl) .text-link span {
 }
 .publication-list li:last-child {
   border-block-end: var(--rule);
+}
+.publication-list a {
+  color: inherit;
+  text-underline-offset: 0.2em;
 }
 .source-pending {
   min-block-size: 50vh;
@@ -780,17 +792,14 @@ html:dir(rtl) .quiet-proof {
   .publication-list {
     margin-block-start: 1.5rem;
   }
-  .monochrome-portrait {
+  .color-portrait {
     aspect-ratio: 2 / 3;
     margin-block-start: 2rem;
     border-block-start: var(--rule);
     border-inline-start: 0;
   }
-  .monochrome-portrait--square {
+  .color-portrait--square {
     aspect-ratio: 1;
-  }
-  .monochrome-portrait__pending {
-    min-block-size: 0;
   }
   .longform-opening,
   .writing-opening {

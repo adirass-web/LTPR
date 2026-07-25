@@ -1,0 +1,33 @@
+---
+interface Props {
+  variant: '2x3' | 'square';
+  alt: string;
+  priority?: boolean;
+}
+
+const { variant, alt, priority = false } = Astro.props;
+const dimensions = variant === '2x3' ? { width: 1280, height: 1920 } : { width: 960, height: 960 };
+const widths = variant === '2x3' ? [480, 720, 960, 1280] : [320, 640, 960];
+const directory = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}images/portraits`;
+const stem = `lior-tabansky-portrait-${variant}`;
+const srcset = (extension: 'avif' | 'webp' | 'jpg') =>
+  widths.map((width) => `${directory}/${stem}-${width}.${extension} ${width}w`).join(', ');
+---
+
+<figure class:list={['color-portrait', `color-portrait--${variant}`]}>
+  <picture>
+    <source srcset={srcset('avif')} type="image/avif" sizes="(max-width: 799px) 100vw, 43vw" />
+    <source srcset={srcset('webp')} type="image/webp" sizes="(max-width: 799px) 100vw, 43vw" />
+    <img
+      src={`${directory}/${stem}-${dimensions.width}.jpg`}
+      srcset={srcset('jpg')}
+      sizes="(max-width: 799px) 100vw, 43vw"
+      width={dimensions.width}
+      height={dimensions.height}
+      alt={alt}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchpriority={priority ? 'high' : 'auto'}
+    />
+  </picture>
+</figure>
