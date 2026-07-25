@@ -1,0 +1,19 @@
+---
+import SiteShell from '~/components/SiteShell.astro';
+import { siteContent, type PageKey } from '~/content/site';
+
+interface Props {
+  page: PageKey;
+}
+
+const { page } = Astro.props;
+const content = siteContent.he.pages[page];
+---
+
+<SiteShell locale="he" page={page} noindex>
+  <section class="source-pending" aria-labelledby="source-pending-title">
+    <p class="eyebrow">עברית</p>
+    <h1 id="source-pending-title">{content.title}</h1>
+    <p>הגרסה העברית המקורית של עמוד זה נמצאת בהכנה. האתר אינו מציג תרגום מכונה במקום טקסט מאושר.</p>
+  </section>
+</SiteShell>

@@ -1,0 +1,64 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import { pageKeys, pagePath, siteContent, type Locale, type PageKey } from '~/content/site';
+
+interface Props {
+  locale: Locale;
+  page: PageKey;
+  home?: boolean;
+  canonicalPath?: string;
+  alternatePath?: string;
+  noindex?: boolean;
+}
+
+const { locale, page, home = false, canonicalPath, alternatePath, noindex = false } = Astro.props;
+const alternateLocale = locale === 'en' ? 'he' : 'en';
+const content = siteContent[locale];
+const current = content.pages[page];
+const dir = locale === 'he' ? 'rtl' : 'ltr';
+const path = canonicalPath ?? pagePath(locale, page);
+---
+
+<Foundation
+  lang={locale}
+  dir={dir}
+  title={current.title}
+  description={current.description}
+  canonicalPath={path}
+  alternatePath={alternatePath ?? pagePath(alternateLocale, page)}
+  alternateLang={alternateLocale}
+  noindex={noindex}
+>
+  <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}>
+      <a class="site-name" href={pagePath(locale, 'home')}><bdi>Dr. Lior Tabansky</bdi></a>
+      <div class="site-nav__links">
+        {
+          pageKeys.map((item) => (
+            <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
+              {content.pages[item].nav}
+            </a>
+          ))
+        }
+        <a
+          class="site-nav__locale"
+          href={pagePath(alternateLocale, page)}
+          lang={alternateLocale}
+          dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}
+        >
+          {content.switchLabel}
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class:list={['site-main', { 'site-main--home': home }]}>
+    <slot />
+  </main>
+  <footer id="inquiries" class="site-footer">
+    <div class="site-footer__inner">
+      <bdi>Dr. Lior Tabansky</bdi>
+      <a href="https://www.linkedin.com/in/ltaba/">{content.privateInquiries}</a>
+    </div>
+  </footer>
+</Foundation>
