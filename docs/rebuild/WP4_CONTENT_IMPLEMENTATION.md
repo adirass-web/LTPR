@@ -21,18 +21,18 @@ The visible EN content is held in `src/content/en-v3.ts`; the page components co
 - `/prototype/evidence/en/` and `/prototype/evidence/he/` are removed.
 - The prior prototype Home copy is not retained as current page content.
 
-## Portrait decision — superseded
+## Portrait decision — superseded by approved monochrome v2
 
-On 2026-07-25, the owner superseded the monochrome-only decision: use the existing color portrait derivatives. The color files remain preserved without editing, recoloring, CSS grayscale, upscaling, or re-encoding.
+The temporary color-portrait decision was superseded on 2026-07-25. The approved refined monochrome v2 masters now provide the live responsive portrait set; the former color derivatives were moved byte-for-byte to `archive/portraits/color-20260725/`.
 
 The implementation uses responsive `<picture>` sources with AVIF, WebP, and JPEG fallbacks:
 
 | Page | Ratio | Largest JPEG derivative | SHA-256 |
 | --- | --- |
-| Home | 2:3 | `lior-tabansky-portrait-2x3-1280.jpg` | `69ae6da4ea3795b4ec30941879b96dbf92b835a12d851dd3099494942e5562bf` |
-| About | 1:1 | `lior-tabansky-portrait-square-960.jpg` | `bfda730c7b3982667ada11d0958f7ab1b9dd73cadfcfd92d6a0fb4b150465bfc` |
+| Home | 2:3 | `lior-tabansky-portrait-2x3-1024.jpg` | `44f55308b9f882acb41f9575f50ca66a0342f5cc45ad038ba0e6ab573a4a4d2f` |
+| About | 1:1 | `lior-tabansky-portrait-square-960.jpg` | `201fe0ced7bfc1de89961516160ad9593f7abc79a43a7fdd432c703d910a4dd7` |
 
-`ColorPortrait.astro` renders the approved color derivatives; `MonochromePortrait.astro` is removed. The portrait release gate is closed.
+`Portrait.astro` renders the approved monochrome derivatives. The portrait release gate remains closed.
 
 ## Citation release gate — superseded
 

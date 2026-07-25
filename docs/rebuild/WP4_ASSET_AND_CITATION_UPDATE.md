@@ -1,18 +1,18 @@
-# WP4 — color portrait and citation update
+# WP4 — portrait and citation update
 
 Date: 2026-07-25
 Base checkpoint: `f86254c` (`rebuild/astrowind`)
 
 ## Decision record
 
-The owner superseded the 2026-07-25 monochrome-portrait requirement. The site now uses the retained color portrait derivatives without modification:
+The color-portrait decision recorded at `41b63fc` is superseded. The site now uses the approved refined monochrome v2 portrait derivatives. The former color derivatives are retained byte-for-byte in `archive/portraits/color-20260725/`.
 
 | Page | Component | Ratio | Formats | Loading |
 | --- | --- | --- | --- | --- |
-| `/en/` | `ColorPortrait.astro` | 2:3 | AVIF, WebP, JPEG | eager/high priority |
-| `/en/about/` | `ColorPortrait.astro` | 1:1 | AVIF, WebP, JPEG | lazy |
+| `/en/` | `Portrait.astro` | 2:3 | AVIF, WebP, JPEG | eager/high priority |
+| `/en/about/` | `Portrait.astro` | 1:1 | AVIF, WebP, JPEG | lazy |
 
-The color originals and their derived assets are retained. No new portrait asset was generated, edited, recolored, re-encoded, or deleted.
+The current responsive assets are derivative encodes of the two approved monochrome v2 masters. No further crop, retouching, recoloring, or AI generation was performed. See [`PORTRAIT_ASSET_TRANSITION_20260725.md`](PORTRAIT_ASSET_TRANSITION_20260725.md) for dimensions, checksum records, and archive treatment.
 
 ## Google Scholar retrieval
 

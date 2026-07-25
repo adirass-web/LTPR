@@ -7,15 +7,16 @@
 
 | Material | Baseline location | Classification | Rebuild handling | Status |
 |---|---|---|---|---|
-| Home portrait, 2:3 | `public/images/portraits/lior-tabansky-portrait-2x3-*` | reuse unchanged | Preserve every AVIF, WebP and JPEG file byte-for-byte; retain declared dimensions and unmirrored use. | ready |
-| About portrait, 1:1 | `public/images/portraits/lior-tabansky-portrait-square-*` | reuse unchanged | Preserve every AVIF, WebP and JPEG file byte-for-byte; retain declared dimensions and unmirrored use. | ready |
+| Home portrait, 2:3 | `public/images/portraits/lior-tabansky-portrait-2x3-*` | approved monochrome v2 | Responsive AVIF, WebP, and JPEG derivatives generated from the 1024 × 1536 approved monochrome master. Use unmirrored; maximum source width is 1024 px—no upscale. | ready |
+| About portrait, 1:1 | `public/images/portraits/lior-tabansky-portrait-square-*` | approved monochrome v2 | Responsive AVIF, WebP, and JPEG derivatives generated from the 1254 × 1254 approved monochrome master. Use unmirrored. | ready |
+| Retired color portrait set | `archive/portraits/color-20260725/` | repository archive | Exact former runtime derivatives moved out of `public/`; not served by the site. See [`PORTRAIT_ASSET_TRANSITION_20260725.md`](PORTRAIT_ASSET_TRANSITION_20260725.md). | archived |
 | World Bank mark | `public/images/client-strip/world-bank.svg` | migrate structurally | Retain current source pending rights/variant confirmation; use only in the four-mark proof strip. | usable with review |
 | IAI mark | `public/images/client-strip/iai.svg` | migrate structurally | Retain current source pending rights/variant confirmation; use only in the four-mark proof strip. | usable with review |
 | Singapore CSA mark | `public/images/client-strip/singapore-csa.png` | migrate structurally | Retain current source pending rights/variant confirmation; use only in the four-mark proof strip. | usable with review |
 | IISS mark | `public/images/client-strip/iiss.png` | migrate structurally | Retain current source pending rights/variant confirmation; use only in the four-mark proof strip. | usable with review |
 | Original site archive | `cdt-personal.zip` | exclude | Keep as repository history/archive material; never serve or import as a runtime asset. | archived |
 
-The portrait checksum set is the verification anchor for the instruction not to crop, retouch, recolor, upscale or re-encode approved portraits. The four institutional marks are the only primary proof-strip candidates. Sierra Leone and Georgia are excluded from that strip.
+The portrait checksum set records the current approved monochrome runtime derivatives. The prior color set is retained byte-for-byte in the repository archive, with its own manifest. The four institutional marks are the only primary proof-strip candidates. Sierra Leone and Georgia are excluded from that strip.
 
 ## Content and data inventory
 
@@ -30,7 +31,7 @@ The portrait checksum set is the verification anchor for the instruction not to 
 | Press deep links and fair-use materials | not complete | pending | verify before publication |
 | Contact email | not supplied | pending | no placeholder or invented value |
 | Environmental photography | not supplied | pending | author will provide a small set of singular images suggesting protection through environment and mood; no stock or generated substitute |
-| Monochrome portrait variants | not part of this baseline | pending separate asset task | do not substitute for the approved color portrait sets under this rebuild specification |
+| Approved monochrome portrait variants | `public/images/portraits/` | current runtime asset | Installed 2026-07-25; supersedes the color runtime set, which remains archived in the repository. |
 
 ## Metadata and deployment inventory
 

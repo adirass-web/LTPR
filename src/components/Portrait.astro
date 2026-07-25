@@ -6,8 +6,10 @@ interface Props {
 }
 
 const { variant, alt, priority = false } = Astro.props;
-const dimensions = variant === '2x3' ? { width: 1280, height: 1920 } : { width: 960, height: 960 };
-const widths = variant === '2x3' ? [480, 720, 960, 1280] : [320, 640, 960];
+// The 2:3 master is 1024 × 1536. Do not create a 1280 px derivative by
+// upscaling it merely to preserve the retired color-asset width.
+const dimensions = variant === '2x3' ? { width: 1024, height: 1536 } : { width: 960, height: 960 };
+const widths = variant === '2x3' ? [480, 720, 960, 1024] : [320, 640, 960];
 const directory = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}images/portraits`;
 const stem = `lior-tabansky-portrait-${variant}`;
 const srcset = (extension: 'avif' | 'webp' | 'jpg') =>
