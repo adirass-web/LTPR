@@ -10,7 +10,7 @@ import { aboutV3 } from '~/content/en-v3';
       <div>
         <p class="eyebrow">About</p>
         <h1>{aboutV3.opening.title}</h1>
-        <p>{aboutV3.opening.text}</p>
+        {aboutV3.opening.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </div>
       <Portrait variant="square" alt="Dr. Lior Tabansky" />
     </header>
@@ -24,11 +24,10 @@ import { aboutV3 } from '~/content/en-v3';
               <h2>{section.label}</h2>
             </div>
             <div class="longform-section__copy">
-              {section.paragraphs.map((paragraph) => (
-                <p>{paragraph}</p>
-              ))}
+              {section.list && <ul>{section.list.map((item) => <li>{item}</li>)}</ul>}
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
               {section.label === 'On discretion' && (
-                <a class="text-link" href="#inquiries">
+                <a class="text-link" href="mailto:liortabansky@gmail.com">
                   Private inquiries <span aria-hidden="true">→</span>
                 </a>
               )}
