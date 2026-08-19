@@ -13,7 +13,12 @@ export default defineConfig({
   output: 'static',
   site: githubPages ? 'https://adirass-web.github.io' : 'https://cyberdrtabansky.com',
   base: githubPages ? '/LTPR' : undefined,
-  integrations: [sitemap(), mdx()],
+  integrations: [
+    sitemap({
+      filter: (page) => ['/en/', '/en/about/', '/en/writing/'].some((route) => page.endsWith(route)),
+    }),
+    mdx(),
+  ],
   vite: {
     plugins: [tailwindcss()],
     resolve: {

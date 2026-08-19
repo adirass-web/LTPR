@@ -1,6 +1,6 @@
 ---
 import Foundation from '~/layouts/Foundation.astro';
-import { pageKeys, pagePath, siteContent, type Locale, type PageKey } from '~/content/site';
+import { launchPageKeys, pagePath, siteContent, type Locale, type PageKey } from '~/content/site';
 
 interface Props {
   locale: Locale;
@@ -25,8 +25,8 @@ const path = canonicalPath ?? pagePath(locale, page);
   title={current.title}
   description={current.description}
   canonicalPath={path}
-  alternatePath={alternatePath ?? pagePath(alternateLocale, page)}
-  alternateLang={alternateLocale}
+  alternatePath={alternatePath}
+  alternateLang={alternatePath ? alternateLocale : undefined}
   noindex={noindex}
 >
   <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
@@ -35,20 +35,19 @@ const path = canonicalPath ?? pagePath(locale, page);
       <a class="site-name" href={pagePath(locale, 'home')}><bdi>Dr. Lior Tabansky</bdi></a>
       <div class="site-nav__links">
         {
-          pageKeys.map((item) => (
+          launchPageKeys.map((item) => (
             <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
               {content.pages[item].nav}
             </a>
           ))
         }
-        <a
-          class="site-nav__locale"
-          href={pagePath(alternateLocale, page)}
-          lang={alternateLocale}
-          dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}
-        >
-          {content.switchLabel}
-        </a>
+        {
+          locale === 'he' && (
+            <a class="site-nav__locale" href={pagePath('en', page)} lang="en" dir="ltr">
+              EN
+            </a>
+          )
+        }
       </div>
     </nav>
   </header>
