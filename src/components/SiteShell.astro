@@ -57,7 +57,10 @@ const path = canonicalPath ?? pagePath(locale, page);
   <footer id="inquiries" class="site-footer">
     <div class="site-footer__inner">
       <bdi>Dr. Lior Tabansky</bdi>
-      <a href="https://www.linkedin.com/in/ltaba/">{content.privateInquiries}</a>
+      <div>
+        <p>{content.privateInquiries}</p>
+        <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+      </div>
     </div>
   </footer>
 </Foundation>
