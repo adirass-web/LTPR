@@ -41,7 +41,8 @@ import { homeV3 } from '~/content/en-v3';
 
     <section class="home-section home-section--proof" aria-labelledby="proof-title">
       <p class="eyebrow">Twenty years, briefly</p>
-      <ul id="proof-title" class="quiet-proof">
+      <h2 id="proof-title" class="sr-only">Twenty years, briefly</h2>
+      <ul class="quiet-proof">
         {homeV3.proof.map((item) => <li>{item}</li>)}
       </ul>
     </section>

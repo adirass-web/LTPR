@@ -17,6 +17,7 @@ const content = siteContent[locale];
 const current = content.pages[page];
 const dir = locale === 'he' ? 'rtl' : 'ltr';
 const path = canonicalPath ?? pagePath(locale, page);
+const localePath = pagePath(alternateLocale, page);
 ---
 
 <Foundation
@@ -25,15 +26,18 @@ const path = canonicalPath ?? pagePath(locale, page);
   title={current.title}
   description={current.description}
   canonicalPath={path}
-  alternatePath={alternatePath}
-  alternateLang={alternatePath ? alternateLocale : undefined}
+  alternatePath={alternatePath ?? localePath}
+  alternateLang={alternateLocale}
   noindex={noindex}
 >
   <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
   <header class="site-header">
     <nav class="site-nav" aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}>
       <a class="site-name" href={pagePath(locale, 'home')}><bdi>Dr. Lior Tabansky</bdi></a>
-      <div class="site-nav__links">
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="site-nav__toggle-label">{locale === 'he' ? 'תפריט' : 'Menu'}</span>
+      </button>
+      <div class="site-nav__links" id="site-navigation">
         {
           launchPageKeys.map((item) => (
             <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
@@ -41,17 +45,13 @@ const path = canonicalPath ?? pagePath(locale, page);
             </a>
           ))
         }
-        {
-          locale === 'he' && (
-            <a class="site-nav__locale" href={pagePath('en', page)} lang="en" dir="ltr">
-              EN
-            </a>
-          )
-        }
+        <a class="site-nav__locale" href={localePath} lang={alternateLocale} dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}>
+          {content.switchLabel}
+        </a>
       </div>
     </nav>
   </header>
-  <main id="content" class:list={['site-main', { 'site-main--home': home }]}>
+  <main id="content" tabindex="-1" class:list={['site-main', { 'site-main--home': home }]}>
     <slot />
   </main>
   <footer id="inquiries" class="site-footer">
@@ -64,3 +64,29 @@ const path = canonicalPath ?? pagePath(locale, page);
     </div>
   </footer>
 </Foundation>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('.site-nav');
+  const toggle = document.querySelector<HTMLButtonElement>('.site-nav__toggle');
+  const links = document.querySelector<HTMLElement>('#site-navigation');
+
+  if (nav && toggle && links) {
+    const close = (restoreFocus = false) => {
+      nav.classList.remove('site-nav--open');
+      toggle.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) toggle.focus();
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('site-nav--open');
+      toggle.setAttribute('aria-expanded', String(open));
+      if (open) links.querySelector<HTMLAnchorElement>('a')?.focus();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('site-nav--open')) close(true);
+    });
+
+    links.addEventListener('click', () => close());
+  }
+</script>
