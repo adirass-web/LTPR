@@ -1,10 +1,10 @@
 ---
-import ColorPortrait from '~/components/ColorPortrait.astro';
+import Portrait from '~/components/Portrait.astro';
 import SiteShell from '~/components/SiteShell.astro';
 import { homeV3 } from '~/content/en-v3';
 ---
 
-<SiteShell locale="en" page="home" home noindex>
+<SiteShell locale="en" page="home" home>
   <div class="home home--v3">
     <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero__inner">
@@ -13,7 +13,7 @@ import { homeV3 } from '~/content/en-v3';
           <p class="home-hero__standfirst">{homeV3.hero.subhead}</p>
           <a class="cta cta--accent" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
         </div>
-        <ColorPortrait variant="2x3" alt="Dr. Lior Tabansky" priority />
+        <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
       </div>
     </section>
 

@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages preview
+name: Deploy production site
 
 on:
   push:
@@ -27,8 +27,6 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
-        env:
-          SITE_TARGET: github-pages
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist

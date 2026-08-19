@@ -7,14 +7,14 @@ interface Props {
   title: string;
   description?: string;
   canonicalPath: string;
-  alternatePath: string;
-  alternateLang: 'en' | 'he';
+  alternatePath?: string;
+  alternateLang?: 'en' | 'he';
   noindex?: boolean;
 }
 
 const { lang, dir, title, description, canonicalPath, alternatePath, alternateLang, noindex = false } = Astro.props;
 const canonicalUrl = new URL(canonicalPath, Astro.site);
-const alternateUrl = new URL(alternatePath, Astro.site);
+const alternateUrl = alternatePath ? new URL(alternatePath, Astro.site) : undefined;
 const xDefaultUrl = new URL(`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}en/`, Astro.site);
 ---
 
@@ -27,7 +27,7 @@ const xDefaultUrl = new URL(`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}en/
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang={lang} href={canonicalUrl} />
-    <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+    {alternateUrl && alternateLang && <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />}
     <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
   </head>
