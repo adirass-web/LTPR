@@ -1,5 +1,5 @@
-export const pageKeys = ['home', 'about', 'media', 'writing'] as const;
-export const launchPageKeys = ['home', 'about', 'writing'] as const;
+export const pageKeys = ['home', 'media', 'about'] as const;
+export const launchPageKeys = ['home', 'media', 'about'] as const;
 
 export type Locale = 'en' | 'he';
 export type PageKey = (typeof pageKeys)[number];
@@ -19,21 +19,16 @@ export const siteContent: Record<Locale, LocaleContent> = {
     pages: {
       home: {
         nav: 'Home',
-        title: 'Dr. Lior Tabansky — strategy for defense innovation, AI, and national resilience',
+        title: 'Dr. Lior Tabansky — defense innovation, AI and national resilience',
         description:
-          "For twenty years, one question: how a government or a company turns technology into power. The answer is never the technology — it's how you organize around it.",
+          'How governments and companies turn technology into power. The decisive factor is not the technology, but how the organization is built around it.',
       },
+      media: { nav: 'Media', title: 'Media', description: 'Selected appearances and commentary.' },
       about: {
         nav: 'About',
         title: 'About — Dr. Lior Tabansky',
         description:
-          'For twenty years, one question: why capable states and companies stay insecure — and how defense innovation, AI, and national resilience actually get built.',
-      },
-      media: { nav: 'Media', title: 'Media', description: 'Selected appearances and commentary.' },
-      writing: {
-        nav: 'Writing',
-        title: 'Writing — Dr. Lior Tabansky',
-        description: 'A few arguments on AI, cyber-power, and national resilience — the thinking behind the work.',
+          'Why capable governments and companies remain insecure — and how defense innovation, AI and national resilience are built in practice.',
       },
     },
   },
@@ -43,18 +38,16 @@ export const siteContent: Record<Locale, LocaleContent> = {
     privateInquiries: 'לפניות פרטיות',
     pages: {
       home: { nav: 'בית', title: 'ליאור טבנסקי', description: 'סייבר לאומי וחדשנות ביטחונית.' },
-      about: { nav: 'אודות', title: 'אודות', description: 'רקע מקצועי ונקודות ציון נבחרות.' },
       media: { nav: 'מדיה', title: 'מדיה', description: 'הופעות ופרשנות נבחרות.' },
-      writing: { nav: 'כתיבה', title: 'כתיבה', description: 'כתיבה וניתוח נבחרים.' },
+      about: { nav: 'אודות', title: 'אודות', description: 'רקע מקצועי ונקודות ציון נבחרות.' },
     },
   },
 };
 
 export const paths: Record<PageKey, string> = {
   home: '',
-  about: 'about/',
   media: 'media/',
-  writing: 'writing/',
+  about: 'about/',
 };
 
 export function pagePath(locale: Locale, page: PageKey): string {
