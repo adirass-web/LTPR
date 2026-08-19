@@ -27,6 +27,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/mdx": "^6.0.1",
     "@eslint/js": "^10.0.1",
+    "@typescript-eslint/parser": "^8.65.0",
     "@tailwindcss/vite": "^4.3.0",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^10.4.0",

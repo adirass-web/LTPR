@@ -1,14 +1,23 @@
 # cyberdrtabansky.com
 
-Personal authority site for **Dr. Lior Tabansky** — restrained, premium, media-forward. Positioning: *first-principles strategy for defense innovation, AI, and digital trust.* No overt selling.
+Production English authority site for Dr. Lior Tabansky: first-principles strategy for defense innovation, AI and national resilience.
 
-- **Stack:** Astro (static), i18n (EN default + Hebrew RTL), mobile-first.
-- **Design:** production semantic layout based on Pojo Frame/Firma, with Zapa-inspired Media/Writing indexes. Final typography and color tuning are deferred.
+## Live English scope
+
+- `/en/` — Home
+- `/en/media/` — selected television, press and speaking appearances
+- `/en/about/` — background, method and credentials
+
+The Hebrew routes are deliberately noindex translation staging. They are not linked as published equivalents until approved native Hebrew copy is available.
 
 ## Build
+
 ```bash
-npm install
-npm run dev
-npm run build   # -> dist/
+npm ci
+npm run check
+npm run build
 ```
-Deploy `dist/` to any static host. On-brand rules: see `CLAUDE.md`. Dev/ops: see `HANDOVER.md`.
+
+`dist/` is the static production artifact. GitHub Pages deploys from `main`.
+
+The current editorial, accessibility and release rules are in [CLAUDE.md](CLAUDE.md). Historical implementation material is retained under `archive/` and Git history.

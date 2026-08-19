@@ -8,15 +8,25 @@ interface Props {
   home?: boolean;
   canonicalPath?: string;
   alternatePath?: string;
+  showLanguageSwitch?: boolean;
   noindex?: boolean;
 }
 
-const { locale, page, home = false, canonicalPath, alternatePath, noindex = false } = Astro.props;
+const {
+  locale,
+  page,
+  home = false,
+  canonicalPath,
+  alternatePath,
+  showLanguageSwitch = false,
+  noindex = false,
+} = Astro.props;
 const alternateLocale = locale === 'en' ? 'he' : 'en';
 const content = siteContent[locale];
 const current = content.pages[page];
 const dir = locale === 'he' ? 'rtl' : 'ltr';
 const path = canonicalPath ?? pagePath(locale, page);
+const alternate = showLanguageSwitch ? (alternatePath ?? pagePath(alternateLocale, page)) : undefined;
 ---
 
 <Foundation
@@ -25,33 +35,45 @@ const path = canonicalPath ?? pagePath(locale, page);
   title={current.title}
   description={current.description}
   canonicalPath={path}
-  alternatePath={alternatePath}
-  alternateLang={alternatePath ? alternateLocale : undefined}
+  alternatePath={alternate}
+  alternateLang={alternate ? alternateLocale : undefined}
   noindex={noindex}
 >
   <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
   <header class="site-header">
     <nav class="site-nav" aria-label={locale === 'he' ? 'ניווט ראשי' : 'Primary navigation'}>
       <a class="site-name" href={pagePath(locale, 'home')}><bdi>Dr. Lior Tabansky</bdi></a>
-      <div class="site-nav__links">
-        {
-          launchPageKeys.map((item) => (
-            <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
-              {content.pages[item].nav}
-            </a>
-          ))
-        }
-        {
-          locale === 'he' && (
-            <a class="site-nav__locale" href={pagePath('en', page)} lang="en" dir="ltr">
-              EN
-            </a>
-          )
-        }
-      </div>
+      <details class="site-nav__menu" open>
+        <summary>{locale === 'he' ? 'תפריט' : 'Menu'}</summary>
+        <ul class="site-nav__links">
+          {
+            launchPageKeys.map((item) => (
+              <li>
+                <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
+                  {content.pages[item].nav}
+                </a>
+              </li>
+            ))
+          }
+          {
+            alternate && (
+              <li>
+                <a
+                  class="site-nav__locale"
+                  href={alternate}
+                  lang={alternateLocale}
+                  dir={alternateLocale === 'he' ? 'rtl' : 'ltr'}
+                >
+                  {content.switchLabel}
+                </a>
+              </li>
+            )
+          }
+        </ul>
+      </details>
     </nav>
   </header>
-  <main id="content" class:list={['site-main', { 'site-main--home': home }]}>
+  <main id="content" tabindex="-1" class:list={['site-main', { 'site-main--home': home }]}>
     <slot />
   </main>
   <footer id="inquiries" class="site-footer">
@@ -64,3 +86,17 @@ const path = canonicalPath ?? pagePath(locale, page);
     </div>
   </footer>
 </Foundation>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.site-nav__menu');
+  const compactViewport = window.matchMedia('(max-width: 52.5rem)');
+
+  if (menu) {
+    const synchronizeMenu = () => {
+      menu.open = !compactViewport.matches;
+    };
+
+    synchronizeMenu();
+    compactViewport.addEventListener('change', synchronizeMenu);
+  }
+</script>

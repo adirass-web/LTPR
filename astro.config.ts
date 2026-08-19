@@ -15,7 +15,7 @@ export default defineConfig({
   base: githubPages ? '/LTPR' : undefined,
   integrations: [
     sitemap({
-      filter: (page) => ['/en/', '/en/about/', '/en/writing/'].some((route) => page.endsWith(route)),
+      filter: (page) => ['/en/', '/en/about/', '/en/media/'].some((route) => page.endsWith(route)),
     }),
     mdx(),
   ],

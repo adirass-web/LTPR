@@ -91,7 +91,7 @@ export const aboutV3 = {
     {
       label: 'On AI',
       paragraphs: [
-        'A minister\'s office calls. They want “the best AI” by year\'s end. Another asks for two hundred trained cyber-warriors.',
+        "A minister's office calls. They want “the best AI” by year's end. Another asks for two hundred trained cyber-warriors.",
         'I ask the question that comes first: to do what?',
         'Which decision will it change? What will you gain? How soon?',
         'The room goes quiet. No one had asked.',

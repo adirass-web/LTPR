@@ -17,15 +17,30 @@ import { aboutV3 } from '~/content/en-v3';
 
     <div class="longform-sections">
       {
-        aboutV3.sections.map((section) => (
-          <section class="longform-section" data-citation-slots={section.citations.join('; ') || undefined}>
+        aboutV3.sections.map((section, index) => (
+          <section
+            class="longform-section"
+            aria-labelledby={`about-section-${index + 1}`}
+            data-citation-slots={section.citations.join('; ') || undefined}
+          >
             <div class="longform-section__label">
+              <p class="section-index" aria-hidden="true">
+                0{index + 1}
+              </p>
               {section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}
-              <h2>{section.label}</h2>
+              <h2 id={`about-section-${index + 1}`}>{section.label}</h2>
             </div>
             <div class="longform-section__copy">
-              {section.list && <ul>{section.list.map((item) => <li>{item}</li>)}</ul>}
-              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {section.list && (
+                <ul>
+                  {section.list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
+              {section.paragraphs.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
               {section.label === 'On discretion' && (
                 <a class="text-link" href="mailto:liortabansky@gmail.com">
                   Private inquiries <span aria-hidden="true">→</span>
