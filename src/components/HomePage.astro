@@ -11,9 +11,7 @@ import { homeV3 } from '~/content/en-v3';
         <div class="home-hero__copy">
           <p class="eyebrow">{homeV3.hero.eyebrow}</p>
           <h1 id="home-title">{homeV3.hero.title}</h1>
-          {homeV3.hero.subhead.split('\n\n').map((paragraph) => (
-            <p class="home-hero__standfirst">{paragraph}</p>
-          ))}
+          {homeV3.hero.subhead.split('\n\n').map((paragraph) => <p class="home-hero__standfirst">{paragraph}</p>)}
           <a class="cta cta--accent" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
         </div>
         <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
@@ -31,7 +29,9 @@ import { homeV3 } from '~/content/en-v3';
               <span aria-hidden="true">0{index + 1}</span>
               <div>
                 <h3>{problem.title}</h3>
-                {problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+                {problem.paragraphs.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
               </div>
             </li>
           ))
