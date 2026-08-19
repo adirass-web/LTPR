@@ -9,8 +9,11 @@ import { homeV3 } from '~/content/en-v3';
     <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero__inner">
         <div class="home-hero__copy">
+          <p class="eyebrow">{homeV3.hero.eyebrow}</p>
           <h1 id="home-title">{homeV3.hero.title}</h1>
-          <p class="home-hero__standfirst">{homeV3.hero.subhead}</p>
+          {homeV3.hero.subhead.split('\n\n').map((paragraph) => (
+            <p class="home-hero__standfirst">{paragraph}</p>
+          ))}
           <a class="cta cta--accent" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
         </div>
         <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
@@ -19,7 +22,7 @@ import { homeV3 } from '~/content/en-v3';
 
     <section class="home-section home-section--pillars" aria-labelledby="problems-title">
       <div class="home-section__header">
-        <h2 id="problems-title">The three problems I work</h2>
+        <h2 id="problems-title">{homeV3.problemsTitle}</h2>
       </div>
       <ol class="pillar-list">
         {
@@ -28,7 +31,7 @@ import { homeV3 } from '~/content/en-v3';
               <span aria-hidden="true">0{index + 1}</span>
               <div>
                 <h3>{problem.title}</h3>
-                <p>{problem.text}</p>
+                {problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
               </div>
             </li>
           ))
@@ -38,7 +41,9 @@ import { homeV3 } from '~/content/en-v3';
 
     <section class="home-section home-section--proof" aria-labelledby="proof-title">
       <p class="eyebrow">Twenty years, briefly</p>
-      <p id="proof-title" class="quiet-proof">{homeV3.proof}</p>
+      <ul id="proof-title" class="quiet-proof">
+        {homeV3.proof.map((item) => <li>{item}</li>)}
+      </ul>
     </section>
 
     <section class="home-close" aria-labelledby="inquiries-title">
@@ -46,7 +51,7 @@ import { homeV3 } from '~/content/en-v3';
         <p class="eyebrow">Private inquiries</p>
         <h2 id="inquiries-title">{homeV3.close}</h2>
       </div>
-      <a class="cta cta--outline" href="#inquiries">Private inquiries <span aria-hidden="true">→</span></a>
+      <a class="cta cta--outline" href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
     </section>
   </div>
 </SiteShell>
