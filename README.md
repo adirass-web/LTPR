@@ -26,4 +26,4 @@ the production site. The Cloudflare project settings, release checks and
 rollback procedure are documented in
 [`docs/CLOUDFLARE_DEPLOYMENT.md`](docs/CLOUDFLARE_DEPLOYMENT.md).
 
-The current editorial, accessibility and release rules are in [CLAUDE.md](CLAUDE.md). Historical implementation material is retained under `archive/` and Git history.
+The current editorial, accessibility and release rules are in [CLAUDE.md](CLAUDE.md). Git history preserves retired implementation material. The inventory of materials held in the owner's separate asset folder is recorded in [`docs/SOURCE_AND_DEPENDENCY_REGISTER.md`](docs/SOURCE_AND_DEPENDENCY_REGISTER.md).

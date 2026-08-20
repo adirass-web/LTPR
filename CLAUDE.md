@@ -4,8 +4,9 @@
 
 - **English is the production site.** Its live architecture is **Home · Media · About**.
 - The approved English source is [`src/content/en-v3.ts`](src/content/en-v3.ts). Do not change its published wording without the owner's explicit approval.
+- The owner-held asset inventory is [`docs/SOURCE_AND_DEPENDENCY_REGISTER.md`](docs/SOURCE_AND_DEPENDENCY_REGISTER.md). Its legacy readiness fields will be reconciled during the next Media work package.
 - Hebrew routes are retained as noindex translation staging. Do not present them as published equivalents, link to them from the English menu, or emit `hreflang` alternates until native Hebrew copy is approved.
-- Writing is removed from the public site. Git history and `archive/` preserve retired work.
+- Writing is removed from the public site. Git history preserves retired work.
 - Private inquiries: `liortabansky@gmail.com`.
 
 ## Positioning and voice
