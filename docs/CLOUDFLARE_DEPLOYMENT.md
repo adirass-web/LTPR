@@ -4,6 +4,7 @@
 
 - Cloudflare account: `Adirassner@gmail.com's Account`
 - Pages project: `cyberdrtabansky`
+- Pages hostname: `https://cyberdrtabansky.pages.dev`
 - Source: `adirass-web/LTPR`
 - Production branch: `main`
 - Build command: `npm run build`
