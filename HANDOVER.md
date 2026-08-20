@@ -19,7 +19,15 @@ npm run build
 SITE_TARGET=github-pages npm run build
 ```
 
-GitHub Pages deploys the `main` branch. Keep generated `dist/` and `node_modules/` out of commits.
+Cloudflare Pages deploys `main` automatically with `npm run build` and publishes
+`dist/`. Pull requests receive Cloudflare preview deployments. GitHub Actions is
+the non-deploying verification gate and retains the GitHub Pages-target build as
+a base-path regression check.
+
+The production settings and rollback runbook are in
+[`docs/CLOUDFLARE_DEPLOYMENT.md`](docs/CLOUDFLARE_DEPLOYMENT.md). Keep generated
+`dist/`, `node_modules/`, local Wrangler state and local secret files out of
+commits.
 
 ## Next editorial work
 

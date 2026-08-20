@@ -18,6 +18,12 @@ npm run check
 npm run build
 ```
 
-`dist/` is the static production artifact. GitHub Pages deploys from `main`.
+`dist/` is the static production artifact. Cloudflare Pages builds and deploys
+`main` automatically; pull requests receive isolated preview deployments.
+
+GitHub Actions verifies every pull request and `main` push but does not publish
+the production site. The Cloudflare project settings, release checks and
+rollback procedure are documented in
+[`docs/CLOUDFLARE_DEPLOYMENT.md`](docs/CLOUDFLARE_DEPLOYMENT.md).
 
 The current editorial, accessibility and release rules are in [CLAUDE.md](CLAUDE.md). Historical implementation material is retained under `archive/` and Git history.

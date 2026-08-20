@@ -1,5 +1,8 @@
 node_modules/
 dist/
 .astro/
+.npm-cache/
+.wrangler/
+.dev.vars*
 .DS_Store
 *.log
