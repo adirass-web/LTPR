@@ -4,6 +4,8 @@
 **Updated:** 2026-07-20  
 **Scope:** public-site inputs only; not a license to publish any listed asset
 
+**Inventory notice:** This register inventories materials held in the owner's separate local asset folder. Its existing publication-readiness fields are preserved as recorded and will be reconciled during the next Media work package; they are not a current inventory of runtime assets in this repository.
+
 ## How to use this register
 
 This is the release gate for source material, assets, links, and claims. A row is:
@@ -95,3 +97,4 @@ The source inventory was reviewed from the handover and asset plan. The current 
 7. Confirm the hosting, analytics, and deployment owner.
 
 Until the release-critical rows are resolved, implementation may safely proceed on structure, visual directions, responsive behavior, guarded copy, and data-model preparation—but not on publication of the associated media or claims.
+
