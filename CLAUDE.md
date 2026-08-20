@@ -31,4 +31,3 @@
 - Media items use the original outlet or platform link. Logos and thumbnails are supporting evidence, not decoration.
 - Do not add generic labels such as “Featured appearance” or “Hebrew television interview.” Use the outlet, title and useful date/language/duration only.
 - Preserve semantic headings, keyboard-accessible controls, visible focus states, responsive AVIF/WebP/fallback images, reduced-motion support and logical CSS properties for future RTL work.
-

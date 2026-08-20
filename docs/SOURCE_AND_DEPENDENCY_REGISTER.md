@@ -97,4 +97,3 @@ The source inventory was reviewed from the handover and asset plan. The current 
 7. Confirm the hosting, analytics, and deployment owner.
 
 Until the release-critical rows are resolved, implementation may safely proceed on structure, visual directions, responsive behavior, guarded copy, and data-model preparation—but not on publication of the associated media or claims.
-
