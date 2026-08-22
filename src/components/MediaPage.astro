@@ -21,10 +21,15 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
       <div class="media-lead">
         <div class="media-lead__visual-stack">
           <div class="media-lead__visual">
-            <ResponsiveMediaImage image={lead.image} loading="eager" fetchpriority="high" />
+            <ResponsiveMediaImage
+              image={lead.image}
+              loading="eager"
+              fetchpriority="high"
+              sizes="(min-width: 46rem) 66vw, 100vw"
+            />
           </div>
           <div class="media-lead__network" aria-hidden="true">
-            <ResponsiveMediaImage image={lead.secondaryImage} />
+            <ResponsiveMediaImage image={lead.secondaryImage} sizes="(min-width: 46rem) 66vw, 100vw" />
           </div>
         </div>
         <div class="media-lead__copy">
@@ -41,14 +46,6 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
       <div class="media-grid">
         {videos.map((item) => <MediaVideoCard item={item} />)}
       </div>
-      <a
-        class="text-link media-channel-link"
-        href="https://www.youtube.com/@ltabansky6248/videos"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        More video <span aria-hidden="true">↗</span><span class="sr-only">, opens in a new tab</span>
-      </a>
     </section>
 
     <section class="media-section" aria-labelledby="press-title">

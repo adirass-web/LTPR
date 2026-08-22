@@ -1,9 +1,12 @@
 export type MediaImage = {
-  src: string;
+  base: string;
+  widths: readonly number[];
   width: number;
   height: number;
   alt: string;
 };
+
+type MediaStatus = 'verified' | 'owner-archive' | 'source-pending';
 
 export type MediaVideoItem = {
   id: string;
@@ -15,6 +18,8 @@ export type MediaVideoItem = {
   url?: string;
   image?: MediaImage;
   posterLabel?: string;
+  visualMode: 'poster' | 'typography';
+  status: MediaStatus;
   originalLang?: 'en' | 'he' | 'it' | 'ru';
 };
 
@@ -26,6 +31,7 @@ export type MediaPressItem = {
   date: string;
   url: string;
   imageSrc?: string;
+  status: Extract<MediaStatus, 'verified'>;
   originalLang?: 'en' | 'fr' | 'it' | 'nl';
 };
 
@@ -36,25 +42,29 @@ export type MediaArchiveItem = {
   date: string;
   url: string;
   note?: string;
+  status: MediaStatus;
   originalLang?: 'en' | 'he' | 'fr' | 'it' | 'pl';
 };
 
 export const lead = {
-  outlet: 'RAI · Codice: La vita è digitale',
-  title: 'Networks, digital society and resilience',
-  date: '2020',
+  outlet: 'RAI · Codice: la vita è digitale',
+  title: 'Codice: la vita è digitale',
+  date: '10 May 2020',
   meta: 'RAI 1 · Italian',
+  status: 'owner-archive' as const,
   image: {
-    src: 'codice-2020.jpg',
-    width: 640,
-    height: 360,
-    alt: 'Lior Tabansky speaking on RAI Codice: La vita è digitale',
+    base: 'codice-2020',
+    widths: [480, 768, 1024],
+    width: 1024,
+    height: 576,
+    alt: 'Lior Tabansky speaking on RAI Codice: la vita è digitale',
   } satisfies MediaImage,
   secondaryImage: {
-    src: 'codice-network.jpg',
-    width: 480,
-    height: 270,
-    alt: 'Network visualization shown in the RAI Codice episode',
+    base: 'codice-network',
+    widths: [480, 768, 1024],
+    width: 1024,
+    height: 576,
+    alt: 'Network-science installation shown in the RAI Codice episode',
   } satisfies MediaImage,
 };
 
@@ -68,11 +78,14 @@ export const videos: MediaVideoItem[] = [
     meta: 'Hebrew',
     url: 'https://youtu.be/-M2fTsR8YC8',
     image: {
-      src: 'channel-economy.jpg',
-      width: 360,
-      height: 202,
+      base: 'channel-economy',
+      widths: [480, 640],
+      width: 640,
+      height: 360,
       alt: 'Lior Tabansky discussing Bank Leumi and Meta Israel on Channel Economy',
     },
+    visualMode: 'poster',
+    status: 'owner-archive',
   },
   {
     id: 'channel14-pegasus-2022',
@@ -82,11 +95,14 @@ export const videos: MediaVideoItem[] = [
     date: '19 January 2022',
     meta: 'Hebrew · owner archive',
     image: {
-      src: 'channel14-2022.jpg',
-      width: 360,
-      height: 202,
+      base: 'channel14-2022',
+      widths: [480, 768],
+      width: 768,
+      height: 432,
       alt: 'Lior Tabansky discussing police phone hacking and Pegasus on Channel 14',
     },
+    visualMode: 'poster',
+    status: 'source-pending',
   },
   {
     id: 'ntv-innovation-2021',
@@ -94,14 +110,17 @@ export const videos: MediaVideoItem[] = [
     outlet: 'NTV',
     title: 'Building innovation ecosystems: Silicon Valley, universities and the Israeli experience',
     date: '8 December 2021',
-    meta: 'Russian national broadcast',
+    meta: 'Russian · national broadcast',
     url: 'https://www.ntv.ru/novosti/2642205/',
     image: {
-      src: 'ntv-2021.jpg',
-      width: 360,
-      height: 202,
+      base: 'ntv-2021',
+      widths: [480, 768],
+      width: 768,
+      height: 432,
       alt: 'Lior Tabansky discussing innovation systems on NTV',
     },
+    visualMode: 'poster',
+    status: 'verified',
   },
   {
     id: 'rainews-russia-2019',
@@ -112,6 +131,8 @@ export const videos: MediaVideoItem[] = [
     meta: 'Interview by Annamaria Esposito · Italian',
     url: 'https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html',
     posterLabel: 'RAINEWS · RUSSIA · 2019',
+    visualMode: 'typography',
+    status: 'verified',
   },
   {
     id: 'channel10-undersea-2015',
@@ -121,11 +142,14 @@ export const videos: MediaVideoItem[] = [
     date: '27 October 2015',
     meta: 'Hebrew · owner archive',
     image: {
-      src: 'channel10-2015.jpg',
-      width: 400,
-      height: 226,
+      base: 'channel10-2015',
+      widths: [480, 768],
+      width: 768,
+      height: 432,
       alt: 'Lior Tabansky on Channel 10 discussing threats to undersea internet cables',
     },
+    visualMode: 'poster',
+    status: 'source-pending',
   },
 ];
 
@@ -138,6 +162,7 @@ export const press: MediaPressItem[] = [
     date: '4 December 2023',
     url: 'https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204',
     imageSrc: 'figaro.jpg',
+    status: 'verified',
     originalLang: 'fr',
   },
   {
@@ -148,6 +173,7 @@ export const press: MediaPressItem[] = [
     date: '27 June 2022',
     url: 'https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1',
     imageSrc: 'ap.jpg',
+    status: 'verified',
     originalLang: 'en',
   },
   {
@@ -158,6 +184,7 @@ export const press: MediaPressItem[] = [
     date: '4 January 2022',
     url: 'https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654',
     imageSrc: 'nrc.png',
+    status: 'verified',
     originalLang: 'nl',
   },
   {
@@ -167,6 +194,7 @@ export const press: MediaPressItem[] = [
     title: 'Entre NSO et le pouvoir israélien, des liens troubles',
     date: '21 July 2021',
     url: 'https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles',
+    status: 'verified',
     originalLang: 'fr',
   },
   {
@@ -177,6 +205,7 @@ export const press: MediaPressItem[] = [
     date: '20 May 2020',
     url: 'https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/',
     imageSrc: 'repubblica.png',
+    status: 'verified',
     originalLang: 'it',
   },
   {
@@ -186,6 +215,7 @@ export const press: MediaPressItem[] = [
     title: 'Difesa e cyber-sicurezza, l’Italia è in ritardo di 10 anni',
     date: '7 July 2018',
     url: 'https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html',
+    status: 'verified',
     originalLang: 'it',
   },
 ];
@@ -193,11 +223,12 @@ export const press: MediaPressItem[] = [
 export const archive: MediaArchiveItem[] = [
   {
     id: 'rai-codice-2017',
-    outlet: 'RAI · Codice: La vita è digitale',
+    outlet: 'RAI · Codice: la vita è digitale',
     title: 'Cybersicurezza, esperti a confronto',
     date: '18 August 2017',
     url: 'https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html',
     note: 'First-season RAI appearance',
+    status: 'verified',
     originalLang: 'it',
   },
   {
@@ -206,6 +237,7 @@ export const archive: MediaArchiveItem[] = [
     title: 'NSO, surveillance and the double-edged sword of the Start-Up Nation',
     date: '22 July 2021',
     url: 'https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635',
+    status: 'verified',
   },
   {
     id: 'ynet-technology-2007',
@@ -214,6 +246,7 @@ export const archive: MediaArchiveItem[] = [
     date: '4 July 2007',
     url: 'https://www.ynet.co.il/articles/0,7340,L-3421276,00.html',
     note: 'From the archive',
+    status: 'verified',
     originalLang: 'he',
   },
 ];
