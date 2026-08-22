@@ -1,7 +1,7 @@
 export type MediaImage = {
-  base: string;
-  widths: number[];
-  fallbackWidth: number;
+  src: string;
+  width: number;
+  height: number;
   alt: string;
 };
 
@@ -46,15 +46,15 @@ export const lead = {
   meta: 'RAI 1 · Italian',
   url: 'https://www.raiplay.it/',
   image: {
-    base: 'codice-2020',
-    widths: [480, 768, 1024],
-    fallbackWidth: 1024,
+    src: 'codice-2020.jpg',
+    width: 1024,
+    height: 576,
     alt: 'Lior Tabansky speaking on RAI Codice: La vita è digitale',
   } satisfies MediaImage,
   secondaryImage: {
-    base: 'codice-network',
-    widths: [480, 768, 1024],
-    fallbackWidth: 1024,
+    src: 'codice-network.jpg',
+    width: 1024,
+    height: 576,
     alt: 'Network visualization shown in the RAI Codice episode',
   } satisfies MediaImage,
 };
@@ -69,9 +69,9 @@ export const videos: MediaVideoItem[] = [
     meta: 'Hebrew',
     url: 'https://youtu.be/-M2fTsR8YC8',
     image: {
-      base: 'channel-economy',
-      widths: [480, 640],
-      fallbackWidth: 640,
+      src: 'channel-economy.jpg',
+      width: 640,
+      height: 360,
       alt: 'Lior Tabansky discussing Bank Leumi and Meta Israel on Channel Economy',
     },
   },
@@ -84,9 +84,9 @@ export const videos: MediaVideoItem[] = [
     meta: 'Hebrew',
     url: 'https://www.youtube.com/',
     image: {
-      base: 'channel14-2022',
-      widths: [480, 768],
-      fallbackWidth: 768,
+      src: 'channel14-2022.jpg',
+      width: 960,
+      height: 540,
       alt: 'Lior Tabansky discussing police phone hacking and Pegasus on Channel 14',
     },
   },
@@ -99,9 +99,9 @@ export const videos: MediaVideoItem[] = [
     meta: 'Russian national broadcast',
     url: 'https://www.ntv.ru/novosti/2642205/',
     image: {
-      base: 'ntv-2021',
-      widths: [480, 768],
-      fallbackWidth: 768,
+      src: 'ntv-2021.jpg',
+      width: 1280,
+      height: 720,
       alt: 'Lior Tabansky discussing innovation systems on NTV',
     },
   },
@@ -124,9 +124,9 @@ export const videos: MediaVideoItem[] = [
     meta: 'Hebrew',
     url: 'https://www.youtube.com/@ltabansky6248/videos',
     image: {
-      base: 'channel10-2015',
-      widths: [480, 768],
-      fallbackWidth: 768,
+      src: 'channel10-2015.jpg',
+      width: 1280,
+      height: 720,
       alt: 'Lior Tabansky on Channel 10 discussing threats to undersea internet cables',
     },
   },
