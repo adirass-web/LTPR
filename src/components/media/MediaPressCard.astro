@@ -19,7 +19,11 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
   >
     <div class="media-card__press-visual">
       <span class="media-card__masthead">{item.outlet}</span>
-      {item.imageSrc && <img src={asset(item.imageSrc)} width="320" height="240" loading="lazy" decoding="async" alt="" />}
+      {
+        item.imageSrc && (
+          <img src={asset(item.imageSrc)} width="320" height="240" loading="lazy" decoding="async" alt="" />
+        )
+      }
     </div>
     <div class="media-card__body">
       <p class="eyebrow">{item.outlet}</p>
