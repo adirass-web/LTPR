@@ -30,7 +30,7 @@ export type MediaPressItem = {
   title: string;
   date: string;
   url: string;
-  imageSrc?: string;
+  image: MediaImage;
   status: Extract<MediaStatus, 'verified'>;
   originalLang?: 'en' | 'fr' | 'it' | 'nl';
 };
@@ -130,8 +130,14 @@ export const videos: MediaVideoItem[] = [
     date: '12 May 2019',
     meta: 'Interview by Annamaria Esposito · Italian',
     url: 'https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html',
-    posterLabel: 'RAINEWS · RUSSIA · 2019',
-    visualMode: 'typography',
+    image: {
+      base: 'rainews-2019',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'Lior Tabansky interviewed by RaiNews 24 about Russia and cybersecurity strategy',
+    },
+    visualMode: 'poster',
     status: 'verified',
   },
   {
@@ -161,7 +167,13 @@ export const press: MediaPressItem[] = [
     title: 'Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille',
     date: '4 December 2023',
     url: 'https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204',
-    imageSrc: 'figaro.jpg',
+    image: {
+      base: 'press-figaro',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'Le Figaro article preview about artificial intelligence in the Israel-Hamas war',
+    },
     status: 'verified',
     originalLang: 'fr',
   },
@@ -172,7 +184,13 @@ export const press: MediaPressItem[] = [
     title: 'Cyberattack forces Iran steel company to halt production',
     date: '27 June 2022',
     url: 'https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1',
-    imageSrc: 'ap.jpg',
+    image: {
+      base: 'press-ap',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'Associated Press article preview about the cyberattack on an Iranian steel company',
+    },
     status: 'verified',
     originalLang: 'en',
   },
@@ -183,7 +201,13 @@ export const press: MediaPressItem[] = [
     title: 'Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal',
     date: '4 January 2022',
     url: 'https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654',
-    imageSrc: 'nrc.png',
+    image: {
+      base: 'press-nrc',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'NRC article preview about the Pegasus surveillance-industry scandal',
+    },
     status: 'verified',
     originalLang: 'nl',
   },
@@ -194,6 +218,13 @@ export const press: MediaPressItem[] = [
     title: 'Entre NSO et le pouvoir israélien, des liens troubles',
     date: '21 July 2021',
     url: 'https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles',
+    image: {
+      base: 'press-france24',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'France 24 article preview about links between NSO and Israeli power',
+    },
     status: 'verified',
     originalLang: 'fr',
   },
@@ -204,7 +235,13 @@ export const press: MediaPressItem[] = [
     title: 'Israele vs Iran: il nuovo fronte di guerra è il cyberspazio',
     date: '20 May 2020',
     url: 'https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/',
-    imageSrc: 'repubblica.png',
+    image: {
+      base: 'press-repubblica',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'la Repubblica article preview about cyber conflict between Israel and Iran',
+    },
     status: 'verified',
     originalLang: 'it',
   },
@@ -215,6 +252,13 @@ export const press: MediaPressItem[] = [
     title: 'Difesa e cyber-sicurezza, l’Italia è in ritardo di 10 anni',
     date: '7 July 2018',
     url: 'https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html',
+    image: {
+      base: 'press-ilgiornale',
+      widths: [480, 768],
+      width: 768,
+      height: 480,
+      alt: 'Il Giornale article preview about Italy and cybersecurity',
+    },
     status: 'verified',
     originalLang: 'it',
   },

@@ -1,12 +1,12 @@
 ---
 import type { MediaPressItem } from '~/data/media';
+import ResponsiveMediaImage from './ResponsiveMediaImage.astro';
 
 interface Props {
   item: MediaPressItem;
 }
 
 const { item } = Astro.props;
-const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}`;
 ---
 
 <article class="media-card media-card--press">
@@ -18,12 +18,7 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
     aria-label={`Read ${item.title} in ${item.outlet}, opens in a new tab`}
   >
     <div class="media-card__press-visual">
-      <span class="media-card__masthead">{item.outlet}</span>
-      {
-        item.imageSrc && (
-          <img src={asset(item.imageSrc)} width="320" height="240" loading="lazy" decoding="async" alt="" />
-        )
-      }
+      <ResponsiveMediaImage image={item.image} sizes="(min-width: 46rem) 35vw, 100vw" />
     </div>
     <div class="media-card__body">
       <p class="eyebrow">{item.outlet}</p>

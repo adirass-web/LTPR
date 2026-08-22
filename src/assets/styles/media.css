@@ -193,29 +193,25 @@
 }
 
 .media-card__press-visual {
-  position: relative;
-  display: grid;
-  min-block-size: clamp(13rem, 44cqi, 20rem);
-  align-content: space-between;
-  gap: 1rem;
-  padding: clamp(1rem, 5cqi, 2rem);
   overflow: clip;
   border: var(--rule);
 }
 
-.media-card__masthead {
-  max-inline-size: 12ch;
-  font-size: clamp(2rem, 9cqi, 4rem);
-  line-height: 0.88;
-  letter-spacing: -0.06em;
+.media-card--press .media-card__link {
+  display: grid;
+  grid-template-rows: minmax(0, 1.618fr) minmax(0, 1fr);
+  min-block-size: clamp(25rem, 60cqi, 29rem);
+}
+
+.media-card__press-visual picture,
+.media-card__press-visual img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .media-card__press-visual img {
-  inline-size: min(48%, 20rem);
-  block-size: auto;
-  align-self: end;
-  justify-self: end;
-  filter: grayscale(100%);
+  object-fit: cover;
 }
 
 .media-coverage-grid {
@@ -256,28 +252,12 @@
 }
 
 .media-stages {
-  display: grid;
-  gap: var(--media-space-grid);
-}
-
-.media-visual--stage {
-  aspect-ratio: 3 / 4;
-  max-block-size: 34rem;
-  overflow: clip;
-}
-
-.media-visual--stage picture,
-.media-visual--stage img {
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.media-visual--stage img {
-  object-fit: cover;
+  --media-stage-min: 18rem;
 }
 
 .media-stage-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--media-stage-min)), 1fr));
   margin: 0;
   border-block-start: var(--rule);
 }
@@ -286,6 +266,7 @@
   display: grid;
   grid-template-columns: minmax(6rem, 0.36fr) minmax(0, 1fr);
   gap: 1rem;
+  min-inline-size: 0;
   padding-block: 1.1rem;
   border-block-end: 1px solid color-mix(in srgb, var(--ink) 42%, var(--canvas));
 }
@@ -301,8 +282,10 @@
 }
 
 .media-stage-list dd {
+  min-inline-size: 0;
   font-size: clamp(1.1rem, 4cqi, 1.5rem);
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .media-press-kit {
@@ -336,10 +319,6 @@
 
   .media-lead {
     grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 0.7fr);
-  }
-
-  .media-stages {
-    grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.45fr);
   }
 
   .media-press-kit {
