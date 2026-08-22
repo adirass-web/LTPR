@@ -1,0 +1,25 @@
+---
+import type { MediaArchiveItem } from '~/data/media';
+
+interface Props {
+  item: MediaArchiveItem;
+}
+
+const { item } = Astro.props;
+---
+
+<a
+  class="media-coverage-item"
+  href={item.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${item.outlet}: ${item.title}, opens in a new tab`}
+>
+  <span class="media-coverage-item__date">{item.date}</span>
+  <span class="media-coverage-item__copy">
+    <span class="eyebrow">{item.outlet}</span>
+    <span class="media-coverage-item__title" lang={item.originalLang}>{item.title}</span>
+    {item.note && <span class="media-meta">{item.note}</span>}
+  </span>
+  <span class="media-arrow" aria-hidden="true">↗</span>
+</a>
