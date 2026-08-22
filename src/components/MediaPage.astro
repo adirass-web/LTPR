@@ -10,7 +10,14 @@ import '~/assets/styles/media.css';
 const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 ---
 
-<SiteShell locale="en" page="media">
+<SiteShell
+  locale="en"
+  page="media"
+  socialImage={{
+    path: 'images/media/codice-2020-1024w.jpg',
+    alt: 'Dr. Lior Tabansky on RAI’s Codice: la vita è digitale',
+  }}
+>
   <article class="media-page">
     <header class="media-page__intro">
       <p class="eyebrow">Selected appearances</p>

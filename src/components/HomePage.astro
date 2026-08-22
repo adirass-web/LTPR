@@ -5,7 +5,15 @@ import { homeV3 } from '~/content/en-v3';
 import { pagePath } from '~/content/site';
 ---
 
-<SiteShell locale="en" page="home" home>
+<SiteShell
+  locale="en"
+  page="home"
+  home
+  socialImage={{
+    path: 'images/portraits/lior-tabansky-portrait-2x3-1024.jpg',
+    alt: 'Dr. Lior Tabansky',
+  }}
+>
   <div class="home">
     <section id="profile" class="home-hero" aria-labelledby="home-title">
       <div class="home-hero__inner">

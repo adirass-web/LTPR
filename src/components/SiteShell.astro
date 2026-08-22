@@ -10,6 +10,10 @@ interface Props {
   alternatePath?: string;
   showLanguageSwitch?: boolean;
   noindex?: boolean;
+  socialImage?: {
+    path: string;
+    alt: string;
+  };
 }
 
 const {
@@ -20,6 +24,7 @@ const {
   alternatePath,
   showLanguageSwitch = false,
   noindex = false,
+  socialImage,
 } = Astro.props;
 const alternateLocale = locale === 'en' ? 'he' : 'en';
 const content = siteContent[locale];
@@ -57,6 +62,7 @@ const navItems =
   alternatePath={alternate}
   alternateLang={alternate ? alternateLocale : undefined}
   noindex={noindex}
+  socialImage={socialImage}
 >
   <a class="skip-link" href="#content">{locale === 'he' ? 'דלג לתוכן' : 'Skip to content'}</a>
   <header class="site-header">

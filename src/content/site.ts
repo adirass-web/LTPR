@@ -22,7 +22,12 @@ export const siteContent: Record<Locale, LocaleContent> = {
         title: 'Dr. Lior Tabansky — innovation systems, AI, digital trust and national resilience',
         description: 'Independent work on innovation systems, AI, digital trust and national resilience.',
       },
-      media: { nav: 'Media', title: 'Media', description: 'Selected appearances and commentary.' },
+      media: {
+        nav: 'Media',
+        title: 'Media — Dr. Lior Tabansky',
+        description:
+          'Selected interviews, television appearances and international press coverage on innovation systems, AI, cybersecurity and national resilience.',
+      },
       about: {
         nav: 'Profile',
         title: 'Profile — Dr. Lior Tabansky',
