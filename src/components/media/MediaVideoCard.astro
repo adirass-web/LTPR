@@ -19,7 +19,10 @@ const wrapperProps = item.url
 ---
 
 <article class="media-card media-card--video">
-  <Wrapper class:list={['media-card__link', { 'media-card__link--static': !item.url }]} {...wrapperProps}>
+  <Wrapper
+    class:list={['media-card__link', { 'media-card__link--static': !item.url }]}
+    {...wrapperProps}
+  >
     <div class="media-card__visual">
       {
         item.image ? (
