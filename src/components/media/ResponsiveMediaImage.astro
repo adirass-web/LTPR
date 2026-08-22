@@ -9,20 +9,14 @@ interface Props {
 
 const { image, loading = 'lazy', fetchpriority = 'auto' } = Astro.props;
 const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}`;
-const srcset = (extension: 'avif' | 'webp') =>
-  image.widths.map((width) => `${asset(`${image.base}-${width}w.${extension}`)} ${width}w`).join(', ');
 ---
 
-<picture>
-  <source type="image/avif" srcset={srcset('avif')} sizes="100vw" />
-  <source type="image/webp" srcset={srcset('webp')} sizes="100vw" />
-  <img
-    src={asset(`${image.base}-${image.fallbackWidth}w.jpg`)}
-    width={image.fallbackWidth}
-    height={Math.round((image.fallbackWidth * 9) / 16)}
-    loading={loading}
-    decoding="async"
-    fetchpriority={fetchpriority}
-    alt={image.alt}
-  />
-</picture>
+<img
+  src={asset(image.src)}
+  width={image.width}
+  height={image.height}
+  loading={loading}
+  decoding="async"
+  fetchpriority={fetchpriority}
+  alt={image.alt}
+/>
