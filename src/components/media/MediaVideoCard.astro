@@ -7,24 +7,27 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const Wrapper = item.url ? 'a' : 'div';
+const wrapperProps = item.url
+  ? {
+      href: item.url,
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      'aria-label': `Watch ${item.title} from ${item.outlet}, opens in a new tab`,
+    }
+  : {};
 ---
 
 <article class="media-card media-card--video">
-  <a
-    class="media-card__link"
-    href={item.url}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label={`Watch ${item.title} from ${item.outlet}, opens in a new tab`}
-  >
+  <Wrapper class:list={['media-card__link', { 'media-card__link--static': !item.url }]} {...wrapperProps}>
     <div class="media-card__visual">
       {item.image ? <ResponsiveMediaImage image={item.image} /> : <div class="media-card__poster-label">{item.posterLabel}</div>}
-      <span class="media-play" aria-hidden="true">▶</span>
+      {item.url && <span class="media-play" aria-hidden="true">▶</span>}
     </div>
     <div class="media-card__body">
       <p class="eyebrow">{item.outlet}</p>
       <h3>{item.title}</h3>
       <p class="media-meta">{item.date}{item.meta ? ` · ${item.meta}` : ''}</p>
     </div>
-  </a>
+  </Wrapper>
 </article>
