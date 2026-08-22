@@ -207,28 +207,29 @@ a:hover {
   overflow: clip;
 }
 .home-hero,
-.home-section,
-.home-close {
+.profile-section {
   border-block-end: var(--rule);
 }
 .home-hero__inner,
-.home-section,
-.home-close {
+.profile-section {
   inline-size: min(100% - 3rem, 90rem);
   margin-inline: auto;
 }
+.home-hero {
+  container: home-hero / inline-size;
+  scroll-margin-block-start: 4.5rem;
+}
 .home-hero__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.78fr);
-  min-block-size: min(47rem, calc(100vh - 4.5rem));
+  display: flex;
+  flex-direction: column-reverse;
 }
 .home-hero__copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-block: clamp(3rem, 7vw, 7rem);
-  padding-inline-end: clamp(1.5rem, 7vw, 8rem);
+  padding-block: 2.25rem 3.5rem;
+  padding-inline: 1rem;
 }
 .eyebrow {
   margin: 0 0 1.25rem;
@@ -247,7 +248,7 @@ a:hover {
 }
 .home-hero__standfirst {
   max-inline-size: 40rem;
-  margin: 2rem 0 0;
+  margin: 1.5rem 0 0;
   font-size: clamp(1.05rem, 1.7vw, 1.4rem);
   line-height: 1.45;
 }
@@ -275,7 +276,8 @@ a:hover {
 .color-portrait {
   align-self: stretch;
   margin: 0;
-  border-inline-start: var(--rule);
+  aspect-ratio: 2 / 3;
+  border-block-end: var(--rule);
 }
 .color-portrait picture,
 .color-portrait img {
@@ -285,6 +287,23 @@ a:hover {
 }
 .color-portrait img {
   object-fit: cover;
+}
+
+@container home-hero (inline-size >= 50rem) {
+  .home-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.78fr);
+    min-block-size: min(47rem, calc(100dvh - 4.5rem));
+  }
+  .home-hero__copy {
+    padding-block: clamp(3rem, 7vw, 7rem);
+    padding-inline: 0 clamp(1.5rem, 7vw, 8rem);
+  }
+  .color-portrait {
+    aspect-ratio: auto;
+    border-block-end: 0;
+    border-inline-start: var(--rule);
+  }
 }
 
 .proof-strip__inner {
@@ -318,81 +337,123 @@ a:hover {
   line-height: 1.45;
 }
 
-.home-section {
+.profile-section {
+  container: profile-section / inline-size;
   content-visibility: auto;
   contain-intrinsic-size: auto 52rem;
   padding-block: clamp(4rem, 9vw, 8rem);
 }
-.home-section__header {
-  display: grid;
-  grid-template-columns: minmax(10rem, 0.44fr) minmax(0, 1fr);
-  gap: 2rem;
+.profile-section__header {
   margin-block-end: clamp(2.5rem, 5vw, 5rem);
 }
-.home-section__header .eyebrow {
-  margin: 0;
-}
-.home-section__header h2 {
+.profile-section h2 {
   max-inline-size: 15ch;
+  margin: 0;
   font-size: clamp(2.25rem, 4.5vw, 5.25rem);
+  font-weight: 400;
   line-height: 0.92;
   letter-spacing: -0.055em;
   text-wrap: balance;
 }
-.pillar-list {
+.profile-area-list,
+.profile-record-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.pillar-list li {
-  display: grid;
-  grid-template-columns: minmax(10rem, 0.44fr) minmax(0, 1fr);
-  gap: 2rem;
+.profile-area-list {
+  border-block-start: var(--rule);
+}
+.profile-area-list li {
+  min-inline-size: 0;
   padding-block: 1.25rem 2.75rem;
   border-block-start: var(--rule);
 }
-.pillar-list li:last-child {
+.profile-area-list li:first-child {
+  border-block-start: 0;
+}
+.profile-area-list li:last-child {
   border-block-end: var(--rule);
 }
-.pillar-list span {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-}
-.pillar-list h3 {
+.profile-area-list h3 {
   max-inline-size: 18ch;
+  margin: 0;
   font-size: clamp(1.55rem, 2.7vw, 2.75rem);
+  font-weight: 400;
   line-height: 1;
   letter-spacing: -0.04em;
 }
-.pillar-list p {
+.profile-area-list__copy > p,
+.profile-prose > p {
   max-inline-size: 46rem;
   margin: 1rem 0 0;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.5;
   text-wrap: pretty;
 }
+.profile-prose > p:first-child {
+  margin-block-start: 0;
+}
+.profile-record-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  border-block-start: var(--rule);
+}
+.profile-record-list li {
+  min-inline-size: 0;
+  padding-block: 1.25rem 1.75rem;
+  padding-inline: 0 1.25rem;
+  border-block-end: var(--rule);
+  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+.profile-prose {
+  max-inline-size: 46rem;
+}
+.profile-prose .text-link {
+  display: inline-block;
+  margin-block-start: 1.75rem;
+}
+
+@container profile-section (inline-size >= 44rem) {
+  .profile-section__header,
+  .profile-area-list li,
+  .profile-section__layout {
+    display: grid;
+    grid-template-columns: minmax(11rem, 0.44fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 7rem);
+  }
+  .profile-section__header {
+    margin-block-end: clamp(2.5rem, 5vw, 5rem);
+  }
+  .profile-section__header h2 {
+    grid-column: 2;
+  }
+  .profile-area-list h3 {
+    grid-column: 1;
+  }
+  .profile-area-list__copy {
+    grid-column: 2;
+  }
+  .profile-area-list__copy > p:first-child {
+    margin-block-start: 0;
+  }
+  .profile-section__layout > .profile-section__header {
+    display: block;
+    margin: 0;
+  }
+  .profile-section__layout > .profile-record-list,
+  .profile-section__layout > .profile-prose {
+    grid-column: 2;
+  }
+  .profile-record-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 .text-link {
   font-size: 0.76rem;
   letter-spacing: 0.05em;
-}
-
-.home-close {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-block: clamp(5rem, 10vw, 10rem);
-}
-.home-close h2 {
-  max-inline-size: 16ch;
-  font-size: clamp(2.5rem, 5.5vw, 6.25rem);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-  text-wrap: balance;
-}
-.home-close .cta {
-  flex: none;
-  margin: 0;
 }
 
 html:dir(rtl) .eyebrow,
@@ -430,99 +491,21 @@ html:dir(rtl) .text-link span {
   .site-main--home {
     inline-size: 100%;
   }
-  .home-hero__inner {
-    display: flex;
-    flex-direction: column-reverse;
-    min-block-size: 0;
-  }
-  .home-hero__copy,
-  html:dir(rtl) .home-hero__copy {
-    padding: 2.25rem 1rem 3.5rem;
-  }
-  .color-portrait {
-    aspect-ratio: 2 / 3;
-    border-block-end: var(--rule);
-    border-inline-start: 0;
-  }
-  .home-hero__standfirst {
-    margin-block-start: 1.5rem;
-  }
   .home-hero__inner,
-  .home-section,
-  .home-close {
+  .profile-section {
     inline-size: min(100% - 2rem, 90rem);
   }
-  .home-section__header,
-  .pillar-list li {
-    display: block;
-  }
-  .home-section__header {
-    margin-block-end: 2.5rem;
-  }
-  .home-section__header h2 {
-    margin-block-start: 1.25rem;
-  }
-  .pillar-list li {
-    padding-block: 1rem 2rem;
-  }
-  .pillar-list li > span {
-    display: block;
-    margin-block-end: 1.2rem;
-  }
-  .home-close {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
-.home--v3 .home-section--pillars {
-  padding-block-start: clamp(4.5rem, 11vw, 10rem);
-}
-.home-section--proof {
-  display: grid;
-  grid-template-columns: minmax(10rem, 0.44fr) minmax(0, 1fr);
-  gap: 2rem;
-}
-.home-section--proof .eyebrow {
-  margin: 0;
-}
-.quiet-proof {
-  display: grid;
-  gap: 0.6rem;
-  max-inline-size: 55rem;
-  margin: 0;
-  padding: 0;
-  font-size: clamp(1.3rem, 2.55vw, 2.9rem);
-  line-height: 1.1;
-  letter-spacing: -0.045em;
-  list-style: none;
-}
-.quiet-proof li {
-  position: relative;
-  padding-inline-start: 1.25rem;
-}
-.quiet-proof li::before {
-  position: absolute;
-  inset-inline-start: 0;
-  color: var(--forest);
-  content: '—';
-}
-
-.longform-page,
+.route-note,
 .source-pending {
   max-inline-size: 72rem;
   margin-inline: auto;
 }
-.longform-opening {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.55fr);
-  gap: clamp(2rem, 7vw, 8rem);
-  align-items: end;
-  padding-block-end: clamp(4rem, 10vw, 9rem);
-  border-block-end: var(--rule);
+.route-note {
+  min-block-size: 50vh;
 }
-.longform-opening h1,
+.route-note h1,
 .writing-opening h1,
 .source-pending h1 {
   max-inline-size: 12ch;
@@ -533,7 +516,7 @@ html:dir(rtl) .text-link span {
   letter-spacing: -0.065em;
   text-wrap: balance;
 }
-.longform-opening > div > p:not(.eyebrow),
+.route-note > p,
 .writing-opening > p:not(.eyebrow),
 .source-pending > p:not(.eyebrow) {
   max-inline-size: 42rem;
@@ -541,10 +524,6 @@ html:dir(rtl) .text-link span {
   font-size: clamp(1.1rem, 1.8vw, 1.45rem);
   line-height: 1.48;
 }
-.longform-sections {
-  margin-block-start: clamp(4rem, 10vw, 9rem);
-}
-.longform-section,
 .writing-section {
   display: grid;
   grid-template-columns: minmax(12rem, 0.44fr) minmax(0, 1fr);
@@ -553,24 +532,12 @@ html:dir(rtl) .text-link span {
   border-block-start: var(--rule);
   scroll-margin-block-start: 6.5rem;
 }
-.longform-section:last-child,
 .writing-section:last-child {
   border-block-end: var(--rule);
 }
-.longform-section__label .eyebrow,
 .writing-section__header .eyebrow {
   margin: 0 0 1.25rem;
 }
-.longform-section__label {
-  align-self: start;
-}
-.section-index {
-  margin: 0 0 1.25rem;
-  color: var(--forest);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-}
-.longform-section h2,
 .writing-section h2 {
   max-inline-size: 13ch;
   margin: 0;
@@ -579,7 +546,6 @@ html:dir(rtl) .text-link span {
   line-height: 0.98;
   letter-spacing: -0.05em;
 }
-.longform-section__copy > p,
 .writing-section > p {
   max-inline-size: 45rem;
   margin: 0;
@@ -587,10 +553,7 @@ html:dir(rtl) .text-link span {
   line-height: 1.58;
   text-wrap: pretty;
 }
-.longform-section__copy > p + p {
-  margin-block-start: 1.2em;
-}
-.longform-section__copy .text-link,
+.route-note .text-link,
 .writing-section > .text-link {
   display: inline-block;
   margin-block-start: 2rem;
@@ -672,49 +635,25 @@ html:dir(rtl) .text-link span {
   min-block-size: 50vh;
 }
 
-html:dir(rtl) .longform-opening h1,
+html:dir(rtl) .route-note h1,
 html:dir(rtl) .writing-opening h1,
 html:dir(rtl) .source-pending h1,
-html:dir(rtl) .longform-section h2,
 html:dir(rtl) .writing-section h2,
-html:dir(rtl) .essay-list h3,
-html:dir(rtl) .quiet-proof {
+html:dir(rtl) .essay-list h3 {
   letter-spacing: normal;
 }
 
 @media (max-width: 799px) {
-  .home-section--proof,
-  .longform-opening,
-  .longform-section,
   .writing-section {
     display: block;
   }
-  .home-section--proof .quiet-proof,
-  .longform-section__copy,
   .writing-section > p,
   .essay-list,
   .publication-list {
     margin-block-start: 1.5rem;
   }
-  .color-portrait {
-    aspect-ratio: 2 / 3;
-    margin-block-start: 2rem;
-    border-block-start: var(--rule);
-    border-inline-start: 0;
-  }
-  .color-portrait--square {
-    aspect-ratio: 1;
-  }
-  .longform-opening,
   .writing-opening {
     padding-block-end: 4rem;
-  }
-}
-
-@media (min-width: 50rem) {
-  .longform-section__label {
-    position: sticky;
-    inset-block-start: 6.5rem;
   }
 }
 

@@ -1,6 +1,6 @@
 # Concise, evidence-led profile design
 
-**Status:** approved for specification review  
+**Status:** approved for implementation
 **Scope:** English primary site only; Media remains the public evidence archive.
 
 ## Purpose
@@ -14,12 +14,12 @@ The resulting experience should be restrained, premium, discreet, and confident.
 `/en/` becomes the complete English profile page. It will have five compact parts, in this DOM order:
 
 1. **Thesis** — retain the H1, `Advantage is created, not bought.` Use one short, concrete supporting statement about institutions turning technology into operational advantage. Keep the portrait as the only priority image. Remove the hero inquiry CTA and generic eyebrow.
-2. **Work** — three short sections: Defense innovation, AI and decision-making, and National resilience. Each makes one evidence-led point in plain English; no numbered labels, generic eyebrows, or repeated rhetorical devices.
+2. **Work** — four short sections: Innovation systems, AI and organizational advantage, Digital trust and critical systems, and National resilience. Each makes one evidence-led point in plain English; no numbered labels, generic eyebrows, or repeated rhetorical devices.
 3. **Selected record** — a short factual list taken from the existing verified record: doctorate, book, cyber-power research, Singapore strategy work, parliamentary briefings, and international consulting. It provides proof without a separate long biography.
 4. **Method** — one compact paragraph linking public work on PROGRESS and sectoral cybersecurity maturity to the site thesis. Retain source citations already represented by the content model.
 5. **Public record** — a quiet internal link to `/en/media/`, making Media the home for international appearances, articles, language breadth, and original headlines.
 
-The full multi-section autobiography, investor vignette, and repeated statements about discretion do not move to Home. Their useful facts either enter the concise profile or disappear. The footer does not add a separate statement about discretion.
+The full multi-section autobiography, investor vignette, and all statements about discretion do not move to Home. Their useful facts either enter the concise profile or disappear.
 
 ## Copy discipline
 
@@ -44,9 +44,9 @@ Apply the supplied Pinker-Orwell prose brief as an editing standard, not as an e
 
 ### About compatibility route
 
-`/en/about/` stays published but leaves primary navigation. It becomes a small compatibility page for previously shared links, with a clear link to the full profile at `/en/#profile`, `noindex`, and a canonical URL of `/en/`.
+`/en/about/` leaves primary navigation and redirects permanently to `/en/#profile` on Cloudflare Pages. The static About page remains a small `noindex` fallback for local development only, with a canonical URL of `/en/`.
 
-Do not use a host-specific redirect: the project must continue to produce a correct GitHub Pages build as well as its Cloudflare deployment.
+Use Cloudflare Pages' `_redirects` file for both `/en/about` and `/en/about/`. A URL fragment is valid in its redirect destination.
 
 ### Hebrew
 
@@ -54,7 +54,7 @@ Hebrew remains out of scope. Its current page structure and navigation must not 
 
 ## Footer
 
-Keep the footer intentionally sparse. It contains the name, a quiet factual field line (`Defense innovation · AI · national resilience`), and the existing email address. It contains neither a conversion CTA nor duplicated primary navigation.
+Keep the footer intentionally sparse. It contains only the name and the existing email address. It contains neither a conversion CTA nor duplicated primary navigation.
 
 ## Implementation boundaries
 
@@ -62,9 +62,10 @@ Expected files:
 
 - `src/content/en-v3.ts` — replace the English Home/About long-form data with concise profile data; retain and use existing sources.
 - `src/components/HomePage.astro` — render the compact profile sections and its Media reference.
-- `src/components/AboutPage.astro` and `src/pages/en/about.astro` — render the compatibility page with the agreed canonical/noindex behavior.
+- `src/components/AboutPage.astro` and `src/pages/en/about.astro` — retain a minimal local fallback with the agreed canonical/noindex behavior.
 - `src/components/SiteShell.astro` and `src/content/site.ts` — represent English `Profile`/`Media` navigation while preserving Hebrew navigation and update footer copy.
 - `src/assets/styles/tailwind.css` — remove obsolete home-close and long-form layout rules, then add semantic profile/compatibility styles using existing tokens and logical properties.
+- `public/_redirects` and `astro.config.ts` — redirect legacy About URLs on Cloudflare Pages and remove the legacy page from the sitemap.
 
 `src/components/MediaPage.astro`, media cards, `src/data/media.ts`, media assets, and third-party source links are out of scope except for the new quiet internal route from Home to Media.
 
@@ -81,9 +82,9 @@ Expected files:
 
 1. `/en/` reads as a concise, evidence-led profile and contains no large inquiry CTA.
 2. The English header shows only Profile and Media besides the home/name link.
-3. `/en/about/` is unlinked from primary navigation, readable, noindexed, canonicalized to `/en/`, and links visitors to the profile.
+3. `/en/about` and `/en/about/` redirect permanently to `/en/#profile` on Cloudflare Pages; the fallback page is unlinked, readable, noindexed and canonicalized to `/en/`.
 4. Media retains all original-language titles, press cards, sources, and routes.
 5. Hebrew pages remain structurally unchanged and RTL-safe.
 6. The footer remains informational, sparse, and non-conversion-oriented.
-7. `npm ci`, `npm run check`, `npm run build`, and `SITE_TARGET=github-pages npm run build` succeed.
+7. `npm ci`, `npm run check`, and `npm run build` succeed.
 8. Desktop, tablet, 390px, and 430px checks confirm no horizontal overflow, readable text, correct nav behavior, visible focus, and stable image loading.

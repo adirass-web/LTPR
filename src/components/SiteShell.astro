@@ -27,6 +27,25 @@ const current = content.pages[page];
 const dir = locale === 'he' ? 'rtl' : 'ltr';
 const path = canonicalPath ?? pagePath(locale, page);
 const alternate = showLanguageSwitch ? (alternatePath ?? pagePath(alternateLocale, page)) : undefined;
+const navItems =
+  locale === 'en'
+    ? [
+        {
+          label: content.pages.home.nav,
+          href: `${pagePath('en', 'home')}#profile`,
+          current: page === 'home',
+        },
+        {
+          label: content.pages.media.nav,
+          href: pagePath('en', 'media'),
+          current: page === 'media',
+        },
+      ]
+    : launchPageKeys.map((item) => ({
+        label: content.pages[item].nav,
+        href: pagePath(locale, item),
+        current: item === page,
+      }));
 ---
 
 <Foundation
@@ -47,10 +66,10 @@ const alternate = showLanguageSwitch ? (alternatePath ?? pagePath(alternateLocal
         <summary>{locale === 'he' ? 'תפריט' : 'Menu'}</summary>
         <ul class="site-nav__links">
           {
-            launchPageKeys.map((item) => (
+            navItems.map((item) => (
               <li>
-                <a aria-current={item === page ? 'page' : undefined} href={pagePath(locale, item)}>
-                  {content.pages[item].nav}
+                <a aria-current={item.current ? 'page' : undefined} href={item.href}>
+                  {item.label}
                 </a>
               </li>
             ))
@@ -79,10 +98,16 @@ const alternate = showLanguageSwitch ? (alternatePath ?? pagePath(alternateLocal
   <footer id="inquiries" class="site-footer">
     <div class="site-footer__inner">
       <bdi>Dr. Lior Tabansky</bdi>
-      <div>
-        <p>{content.privateInquiries}</p>
-        <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
-      </div>
+      {
+        locale === 'en' ? (
+          <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+        ) : (
+          <div>
+            <p>{content.privateInquiries}</p>
+            <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+          </div>
+        )
+      }
     </div>
   </footer>
 </Foundation>

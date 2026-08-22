@@ -18,17 +18,15 @@ export const siteContent: Record<Locale, LocaleContent> = {
     privateInquiries: 'Private inquiries',
     pages: {
       home: {
-        nav: 'Home',
-        title: 'Dr. Lior Tabansky — defense innovation, AI and national resilience',
-        description:
-          'How governments and companies turn technology into power. The decisive factor is not the technology, but how the organization is built around it.',
+        nav: 'Profile',
+        title: 'Dr. Lior Tabansky — innovation systems, AI, digital trust and national resilience',
+        description: 'Independent work on innovation systems, AI, digital trust and national resilience.',
       },
       media: { nav: 'Media', title: 'Media', description: 'Selected appearances and commentary.' },
       about: {
-        nav: 'About',
-        title: 'About — Dr. Lior Tabansky',
-        description:
-          'Why capable governments and companies remain insecure — and how defense innovation, AI and national resilience are built in practice.',
+        nav: 'Profile',
+        title: 'Profile — Dr. Lior Tabansky',
+        description: 'The current profile is available on the home page.',
       },
     },
   },
