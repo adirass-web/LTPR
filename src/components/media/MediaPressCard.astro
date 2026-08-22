@@ -1,0 +1,30 @@
+---
+import type { MediaPressItem } from '~/data/media';
+
+interface Props {
+  item: MediaPressItem;
+}
+
+const { item } = Astro.props;
+const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}`;
+---
+
+<article class="media-card media-card--press">
+  <a
+    class="media-card__link"
+    href={item.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Read ${item.title} in ${item.outlet}, opens in a new tab`}
+  >
+    <div class="media-card__press-visual">
+      <span class="media-card__masthead">{item.outlet}</span>
+      {item.imageBase && <img src={asset(`${item.imageBase}.jpg`)} width="320" height="240" loading="lazy" decoding="async" alt="" />}
+    </div>
+    <div class="media-card__body">
+      <p class="eyebrow">{item.outlet}</p>
+      <h3 lang={item.originalLang}>{item.title}</h3>
+      <p class="media-meta">{item.date}</p>
+    </div>
+  </a>
+</article>
