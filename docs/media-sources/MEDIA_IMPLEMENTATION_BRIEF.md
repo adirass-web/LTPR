@@ -342,7 +342,6 @@ Before requesting owner approval:
 npm ci
 npm run check
 npm run build
-SITE_TARGET=github-pages npm run build
 ```
 
 Then verify:

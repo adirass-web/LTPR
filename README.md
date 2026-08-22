@@ -6,7 +6,6 @@ Production English authority site for Dr. Lior Tabansky: first-principles strate
 
 - `/en/` — Home
 - `/en/media/` — selected television, press and speaking appearances
-- `/en/about/` — background, method and credentials
 
 The Hebrew routes are deliberately noindex translation staging. They are not linked as published equivalents until approved native Hebrew copy is available.
 

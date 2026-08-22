@@ -6,13 +6,11 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const githubPages = process.env.SITE_TARGET === 'github-pages';
 const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   output: 'static',
-  site: githubPages ? 'https://adirass-web.github.io' : 'https://cyberdrtabansky.com',
-  base: githubPages ? '/LTPR' : undefined,
+  site: 'https://cyberdrtabansky.com',
   integrations: [
     sitemap({
       filter: (page) => ['/en/', '/en/media/'].some((route) => page.endsWith(route)),

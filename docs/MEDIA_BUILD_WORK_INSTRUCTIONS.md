@@ -542,7 +542,6 @@ Before review:
 npm ci
 npm run check
 npm run build
-SITE_TARGET=github-pages npm run build
 ```
 
 Then inspect:

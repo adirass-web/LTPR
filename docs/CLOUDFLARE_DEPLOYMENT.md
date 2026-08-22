@@ -28,7 +28,6 @@ Before merge:
 npm ci
 npm run check
 npm run build
-SITE_TARGET=github-pages npm run build
 ```
 
 Review the Cloudflare preview and confirm:
