@@ -41,7 +41,12 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
       <div class="media-grid">
         {videos.map((item) => <MediaVideoCard item={item} />)}
       </div>
-      <a class="text-link media-channel-link" href="https://www.youtube.com/@ltabansky6248/videos" target="_blank" rel="noopener noreferrer">
+      <a
+        class="text-link media-channel-link"
+        href="https://www.youtube.com/@ltabansky6248/videos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         More video <span aria-hidden="true">↗</span><span class="sr-only">, opens in a new tab</span>
       </a>
     </section>
@@ -64,7 +69,14 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
       <h2 id="stages-title">Stages</h2>
       <div class="media-stages">
         <div class="media-visual--stage">
-          <img src={asset('cycon-portrait.jpg')} width="720" height="960" loading="lazy" decoding="async" alt="Lior Tabansky speaking at CyCon" />
+          <img
+            src={asset('cycon-portrait.jpg')}
+            width="720"
+            height="960"
+            loading="lazy"
+            decoding="async"
+            alt="Lior Tabansky speaking at CyCon"
+          />
         </div>
         <dl class="media-stage-list">
           <div><dt>Tallinn</dt><dd>NATO CCDCOE · CyCon</dd></div>
@@ -80,9 +92,24 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
     <section class="media-section media-press-kit" aria-labelledby="kit-title">
       <div class="media-book">
         <picture>
-          <source type="image/avif" srcset={`${asset('book-110w.avif')} 110w, ${asset('book-220w.avif')} 220w`} sizes="110px" />
-          <source type="image/webp" srcset={`${asset('book-110w.webp')} 110w, ${asset('book-220w.webp')} 220w`} sizes="110px" />
-          <img src={asset('book.jpg')} width="220" height="330" loading="lazy" decoding="async" alt="Cybersecurity in Israel book cover" />
+          <source
+            type="image/avif"
+            srcset={`${asset('book-110w.avif')} 110w, ${asset('book-220w.avif')} 220w`}
+            sizes="110px"
+          />
+          <source
+            type="image/webp"
+            srcset={`${asset('book-110w.webp')} 110w, ${asset('book-220w.webp')} 220w`}
+            sizes="110px"
+          />
+          <img
+            src={asset('book.jpg')}
+            width="220"
+            height="330"
+            loading="lazy"
+            decoding="async"
+            alt="Cybersecurity in Israel book cover"
+          />
         </picture>
       </div>
       <div><h2 id="kit-title">Press kit</h2><p>Bio, headshots, book cover, contact.</p></div>
