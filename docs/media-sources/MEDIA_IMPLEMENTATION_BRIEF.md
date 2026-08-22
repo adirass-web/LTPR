@@ -59,11 +59,13 @@ Owner master:
 `Clip Codice La vita è digitale - RaiPlay 20406082_1800.mp4-.mp4`
 
 Poster instructions:
+
 - primary still: **00:41** — clear close-up of Lior Tabansky with RAI 1 / CODICE branding and lower third
 - secondary/network still: approximately **00:15** — visible `the art of connection` / network-science installation
 - crop must preserve network art where the secondary composition is shown
 
 Owner-provided episode context:
+
 - `Codice: la vita è digitale`
 - 10 May 2020
 - post-lockdown special hosted by Barbara Carfagna
@@ -71,13 +73,14 @@ Owner-provided episode context:
 - discussion concerned future social structure, digital tracking, cybersecurity, AI, blockchain, and the post-COVID environment
 - Lior Tabansky also appeared
 
-**Publication rule:** the above detailed episode description is owner-supplied. Before publishing detailed on-page claims, verify against an official/public RAI source if practical. Do not invent a canonical episode URL. If no exact public URL is found, the lead may be non-clickable or use only a verified RAI destination; do not use a generic fake deep link.
+**Publication rule:** the above detailed episode description is owner-supplied. Before publishing detailed on-page claims, verify against an official/public RAI source if practical. The owner has supplied the verified public destination: `https://youtu.be/pb8YD_ic1xE`. Use that precise destination; do not substitute a generic channel or RAI URL.
 
 The previous 2017 RAI lead is demoted to More Coverage / secondary RAI evidence, not removed.
 
 ## 5. On Screen — locked five
 
 ### A. Channel Economy — 18 Aug 2026
+
 Owner master:
 `20260818 ד_ר טבנסקי על תביעת בנק לאומי נגד מטא ישראל.mp4`
 
@@ -85,6 +88,7 @@ Public source supplied by owner:
 `https://youtu.be/-M2fTsR8YC8`
 
 Poster:
+
 - use **06:12–06:14**
 - selected working timestamp: **06:13**
 - preserve Channel Economy visual identity and the Bank Leumi/Meta topic lower third
@@ -95,6 +99,7 @@ Working English descriptor:
 Do not treat this English descriptor as an exact broadcast headline unless verified.
 
 ### B. Channel 14 — 19 Jan 2022
+
 Owner master:
 `2022-01-19  ע14 _gbgmatu6_0_zukp4kat_2.mp4`
 
@@ -105,12 +110,14 @@ English descriptor:
 `Is the police hacking phones using Pegasus?`
 
 Poster:
+
 - use approximately **05:30 / 330s**
 - clear close-up, Channel 14 branding, and the topic lower-third visible
 
-No canonical public URL has yet been supplied. Do not link to a generic YouTube homepage. If no verified public destination is found, render the card without a false outbound link and mark source URL as TODO.
+Owner-supplied public destination: `https://youtu.be/6e5bnT04vO8`. Use that precise destination; do not link to a generic YouTube homepage.
 
 ### C. NTV — 8 Dec 2021
+
 Owner master:
 `Силиконовая долина в Москве как создают научно-технологический центр МГУ.mp4`
 
@@ -127,12 +134,14 @@ Working English descriptor:
 `Building innovation ecosystems: Silicon Valley, universities and the Israeli experience`
 
 Poster:
+
 - selected working timestamp: **02:00 / 120s**
 - strong close-up of Tabansky with NTV branding and the program lower third
 
 Use **8 Dec 2021** as original publication/broadcast date unless the official NTV source proves otherwise. A later YouTube upload date is not the card date.
 
 ### D. RaiNews — 12 May 2019
+
 Canonical source:
 `https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html`
 
@@ -144,6 +153,7 @@ Interview by Annamaria Esposito; Italian.
 **Public poster sourcing is explicitly approved.** Source the still from the verified RaiNews/public source, not from a generic Russia image. If the page cannot yield a defensible still, use a typography-led RaiNews visual rather than fabricating a screenshot.
 
 ### E. Channel 10 · London et Kirschenbaum — 27 Oct 2015
+
 Owner master:
 `23.mp4`
 
@@ -157,10 +167,11 @@ English descriptor:
 `Could Russian ships cut off the internet?`
 
 Poster:
+
 - use approximately **00:01**
 - clean close-up with Channel 10 identity visible
 
-No canonical public URL has been supplied. Do not use a generic channel/profile URL as though it were the source. Render without false outbound link or mark URL TODO until verified.
+Owner-supplied public destination: `https://youtu.be/EyymYGiIbxg`. Use that precise destination; do not substitute a generic channel/profile URL.
 
 ## 6. Press & Features — locked six
 
@@ -224,20 +235,22 @@ Owner will provide the preferred i24 English video after the page is substantial
 Use one semantic DOM tree.
 
 ### Base / narrow containers
+
 - RAI lead: poster, optional secondary network image, then copy
 - On Screen: one full-width card per row
 - Press: one full-width card per row
 - More Coverage: compact vertical list/grid
-- Stages: image then stage list
-- Press Kit: stacked utility block
+- Stages: text-only linked event list
+- Press Kit: stacked utility resources
 
 ### Wider containers
+
 - RAI lead: asymmetric editorial composition, media dominant
 - On Screen: intrinsic two-column grid when container permits
 - Press: intrinsic two-column grid when container permits
 - More Coverage: 2–3 columns as space allows
-- Stages: image + list side by side
-- Press Kit: compact horizontal layout
+- Stages: intrinsic linked event list
+- Press Kit: intrinsic resource grid
 
 Do not enlarge specific cards using source identity or DOM position. RAI supplies the dominant hierarchy; recurring card components should be consistent.
 
@@ -247,22 +260,12 @@ Use a small structured Media data model. Suggested fields:
 
 ```ts
 {
-  id,
-  kind,
-  outlet,
-  title,
-  date,
-  runtime,
-  language,
-  url,
-  image,
-  imageAlt,
-  visualMode,
-  status
+  (id, kind, outlet, title, date, runtime, language, url, image, imageAlt, visualMode, status);
 }
 ```
 
 Reusable components are appropriate for:
+
 - `MediaVideoCard`
 - `MediaPressCard`
 - `MoreCoverageItem`
@@ -278,18 +281,19 @@ Owner MP4 masters are **source originals**, not production runtime assets. Do no
 
 Approved owner-MP4 poster timestamps:
 
-| Base | Timestamp | Source |
-|---|---:|---|
-| `codice-2020` | 00:41 | 2020 RAI Codice clip |
-| `codice-network` | 00:15 | same clip; network-art secondary still |
-| `channel-economy` | 06:13 | Channel Economy file |
-| `channel14-2022` | 05:30 | Channel 14 file |
-| `ntv-2021` | 02:00 | NTV file |
-| `channel10-2015` | 00:01 | `23.mp4` |
+| Base              | Timestamp | Source                                 |
+| ----------------- | --------: | -------------------------------------- |
+| `codice-2020`     |     00:41 | 2020 RAI Codice clip                   |
+| `codice-network`  |     00:15 | same clip; network-art secondary still |
+| `channel-economy` |     06:13 | Channel Economy file                   |
+| `channel14-2022`  |     05:30 | Channel 14 file                        |
+| `ntv-2021`        |     02:00 | NTV file                               |
+| `channel10-2015`  |     00:01 | `23.mp4`                               |
 
 Generate only widths needed by the real card geometry. Preferred formats: AVIF, WebP, JPEG fallback. Do not upscale weak source images.
 
 Current derivative plan:
+
 - lead/network: 480 / 768 / 1024 where useful
 - Channel Economy: 480 / 640 maximum (source is 640×360)
 - Channel 14: 480 / 768
@@ -301,6 +305,7 @@ Current derivative plan:
 `docs/media-sources/` is an internal source/reference folder, not a public web asset folder.
 
 Keep:
+
 - implementation brief
 - source manifest with hashes/provenance
 - reference snapshots / extracted text from supplied press PDFs
@@ -322,6 +327,7 @@ The branch already contains an in-progress refactor. **Audit it rather than assu
 - several preliminary JPG posters in `public/images/media/`
 
 Known issues to correct:
+
 - placeholder/generic URLs must not ship (`rai.it`, generic `youtube.com`, generic channel/profile links)
 - poster filename/data conventions must match actual production derivatives
 - ensure `media.css` is correctly imported/integrated and does not duplicate obsolete Media rules in `tailwind.css`
@@ -340,6 +346,7 @@ SITE_TARGET=github-pages npm run build
 ```
 
 Then verify:
+
 - desktop
 - tablet
 - ~390px mobile
@@ -362,9 +369,8 @@ Use Cloudflare PR preview if available.
 
 ## 16. Final TODO list
 
-- verify/publicly identify exact 2020 RAI episode URL if available
 - source RaiNews 2019 official/public poster (permission already granted)
-- identify verified public destinations for Channel 14 and Channel 10 if possible; otherwise do not fake links
 - validate Channel Economy exact broadcast title; current English wording is a descriptor
 - later: owner supplies preferred i24 English video
 - later: Hebrew Media translation/content parity
+- later: add the owner-approved downloadable bio PDF to the Press Kit

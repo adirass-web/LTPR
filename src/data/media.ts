@@ -46,10 +46,26 @@ export type MediaArchiveItem = {
   originalLang?: 'en' | 'he' | 'fr' | 'it' | 'pl';
 };
 
+export type MediaStageItem = {
+  city: string;
+  event: string;
+  date: string;
+  url: string;
+};
+
+export type PressKitItem = {
+  id: string;
+  label: string;
+  detail: string;
+  kind: 'download' | 'external' | 'contact' | 'todo';
+  url?: string;
+};
+
 export const lead = {
   outlet: 'RAI · Codice: la vita è digitale',
   title: 'Codice: la vita è digitale',
   date: '10 May 2020',
+  url: 'https://youtu.be/pb8YD_ic1xE',
   meta: 'RAI 1 · Italian',
   status: 'owner-archive' as const,
   image: {
@@ -93,6 +109,7 @@ export const videos: MediaVideoItem[] = [
     outlet: 'Channel 14',
     title: 'Is the police hacking phones using Pegasus?',
     date: '19 January 2022',
+    url: 'https://youtu.be/6e5bnT04vO8',
     meta: 'Hebrew · owner archive',
     image: {
       base: 'channel14-2022',
@@ -102,7 +119,7 @@ export const videos: MediaVideoItem[] = [
       alt: 'Lior Tabansky discussing police phone hacking and Pegasus on Channel 14',
     },
     visualMode: 'poster',
-    status: 'source-pending',
+    status: 'owner-archive',
   },
   {
     id: 'ntv-innovation-2021',
@@ -146,6 +163,7 @@ export const videos: MediaVideoItem[] = [
     outlet: 'Channel 10 · London et Kirschenbaum',
     title: 'Could Russian ships cut off the internet?',
     date: '27 October 2015',
+    url: 'https://youtu.be/EyymYGiIbxg',
     meta: 'Hebrew · owner archive',
     image: {
       base: 'channel10-2015',
@@ -155,7 +173,7 @@ export const videos: MediaVideoItem[] = [
       alt: 'Lior Tabansky on Channel 10 discussing threats to undersea internet cables',
     },
     visualMode: 'poster',
-    status: 'source-pending',
+    status: 'owner-archive',
   },
 ];
 
@@ -296,3 +314,86 @@ export const archive: MediaArchiveItem[] = [
 ];
 
 export const mediaTodo = ['Assess the owner-supplied i24 English appearance when the main video is available.'];
+
+export const stages: MediaStageItem[] = [
+  {
+    city: 'Tallinn',
+    event: 'NATO CCDCOE · CyCon',
+    date: '2016',
+    url: 'https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/',
+  },
+  {
+    city: 'Copenhagen',
+    event: 'Danish Parliament · public hearing on military cybersecurity',
+    date: '11 September 2019',
+    url: 'https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed',
+  },
+  {
+    city: 'Rome',
+    event: 'Camera dei Deputati · academic session',
+    date: '29 September 2015',
+    url: 'https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417',
+  },
+  {
+    city: 'Amsterdam',
+    event: 'Future of War Conference',
+    date: '2022',
+    url: 'https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8',
+  },
+  {
+    city: 'Singapore',
+    event: 'APPSNO',
+    date: '2018',
+    url: 'https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/',
+  },
+  {
+    city: 'Tel Aviv',
+    event: 'Cyber Week · critical-infrastructure protection',
+    date: '2023',
+    url: 'https://cyberweek.tau.ac.il/2023/Events/Scaling-up-Cyber-Capacity-Building%3A-The-Sectoral-Approach-to-Critical-Infrastructure-Protection',
+  },
+];
+
+export const pressKit: PressKitItem[] = [
+  {
+    id: 'portrait-2x3',
+    label: 'Portrait headshot',
+    detail: '2:3 · high resolution JPG',
+    kind: 'download',
+    url: 'images/portraits/lior-tabansky-portrait-2x3-1024.jpg',
+  },
+  {
+    id: 'portrait-square',
+    label: 'Square headshot',
+    detail: '1:1 · high resolution JPG',
+    kind: 'download',
+    url: 'images/portraits/lior-tabansky-portrait-square-960.jpg',
+  },
+  {
+    id: 'book',
+    label: 'Cybersecurity in Israel',
+    detail: 'Book details · Springer',
+    kind: 'external',
+    url: 'https://link.springer.com/book/10.1007/978-3-319-18986-4',
+  },
+  {
+    id: 'world-bank-scmm',
+    label: 'Sectoral Cybersecurity Maturity Model',
+    detail: 'World Bank publication',
+    kind: 'external',
+    url: 'https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392',
+  },
+  {
+    id: 'press-contact',
+    label: 'Press contact',
+    detail: 'liortabansky@gmail.com',
+    kind: 'contact',
+    url: 'mailto:liortabansky@gmail.com',
+  },
+  {
+    id: 'bio-pdf',
+    label: 'Downloadable bio PDF',
+    detail: 'Coming soon',
+    kind: 'todo',
+  },
+];

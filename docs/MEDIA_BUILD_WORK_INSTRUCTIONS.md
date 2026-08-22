@@ -43,11 +43,13 @@ Owner source:
 `Clip Codice La vita è digitale - RaiPlay 20406082_1800.mp4-.mp4`
 
 Poster direction:
+
 - inspect around **00:41**;
 - preserve the visible network-science artwork in the composition where possible;
 - the lead should visually connect the interview and network visualization rather than use a generic TV screenshot.
 
 Owner-provided contextual note, to be verified before detailed on-page claims:
+
 - special post-lockdown episode hosted by Barbara Carfagna;
 - Albert-László Barabási appeared alongside other experts;
 - themes included future social structure, digital tracking, cybersecurity, AI and blockchain;
@@ -69,6 +71,7 @@ Topic:
 Bank Leumi v. Meta Israel / responsibility for fraudulent advertising.
 
 Poster direction:
+
 - use frames from **06:12–06:14**;
 - select the strongest clear close-up with useful channel identity / lower-third if available.
 
@@ -84,6 +87,7 @@ English descriptor:
 **Is the police hacking phones using Pegasus?**
 
 Poster direction:
+
 - use a strong close-up around the later part of the interview (the previously reviewed ~330s frame was strong);
 - preserve Channel 14 branding and topic lower-third where visually useful.
 
@@ -115,6 +119,7 @@ Title / descriptor:
 **Russia and national cybersecurity strategy**
 
 Metadata already verified in project work:
+
 - interview by Annamaria Esposito;
 - Italian;
 - 12 May 2019.
@@ -203,6 +208,7 @@ Title:
 `Cybersicurezza, esperti a confronto`
 
 Owner-provided context, verify before detailed on-page claims:
+
 - first season;
 - filmed across Israel, Japan and Silicon Valley;
 - themes included cybersecurity, AI and transhumanism;
@@ -230,6 +236,7 @@ Purpose: demonstrate long-term intellectual continuity without making a nearly t
 ### Additional reserve outlets
 
 Potential More Coverage inventory includes:
+
 - Le Figaro 2021 Pegasus coverage
 - Gazeta Wyborcza
 - CyberDefence24
@@ -265,6 +272,7 @@ Do **not** use a generic Media template.
 Build a custom Media composition on the existing LTPR design system.
 
 This is:
+
 - not a new visual identity;
 - not a generic AstroWind card page;
 - not a collection of manual CSS exceptions.
@@ -274,6 +282,7 @@ This is:
 Use one DOM hierarchy. Small containers are the base experience. Components adapt to available space rather than being duplicated for mobile/desktop.
 
 Preferred approach:
+
 - intrinsic CSS grid;
 - container size queries for genuine component composition changes;
 - `clamp()` and container units where useful;
@@ -310,6 +319,7 @@ Existing site tokens remain authoritative:
 No additional visual colors without explicit owner approval.
 
 Do not introduce:
+
 - rounded-card design;
 - gradients;
 - heavy shadows;
@@ -366,6 +376,7 @@ Use owner 2020 Codice material. Poster should include the interview/network-scie
 ### On Screen cards
 
 Each card:
+
 - large 16:9 poster;
 - outlet/program;
 - title/topic;
@@ -382,6 +393,7 @@ Do not embed five YouTube players. Use optimized posters linking to original sou
 Two-column editorial grid on sufficiently wide containers, single column on narrow containers.
 
 Each card:
+
 - publication identity;
 - article title;
 - publication date;
@@ -397,6 +409,7 @@ Do **not** enlarge or republish full newspaper pages, PDFs, clipping scans or su
 Large Press cards are large because of layout and typography, not because a third-party article scan is enlarged.
 
 Visual priority:
+
 1. appropriate publisher/source image;
 2. limited thumbnail integrated into the card;
 3. relevant approved owner-held image;
@@ -407,6 +420,7 @@ Full third-party PDFs supplied as research/reference sources belong in source ar
 ## 14. Asset workflow
 
 For owner-held TV/video sources:
+
 - extract selected poster frame;
 - crop to shared card geometry;
 - do not upscale weak sources;
@@ -470,6 +484,7 @@ The architecture must remain RTL/HE-ready, but do not expose machine-translated 
 ## 19. Accessibility
 
 Required:
+
 - semantic heading structure;
 - accessible card/link labels;
 - visible keyboard focus;
@@ -494,27 +509,30 @@ Required:
 
 Stages remain supporting evidence and do not count toward the 12.
 
-Current evidence may include:
-- Tallinn — NATO CCDCOE / CyCon
-- Copenhagen — Danish Parliament
-- Rome — Camera dei Deputati
-- Amsterdam — Future of War
-- Singapore — APPSNO
-- Tel Aviv — Cyber Week
+Every stage row links to the official record:
 
-Keep restrained. One strong event photograph plus list is sufficient unless owner reopens scope.
+- Tallinn — [NATO CCDCOE / CyCon 2016](https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/)
+- Copenhagen — [Danish Parliament hearing, 11 September 2019](https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed)
+- Rome — [Camera dei Deputati session, 29 September 2015](https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417)
+- Amsterdam — [Future of War Conference programme, 2022](https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8)
+- Singapore — [APPSNO, 2018](https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/)
+- Tel Aviv — [Cyber Week 2023: critical-infrastructure protection](https://cyberweek.tau.ac.il/2023/Events/Scaling-up-Cyber-Capacity-Building%3A-The-Sectoral-Approach-to-Critical-Infrastructure-Protection)
+
+Keep the section text-only, rule-led and restrained. Do not add a replacement event photograph.
 
 ## 22. Press Kit
 
 Press Kit remains utility, not part of the 12.
 
-Possible content:
-- bio
-- headshots
-- book cover
-- contact
+Current approved resources:
 
-Do not expose downloadable assets without explicit approved files/rights.
+- `public/images/portraits/lior-tabansky-portrait-2x3-1024.jpg` — downloadable 2:3 headshot
+- `public/images/portraits/lior-tabansky-portrait-square-960.jpg` — downloadable square headshot
+- [Cybersecurity in Israel](https://link.springer.com/book/10.1007/978-3-319-18986-4) — book details
+- [Sectoral Cybersecurity Maturity Model](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392) — World Bank publication
+- `mailto:liortabansky@gmail.com` — press contact
+
+Do not publish a bio now. Keep a visible **Downloadable bio PDF — coming soon** item until the owner provides the final approved PDF. The generic World Bank financial summary is not evidence for the specific work and must not be linked.
 
 ## 23. QA
 
@@ -528,6 +546,7 @@ SITE_TARGET=github-pages npm run build
 ```
 
 Then inspect:
+
 - desktop;
 - tablet;
 - ~390px mobile;
@@ -547,6 +566,7 @@ Work only on `feature/media-12-item-expansion`.
 Do not merge to `main` without explicit owner approval.
 
 Before PR/review, report:
+
 - exact files changed;
 - source assets added;
 - unresolved TODOs;

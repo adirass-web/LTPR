@@ -4,10 +4,10 @@ import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro'
 import MediaVideoCard from '~/components/media/MediaVideoCard.astro';
 import MediaPressCard from '~/components/media/MediaPressCard.astro';
 import MoreCoverageItem from '~/components/media/MoreCoverageItem.astro';
-import { archive, lead, press, videos } from '~/data/media';
+import { archive, lead, press, pressKit, stages, videos } from '~/data/media';
 import '~/assets/styles/media.css';
 
-const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}`;
+const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 ---
 
 <SiteShell locale="en" page="media">
@@ -18,7 +18,13 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
     </header>
 
     <section class="media-section" aria-labelledby="media-lead-title">
-      <div class="media-lead">
+      <a
+        class="media-lead"
+        href={lead.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Watch ${lead.title} from ${lead.outlet}, opens in a new tab`}
+      >
         <div class="media-lead__visual-stack">
           <div class="media-lead__visual">
             <ResponsiveMediaImage
@@ -27,6 +33,7 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
               fetchpriority="high"
               sizes="(min-width: 46rem) 66vw, 100vw"
             />
+            <span class="media-play" aria-hidden="true">▶</span>
           </div>
           <div class="media-lead__network" aria-hidden="true">
             <ResponsiveMediaImage image={lead.secondaryImage} sizes="(min-width: 46rem) 66vw, 100vw" />
@@ -36,9 +43,9 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
           <p class="eyebrow">{lead.outlet}</p>
           <h2 id="media-lead-title">{lead.title}</h2>
           <p>{lead.date} · {lead.meta}</p>
-          <p class="media-lead__source">Owner archive · RAI broadcast</p>
+          <p class="media-lead__source">RAI broadcast · Watch on YouTube</p>
         </div>
-      </div>
+      </a>
     </section>
 
     <section class="media-section" aria-labelledby="on-screen-title">
@@ -64,43 +71,63 @@ const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}
 
     <section class="media-section" aria-labelledby="stages-title">
       <h2 id="stages-title">Stages</h2>
-      <div class="media-stages">
-        <dl class="media-stage-list">
-          <div><dt>Tallinn</dt><dd>NATO CCDCOE · CyCon</dd></div>
-          <div><dt>Copenhagen</dt><dd>Danish Parliament</dd></div>
-          <div><dt>Rome</dt><dd>Camera dei Deputati</dd></div>
-          <div><dt>Amsterdam</dt><dd>Future of War</dd></div>
-          <div><dt>Singapore</dt><dd>APPSNO</dd></div>
-          <div><dt>Tel Aviv</dt><dd>Cyber Week</dd></div>
-        </dl>
-      </div>
+      <ul class="media-stage-list">
+        {
+          stages.map((stage) => (
+            <li>
+              <a
+                href={stage.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Read the official record for ${stage.event} in ${stage.city}, opens in a new tab`}
+              >
+                <span class="media-stage-list__city">{stage.city}</span>
+                <span class="media-stage-list__copy">
+                  <span>{stage.event}</span>
+                  <span class="media-meta">{stage.date}</span>
+                </span>
+                <span class="media-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </section>
 
     <section class="media-section media-press-kit" aria-labelledby="kit-title">
-      <div class="media-book">
-        <picture>
-          <source
-            type="image/avif"
-            srcset={`${asset('book-110w.avif')} 110w, ${asset('book-220w.avif')} 220w`}
-            sizes="110px"
-          />
-          <source
-            type="image/webp"
-            srcset={`${asset('book-110w.webp')} 110w, ${asset('book-220w.webp')} 220w`}
-            sizes="110px"
-          />
-          <img
-            src={asset('book.jpg')}
-            width="220"
-            height="330"
-            loading="lazy"
-            decoding="async"
-            alt="Cybersecurity in Israel book cover"
-          />
-        </picture>
+      <div class="media-press-kit__intro">
+        <h2 id="kit-title">Press kit</h2>
+        <p>Headshots, selected references and contact.</p>
       </div>
-      <div><h2 id="kit-title">Press kit</h2><p>Bio, headshots, book cover, contact.</p></div>
-      <a class="cta cta--outline" href="mailto:liortabansky@gmail.com">Email</a>
+      <ul class="media-press-kit__resources">
+        {
+          pressKit.map((item) =>
+            item.url ? (
+              <li>
+                <a
+                  href={item.kind === 'download' ? publicPath(item.url) : item.url}
+                  download={item.kind === 'download' ? '' : undefined}
+                  target={item.kind === 'external' ? '_blank' : undefined}
+                  rel={item.kind === 'external' ? 'noopener noreferrer' : undefined}
+                >
+                  <span>{item.label}</span>
+                  <span class="media-meta">{item.detail}</span>
+                  <span class="media-arrow" aria-hidden="true">
+                    {item.kind === 'download' ? '↓' : '↗'}
+                  </span>
+                </a>
+              </li>
+            ) : (
+              <li class="media-press-kit__todo">
+                <span>{item.label}</span>
+                <span class="media-meta">{item.detail}</span>
+              </li>
+            )
+          )
+        }
+      </ul>
     </section>
   </article>
 </SiteShell>
