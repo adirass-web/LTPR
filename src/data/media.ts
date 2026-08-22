@@ -12,7 +12,7 @@ export type MediaVideoItem = {
   title: string;
   date: string;
   meta?: string;
-  url: string;
+  url?: string;
   image?: MediaImage;
   posterLabel?: string;
   originalLang?: 'en' | 'he' | 'it' | 'ru';
@@ -25,7 +25,7 @@ export type MediaPressItem = {
   title: string;
   date: string;
   url: string;
-  imageBase?: string;
+  imageSrc?: string;
   originalLang?: 'en' | 'fr' | 'it' | 'nl';
 };
 
@@ -41,20 +41,19 @@ export type MediaArchiveItem = {
 
 export const lead = {
   outlet: 'RAI · Codice: La vita è digitale',
-  title: 'Networks, digital society and resilience after lockdown',
-  date: '10 May 2020',
+  title: 'Networks, digital society and resilience',
+  date: '2020',
   meta: 'RAI 1 · Italian',
-  url: 'https://www.raiplay.it/',
   image: {
     src: 'codice-2020.jpg',
-    width: 1024,
-    height: 576,
+    width: 640,
+    height: 360,
     alt: 'Lior Tabansky speaking on RAI Codice: La vita è digitale',
   } satisfies MediaImage,
   secondaryImage: {
     src: 'codice-network.jpg',
-    width: 1024,
-    height: 576,
+    width: 480,
+    height: 270,
     alt: 'Network visualization shown in the RAI Codice episode',
   } satisfies MediaImage,
 };
@@ -70,8 +69,8 @@ export const videos: MediaVideoItem[] = [
     url: 'https://youtu.be/-M2fTsR8YC8',
     image: {
       src: 'channel-economy.jpg',
-      width: 640,
-      height: 360,
+      width: 360,
+      height: 202,
       alt: 'Lior Tabansky discussing Bank Leumi and Meta Israel on Channel Economy',
     },
   },
@@ -81,12 +80,11 @@ export const videos: MediaVideoItem[] = [
     outlet: 'Channel 14',
     title: 'Is the police hacking phones using Pegasus?',
     date: '19 January 2022',
-    meta: 'Hebrew',
-    url: 'https://www.youtube.com/',
+    meta: 'Hebrew · owner archive',
     image: {
       src: 'channel14-2022.jpg',
-      width: 960,
-      height: 540,
+      width: 360,
+      height: 202,
       alt: 'Lior Tabansky discussing police phone hacking and Pegasus on Channel 14',
     },
   },
@@ -100,8 +98,8 @@ export const videos: MediaVideoItem[] = [
     url: 'https://www.ntv.ru/novosti/2642205/',
     image: {
       src: 'ntv-2021.jpg',
-      width: 1280,
-      height: 720,
+      width: 360,
+      height: 202,
       alt: 'Lior Tabansky discussing innovation systems on NTV',
     },
   },
@@ -121,12 +119,11 @@ export const videos: MediaVideoItem[] = [
     outlet: 'Channel 10 · London et Kirschenbaum',
     title: 'Could Russian ships cut off the internet?',
     date: '27 October 2015',
-    meta: 'Hebrew',
-    url: 'https://www.youtube.com/@ltabansky6248/videos',
+    meta: 'Hebrew · owner archive',
     image: {
       src: 'channel10-2015.jpg',
-      width: 1280,
-      height: 720,
+      width: 400,
+      height: 226,
       alt: 'Lior Tabansky on Channel 10 discussing threats to undersea internet cables',
     },
   },
@@ -140,7 +137,7 @@ export const press: MediaPressItem[] = [
     title: 'Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille',
     date: '4 December 2023',
     url: 'https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204',
-    imageBase: 'figaro',
+    imageSrc: 'figaro.jpg',
     originalLang: 'fr',
   },
   {
@@ -150,7 +147,7 @@ export const press: MediaPressItem[] = [
     title: 'Cyberattack forces Iran steel company to halt production',
     date: '27 June 2022',
     url: 'https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1',
-    imageBase: 'ap',
+    imageSrc: 'ap.jpg',
     originalLang: 'en',
   },
   {
@@ -160,7 +157,7 @@ export const press: MediaPressItem[] = [
     title: 'Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal',
     date: '4 January 2022',
     url: 'https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654',
-    imageBase: 'nrc',
+    imageSrc: 'nrc.png',
     originalLang: 'nl',
   },
   {
@@ -179,7 +176,7 @@ export const press: MediaPressItem[] = [
     title: 'Israele vs Iran: il nuovo fronte di guerra è il cyberspazio',
     date: '20 May 2020',
     url: 'https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/',
-    imageBase: 'repubblica',
+    imageSrc: 'repubblica.png',
     originalLang: 'it',
   },
   {
@@ -221,6 +218,4 @@ export const archive: MediaArchiveItem[] = [
   },
 ];
 
-export const mediaTodo = [
-  'Assess the owner-supplied i24 English appearance when the main video is available.',
-];
+export const mediaTodo = ['Assess the owner-supplied i24 English appearance when the main video is available.'];
