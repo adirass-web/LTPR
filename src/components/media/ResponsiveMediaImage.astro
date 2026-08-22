@@ -1,0 +1,32 @@
+---
+import type { MediaImage } from '~/data/media';
+
+interface Props {
+  image: MediaImage;
+  loading?: 'eager' | 'lazy';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  sizes?: string;
+}
+
+const { image, loading = 'lazy', fetchpriority = 'auto', sizes = '100vw' } = Astro.props;
+const asset = (file: string) => `${import.meta.env.BASE_URL}images/media/${file}`;
+const srcset = (format: 'avif' | 'webp' | 'jpg') =>
+  image.widths.map((width) => `${asset(`${image.base}-${width}w.${format}`)} ${width}w`).join(', ');
+const fallbackWidth = image.widths.at(-1);
+---
+
+<picture>
+  <source type="image/avif" srcset={srcset('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={srcset('webp')} sizes={sizes} />
+  <img
+    src={asset(`${image.base}-${fallbackWidth}w.jpg`)}
+    srcset={srcset('jpg')}
+    sizes={sizes}
+    width={image.width}
+    height={image.height}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+    alt={image.alt}
+  />
+</picture>
