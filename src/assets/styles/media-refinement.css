@@ -1,0 +1,8 @@
+.media-section + .media-section {
+  border-block-start: 0;
+}
+
+.media-section--archive,
+.media-section--stages {
+  padding-block-start: clamp(5.5rem, 10vw, 9.5rem);
+}
