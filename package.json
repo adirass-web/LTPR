@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "@fontsource/heebo": "^5.2.8",
+    "@fontsource/ibm-plex-sans": "^5.2.8",
+    "@fontsource/ibm-plex-sans-hebrew": "^5.2.8",
     "astro": "^7.2.4"
   },
   "devDependencies": {
