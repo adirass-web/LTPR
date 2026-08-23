@@ -32,6 +32,7 @@ const alternateUrl = alternatePath ? new URL(alternatePath, Astro.site) : undefi
 const xDefaultUrl = new URL(`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}en/`, Astro.site);
 const socialImageUrl = socialImage ? new URL(socialImage.path, Astro.site) : undefined;
 const shouldIncludeStructuredData = lang === 'en' && !noindex;
+const shouldEmitLanguageAlternates = !noindex;
 const structuredData = shouldIncludeStructuredData
   ? {
       '@context': 'https://schema.org',
@@ -73,13 +74,17 @@ const structuredDataJson = structuredData ? JSON.stringify(structuredData).repla
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f6f6f6" />
+    <meta name="theme-color" content="#f7f6f3" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
-    {alternateUrl && alternateLang && <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />}
-    <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
+    {shouldEmitLanguageAlternates && <link rel="alternate" hreflang={lang} href={canonicalUrl} />}
+    {
+      shouldEmitLanguageAlternates && alternateUrl && alternateLang && (
+        <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+      )
+    }
+    {shouldEmitLanguageAlternates && <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     {
       socialImageUrl && socialImage && (
