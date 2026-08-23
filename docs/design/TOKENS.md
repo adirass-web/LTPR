@@ -1,5 +1,7 @@
 # Visual tokens
 
+Status: active Profile + Media design system.
+
 | Token | Value | Rule |
 | --- | --- | --- |
 | Canvas | `#f2efe7` | Warm global page ground |
