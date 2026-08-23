@@ -2,10 +2,10 @@
 
 ## Release status
 
-- **English is the production site.** Its live architecture is **Home · Media · About**.
+- **English is the production site.** Its public architecture is **Profile · Media**: `/en/` is the profile page and `/en/media/` is the media page. Do not add About or Writing navigation or publish standalone About/Writing routes.
 - The approved English source is [`src/content/en-v3.ts`](src/content/en-v3.ts). Do not change its published wording without the owner's explicit approval.
 - The owner-held asset inventory is [`docs/SOURCE_AND_DEPENDENCY_REGISTER.md`](docs/SOURCE_AND_DEPENDENCY_REGISTER.md). Its legacy readiness fields will be reconciled during the next Media work package.
-- Hebrew routes are retained as noindex translation staging. Do not present them as published equivalents, link to them from the English menu, or emit `hreflang` alternates until native Hebrew copy is approved.
+- Hebrew Profile and Media routes are retained as noindex translation staging. Build genuine RTL and route parity now, but do not present Hebrew as a published equivalent, link to it from the English menu, or emit `hreflang` alternates until native Hebrew copy is approved.
 - Writing is removed from the public site. Git history preserves retired work.
 - Private inquiries: `liortabansky@gmail.com`.
 
@@ -14,7 +14,9 @@
 - Identity: **first-principles strategy for defense innovation, AI and national resilience.**
 - Audience: governments and investors.
 - Voice: restrained, precise, first-person and non-promotional. One quiet **Private inquiries** path; no sales funnel, booking flow or contact page.
-- The visual system is portrait-led and editorial: Heebo Regular, canvas `#f6f6f6`, ink `#000000`, forest `#02291f`, square geometry, 1 px rules, no shadows, gradients, stock imagery or generic security motifs.
+- The visual system must communicate intellectual authority and practical success in complex problems, international experience, discretion, precision and restrained mystique, with Israel, cyber and technology present as context rather than motifs.
+- Design qualities: **modern, premium, restrained, editorial, warm and confident**. The old “1 px black rule + square grid” aesthetic is obsolete and must not govern the redesign. Retain deep forest only as a functional accent. Avoid stock imagery and generic security motifs.
+- Structural rewriting of the Profile page is permitted more freely than copy rewriting. The approved English source remains authoritative; preserve its claims and wording unless the owner explicitly approves copy changes.
 
 ## Copy and factual guardrails
 
