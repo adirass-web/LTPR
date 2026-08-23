@@ -18,6 +18,7 @@ import { pagePath } from '~/content/site';
     <section id="profile" class="home-hero" aria-labelledby="home-title">
       <div class="home-hero__inner">
         <div class="home-hero__copy">
+          <p class="home-hero__identity">Dr. Lior Tabansky</p>
           <h1 id="home-title">{homeV3.hero.title}</h1>
           <p class="home-hero__standfirst">{homeV3.hero.standfirst}</p>
         </div>
@@ -31,9 +32,12 @@ import { pagePath } from '~/content/site';
       </div>
       <ul class="profile-area-list">
         {
-          homeV3.areas.map((area) => (
+          homeV3.areas.map((area, index) => (
             <li data-citation-slots={area.citations.join('; ') || undefined}>
-              <h3>{area.title}</h3>
+              <div class="profile-area-list__heading">
+                <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{area.title}</h3>
+              </div>
               <div class="profile-area-list__copy">
                 {area.paragraphs.map((paragraph) => (
                   <p>{paragraph}</p>
@@ -50,9 +54,9 @@ import { pagePath } from '~/content/site';
         <div class="profile-section__header">
           <h2 id="record-title">{homeV3.record.title}</h2>
         </div>
-        <ul class="profile-record-list">
+        <ol class="profile-record-list">
           {homeV3.record.items.map((item) => <li>{item}</li>)}
-        </ul>
+        </ol>
       </div>
     </section>
 
