@@ -1,5 +1,5 @@
-export const pageKeys = ['home', 'media', 'about'] as const;
-export const launchPageKeys = ['home', 'media', 'about'] as const;
+export const pageKeys = ['home', 'media'] as const;
+export const launchPageKeys = ['home', 'media'] as const;
 
 export type Locale = 'en' | 'he';
 export type PageKey = (typeof pageKeys)[number];
@@ -28,11 +28,6 @@ export const siteContent: Record<Locale, LocaleContent> = {
         description:
           'Selected interviews, television appearances and international press coverage on innovation systems, AI, cybersecurity and national resilience.',
       },
-      about: {
-        nav: 'Profile',
-        title: 'Profile — Dr. Lior Tabansky',
-        description: 'The current profile is available on the home page.',
-      },
     },
   },
   he: {
@@ -42,7 +37,6 @@ export const siteContent: Record<Locale, LocaleContent> = {
     pages: {
       home: { nav: 'בית', title: 'ליאור טבנסקי', description: 'סייבר לאומי וחדשנות ביטחונית.' },
       media: { nav: 'מדיה', title: 'מדיה', description: 'הופעות ופרשנות נבחרות.' },
-      about: { nav: 'אודות', title: 'אודות', description: 'רקע מקצועי ונקודות ציון נבחרות.' },
     },
   },
 };
@@ -50,7 +44,6 @@ export const siteContent: Record<Locale, LocaleContent> = {
 export const paths: Record<PageKey, string> = {
   home: '',
   media: 'media/',
-  about: 'about/',
 };
 
 export function pagePath(locale: Locale, page: PageKey): string {
