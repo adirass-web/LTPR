@@ -88,7 +88,9 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
                   <span>{stage.event}</span>
                   <span class="media-meta">{stage.date}</span>
                 </span>
-                <span class="media-arrow" aria-hidden="true">↗</span>
+                <span class="media-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </a>
             </li>
           ))
@@ -114,7 +116,9 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
                 >
                   <span>{item.label}</span>
                   <span class="media-meta">{item.detail}</span>
-                  <span class="media-arrow" aria-hidden="true">{item.kind === 'download' ? '↓' : '↗'}</span>
+                  <span class="media-arrow" aria-hidden="true">
+                    {item.kind === 'download' ? '↓' : '↗'}
+                  </span>
                 </a>
               </li>
             ) : (

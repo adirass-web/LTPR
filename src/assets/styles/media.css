@@ -136,7 +136,9 @@
   background: color-mix(in srgb, var(--canvas) 94%, transparent);
   color: var(--forest);
   font-size: 0.72rem;
-  transition: transform var(--motion), background-color var(--motion);
+  transition:
+    transform var(--motion),
+    background-color var(--motion);
 }
 
 .media-grid {
