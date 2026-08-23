@@ -103,17 +103,11 @@ const navItems =
   </main>
   <footer id="inquiries" class="site-footer">
     <div class="site-footer__inner">
-      <bdi>Dr. Lior Tabansky</bdi>
-      {
-        locale === 'en' ? (
-          <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
-        ) : (
-          <div>
-            <p>{content.privateInquiries}</p>
-            <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
-          </div>
-        )
-      }
+      <bdi class="site-footer__name">Dr. Lior Tabansky</bdi>
+      <div class="site-footer__contact">
+        <p>{content.privateInquiries}</p>
+        <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+      </div>
     </div>
   </footer>
 </Foundation>
