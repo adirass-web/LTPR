@@ -1,9 +1,16 @@
-.profile-section + .profile-section {
-  border-block-start: 0;
+.profile-section--areas {
+  padding-block-start: var(--section-space);
 }
 
-.profile-section--areas {
-  padding-block-start: clamp(6rem, 13vw, 12rem);
+.profile-section__header h2::before,
+.profile-evidence h2::before,
+.profile-close h2::before {
+  content: '';
+  display: block;
+  inline-size: 2.2rem;
+  block-size: 0.22rem;
+  margin-block-end: 1.15rem;
+  background: var(--forest);
 }
 
 .profile-evidence,
@@ -14,50 +21,44 @@
 
 .profile-evidence {
   display: grid;
-  gap: clamp(5rem, 10vw, 10rem);
+  gap: clamp(6rem, 11vw, 10rem);
   padding-block: var(--section-space);
 }
 
 .profile-evidence h2,
 .profile-close h2 {
   margin: 0;
-  font-size: clamp(2.15rem, 4.2vw, 4.75rem);
+  font-size: clamp(2.15rem, 4vw, 4.45rem);
   font-weight: 500;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   line-height: 0.98;
   text-wrap: balance;
 }
 
-.profile-evidence__record {
+.profile-evidence__record,
+.profile-evidence__method {
   display: grid;
   gap: var(--space-lg);
 }
 
 .profile-evidence__record h2 {
-  max-inline-size: 8ch;
-}
-
-.profile-evidence__method {
-  display: grid;
-  gap: var(--space-md);
-  max-inline-size: 58rem;
-  margin-inline-start: auto;
+  max-inline-size: 9ch;
 }
 
 .profile-evidence__method h2 {
   max-inline-size: 10ch;
   color: var(--forest);
-  font-size: clamp(1.6rem, 2.7vw, 2.7rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
 .profile-record-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2.25rem, 4vw, 4.5rem) clamp(2rem, 6vw, 7rem);
+  gap: clamp(2.5rem, 4vw, 4.5rem) clamp(2rem, 5vw, 6rem);
 }
 
 .profile-record-list li {
   position: relative;
-  padding-block-start: 1rem;
+  padding-block-start: 1.1rem;
 }
 
 .profile-record-list li::before {
@@ -65,14 +66,13 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
-  inline-size: 1.9rem;
-  block-size: 2px;
+  inline-size: 2rem;
+  block-size: 0.18rem;
   background: var(--forest);
 }
 
 .profile-close {
-  padding-block: clamp(6rem, 13vw, 12rem);
-  background: color-mix(in srgb, var(--ink) 3.5%, var(--canvas));
+  padding-block: var(--section-space);
 }
 
 .profile-close__inner {
@@ -84,19 +84,43 @@
   max-inline-size: 10ch;
 }
 
+.profile-close__body {
+  display: grid;
+  gap: clamp(2.25rem, 4vw, 4rem);
+  min-inline-size: 0;
+}
+
 .profile-close__copy {
-  max-inline-size: var(--reading-max);
+  max-inline-size: 26rem;
 }
 
 .profile-close__copy p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(1.08rem, 1.55vw, 1.32rem);
-  line-height: 1.58;
+  font-size: clamp(1.06rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
 }
 
 .profile-close .text-link {
-  margin-block-start: 1.75rem;
+  margin-block-start: 1.6rem;
+}
+
+.profile-close__visual {
+  display: block;
+  overflow: clip;
+  aspect-ratio: 16 / 9;
+  background: color-mix(in srgb, var(--ink) 5%, var(--canvas));
+}
+
+.profile-close__visual picture,
+.profile-close__visual img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.profile-close__visual img {
+  object-fit: cover;
 }
 
 html:dir(rtl) .profile-evidence h2,
@@ -105,34 +129,34 @@ html:dir(rtl) .profile-close h2 {
 }
 
 @media (min-width: 52rem) {
-  .profile-evidence {
-    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.6fr);
-    align-items: start;
-  }
-
-  .profile-evidence__method {
-    position: sticky;
-    inset-block-start: 8rem;
-    margin-inline-start: 0;
-  }
-
+  .profile-evidence__record,
+  .profile-evidence__method,
   .profile-close__inner {
-    grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+    grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
     gap: clamp(2.5rem, 7vw, 8rem);
     align-items: start;
   }
 
-  .profile-close__copy {
+  .profile-evidence__record h2,
+  .profile-evidence__method h2,
+  .profile-close h2 {
+    grid-column: 1;
+  }
+
+  .profile-record-list,
+  .profile-evidence__method .profile-prose,
+  .profile-close__body {
     grid-column: 2;
+  }
+
+  .profile-close__body {
+    grid-template-columns: minmax(13rem, 0.4fr) minmax(0, 1fr);
+    align-items: end;
   }
 }
 
 @media (max-width: 51.99rem) {
   .profile-record-list {
     grid-template-columns: 1fr;
-  }
-
-  .profile-evidence__method {
-    margin-inline-start: 0;
   }
 }
