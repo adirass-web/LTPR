@@ -1,5 +1,5 @@
 export const pageKeys = ['home', 'media', 'about'] as const;
-export const launchPageKeys = ['home', 'media', 'about'] as const;
+export const launchPageKeys = ['home', 'media'] as const;
 
 export type Locale = 'en' | 'he';
 export type PageKey = (typeof pageKeys)[number];
