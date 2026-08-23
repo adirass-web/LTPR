@@ -129,24 +129,51 @@ html:dir(rtl) .profile-close h2 {
 }
 
 @media (min-width: 52rem) {
+  .profile-section--areas,
   .profile-evidence__record,
   .profile-evidence__method,
   .profile-close__inner {
+    display: grid;
     grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
     gap: clamp(2.5rem, 7vw, 8rem);
     align-items: start;
   }
 
+  .profile-section--areas .profile-section__header,
   .profile-evidence__record h2,
   .profile-evidence__method h2,
   .profile-close h2 {
     grid-column: 1;
   }
 
+  .profile-section--areas .profile-section__header {
+    margin: 0;
+  }
+
+  .profile-section--areas .profile-area-list,
   .profile-record-list,
   .profile-evidence__method .profile-prose,
   .profile-close__body {
     grid-column: 2;
+  }
+
+  .profile-section--areas .profile-area-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3.5rem, 6vw, 6rem) clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .profile-section--areas .profile-area-list li {
+    display: block;
+  }
+
+  .profile-section--areas .profile-area-list h3,
+  .profile-section--areas .profile-area-list__copy {
+    grid-column: auto;
+  }
+
+  .profile-section--areas .profile-area-list__copy {
+    margin-block-start: 1rem;
   }
 
   .profile-close__body {
