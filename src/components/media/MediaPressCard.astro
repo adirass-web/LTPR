@@ -18,7 +18,7 @@ const { item } = Astro.props;
     aria-label={`Read ${item.title} in ${item.outlet}, opens in a new tab`}
   >
     <div class="media-card__press-visual">
-      <ResponsiveMediaImage image={item.image} sizes="(min-width: 46rem) 35vw, 100vw" />
+      <ResponsiveMediaImage image={item.image} sizes="(min-width: 64rem) 55vw, 100vw" />
     </div>
     <div class="media-card__body">
       <p class="eyebrow">{item.outlet}</p>
