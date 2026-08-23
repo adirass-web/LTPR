@@ -20,11 +20,10 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 >
   <article class="media-page">
     <header class="media-page__intro">
-      <p class="eyebrow">Selected appearances</p>
       <h1>Media</h1>
     </header>
 
-    <section class="media-section" aria-labelledby="media-lead-title">
+    <section class="media-section media-section--lead" aria-labelledby="media-lead-title">
       <a
         class="media-lead"
         href={lead.url}
@@ -32,24 +31,19 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
         rel="noopener noreferrer"
         aria-label={`Watch ${lead.title} from ${lead.outlet}, opens in a new tab`}
       >
-        <div class="media-lead__visual-stack">
-          <div class="media-lead__visual">
-            <ResponsiveMediaImage
-              image={lead.image}
-              loading="eager"
-              fetchpriority="high"
-              sizes="(min-width: 46rem) 66vw, 100vw"
-            />
-            <span class="media-play" aria-hidden="true">▶</span>
-          </div>
-          <div class="media-lead__network" aria-hidden="true">
-            <ResponsiveMediaImage image={lead.secondaryImage} sizes="(min-width: 46rem) 66vw, 100vw" />
-          </div>
+        <div class="media-lead__visual">
+          <ResponsiveMediaImage
+            image={lead.image}
+            loading="eager"
+            fetchpriority="high"
+            sizes="(min-width: 70rem) 62vw, 100vw"
+          />
+          <span class="media-play" aria-hidden="true">▶</span>
         </div>
         <div class="media-lead__copy">
-          <p class="eyebrow">{lead.outlet}</p>
+          <p class="media-outlet">{lead.outlet}</p>
           <h2 id="media-lead-title">{lead.title}</h2>
-          <p>{lead.date} · {lead.meta}</p>
+          <p class="media-meta">{lead.date} · {lead.meta}</p>
           <p class="media-lead__source">RAI broadcast · Watch on YouTube</p>
         </div>
       </a>
@@ -57,26 +51,26 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
     <section class="media-section" aria-labelledby="on-screen-title">
       <h2 id="on-screen-title">On screen</h2>
-      <div class="media-grid">
+      <div class="media-grid media-grid--video">
         {videos.map((item) => <MediaVideoCard item={item} />)}
       </div>
     </section>
 
     <section class="media-section" aria-labelledby="press-title">
       <h2 id="press-title">Press &amp; features</h2>
-      <div class="media-grid">
+      <div class="media-grid media-grid--press">
         {press.map((item) => <MediaPressCard item={item} />)}
       </div>
     </section>
 
-    <section class="media-section" aria-labelledby="coverage-title">
+    <section class="media-section media-section--archive" aria-labelledby="coverage-title">
       <h2 id="coverage-title">More coverage</h2>
       <div class="media-coverage-grid">
         {archive.map((item) => <MoreCoverageItem item={item} />)}
       </div>
     </section>
 
-    <section class="media-section" aria-labelledby="stages-title">
+    <section class="media-section media-section--stages" aria-labelledby="stages-title">
       <h2 id="stages-title">Stages</h2>
       <ul class="media-stage-list">
         {
@@ -93,9 +87,7 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
                   <span>{stage.event}</span>
                   <span class="media-meta">{stage.date}</span>
                 </span>
-                <span class="media-arrow" aria-hidden="true">
-                  ↗
-                </span>
+                <span class="media-arrow" aria-hidden="true">↗</span>
               </a>
             </li>
           ))
@@ -121,9 +113,7 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
                 >
                   <span>{item.label}</span>
                   <span class="media-meta">{item.detail}</span>
-                  <span class="media-arrow" aria-hidden="true">
-                    {item.kind === 'download' ? '↓' : '↗'}
-                  </span>
+                  <span class="media-arrow" aria-hidden="true">{item.kind === 'download' ? '↓' : '↗'}</span>
                 </a>
               </li>
             ) : (
