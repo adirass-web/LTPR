@@ -2,10 +2,12 @@
 
 | Token | Value | Rule |
 | --- | --- | --- |
-| Canvas | `#f6f6f6` | Global page ground |
-| Ink | `#000000` | Type, rules, focus states, outline CTAs |
-| Accent | `#02291f` | One primary CTA per viewport |
-| Rule | `1px solid #000000` | Dividers and borders |
-| Radius | `0px` | No rounded geometry |
+| Canvas | `#f2efe7` | Warm global page ground |
+| Paper | `#faf8f2` | Quiet raised or alternating surface |
+| Ink | `#17201d` | Primary type |
+| Muted ink | `#65706a` | Metadata and supporting labels |
+| Accent | `#073f32` | Functional emphasis, focus and interaction |
+| Hairline | `rgba(23, 32, 29, 0.16)` | Selective structure, never a page-wide grid |
+| Radius | `2px` | Image and compact interactive surface finish |
 
-No additional visual colors are approved for this build.
+Deep forest is functional, not decorative. Use whitespace, tonal surfaces and typography for hierarchy; do not reconstruct the retired square-grid system with repeated borders.
