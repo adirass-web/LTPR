@@ -76,11 +76,7 @@ import '~/assets/styles/profile.css';
             <p>{homeV3.publicRecord.description}</p>
             <a class="text-link" href={pagePath('en', 'media')}>{homeV3.publicRecord.linkLabel}</a>
           </div>
-          <a
-            class="profile-close__visual"
-            href={pagePath('en', 'media')}
-            aria-label="View the Media page"
-          >
+          <a class="profile-close__visual" href={pagePath('en', 'media')} aria-label="View the Media page">
             <ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 42vw, 100vw" />
           </a>
         </div>
