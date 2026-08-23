@@ -1,0 +1,138 @@
+.profile-section + .profile-section {
+  border-block-start: 0;
+}
+
+.profile-section--areas {
+  padding-block-start: clamp(6rem, 13vw, 12rem);
+}
+
+.profile-evidence,
+.profile-close__inner {
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--page-max));
+  margin-inline: auto;
+}
+
+.profile-evidence {
+  display: grid;
+  gap: clamp(5rem, 10vw, 10rem);
+  padding-block: var(--section-space);
+}
+
+.profile-evidence h2,
+.profile-close h2 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4.2vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.profile-evidence__record {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.profile-evidence__record h2 {
+  max-inline-size: 8ch;
+}
+
+.profile-evidence__method {
+  display: grid;
+  gap: var(--space-md);
+  max-inline-size: 58rem;
+  margin-inline-start: auto;
+}
+
+.profile-evidence__method h2 {
+  max-inline-size: 10ch;
+  color: var(--forest);
+  font-size: clamp(1.6rem, 2.7vw, 2.7rem);
+}
+
+.profile-record-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2.25rem, 4vw, 4.5rem) clamp(2rem, 6vw, 7rem);
+}
+
+.profile-record-list li {
+  position: relative;
+  padding-block-start: 1rem;
+}
+
+.profile-record-list li::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 1.9rem;
+  block-size: 2px;
+  background: var(--forest);
+}
+
+.profile-close {
+  padding-block: clamp(6rem, 13vw, 12rem);
+  background: color-mix(in srgb, var(--ink) 3.5%, var(--canvas));
+}
+
+.profile-close__inner {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.profile-close h2 {
+  max-inline-size: 10ch;
+}
+
+.profile-close__copy {
+  max-inline-size: var(--reading-max);
+}
+
+.profile-close__copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.08rem, 1.55vw, 1.32rem);
+  line-height: 1.58;
+}
+
+.profile-close .text-link {
+  margin-block-start: 1.75rem;
+}
+
+html:dir(rtl) .profile-evidence h2,
+html:dir(rtl) .profile-close h2 {
+  letter-spacing: normal;
+}
+
+@media (min-width: 52rem) {
+  .profile-evidence {
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.6fr);
+    align-items: start;
+  }
+
+  .profile-evidence__method {
+    position: sticky;
+    inset-block-start: 8rem;
+    margin-inline-start: 0;
+  }
+
+  .profile-close__inner {
+    grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 8rem);
+    align-items: start;
+  }
+
+  .profile-close__copy {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 51.99rem) {
+  .profile-record-list {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-evidence__method {
+    margin-inline-start: 0;
+  }
+}
