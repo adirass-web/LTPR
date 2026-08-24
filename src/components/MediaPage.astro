@@ -4,7 +4,8 @@ import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro'
 import MediaVideoCard from '~/components/media/MediaVideoCard.astro';
 import MediaPressCard from '~/components/media/MediaPressCard.astro';
 import MoreCoverageItem from '~/components/media/MoreCoverageItem.astro';
-import { archive, lead, press, pressKit, stages, videos } from '~/data/media';
+import { archive, lead, press, pressKit, videos } from '~/data/media';
+import { internationalForums } from '~/data/internationalForums';
 import '~/assets/styles/media.css';
 
 const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -70,23 +71,22 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
       </div>
     </section>
 
-    <section class="media-section media-section--stages" aria-labelledby="stages-title">
-      <h2 id="stages-title">Stages</h2>
+    <section class="media-section media-section--stages" aria-labelledby="forums-title">
+      <h2 id="forums-title">Selected international forums</h2>
       <ul class="media-stage-list">
         {
-          stages.map((stage) => (
+          internationalForums.map((forum) => (
             <li>
               <a
-                href={stage.url}
+                href={forum.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Read the official record for ${stage.event} in ${stage.city}, opens in a new tab`}
+                aria-label={`Read the official record for ${forum.institution}, opens in a new tab`}
               >
-                <span class="media-stage-list__city">{stage.city}</span>
                 <span class="media-stage-list__copy">
-                  <span>{stage.event}</span>
-                  <span class="media-meta">{stage.date}</span>
+                  <span>{forum.institution}</span>
                 </span>
+                <span class="media-stage-list__city">{forum.detail}</span>
                 <span class="media-arrow" aria-hidden="true">
                   ↗
                 </span>
