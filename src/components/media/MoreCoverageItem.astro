@@ -15,18 +15,18 @@ const accessibleLabel =
     : `${item.outlet}: ${item.title}, opens in a new tab`;
 ---
 
-<a
-  class="media-coverage-item"
-  href={item.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={accessibleLabel}
->
+<a class="media-coverage-item" href={item.url} target="_blank" rel="noopener noreferrer" aria-label={accessibleLabel}>
   <span class="media-coverage-item__date"><bdi>{item.date}</bdi></span>
   <span class="media-coverage-item__copy">
     <span class="eyebrow" lang="en" dir="ltr">{item.outlet}</span>
     <span class="media-coverage-item__title" lang={titleLang} dir="auto">{item.title}</span>
-    {item.note && <span class="media-meta" dir="auto">{item.note}</span>}
+    {
+      item.note && (
+        <span class="media-meta" dir="auto">
+          {item.note}
+        </span>
+      )
+    }
   </span>
   <span class="media-arrow" aria-hidden="true">↗</span>
 </a>
