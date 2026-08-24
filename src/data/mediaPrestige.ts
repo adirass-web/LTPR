@@ -1,15 +1,5 @@
-import {
-  archive as baseArchive,
-  lead as baseLead,
-  press as basePress,
-  videos as baseVideos,
-} from './media';
-import type {
-  MediaArchiveItem,
-  MediaImage,
-  MediaPressItem,
-  MediaVideoItem,
-} from './media';
+import { archive as baseArchive, lead as baseLead, press as basePress, videos as baseVideos } from './media';
+import type { MediaArchiveItem, MediaImage, MediaPressItem, MediaVideoItem } from './media';
 
 export type MediaPrestigePressItem = Omit<MediaPressItem, 'image'> & {
   image?: MediaImage;
