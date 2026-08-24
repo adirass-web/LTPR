@@ -2,7 +2,7 @@
 
 **Status:** current design authority for Profile and Media.
 
-The older profile specification under `docs/superpowers/specs/` is obsolete. It may be consulted for history only and must not constrain this redesign.
+Older profile specifications are retained in Git history only and must not constrain this redesign.
 
 ## Mission
 
@@ -45,18 +45,18 @@ Five expert lenses were applied before implementation:
 
 ### Decisions
 
-| Issue | Decision |
-| --- | --- |
-| Existing Home architecture | Recompose from first principles; existing DOM is raw material, not a template. |
-| Typography | IBM Plex Sans / IBM Plex Sans Hebrew, 400 + 500, modest Latin tracking, natural Hebrew tracking. |
-| Canvas | `#f7f6f3` warm white; dark neutral ink; muted neutral text. |
-| Lines | Remove most section/card/header/footer rules; retain subtle separators only for dense archive-like rows. |
-| Accent | Deep forest only for focus, active states and occasional functional emphasis. |
-| Hero | Asymmetric editorial composition rather than a hard bordered split-screen. |
-| Evidence | Bring practical/international record into the main narrative; do not render it as a CV wall. |
-| Media | Editorial hierarchy: one strong lead, quieter grids/lists, authentic crops, no logo wall. |
-| Mystique | Achieve through selective disclosure, asymmetry, negative space and confidence, never theatrical effects. |
-| RTL | Same semantic components and logical properties; no duplicated RTL component tree. |
+| Issue                      | Decision                                                                                                  |
+| -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Existing Home architecture | Recompose from first principles; existing DOM is raw material, not a template.                            |
+| Typography                 | IBM Plex Sans / IBM Plex Sans Hebrew, 400 + 500, modest Latin tracking, natural Hebrew tracking.          |
+| Canvas                     | `#f7f6f3` warm white; dark neutral ink; muted neutral text.                                               |
+| Lines                      | Remove most section/card/header/footer rules; retain subtle separators only for dense archive-like rows.  |
+| Accent                     | Deep forest only for focus, active states and occasional functional emphasis.                             |
+| Hero                       | Asymmetric editorial composition rather than a hard bordered split-screen.                                |
+| Evidence                   | Bring practical/international record into the main narrative; do not render it as a CV wall.              |
+| Media                      | Editorial hierarchy: one strong lead, quieter grids/lists, authentic crops, no logo wall.                 |
+| Mystique                   | Achieve through selective disclosure, asymmetry, negative space and confidence, never theatrical effects. |
+| RTL                        | Same semantic components and logical properties; no duplicated RTL component tree.                        |
 
 ## Home rules
 

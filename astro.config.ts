@@ -2,7 +2,6 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -16,7 +15,6 @@ export default defineConfig({
     sitemap({
       filter: (page) => ['/en/', '/en/media/'].some((route) => page.endsWith(route)),
     }),
-    mdx(),
   ],
   vite: {
     plugins: [tailwindcss()],

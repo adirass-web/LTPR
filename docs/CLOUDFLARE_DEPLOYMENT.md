@@ -33,7 +33,8 @@ npm run build
 Review the Cloudflare preview and confirm:
 
 - `/` redirects to `/en/`.
-- `/en/`, `/en/media/` and `/en/about/` return successful HTML responses.
+- `/en/` and `/en/media/` return successful HTML responses.
+- `/en/about` and `/en/about/` redirect permanently to `/en/#profile`.
 - `/he/` remains a noindex translation-stage route.
 - The response includes the security headers emitted from `public/_headers`.
 - Canonical and sitemap URLs use `https://cyberdrtabansky.com`.
