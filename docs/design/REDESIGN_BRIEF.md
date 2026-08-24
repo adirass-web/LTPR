@@ -92,6 +92,14 @@ Use `lang` and `dir` at the root, logical properties, semantic DOM order and bid
 
 Hebrew staging must remain `noindex` and must not be linked or emitted as `hreflang` until approved native copy exists.
 
+### RTL proof infrastructure
+
+- `/he/design-system/` is an unlinked, `noindex` QA route. It is **not** Hebrew editorial content and must never be added to navigation, sitemap or `hreflang`.
+- The route uses neutral Hebrew specimen strings plus real shared components and media assets to exercise the approved Profile and Media geometries before native Hebrew copy is available.
+- Media cards must set `lang`/`dir` for original-language titles and isolate dates/metadata so Latin, Hebrew and punctuation remain stable inside RTL.
+- Media layout switches are based on the available `.media-page` container width rather than viewport width, so browser zoom and constrained layouts preserve the one/two-column geometry.
+- Remove the proof route after approved Hebrew Profile and Media pages themselves provide equivalent full-layout coverage.
+
 ## Implementation constraints
 
 Keep Astro and the static Cloudflare Pages architecture. No framework migration, animation library or design-system dependency. Prefer modern CSS Grid/Flexbox, `clamp()`, `minmax(0, …)`, logical properties and container queries where they solve component-local behavior.
