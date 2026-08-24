@@ -11,6 +11,18 @@ export const sources = {
     label: 'Cybersecurity in Israel',
     url: 'https://link.springer.com/book/10.1007/978-3-319-18986-4',
   },
+  cyberResilienceLabTeam: {
+    label: 'Cyber Resilience Laboratory team',
+    url: 'https://en-cyber.tau.ac.il/our_team_rcrl',
+  },
+  strategicAdvisoryRecord: {
+    label: 'Dr. Lior Tabansky — strategic advisory record',
+    url: 'https://en-cyber.tau.ac.il/our_team_rcrl/lior_tabansky',
+  },
+  progressFieldRecord: {
+    label: 'Making PROGRESS: field application in sustainable development',
+    url: 'https://rcrl.tau.ac.il/progress_jcp_jan25',
+  },
   sectoralCybersecurityMaturityModel: {
     label: 'Sectoral Cybersecurity Maturity Model',
     url: 'https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392',

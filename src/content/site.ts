@@ -19,8 +19,9 @@ export const siteContent: Record<Locale, LocaleContent> = {
     pages: {
       home: {
         nav: 'Profile',
-        title: 'Dr. Lior Tabansky — innovation systems, AI, digital trust and national resilience',
-        description: 'Independent work on innovation systems, AI, digital trust and national resilience.',
+        title: 'Dr. Lior Tabansky — Strategic technology adviser',
+        description:
+          'Strategic technology adviser to governments and institutions working across cyber, AI, critical systems and national capability.',
       },
       media: {
         nav: 'Media',
