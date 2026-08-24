@@ -1,18 +1,3 @@
-.profile-section--areas {
-  padding-block-start: var(--section-space);
-}
-
-.profile-section__header h2::before,
-.profile-evidence h2::before,
-.profile-close h2::before {
-  content: '';
-  display: block;
-  inline-size: 1.9rem;
-  block-size: 0.2rem;
-  margin-block-end: 1rem;
-  background: var(--forest);
-}
-
 .home-hero__inner {
   align-items: start;
 }
@@ -22,54 +7,234 @@
   margin-block-start: 0;
 }
 
-.profile-evidence,
-.profile-close__inner {
-  inline-size: min(calc(100% - 2 * var(--gutter)), var(--page-max));
-  margin-inline: auto;
-}
-
-.profile-evidence {
-  display: grid;
-  gap: clamp(5rem, 8vw, 8rem);
-  padding-block: var(--section-space);
-}
-
-.profile-evidence h2,
-.profile-close h2 {
-  margin: 0;
-  font-size: clamp(2.05rem, 3.6vw, 3.9rem);
+.home-hero__category {
+  margin: 0 0 clamp(1.15rem, 2vw, 1.75rem);
+  color: var(--forest);
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: -0.027em;
-  line-height: 1;
+  letter-spacing: 0.018em;
+  line-height: 1.4;
+}
+
+.home-hero__role {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.42rem;
+  align-items: baseline;
+  margin-block-start: clamp(1.3rem, 2.2vw, 1.85rem);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color var(--motion);
+}
+
+.home-hero__role::after {
+  content: '↗';
+  margin-inline-start: 0.18rem;
+  color: var(--forest);
+  transition: transform var(--motion);
+}
+
+.profile-section__header h2::before,
+.profile-close h2::before {
+  content: '';
+  display: block;
+  inline-size: 1.9rem;
+  block-size: 0.2rem;
+  margin-block-end: 1rem;
+  background: var(--forest);
+}
+
+.profile-section--proof {
+  padding-block-start: var(--section-space);
+}
+
+.profile-proof,
+.profile-israel,
+.profile-method,
+.profile-close__inner {
+  min-inline-size: 0;
+}
+
+.profile-proof-list,
+.profile-work-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-proof-list {
+  display: grid;
+  gap: clamp(3.25rem, 6vw, 6rem);
+}
+
+.profile-proof-list li {
+  max-inline-size: 31rem;
+}
+
+.profile-proof__label {
+  margin: 0;
+  color: var(--forest);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.018em;
+  line-height: 1.4;
+}
+
+.profile-proof-list h3 {
+  max-inline-size: 20ch;
+  margin: 0.7rem 0 0;
+  font-size: clamp(1.75rem, 2.8vw, 2.8rem);
+  font-weight: 500;
+  letter-spacing: -0.024em;
+  line-height: 1.03;
   text-wrap: balance;
 }
 
-.profile-evidence__record,
-.profile-evidence__method {
+.profile-proof__description {
+  max-inline-size: 31rem;
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.01rem, 1.2vw, 1.14rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.profile-proof__source {
+  display: inline-flex;
+  gap: 0.42rem;
+  align-items: baseline;
+  margin-block-start: 1.15rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--motion);
+}
+
+.profile-proof__source::after {
+  content: '↗';
+  color: var(--forest);
+  transition: transform var(--motion);
+}
+
+.profile-proof__disclosure {
+  max-inline-size: 34rem;
+  margin: clamp(2.75rem, 5vw, 4.75rem) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.profile-israel {
   display: grid;
-  gap: var(--space-lg);
+  gap: clamp(2.75rem, 5vw, 5rem);
+  align-items: center;
 }
 
-.profile-evidence__record h2,
-.profile-evidence__method h2 {
-  max-inline-size: 10ch;
+.profile-book {
+  inline-size: min(100%, 20rem);
+  margin: 0;
 }
 
-.profile-evidence__method h2 {
+.profile-book__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile-book picture,
+.profile-book img {
+  display: block;
+  inline-size: 100%;
+}
+
+.profile-book img {
+  block-size: auto;
+}
+
+.profile-book figcaption {
+  display: grid;
+  gap: 0.2rem;
+  margin-block-start: 0.95rem;
+}
+
+.profile-book cite {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.profile-book figcaption span {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.profile-israel__copy {
+  max-inline-size: 38rem;
+}
+
+.profile-israel__copy p,
+.profile-method > p,
+.profile-work-list p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.01rem, 1.22vw, 1.15rem);
+  line-height: 1.67;
+  text-wrap: pretty;
+}
+
+.profile-israel__copy p:first-child {
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2.25vw, 2.15rem);
+  line-height: 1.22;
+  letter-spacing: -0.018em;
+}
+
+.profile-israel__copy p + p {
+  margin-block-start: 1.35rem;
+}
+
+.profile-work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: clamp(3rem, 5vw, 5rem) clamp(2rem, 4vw, 4rem);
+}
+
+.profile-work-list li {
+  min-inline-size: 0;
+}
+
+.profile-work-list h3 {
+  max-inline-size: 18ch;
+  margin: 0;
   color: var(--forest);
+  font-size: clamp(1.35rem, 1.9vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
-.profile-section--areas .profile-area-list h3 {
-  color: var(--forest);
+.profile-work-list p {
+  margin-block-start: 0.95rem;
 }
 
-.profile-record-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2.25rem, 3.8vw, 4rem) clamp(2rem, 5vw, 5.5rem);
+.profile-method {
+  max-inline-size: 43rem;
 }
 
-.profile-record-list li {
-  max-inline-size: 27rem;
+.profile-method__principle {
+  margin-block-start: clamp(1.75rem, 3vw, 2.75rem) !important;
+  color: var(--ink) !important;
+  font-size: clamp(1.4rem, 2.35vw, 2.25rem) !important;
+  letter-spacing: -0.019em;
+  line-height: 1.2 !important;
 }
 
 .profile-close {
@@ -79,10 +244,18 @@
 .profile-close__inner {
   display: grid;
   gap: var(--space-lg);
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--page-max));
+  margin-inline: auto;
 }
 
 .profile-close h2 {
   max-inline-size: 10ch;
+  margin: 0;
+  font-size: clamp(2.05rem, 3.6vw, 3.9rem);
+  font-weight: 500;
+  letter-spacing: -0.027em;
+  line-height: 1;
+  text-wrap: balance;
 }
 
 .profile-close__body {
@@ -92,7 +265,7 @@
 }
 
 .profile-close__copy {
-  max-inline-size: 25rem;
+  max-inline-size: 32rem;
 }
 
 .profile-close__copy p {
@@ -126,15 +299,21 @@
   transition: transform 260ms ease-out;
 }
 
-html:dir(rtl) .profile-evidence h2,
+html:dir(rtl) .home-hero__category,
+html:dir(rtl) .profile-proof__label,
+html:dir(rtl) .profile-proof-list h3,
+html:dir(rtl) .profile-israel__copy p:first-child,
+html:dir(rtl) .profile-work-list h3,
+html:dir(rtl) .profile-method__principle,
 html:dir(rtl) .profile-close h2 {
   letter-spacing: normal;
 }
 
 @media (min-width: 52rem) {
-  .profile-section--areas,
-  .profile-evidence__record,
-  .profile-evidence__method,
+  .profile-section--proof,
+  .profile-section--israel,
+  .profile-section--work,
+  .profile-section--method,
   .profile-close__inner {
     display: grid;
     grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
@@ -142,58 +321,64 @@ html:dir(rtl) .profile-close h2 {
     align-items: start;
   }
 
-  .profile-section--areas .profile-section__header,
-  .profile-evidence__record h2,
-  .profile-evidence__method h2,
+  .profile-section--proof .profile-section__header,
+  .profile-section--israel .profile-section__header,
+  .profile-section--work .profile-section__header,
+  .profile-section--method .profile-section__header,
   .profile-close h2 {
     grid-column: 1;
-  }
-
-  .profile-section--areas .profile-section__header {
     margin: 0;
   }
 
-  .profile-section--areas .profile-area-list,
-  .profile-record-list,
-  .profile-evidence__method .profile-prose,
+  .profile-proof,
+  .profile-israel,
+  .profile-work-list,
+  .profile-method,
   .profile-close__body {
     grid-column: 2;
   }
 
-  .profile-section--areas .profile-area-list {
-    display: grid;
+  .profile-proof-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(3.25rem, 5.5vw, 5.5rem) clamp(2.5rem, 5vw, 5rem);
+    gap: clamp(2.5rem, 5vw, 5.25rem);
   }
 
-  .profile-section--areas .profile-area-list li {
-    display: block;
-  }
-
-  .profile-section--areas .profile-area-list h3,
-  .profile-section--areas .profile-area-list__copy {
-    grid-column: auto;
-  }
-
-  .profile-section--areas .profile-area-list__copy {
-    margin-block-start: 0.9rem;
+  .profile-israel {
+    grid-template-columns: minmax(13rem, 0.44fr) minmax(0, 1fr);
+    gap: clamp(2.75rem, 5vw, 5.5rem);
   }
 
   .profile-close__body {
-    grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
+    grid-template-columns: minmax(13rem, 0.42fr) minmax(0, 1fr);
     align-items: start;
   }
 }
 
 @media (hover: hover) {
+  .home-hero__role:hover,
+  .profile-proof__source:hover,
+  .profile-book__link:hover cite {
+    color: var(--forest);
+  }
+
+  .home-hero__role:hover::after,
+  .profile-proof__source:hover::after {
+    transform: translate(0.12rem, -0.12rem);
+  }
+
   .profile-close__visual:hover img {
     transform: scale(1.012);
   }
 }
 
-@media (max-width: 51.99rem) {
-  .profile-record-list {
-    grid-template-columns: 1fr;
+@media (max-width: 35.99rem) {
+  .home-hero__role {
+    display: flex;
+    max-inline-size: 19rem;
+  }
+
+  .profile-book {
+    inline-size: min(72vw, 18rem);
   }
 }
 
