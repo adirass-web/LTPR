@@ -76,6 +76,16 @@ Freedom hierarchy:
 
 Media is evidence of international relevance, not a portfolio gallery. Preserve original source URLs, titles, dates, languages and useful metadata. Not every item needs equal visual weight. Dense secondary material can become compact editorial lists.
 
+### Art-direction panel resolution
+
+The five expert lenses were reconvened after responsive review. The following decisions supersede experimental alternatives:
+
+- **On Screen geometry:** use one column on small screens and a strict equal two-column grid from tablet widths upward. With five items, the fifth spans the grid but remains one-card width and is centered. Do not restore the 12-column 7/5 or staggered layout.
+- **Broadcast imagery:** preserve authentic source color with only mild saturation/contrast normalization. Do not apply blanket black-and-white or sepia treatments. Full natural color may return on hover.
+- **Home imagery:** images align to the same typographic axes as their adjacent copy. The hero portrait and Public Record visual top-align with their text fields rather than floating independently.
+- **Forest accent:** make deep forest visibly functional through play controls, source/outlet labels, links, active state and short section markers. Do not use large forest panels or decorative green backgrounds.
+- **Press kit:** treat it as compact utility, collapsed by default in a native `details/summary` disclosure. Do not use a folder metaphor or give it full editorial-section height.
+
 ## Bidi rules
 
 Use `lang` and `dir` at the root, logical properties, semantic DOM order and bidi isolation for mixed Hebrew/Latin text. Do not mirror photography or nondirectional marks. Directional arrows may mirror only when their meaning is directional.
