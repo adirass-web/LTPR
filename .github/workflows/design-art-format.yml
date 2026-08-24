@@ -1,0 +1,34 @@
+name: Format art direction pass
+
+on:
+  push:
+    branches: [design/premium-bilingual-system]
+    paths:
+      - .github/workflows/design-art-format.yml
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: design/premium-bilingual-system
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx prettier --write src/assets/styles/tailwind.css src/assets/styles/profile.css src/assets/styles/media.css
+      - name: Commit formatting
+        run: |
+          if git diff --quiet -- src/assets/styles/tailwind.css src/assets/styles/profile.css src/assets/styles/media.css; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/assets/styles/tailwind.css src/assets/styles/profile.css src/assets/styles/media.css
+          git commit -m "style: format art direction pass"
+          git push origin HEAD:design/premium-bilingual-system
