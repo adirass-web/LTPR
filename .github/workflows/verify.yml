@@ -57,6 +57,14 @@ jobs:
             const context = await browser.newContext(capture.device ?? { viewport: capture.viewport });
             const page = await context.newPage();
             await page.goto(capture.url, { waitUntil: 'networkidle' });
+
+            if (capture.name === 'home-desktop' || capture.name === 'home-mobile') {
+              await page.screenshot({ path: `screenshots/${capture.name}-abovefold.png` });
+            }
+
+            await page.addStyleTag({
+              content: '.site-header { position: static !important; } .skip-link { display: none !important; }',
+            });
             await page.evaluate(async () => {
               for (let y = 0; y < document.body.scrollHeight; y += 600) {
                 window.scrollTo(0, y);
@@ -70,6 +78,20 @@ jobs:
               })
               .catch(() => undefined);
             await page.screenshot({ path: `screenshots/${capture.name}.png`, fullPage: true });
+
+            if (capture.name === 'home-desktop') {
+              const sections = {
+                proof: '.profile-section--proof',
+                israel: '.profile-section--israel',
+                work: '.profile-section--work',
+                method: '.profile-section--method',
+                publicRecord: '.profile-close',
+              };
+              for (const [name, selector] of Object.entries(sections)) {
+                await page.locator(selector).screenshot({ path: `screenshots/home-${name}.png` });
+              }
+            }
+
             metrics[capture.name] = await page.evaluate(() => ({
               title: document.title,
               h1Count: document.querySelectorAll('h1').length,
