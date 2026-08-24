@@ -1,4 +1,5 @@
 ---
+import BookCover from '~/components/BookCover.astro';
 import Portrait from '~/components/Portrait.astro';
 import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
 import SiteShell from '~/components/SiteShell.astro';
@@ -21,50 +22,111 @@ import '~/assets/styles/profile.css';
     <section id="profile" class="home-hero" aria-labelledby="home-title">
       <div class="home-hero__inner">
         <div class="home-hero__copy">
+          <p class="home-hero__category">{homeV3.hero.category}</p>
           <h1 id="home-title">{homeV3.hero.title}</h1>
           <p class="home-hero__standfirst">{homeV3.hero.standfirst}</p>
+          <a
+            class="home-hero__role"
+            href={homeV3.hero.role.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${homeV3.hero.role.title}, ${homeV3.hero.role.institution}, opens in a new tab`}
+          >
+            <span>{homeV3.hero.role.title}</span>
+            <span aria-hidden="true">·</span>
+            <span>{homeV3.hero.role.institution}</span>
+          </a>
         </div>
         <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
       </div>
     </section>
 
-    <section class="profile-section profile-section--areas" aria-labelledby="work-title">
+    <section class="profile-section profile-section--proof" aria-labelledby="public-work-title">
       <div class="profile-section__header">
-        <h2 id="work-title">{homeV3.workTitle}</h2>
+        <h2 id="public-work-title">{homeV3.publicWork.title}</h2>
       </div>
-      <ul class="profile-area-list">
+      <div class="profile-proof">
+        <ul class="profile-proof-list">
+          {
+            homeV3.publicWork.items.map((item) => (
+              <li data-citation-slots={item.citations.join('; ')}>
+                <p class="profile-proof__label">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p class="profile-proof__description">{item.description}</p>
+                <a
+                  class="profile-proof__source"
+                  href={item.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${item.sourceLabel}, opens in a new tab`}
+                >
+                  {item.sourceLabel}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="profile-proof__disclosure">{homeV3.publicWork.disclosure}</p>
+      </div>
+    </section>
+
+    <section
+      class="profile-section profile-section--israel"
+      aria-labelledby="israel-title"
+      data-citation-slots={homeV3.israelExperience.citations.join('; ')}
+    >
+      <div class="profile-section__header">
+        <h2 id="israel-title">{homeV3.israelExperience.title}</h2>
+      </div>
+      <div class="profile-israel">
+        <figure class="profile-book">
+          <a
+            class="profile-book__link"
+            href={homeV3.israelExperience.book.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${homeV3.israelExperience.book.title} on Springer, opens in a new tab`}
+          >
+            <BookCover alt={homeV3.israelExperience.book.alt} />
+            <figcaption>
+              <cite>{homeV3.israelExperience.book.title}</cite>
+              <span>{homeV3.israelExperience.book.detail}</span>
+            </figcaption>
+          </a>
+        </figure>
+        <div class="profile-israel__copy">
+          {homeV3.israelExperience.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-section profile-section--work" aria-labelledby="work-title">
+      <div class="profile-section__header">
+        <h2 id="work-title">{homeV3.work.title}</h2>
+      </div>
+      <ul class="profile-work-list">
         {
-          homeV3.areas.map((area) => (
+          homeV3.work.areas.map((area) => (
             <li data-citation-slots={area.citations.join('; ') || undefined}>
               <h3>{area.title}</h3>
-              <div class="profile-area-list__copy">
-                {area.paragraphs.map((paragraph) => (
-                  <p>{paragraph}</p>
-                ))}
-              </div>
+              <p>{area.description}</p>
             </li>
           ))
         }
       </ul>
     </section>
 
-    <section class="profile-evidence" aria-labelledby="record-title">
-      <div class="profile-evidence__record">
-        <h2 id="record-title">{homeV3.record.title}</h2>
-        <ul class="profile-record-list">
-          {homeV3.record.items.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
-
-      <div
-        class="profile-evidence__method"
-        aria-labelledby="method-title"
-        data-citation-slots={homeV3.method.citations.join('; ')}
-      >
+    <section
+      class="profile-section profile-section--method"
+      aria-labelledby="method-title"
+      data-citation-slots={homeV3.method.citations.join('; ')}
+    >
+      <div class="profile-section__header">
         <h2 id="method-title">{homeV3.method.title}</h2>
-        <div class="profile-prose">
-          {homeV3.method.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-        </div>
+      </div>
+      <div class="profile-method">
+        <p>{homeV3.method.paragraphs[0]}</p>
+        <p class="profile-method__principle">{homeV3.method.paragraphs[1]}</p>
       </div>
     </section>
 
