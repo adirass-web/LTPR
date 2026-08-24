@@ -1,8 +1,11 @@
 ---
 import Portrait from '~/components/Portrait.astro';
+import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
 import SiteShell from '~/components/SiteShell.astro';
 import { homeV3 } from '~/content/en-v3';
 import { pagePath } from '~/content/site';
+import { lead } from '~/data/media';
+import '~/assets/styles/profile.css';
 ---
 
 <SiteShell
@@ -45,42 +48,36 @@ import { pagePath } from '~/content/site';
       </ul>
     </section>
 
-    <section class="profile-section profile-section--record" aria-labelledby="record-title">
-      <div class="profile-section__layout">
-        <div class="profile-section__header">
-          <h2 id="record-title">{homeV3.record.title}</h2>
-        </div>
+    <section class="profile-evidence" aria-labelledby="record-title">
+      <div class="profile-evidence__record">
+        <h2 id="record-title">{homeV3.record.title}</h2>
         <ul class="profile-record-list">
           {homeV3.record.items.map((item) => <li>{item}</li>)}
         </ul>
       </div>
-    </section>
 
-    <section
-      class="profile-section profile-section--method"
-      aria-labelledby="method-title"
-      data-citation-slots={homeV3.method.citations.join('; ')}
-    >
-      <div class="profile-section__layout">
-        <div class="profile-section__header">
-          <h2 id="method-title">{homeV3.method.title}</h2>
-        </div>
+      <div
+        class="profile-evidence__method"
+        aria-labelledby="method-title"
+        data-citation-slots={homeV3.method.citations.join('; ')}
+      >
+        <h2 id="method-title">{homeV3.method.title}</h2>
         <div class="profile-prose">
           {homeV3.method.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
         </div>
       </div>
     </section>
 
-    <section class="profile-section profile-section--record" aria-labelledby="public-record-title">
-      <div class="profile-section__layout">
-        <div class="profile-section__header">
-          <h2 id="public-record-title">{homeV3.publicRecord.title}</h2>
-        </div>
-        <div class="profile-prose">
-          <p>{homeV3.publicRecord.description}</p>
-          <a class="text-link" href={pagePath('en', 'media')}>
-            {homeV3.publicRecord.linkLabel}
-            <span aria-hidden="true">→</span>
+    <section class="profile-close" aria-labelledby="public-record-title">
+      <div class="profile-close__inner">
+        <h2 id="public-record-title">{homeV3.publicRecord.title}</h2>
+        <div class="profile-close__body">
+          <div class="profile-close__copy">
+            <p>{homeV3.publicRecord.description}</p>
+            <a class="text-link" href={pagePath('en', 'media')}>{homeV3.publicRecord.linkLabel}</a>
+          </div>
+          <a class="profile-close__visual" href={pagePath('en', 'media')} aria-label="View the Media page">
+            <ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 42vw, 100vw" />
           </a>
         </div>
       </div>

@@ -1,0 +1,204 @@
+.profile-section--areas {
+  padding-block-start: var(--section-space);
+}
+
+.profile-section__header h2::before,
+.profile-evidence h2::before,
+.profile-close h2::before {
+  content: '';
+  display: block;
+  inline-size: 1.9rem;
+  block-size: 0.2rem;
+  margin-block-end: 1rem;
+  background: var(--forest);
+}
+
+.home-hero__inner {
+  align-items: start;
+}
+
+.home-hero .color-portrait {
+  align-self: start;
+  margin-block-start: 0;
+}
+
+.profile-evidence,
+.profile-close__inner {
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--page-max));
+  margin-inline: auto;
+}
+
+.profile-evidence {
+  display: grid;
+  gap: clamp(5rem, 8vw, 8rem);
+  padding-block: var(--section-space);
+}
+
+.profile-evidence h2,
+.profile-close h2 {
+  margin: 0;
+  font-size: clamp(2.05rem, 3.6vw, 3.9rem);
+  font-weight: 500;
+  letter-spacing: -0.027em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.profile-evidence__record,
+.profile-evidence__method {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.profile-evidence__record h2,
+.profile-evidence__method h2 {
+  max-inline-size: 10ch;
+}
+
+.profile-evidence__method h2 {
+  color: var(--forest);
+}
+
+.profile-section--areas .profile-area-list h3 {
+  color: var(--forest);
+}
+
+.profile-record-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2.25rem, 3.8vw, 4rem) clamp(2rem, 5vw, 5.5rem);
+}
+
+.profile-record-list li {
+  max-inline-size: 27rem;
+}
+
+.profile-close {
+  padding-block: var(--section-space);
+}
+
+.profile-close__inner {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.profile-close h2 {
+  max-inline-size: 10ch;
+}
+
+.profile-close__body {
+  display: grid;
+  gap: clamp(2.25rem, 4vw, 4rem);
+  min-inline-size: 0;
+}
+
+.profile-close__copy {
+  max-inline-size: 25rem;
+}
+
+.profile-close__copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.03rem, 1.25vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.profile-close .text-link {
+  margin-block-start: 1.5rem;
+  color: var(--forest);
+}
+
+.profile-close__visual {
+  display: block;
+  overflow: clip;
+  aspect-ratio: 16 / 9;
+  background: color-mix(in srgb, var(--ink) 5%, var(--canvas));
+}
+
+.profile-close__visual picture,
+.profile-close__visual img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.profile-close__visual img {
+  object-fit: cover;
+  transition: transform 260ms ease-out;
+}
+
+html:dir(rtl) .profile-evidence h2,
+html:dir(rtl) .profile-close h2 {
+  letter-spacing: normal;
+}
+
+@media (min-width: 52rem) {
+  .profile-section--areas,
+  .profile-evidence__record,
+  .profile-evidence__method,
+  .profile-close__inner {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 8rem);
+    align-items: start;
+  }
+
+  .profile-section--areas .profile-section__header,
+  .profile-evidence__record h2,
+  .profile-evidence__method h2,
+  .profile-close h2 {
+    grid-column: 1;
+  }
+
+  .profile-section--areas .profile-section__header {
+    margin: 0;
+  }
+
+  .profile-section--areas .profile-area-list,
+  .profile-record-list,
+  .profile-evidence__method .profile-prose,
+  .profile-close__body {
+    grid-column: 2;
+  }
+
+  .profile-section--areas .profile-area-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3.25rem, 5.5vw, 5.5rem) clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .profile-section--areas .profile-area-list li {
+    display: block;
+  }
+
+  .profile-section--areas .profile-area-list h3,
+  .profile-section--areas .profile-area-list__copy {
+    grid-column: auto;
+  }
+
+  .profile-section--areas .profile-area-list__copy {
+    margin-block-start: 0.9rem;
+  }
+
+  .profile-close__body {
+    grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media (hover: hover) {
+  .profile-close__visual:hover img {
+    transform: scale(1.012);
+  }
+}
+
+@media (max-width: 51.99rem) {
+  .profile-record-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-close__visual img {
+    transition: none;
+  }
+}

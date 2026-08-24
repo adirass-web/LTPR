@@ -1,11 +1,13 @@
 # Visual tokens
 
-| Token | Value | Rule |
-| --- | --- | --- |
-| Canvas | `#f6f6f6` | Global page ground |
-| Ink | `#000000` | Type, rules, focus states, outline CTAs |
-| Accent | `#02291f` | One primary CTA per viewport |
-| Rule | `1px solid #000000` | Dividers and borders |
-| Radius | `0px` | No rounded geometry |
+The canonical design direction is in [`REDESIGN_BRIEF.md`](REDESIGN_BRIEF.md). Keep this token list deliberately small.
 
-No additional visual colors are approved for this build.
+| Token | Value | Use |
+| --- | --- | --- |
+| Canvas | `#f7f6f3` | Warm near-white global ground |
+| Ink | `#141612` | Primary type and high-contrast UI |
+| Muted ink | `#62645f` | Metadata and secondary text |
+| Accent | `#02291f` | Functional focus, active state and restrained emphasis |
+| Subtle line | `color-mix(in srgb, var(--ink) 16%, transparent)` | Dense archive/resource rows only where scanning benefits |
+
+Whitespace is the default separator. Do not rebuild section boundaries with rules, cards or decorative background changes.
