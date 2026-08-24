@@ -1,12 +1,19 @@
 ---
 import type { MediaPressItem } from '~/data/media';
+import type { Locale } from '~/content/site';
 import ResponsiveMediaImage from './ResponsiveMediaImage.astro';
 
 interface Props {
   item: MediaPressItem;
+  locale?: Locale;
 }
 
-const { item } = Astro.props;
+const { item, locale = 'en' } = Astro.props;
+const titleLang = item.originalLang ?? 'en';
+const accessibleLabel =
+  locale === 'he'
+    ? `${item.outlet}: ${item.title}, נפתח בכרטיסייה חדשה`
+    : `Read ${item.title} in ${item.outlet}, opens in a new tab`;
 ---
 
 <article class="media-card media-card--press">
@@ -15,15 +22,15 @@ const { item } = Astro.props;
     href={item.url}
     target="_blank"
     rel="noopener noreferrer"
-    aria-label={`Read ${item.title} in ${item.outlet}, opens in a new tab`}
+    aria-label={accessibleLabel}
   >
     <div class="media-card__press-visual">
       <ResponsiveMediaImage image={item.image} sizes="(min-width: 64rem) 55vw, 100vw" />
     </div>
     <div class="media-card__body">
-      <p class="eyebrow">{item.outlet}</p>
-      <h3 lang={item.originalLang}>{item.title}</h3>
-      <p class="media-meta">{item.date}</p>
+      <p class="eyebrow" lang="en" dir="ltr">{item.outlet}</p>
+      <h3 lang={titleLang} dir="auto">{item.title}</h3>
+      <p class="media-meta"><bdi>{item.date}</bdi></p>
     </div>
   </a>
 </article>
