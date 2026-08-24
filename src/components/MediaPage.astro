@@ -4,7 +4,8 @@ import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro'
 import MediaVideoCard from '~/components/media/MediaVideoCard.astro';
 import MediaPressCard from '~/components/media/MediaPressCard.astro';
 import MoreCoverageItem from '~/components/media/MoreCoverageItem.astro';
-import { archive, lead, press, pressKit, videos } from '~/data/media';
+import { pressKit } from '~/data/media';
+import { archive, lead, press, videos } from '~/data/mediaPrestige';
 import { internationalForums } from '~/data/internationalForums';
 import '~/assets/styles/media.css';
 
@@ -45,20 +46,20 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
           <p class="media-outlet">{lead.outlet}</p>
           <h2 id="media-lead-title">{lead.title}</h2>
           <p class="media-meta">{lead.date} · {lead.meta}</p>
-          <p class="media-lead__source">RAI broadcast · Watch on YouTube</p>
+          <p class="media-lead__source">RAI 1 broadcast · Watch on YouTube</p>
         </div>
       </a>
     </section>
 
-    <section class="media-section" aria-labelledby="on-screen-title">
-      <h2 id="on-screen-title">On screen</h2>
+    <section class="media-section" aria-labelledby="broadcast-title">
+      <h2 id="broadcast-title">Broadcast</h2>
       <div class="media-grid media-grid--video">
         {videos.map((item) => <MediaVideoCard item={item} />)}
       </div>
     </section>
 
     <section class="media-section" aria-labelledby="press-title">
-      <h2 id="press-title">Press &amp; features</h2>
+      <h2 id="press-title">International press</h2>
       <div class="media-grid media-grid--press">
         {press.map((item) => <MediaPressCard item={item} />)}
       </div>
