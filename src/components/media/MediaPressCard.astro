@@ -17,12 +17,12 @@ const { item } = Astro.props;
     rel="noopener noreferrer"
     aria-label={`Read ${item.title} in ${item.outlet}, opens in a new tab`}
   >
-    <div class={`media-card__press-visual${item.image ? '' : ' media-card__press-visual--type'}`}>
+    <div class="media-card__press-visual">
       {
         item.image ? (
           <ResponsiveMediaImage image={item.image} sizes="(min-width: 64rem) 55vw, 100vw" />
         ) : (
-          <span class="media-card__press-wordmark">{item.visualLabel ?? item.outlet}</span>
+          <span class="media-card__poster-label">{item.visualLabel ?? item.outlet}</span>
         )
       }
     </div>
