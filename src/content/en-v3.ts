@@ -18,8 +18,7 @@ export const homeV3 = {
       {
         label: 'Singapore',
         title: 'National cybersecurity strategy',
-        description:
-          'A structured vision, strategic principles and dozens of tailored policy recommendations.',
+        description: 'A structured vision, strategic principles and dozens of tailored policy recommendations.',
         sourceLabel: 'Tel Aviv University record',
         sourceUrl: sources.strategicAdvisoryRecord.url,
         citations: [sources.strategicAdvisoryRecord.url],
