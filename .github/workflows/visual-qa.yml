@@ -1,0 +1,44 @@
+name: Visual QA
+
+on:
+  push:
+    branches: [home/positioning-clarity]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: visual-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    name: Render responsive screenshots
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture pages
+        run: |
+          mkdir -p screenshots
+          python3 -m http.server 4321 --directory dist > /tmp/ltpr-http.log 2>&1 &
+          npx wait-on http://127.0.0.1:4321/en/
+          npx playwright screenshot --browser=chromium --full-page --viewport-size="1440,1000" http://127.0.0.1:4321/en/ screenshots/home-desktop.png
+          npx playwright screenshot --browser=chromium --full-page --viewport-size="768,1024" http://127.0.0.1:4321/en/ screenshots/home-tablet.png
+          npx playwright screenshot --browser=chromium --device="iPhone 13" --full-page http://127.0.0.1:4321/en/ screenshots/home-mobile.png
+          npx playwright screenshot --browser=chromium --full-page --viewport-size="1440,1000" http://127.0.0.1:4321/en/media/ screenshots/media-desktop.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: visual-qa-${{ github.sha }}
+          path: screenshots
+          if-no-files-found: error
+          retention-days: 3
