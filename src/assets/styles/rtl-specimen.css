@@ -1,0 +1,40 @@
+.rtl-specimen__notice,
+.rtl-specimen__media {
+  inline-size: min(calc(100% - 2 * var(--gutter)), var(--page-max));
+  margin-inline: auto;
+}
+
+.rtl-specimen__notice {
+  margin-block-start: 1rem;
+  padding-block: 0.7rem;
+  color: var(--forest);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.rtl-specimen__notice strong {
+  font-weight: 500;
+}
+
+.rtl-specimen__notice bdi {
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.rtl-specimen__media .media-page__intro {
+  padding-block-start: var(--section-space);
+}
+
+.rtl-specimen__media .media-lead__copy {
+  margin-inline-start: 0;
+  margin-inline-end: clamp(0rem, 6vw, 6rem);
+}
+
+.rtl-specimen__media .media-card__body,
+.rtl-specimen__media .media-lead__copy {
+  text-align: start;
+}
+
+.rtl-specimen__mixed {
+  unicode-bidi: isolate;
+}
