@@ -12,8 +12,7 @@
 .media-page__intro h1,
 .media-section > h2,
 .media-lead h2,
-.media-card h3,
-.media-press-kit h2 {
+.media-card h3 {
   margin: 0;
   font-weight: 500;
 }
@@ -33,8 +32,7 @@
   padding-block-start: 0;
 }
 
-.media-section > h2,
-.media-press-kit h2 {
+.media-section > h2 {
   max-inline-size: 14ch;
   margin-block-end: clamp(2.5rem, 4.5vw, 4.25rem);
   font-size: clamp(1.95rem, 3vw, 3.15rem);
@@ -43,12 +41,11 @@
   text-wrap: balance;
 }
 
-.media-section > h2::before,
-.media-press-kit h2::before {
+.media-section > h2::before {
   content: '';
   display: block;
-  inline-size: 1.65rem;
-  block-size: 0.18rem;
+  inline-size: 1.9rem;
+  block-size: 0.2rem;
   margin-block-end: 1rem;
   background: var(--forest);
 }
@@ -87,7 +84,14 @@
 .media-lead__visual img,
 .media-card__visual img {
   object-fit: cover;
-  transition: transform 260ms ease-out;
+  transition:
+    filter 260ms ease-out,
+    transform 260ms ease-out;
+}
+
+.media-lead__visual img,
+.media-card--video .media-card__visual img {
+  filter: saturate(0.88) contrast(0.98);
 }
 
 .media-card__press-visual img {
@@ -114,17 +118,22 @@
 .media-card__body .eyebrow,
 .media-coverage-item .eyebrow {
   margin: 0;
-  color: var(--ink-soft);
+  color: var(--forest);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.018em;
   line-height: 1.4;
 }
 
-.media-meta,
+.media-meta {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .media-lead__source,
 .media-stage-list__city {
-  color: var(--ink-soft);
+  color: var(--forest);
   font-size: 0.78rem;
   line-height: 1.45;
 }
@@ -160,6 +169,8 @@
 .media-grid--video {
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(4rem, 7vw, 7rem) var(--media-gap);
+  max-inline-size: 76rem;
+  margin-inline: auto;
 }
 
 .media-grid--press {
@@ -307,23 +318,50 @@
 }
 
 .media-press-kit {
+  margin-block: clamp(2.25rem, 4vw, 4rem) 0;
+  border-block: 1px solid var(--line);
+}
+
+.media-press-kit__summary {
   display: grid;
-  gap: clamp(1.75rem, 3.5vw, 3.5rem);
-  padding-block: clamp(2.5rem, 4vw, 3.8rem);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.5rem clamp(1rem, 3vw, 2.5rem);
+  align-items: baseline;
+  min-block-size: 4rem;
+  padding-block: 0.85rem;
+  cursor: pointer;
+  list-style: none;
 }
 
-.media-press-kit__intro h2 {
-  margin-block-end: 0;
-  font-size: clamp(1.65rem, 2.4vw, 2.35rem);
-  letter-spacing: -0.02em;
-  line-height: 1.03;
+.media-press-kit__summary::-webkit-details-marker {
+  display: none;
 }
 
-.media-press-kit__intro p {
-  max-inline-size: 24rem;
-  margin: 0.6rem 0 0;
+.media-press-kit__summary::after {
+  content: '+';
+  color: var(--forest);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.media-press-kit[open] .media-press-kit__summary::after {
+  content: '−';
+}
+
+.media-press-kit__title {
+  color: var(--forest);
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+
+.media-press-kit__description {
   color: var(--ink-soft);
-  font-size: 0.92rem;
+  font-size: 0.8rem;
+}
+
+.media-press-kit__panel {
+  padding-block: 0 1.35rem;
 }
 
 .media-press-kit__resources {
@@ -344,17 +382,17 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.1rem 0.75rem;
-  min-block-size: 3.55rem;
+  min-block-size: 3.4rem;
   align-content: center;
-  padding-block: 0.5rem;
+  padding-block: 0.45rem;
   color: inherit;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-decoration: none;
 }
 
 .media-press-kit__resources .media-meta {
   grid-column: 1;
-  font-size: 0.74rem;
+  font-size: 0.73rem;
 }
 
 .media-press-kit__resources .media-arrow {
@@ -367,7 +405,6 @@ html:dir(rtl) .media-page__intro h1,
 html:dir(rtl) .media-section > h2,
 html:dir(rtl) .media-lead h2,
 html:dir(rtl) .media-card h3,
-html:dir(rtl) .media-press-kit h2,
 html:dir(rtl) .media-outlet,
 html:dir(rtl) .media-card__body .eyebrow,
 html:dir(rtl) .media-coverage-item .eyebrow {
@@ -379,9 +416,10 @@ html:dir(rtl) .media-coverage-item .eyebrow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .media-press-kit {
-    grid-template-columns: minmax(11rem, 0.3fr) minmax(0, 1fr);
-    align-items: start;
+  .media-grid--video .media-card:last-child {
+    grid-column: 1 / -1;
+    inline-size: calc((100% - var(--media-gap)) / 2);
+    justify-self: center;
   }
 
   .media-press-kit__resources {
@@ -390,33 +428,6 @@ html:dir(rtl) .media-coverage-item .eyebrow {
 }
 
 @media (min-width: 64rem) {
-  .media-grid--video {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    align-items: start;
-  }
-
-  .media-grid--video .media-card:nth-child(1) {
-    grid-column: span 7;
-  }
-
-  .media-grid--video .media-card:nth-child(2) {
-    grid-column: span 5;
-    margin-block-start: clamp(2rem, 4vw, 4.5rem);
-  }
-
-  .media-grid--video .media-card:nth-child(3) {
-    grid-column: span 5;
-  }
-
-  .media-grid--video .media-card:nth-child(4) {
-    grid-column: span 7;
-    margin-block-start: clamp(1.5rem, 3vw, 3.5rem);
-  }
-
-  .media-grid--video .media-card:nth-child(5) {
-    grid-column: 4 / span 6;
-  }
-
   .media-grid--press .media-card__link {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
@@ -446,7 +457,11 @@ html:dir(rtl) .media-coverage-item .eyebrow {
   }
 
   .media-lead:hover .media-lead__visual img,
-  .media-card--video .media-card__link:hover .media-card__visual img,
+  .media-card--video .media-card__link:hover .media-card__visual img {
+    filter: saturate(1) contrast(1);
+    transform: scale(1.01);
+  }
+
   .media-card--press .media-card__link:hover .media-card__press-visual img {
     transform: scale(1.01);
   }
@@ -459,6 +474,21 @@ html:dir(rtl) .media-coverage-item .eyebrow {
 }
 
 @media (max-width: 47.99rem) {
+  .media-press-kit__summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .media-press-kit__description {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .media-press-kit__summary::after {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
   .media-press-kit__resources > li:nth-child(2) {
     border-block-start: 0;
   }
