@@ -187,10 +187,10 @@ export const press: MediaPressItem[] = [
     url: 'https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204',
     image: {
       base: 'press-figaro',
-      widths: [480, 768],
-      width: 768,
-      height: 480,
-      alt: 'Le Figaro article preview about artificial intelligence in the Israel-Hamas war',
+      widths: [480, 768, 1024],
+      width: 1024,
+      height: 640,
+      alt: 'Le Figaro proof crop showing the article headline and Lior Tabansky quoted on cyber and artificial intelligence',
     },
     status: 'verified',
     originalLang: 'fr',
@@ -282,36 +282,7 @@ export const press: MediaPressItem[] = [
   },
 ];
 
-export const archive: MediaArchiveItem[] = [
-  {
-    id: 'rai-codice-2017',
-    outlet: 'RAI · Codice: la vita è digitale',
-    title: 'Cybersicurezza, esperti a confronto',
-    date: '18 August 2017',
-    url: 'https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html',
-    note: 'First-season RAI appearance',
-    status: 'verified',
-    originalLang: 'it',
-  },
-  {
-    id: 'jpost-nso-2021',
-    outlet: 'The Jerusalem Post',
-    title: 'NSO, surveillance and the double-edged sword of the Start-Up Nation',
-    date: '22 July 2021',
-    url: 'https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635',
-    status: 'verified',
-  },
-  {
-    id: 'ynet-technology-2007',
-    outlet: 'Ynet',
-    title: 'Early work on technology and military adaptation',
-    date: '4 July 2007',
-    url: 'https://www.ynet.co.il/articles/0,7340,L-3421276,00.html',
-    note: 'From the archive',
-    status: 'verified',
-    originalLang: 'he',
-  },
-];
+export const archive: MediaArchiveItem[] = [];
 
 export const mediaTodo = ['Assess the owner-supplied i24 English appearance when the main video is available.'];
 
