@@ -4,13 +4,13 @@ This manifest records owner-supplied source originals used to prepare the LTPR M
 
 ## Owner MP4 masters
 
-| File | Size bytes | Resolution | FPS | Duration | SHA-256 | Role / approved poster |
-|---|---:|---|---|---:|---|---|
-| `2022-01-19  ע14 _gbgmatu6_0_zukp4kat_2.mp4` | 36,961,543 | 960×540 | 30 | 377.813s | `b7172f9c1195383c4c0a0414b88d2cc3206ad557a9915aa5220349f4cfe2e4a8` | Channel 14, 19 Jan 2022; poster ~330s |
-| `20260818 ד_ר טבנסקי על תביעת בנק לאומי נגד מטא ישראל.mp4` | 15,298,497 | 640×360 | 25 | 397.201s | `fd95f81c08d2ae830a7baf8fc948086caf619facc3875abce5f5a7252cc1c1f0` | Channel Economy, 18 Aug 2026; poster 372–374s, selected 373s |
-| `23.mp4` | 3,189,608 | 1280×720 | 25 | 10.360s | `91734883561cbf1a4fb4ae7a9c40f14d2f0f5502b99e355a0d2be4034b194bbf` | Channel 10 / London et Kirschenbaum, 27 Oct 2015; poster ~1s |
-| `Clip Codice La vita è digitale - RaiPlay 20406082_1800.mp4-.mp4` | 21,379,914 | 1024×576 | 25 | 85.200s | `6ab57176af7c42042349c598acbde2fed0f3c7ba0cd1ee5fc8dac5d1d427bf4b` | MAIN 2020 RAI Codice; primary 41s, network secondary 15s |
-| `Силиконовая долина в Москве как создают научно-технологический центр МГУ.mp4` | 54,116,587 | 1280×720 | 25 | 270.605s | `36f2a5a69a290be83ccece2e6080f3ab53274cb30b010c543e69b8d058319a23` | NTV feature; poster ~120s |
+| File                                                                           | Size bytes | Resolution | FPS | Duration | SHA-256                                                            | Role / approved poster                                       |
+| ------------------------------------------------------------------------------ | ---------: | ---------- | --- | -------: | ------------------------------------------------------------------ | ------------------------------------------------------------ |
+| `2022-01-19  ע14 _gbgmatu6_0_zukp4kat_2.mp4`                                   | 36,961,543 | 960×540    | 30  | 377.813s | `b7172f9c1195383c4c0a0414b88d2cc3206ad557a9915aa5220349f4cfe2e4a8` | Channel 14, 19 Jan 2022; poster ~330s                        |
+| `20260818 ד_ר טבנסקי על תביעת בנק לאומי נגד מטא ישראל.mp4`                     | 15,298,497 | 640×360    | 25  | 397.201s | `fd95f81c08d2ae830a7baf8fc948086caf619facc3875abce5f5a7252cc1c1f0` | Channel Economy, 18 Aug 2026; poster 372–374s, selected 373s |
+| `23.mp4`                                                                       |  3,189,608 | 1280×720   | 25  |  10.360s | `91734883561cbf1a4fb4ae7a9c40f14d2f0f5502b99e355a0d2be4034b194bbf` | Channel 10 / London et Kirschenbaum, 27 Oct 2015; poster ~1s |
+| `Clip Codice La vita è digitale - RaiPlay 20406082_1800.mp4-.mp4`              | 21,379,914 | 1024×576   | 25  |  85.200s | `6ab57176af7c42042349c598acbde2fed0f3c7ba0cd1ee5fc8dac5d1d427bf4b` | MAIN 2020 RAI Codice; primary 41s, network secondary 15s     |
+| `Силиконовая долина в Москве как создают научно-технологический центр МГУ.mp4` | 54,116,587 | 1280×720   | 25  | 270.605s | `36f2a5a69a290be83ccece2e6080f3ab53274cb30b010c543e69b8d058319a23` | NTV feature; poster ~120s                                    |
 
 ## Owner/reference PDFs
 
@@ -22,19 +22,22 @@ Original PDFs are retained in the handoff package. Repository copies in `docs/me
 
 ## Poster derivatives produced from owner MP4s
 
-| Base | Timestamp | Widths | Formats |
-|---|---:|---|---|
-| `codice-2020` | 00:41 | 480, 768, 1024 | AVIF, WebP, JPEG |
-| `codice-network` | 00:15 | 480, 768, 1024 | AVIF, WebP, JPEG |
-| `channel-economy` | 06:13 | 480, 640 | AVIF, WebP, JPEG |
-| `channel14-2022` | 05:30 | 480, 768 | AVIF, WebP, JPEG |
-| `ntv-2021` | 02:00 | 480, 768 | AVIF, WebP, JPEG |
-| `channel10-2015` | 00:01 | 480, 768 | AVIF, WebP, JPEG |
+| Base              | Timestamp | Widths         | Formats          |
+| ----------------- | --------: | -------------- | ---------------- |
+| `codice-2020`     |     00:41 | 480, 768, 1024 | AVIF, WebP, JPEG |
+| `codice-network`  |     00:15 | 480, 768, 1024 | AVIF, WebP, JPEG |
+| `channel-economy` |     06:13 | 480, 640       | AVIF, WebP, JPEG |
+| `channel14-2022`  |     05:30 | 480, 768       | AVIF, WebP, JPEG |
+| `ntv-2021`        |     02:00 | 480, 768       | AVIF, WebP, JPEG |
+| `channel10-2015`  |     00:01 | 480, 768       | AVIF, WebP, JPEG |
 
 ## Canonical public sources
 
 - RAI 2017 Codice: `https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html`
 - Channel Economy copy: `https://youtu.be/-M2fTsR8YC8`
+- Channel 14 copy: `https://youtu.be/6e5bnT04vO8`
+- Channel 10 / London et Kirschenbaum copy: `https://youtu.be/EyymYGiIbxg`
+- 2020 RAI Codice owner-supplied destination: `https://youtu.be/pb8YD_ic1xE`
 - NTV: `https://www.ntv.ru/novosti/2642205/`
 - NTV YouTube copy: `https://youtu.be/_4FKfxnDSJU`
 - RaiNews 2019: `https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html`
@@ -44,11 +47,12 @@ Original PDFs are retained in the handoff package. Repository copies in `docs/me
 - France24 2021: `https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles`
 - la Repubblica 2020: `https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/`
 - Il Giornale 2018: `https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html`
+- POLITICO Europe 2024: `https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/`
+- Le Figaro 2024: `https://www.lefigaro.fr/international/attaque-massive-au-liban-une-operation-spectaculaire-et-complexe-a-organiser-20240918`
+- Newsweek 2017: `https://www.newsweek.com/trump-team-leaks-about-israels-hack-kaspersky-lab-could-further-damage-ties-686500`
+- Il Sole 24 Ore / AssoSoftware archive 2020: `https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf`
 - Ynet 2007: `https://www.ynet.co.il/articles/0,7340,L-3421276,00.html`
 
-## Known source-link gaps
+## Deferred source
 
-- 2020 RAI Codice exact canonical episode URL still needs verification.
-- Channel 14 19 Jan 2022 canonical public URL is not yet verified.
-- Channel 10 / London et Kirschenbaum 27 Oct 2015 canonical public URL is not yet verified.
 - i24 English remains a later owner-supplied TODO.
