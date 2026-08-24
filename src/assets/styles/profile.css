@@ -7,9 +7,9 @@
 .profile-close h2::before {
   content: '';
   display: block;
-  inline-size: 2.2rem;
-  block-size: 0.22rem;
-  margin-block-end: 1.15rem;
+  inline-size: 1.65rem;
+  block-size: 0.18rem;
+  margin-block-end: 1rem;
   background: var(--forest);
 }
 
@@ -21,17 +21,17 @@
 
 .profile-evidence {
   display: grid;
-  gap: clamp(6rem, 11vw, 10rem);
+  gap: clamp(5rem, 8vw, 8rem);
   padding-block: var(--section-space);
 }
 
 .profile-evidence h2,
 .profile-close h2 {
   margin: 0;
-  font-size: clamp(2.15rem, 4vw, 4.45rem);
+  font-size: clamp(2.05rem, 3.6vw, 3.9rem);
   font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 0.98;
+  letter-spacing: -0.027em;
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -41,34 +41,22 @@
   gap: var(--space-lg);
 }
 
-.profile-evidence__record h2 {
-  max-inline-size: 9ch;
+.profile-evidence__record h2,
+.profile-evidence__method h2 {
+  max-inline-size: 10ch;
 }
 
 .profile-evidence__method h2 {
-  max-inline-size: 10ch;
   color: var(--forest);
-  font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
 .profile-record-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2.5rem, 4vw, 4.5rem) clamp(2rem, 5vw, 6rem);
+  gap: clamp(2.25rem, 3.8vw, 4rem) clamp(2rem, 5vw, 5.5rem);
 }
 
 .profile-record-list li {
-  position: relative;
-  padding-block-start: 1.1rem;
-}
-
-.profile-record-list li::before {
-  content: '';
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 2rem;
-  block-size: 0.18rem;
-  background: var(--forest);
+  max-inline-size: 27rem;
 }
 
 .profile-close {
@@ -91,18 +79,18 @@
 }
 
 .profile-close__copy {
-  max-inline-size: 26rem;
+  max-inline-size: 25rem;
 }
 
 .profile-close__copy p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(1.06rem, 1.4vw, 1.25rem);
-  line-height: 1.6;
+  font-size: clamp(1.03rem, 1.25vw, 1.16rem);
+  line-height: 1.65;
 }
 
 .profile-close .text-link {
-  margin-block-start: 1.6rem;
+  margin-block-start: 1.5rem;
 }
 
 .profile-close__visual {
@@ -121,6 +109,7 @@
 
 .profile-close__visual img {
   object-fit: cover;
+  transition: transform 260ms ease-out;
 }
 
 html:dir(rtl) .profile-evidence h2,
@@ -160,7 +149,7 @@ html:dir(rtl) .profile-close h2 {
   .profile-section--areas .profile-area-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(3.5rem, 6vw, 6rem) clamp(2.5rem, 5vw, 5rem);
+    gap: clamp(3.25rem, 5.5vw, 5.5rem) clamp(2.5rem, 5vw, 5rem);
   }
 
   .profile-section--areas .profile-area-list li {
@@ -173,17 +162,29 @@ html:dir(rtl) .profile-close h2 {
   }
 
   .profile-section--areas .profile-area-list__copy {
-    margin-block-start: 1rem;
+    margin-block-start: 0.9rem;
   }
 
   .profile-close__body {
-    grid-template-columns: minmax(13rem, 0.4fr) minmax(0, 1fr);
+    grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
     align-items: end;
+  }
+}
+
+@media (hover: hover) {
+  .profile-close__visual:hover img {
+    transform: scale(1.012);
   }
 }
 
 @media (max-width: 51.99rem) {
   .profile-record-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-close__visual img {
+    transition: none;
   }
 }
