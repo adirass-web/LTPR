@@ -57,18 +57,18 @@ jobs:
             const context = await browser.newContext(capture.device ?? { viewport: capture.viewport });
             const page = await context.newPage();
             await page.goto(capture.url, { waitUntil: 'networkidle' });
-            await page.locator('img').evaluateAll((images) =>
-              Promise.all(
-                images.map((image) =>
-                  image.complete
-                    ? Promise.resolve()
-                    : new Promise((resolve) => {
-                        image.addEventListener('load', resolve, { once: true });
-                        image.addEventListener('error', resolve, { once: true });
-                      })
-                )
-              )
-            );
+            await page.evaluate(async () => {
+              for (let y = 0; y < document.body.scrollHeight; y += 600) {
+                window.scrollTo(0, y);
+                await new Promise((resolve) => setTimeout(resolve, 80));
+              }
+              window.scrollTo(0, 0);
+            });
+            await page
+              .waitForFunction(() => [...document.images].every((image) => image.complete), undefined, {
+                timeout: 10000,
+              })
+              .catch(() => undefined);
             await page.screenshot({ path: `screenshots/${capture.name}.png`, fullPage: true });
             metrics[capture.name] = await page.evaluate(() => ({
               title: document.title,
