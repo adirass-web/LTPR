@@ -1,0 +1,85 @@
+/* Design lab C: aggressive subtraction and stronger evidence framing. */
+
+.site-nav__links a[aria-current='page']::after,
+.profile-section__header h2::before,
+.profile-close h2::before,
+.media-section > h2::before,
+.media-coverage-item .media-arrow,
+.media-stage-list .media-arrow,
+.media-press-kit__resources .media-arrow,
+.text-link::after {
+  display: none;
+}
+
+.media-coverage-item,
+.media-stage-list a,
+.media-press-kit__resources a,
+.media-press-kit__todo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.media-coverage-item__date,
+.media-coverage-item__copy,
+.media-stage-list__city,
+.media-stage-list__copy,
+.media-press-kit__resources .media-meta {
+  grid-column: 1;
+}
+
+/* Stronger document-proof frame. */
+.media-card__press-visual {
+  padding: clamp(1rem, 2vw, 1.65rem);
+  background: color-mix(in srgb, var(--ink) 4%, var(--canvas));
+}
+
+.media-card__press-visual img {
+  object-fit: contain;
+}
+
+/* Metadata recedes further, while remaining readable. */
+.media-meta,
+.media-lead__source,
+.media-stage-list__city,
+.media-coverage-item__date,
+.media-press-kit__description,
+.media-press-kit__resources .media-meta {
+  color: color-mix(in srgb, var(--ink-soft) 76%, var(--canvas));
+  font-size: 0.72rem;
+}
+
+.media-coverage-item {
+  border-color: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
+.media-press-kit,
+.media-press-kit__resources > li {
+  border-color: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
+/* Remove nonessential motion; retain color/focus feedback. */
+@media (hover: hover) {
+  .media-play,
+  .media-arrow,
+  .text-link::after,
+  .home-hero__role::after,
+  .profile-proof__source::after,
+  .media-lead__visual img,
+  .media-card__visual img,
+  .media-card__press-visual img,
+  .profile-close__visual img {
+    transform: none !important;
+  }
+}
+
+/* Mobile menu is fully integrated into the page frame. */
+@media (max-width: 52.49rem) {
+  .site-nav__menu[open] .site-nav__links {
+    inset-inline: 0;
+    gap: 0.3rem;
+    padding: 1rem var(--gutter) 1.2rem;
+    border: 0;
+    border-block-start: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+    box-shadow: none;
+    background: var(--canvas);
+  }
+}
