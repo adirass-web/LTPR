@@ -1,0 +1,84 @@
+/* Design lab B: reduced signals, seamless mobile menu, moderate media framing. */
+
+/* Subtraction: keep the first section signature, quiet repeated system cues. */
+.profile-section:not(.profile-section--proof) .profile-section__header h2::before,
+.profile-close h2::before,
+.media-page .media-section:nth-of-type(n + 3) > h2::before {
+  display: none;
+}
+
+.site-nav__links a[aria-current='page']::after {
+  display: none;
+}
+
+.media-coverage-item,
+.media-stage-list a {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.media-coverage-item .media-arrow,
+.media-stage-list .media-arrow {
+  display: none;
+}
+
+.media-coverage-item__date,
+.media-coverage-item__copy,
+.media-stage-list__city,
+.media-stage-list__copy {
+  grid-column: 1;
+}
+
+/* Make evidence screenshots read as editorial artifacts, without altering source imagery. */
+.media-card__press-visual {
+  padding: clamp(0.7rem, 1.4vw, 1.15rem);
+  background: color-mix(in srgb, var(--ink) 3%, var(--canvas));
+}
+
+.media-card__press-visual picture,
+.media-card__press-visual img {
+  block-size: 100%;
+}
+
+.media-card__press-visual img {
+  object-fit: contain;
+}
+
+/* Quieter metadata hierarchy. */
+.media-meta,
+.media-lead__source,
+.media-stage-list__city,
+.media-coverage-item__date {
+  color: color-mix(in srgb, var(--ink-soft) 84%, var(--canvas));
+}
+
+.media-lead__source {
+  color: var(--ink-soft);
+}
+
+/* Reduce decorative movement while preserving feedback. */
+@media (hover: hover) {
+  .media-coverage-item:hover .media-arrow,
+  .media-stage-list a:hover .media-arrow,
+  .media-press-kit__resources a:hover .media-arrow {
+    transform: none;
+  }
+
+  .media-lead:hover .media-lead__visual img,
+  .media-card--video .media-card__link:hover .media-card__visual img,
+  .media-card--press .media-card__link:hover .media-card__press-visual img {
+    transform: none;
+  }
+}
+
+/* Mobile menu becomes a continuation of the header rather than a floating card. */
+@media (max-width: 52.49rem) {
+  .site-nav__menu[open] .site-nav__links {
+    inset-inline: 0;
+    padding-inline: var(--gutter);
+    border: 0;
+    border-block-start: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+    box-shadow: none;
+    background: color-mix(in srgb, var(--canvas) 98%, transparent);
+    backdrop-filter: blur(12px);
+  }
+}
