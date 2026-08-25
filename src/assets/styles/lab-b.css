@@ -1,4 +1,5 @@
 /* Design lab B: reduced signals, seamless mobile menu, moderate media framing. */
+/* Phase 1 comparison build. */
 
 /* Subtraction: keep the first section signature, quiet repeated system cues. */
 .profile-section:not(.profile-section--proof) .profile-section__header h2::before,
