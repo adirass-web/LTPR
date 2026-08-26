@@ -1,0 +1,194 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import Portrait from '~/components/Portrait.astro';
+import BookCover from '~/components/BookCover.astro';
+import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
+import { homeV3 } from '~/content/en-v3';
+import { lead, press } from '~/data/mediaPrestige';
+import { internationalForums } from '~/data/internationalForums';
+import '~/assets/styles/single-page-lab.css';
+
+interface Props {
+  variant: 'a' | 'b' | 'c' | 'd';
+}
+
+const { variant } = Astro.props;
+const selectedPress = press.slice(0, 4);
+const selectedForums = internationalForums.slice(0, 6);
+const canonicalPath = `/lab/single/${variant}/`;
+const variantNames = {
+  a: 'Institutional flow',
+  b: 'Editorial monograph',
+  c: 'Quiet sequence',
+  d: 'Evidence index',
+};
+---
+
+<Foundation
+  lang="en"
+  dir="ltr"
+  title={`Single-page prototype ${variant.toUpperCase()} · Dr. Lior Tabansky`}
+  description={`Noindex structural prototype: ${variantNames[variant]}.`}
+  canonicalPath={canonicalPath}
+  noindex
+>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="sp-header">
+    <a class="sp-name" href="#top">Dr. Lior Tabansky</a>
+    <nav aria-label="Prototype navigation">
+      <a href="#work">Work</a>
+      <a href="#record">Public record</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="content" class:list={['sp-page', `sp-${variant}`]} tabindex="-1">
+    <section id="top" class="sp-hero" aria-labelledby="sp-title">
+      <div class="sp-hero-copy">
+        <p class="sp-kicker">{homeV3.hero.category}</p>
+        <h1 id="sp-title">{homeV3.hero.title}</h1>
+        <p class="sp-standfirst">{homeV3.hero.standfirst}</p>
+        <a class="sp-role" href={homeV3.hero.role.url} target="_blank" rel="noopener noreferrer">
+          {homeV3.hero.role.title} · {homeV3.hero.role.institution} ↗
+        </a>
+      </div>
+      <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
+    </section>
+
+    {variant === 'a' && (
+      <>
+        <section id="work" class="sp-section sp-work-a">
+          <header><p class="sp-index">01</p><h2>{homeV3.publicWork.title}</h2></header>
+          <div class="sp-proof-pair">
+            {homeV3.publicWork.items.map((item) => (
+              <article>
+                <p class="sp-kicker">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceLabel} ↗</a>
+              </article>
+            ))}
+          </div>
+          <p class="sp-disclosure">{homeV3.publicWork.disclosure}</p>
+        </section>
+
+        <section id="record" class="sp-section sp-record-a">
+          <header><p class="sp-index">02</p><h2>Selected public record</h2></header>
+          <div class="sp-record-feature">
+            <a href={lead.url} target="_blank" rel="noopener noreferrer" class="sp-media-feature">
+              <ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 52vw, 100vw" />
+              <div><p class="sp-kicker">{lead.outlet}</p><h3>{lead.title}</h3><p class="sp-meta">{lead.date}</p></div>
+            </a>
+            <div class="sp-press-list">
+              {selectedPress.slice(0, 3).map((item) => (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <span class="sp-kicker">{item.outlet}</span>
+                  <strong>{item.title}</strong>
+                  <span class="sp-meta">{item.date}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="sp-section sp-israel-a">
+          <header><p class="sp-index">03</p><h2>{homeV3.israelExperience.title}</h2></header>
+          <div class="sp-book-row">
+            <a href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a>
+            <div>{homeV3.israelExperience.paragraphs.map((p) => <p>{p}</p>)}</div>
+          </div>
+        </section>
+
+        <section class="sp-section sp-compact-a">
+          <header><p class="sp-index">04</p><h2>{homeV3.work.title}</h2></header>
+          <div class="sp-area-grid">{homeV3.work.areas.map((area) => <article><h3>{area.title}</h3><p>{area.description}</p></article>)}</div>
+          <div class="sp-method-inline"><strong>{homeV3.method.paragraphs[1]}</strong><p>{homeV3.method.paragraphs[0]}</p></div>
+        </section>
+
+        <section class="sp-section sp-forums-a">
+          <header><p class="sp-index">05</p><h2>Selected international forums</h2></header>
+          <ul>{selectedForums.map((forum) => <li><a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><span>{forum.detail}</span></a></li>)}</ul>
+        </section>
+      </>
+    )}
+
+    {variant === 'b' && (
+      <div class="sp-monograph">
+        <aside class="sp-monograph-rail" aria-label="Contents">
+          <a href="#b1">01 Work</a><a href="#b2">02 Israel</a><a href="#b3">03 Practice</a><a href="#b4">04 Record</a>
+        </aside>
+        <div class="sp-monograph-body">
+          <section id="b1" class="sp-chapter">
+            <p class="sp-index">01 / Public work</p><h2>{homeV3.publicWork.title}</h2>
+            {homeV3.publicWork.items.map((item) => <article class="sp-story"><p class="sp-kicker">{item.label}</p><h3>{item.title}</h3><p>{item.description}</p><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceLabel} ↗</a></article>)}
+            <p class="sp-disclosure">{homeV3.publicWork.disclosure}</p>
+          </section>
+          <section id="b2" class="sp-chapter sp-chapter-book">
+            <p class="sp-index">02 / The Israeli experience</p><h2>{homeV3.israelExperience.title}</h2>
+            <div><a class="sp-inline-book" href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a>{homeV3.israelExperience.paragraphs.map((p) => <p>{p}</p>)}</div>
+          </section>
+          <section id="b3" class="sp-chapter">
+            <p class="sp-index">03 / Practice</p><h2>{homeV3.work.title}</h2>
+            {homeV3.work.areas.map((area) => <article class="sp-story sp-story-compact"><h3>{area.title}</h3><p>{area.description}</p></article>)}
+            <blockquote>{homeV3.method.paragraphs[1]}</blockquote><p>{homeV3.method.paragraphs[0]}</p>
+          </section>
+          <section id="b4" class="sp-chapter">
+            <p class="sp-index">04 / Public record</p><h2>Selected public record</h2>
+            <figure class="sp-monograph-media"><a href={lead.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 42rem, 100vw" /></a><figcaption>{lead.outlet} · {lead.date}</figcaption></figure>
+            <div class="sp-citation-list">{selectedPress.map((item) => <a href={item.url} target="_blank" rel="noopener noreferrer"><span>{item.outlet}</span><strong>{item.title}</strong><small>{item.date}</small></a>)}</div>
+            <div class="sp-forum-lines">{selectedForums.map((forum) => <a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><span>{forum.detail}</span></a>)}</div>
+          </section>
+        </div>
+      </div>
+    )}
+
+    {variant === 'c' && (
+      <>
+        <section id="work" class="sp-sequence sp-sequence-text">
+          <div class="sp-sequence-label"><span>01</span><h2>{homeV3.publicWork.title}</h2></div>
+          <div class="sp-sequence-copy">{homeV3.publicWork.items.map((item) => <article><p class="sp-kicker">{item.label}</p><h3>{item.title}</h3><p>{item.description}</p><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceLabel} ↗</a></article>)}<p class="sp-disclosure">{homeV3.publicWork.disclosure}</p></div>
+        </section>
+        <section class="sp-sequence sp-sequence-visual">
+          <figure><a href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a></figure>
+          <div><p class="sp-index">02</p><h2>{homeV3.israelExperience.title}</h2>{homeV3.israelExperience.paragraphs.map((p) => <p>{p}</p>)}</div>
+        </section>
+        <section class="sp-sequence sp-sequence-text">
+          <div class="sp-sequence-label"><span>03</span><h2>{homeV3.work.title}</h2></div>
+          <div class="sp-area-stack">{homeV3.work.areas.map((area) => <article><h3>{area.title}</h3><p>{area.description}</p></article>)}<p class="sp-method-line">{homeV3.method.paragraphs[1]}</p></div>
+        </section>
+        <section id="record" class="sp-sequence sp-sequence-visual sp-sequence-media">
+          <a href={lead.url} target="_blank" rel="noopener noreferrer" class="sp-sequence-image"><ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 48vw, 100vw" /></a>
+          <div><p class="sp-index">04</p><h2>Selected public record</h2><div class="sp-citation-list sp-citation-list-short">{selectedPress.slice(0, 3).map((item) => <a href={item.url} target="_blank" rel="noopener noreferrer"><span>{item.outlet}</span><strong>{item.title}</strong></a>)}</div></div>
+        </section>
+        <section class="sp-sequence sp-sequence-text sp-sequence-forums">
+          <div class="sp-sequence-label"><span>05</span><h2>Selected international forums</h2></div>
+          <div class="sp-forum-lines">{selectedForums.map((forum) => <a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><span>{forum.detail}</span></a>)}</div>
+        </section>
+      </>
+    )}
+
+    {variant === 'd' && (
+      <>
+        <section id="work" class="sp-index-grid">
+          <article class="sp-index-card sp-index-card-work"><p class="sp-kicker">Selected public work</p><h2>{homeV3.publicWork.items[0].title}</h2><p>{homeV3.publicWork.items[0].description}</p></article>
+          <article class="sp-index-card sp-index-card-work"><p class="sp-kicker">Selected public work</p><h2>{homeV3.publicWork.items[1].title}</h2><p>{homeV3.publicWork.items[1].description}</p></article>
+          <a class="sp-index-card sp-index-card-media" href={lead.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={lead.image} sizes="(min-width: 64rem) 42vw, 100vw" /><div><p class="sp-kicker">{lead.outlet}</p><h2>{lead.title}</h2></div></a>
+          <article class="sp-index-card sp-index-card-book"><a href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a><div><p class="sp-kicker">Published authority</p><h2>{homeV3.israelExperience.title}</h2><p>{homeV3.israelExperience.paragraphs[0]}</p></div></article>
+          <article class="sp-index-card sp-index-card-areas"><p class="sp-kicker">Where I work</p><div>{homeV3.work.areas.map((area) => <section><h3>{area.title}</h3><p>{area.description}</p></section>)}</div></article>
+          <article class="sp-index-card sp-index-card-method"><p class="sp-kicker">Method</p><blockquote>{homeV3.method.paragraphs[1]}</blockquote><p>{homeV3.method.paragraphs[0]}</p></article>
+        </section>
+        <section id="record" class="sp-index-record">
+          <header><p class="sp-kicker">Selected public record</p><h2>Press, broadcast and international forums</h2></header>
+          <div class="sp-index-record-columns">
+            <div class="sp-citation-list">{selectedPress.map((item) => <a href={item.url} target="_blank" rel="noopener noreferrer"><span>{item.outlet}</span><strong>{item.title}</strong><small>{item.date}</small></a>)}</div>
+            <div class="sp-forum-lines">{selectedForums.map((forum) => <a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><span>{forum.detail}</span></a>)}</div>
+          </div>
+        </section>
+      </>
+    )}
+  </main>
+
+  <footer id="contact" class="sp-footer">
+    <span>Dr. Lior Tabansky</span><a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+  </footer>
+</Foundation>
