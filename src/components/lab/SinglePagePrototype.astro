@@ -4,7 +4,7 @@ import Portrait from '~/components/Portrait.astro';
 import BookCover from '~/components/BookCover.astro';
 import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
 import { homeV3 } from '~/content/en-v3';
-import { lead, press, videos } from '~/data/mediaPrestige';
+import { lead, press } from '~/data/mediaPrestige';
 import { internationalForums } from '~/data/internationalForums';
 import '~/assets/styles/single-page-lab.css';
 
@@ -14,7 +14,6 @@ interface Props {
 
 const { variant } = Astro.props;
 const selectedPress = press.slice(0, 4);
-const selectedVideos = videos.slice(0, 2);
 const selectedForums = internationalForums.slice(0, 6);
 const canonicalPath = `/lab/single/${variant}/`;
 const variantNames = {
