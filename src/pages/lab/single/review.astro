@@ -1,0 +1,108 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+---
+
+<Foundation
+  lang="en"
+  dir="ltr"
+  title="Integrated editorial profile · Mobile review"
+  description="390 and 430 pixel comparison."
+  canonicalPath="/lab/single/review/"
+  noindex
+>
+  <main class="review">
+    <header>
+      <p>LTPR / Integrated editorial profile / 2 October 2026</p><h1>One story. A richer public record.</h1><p>
+        Portrait, work and perspective in one editorial sequence. Archive material is placed by meaning, with no image
+        limit or compulsory clusters.
+      </p><a href="/lab/single/narrative/" target="_blank" rel="noopener noreferrer">Open the responsive page ↗</a>
+      <p>
+        <a href="/lab/single/a3/" target="_blank" rel="noopener noreferrer">Archived A3, preserved for comparison ↗</a>
+      </p>
+    </header>
+    <div class="views">
+      <section>
+        <h2>390 px</h2><p>Scroll inside the page to review the full sequence.</p><iframe
+          src="/lab/single/narrative/"
+          title="Integrated editorial profile at 390 pixels"
+          width="390"
+          height="844"></iframe>
+      </section>
+      <section>
+        <h2>430 px</h2><p>The same page and content at the wider phone size.</p><iframe
+          src="/lab/single/narrative/"
+          title="Integrated editorial profile at 430 pixels"
+          width="430"
+          height="932"></iframe>
+      </section>
+    </div>
+    <aside>
+      <h2>Review focus</h2><p>
+        Does the opening introduce the person and the position together? Does practical work establish credibility
+        before media recognition? Do the images develop the argument rather than interrupt it?
+      </p><p>
+        Source-image cleanup is deferred. Existing approved assets are reused; original videos are not served. Press and
+        broadcast appearances identify commentary, not operational involvement or client endorsements. The strategy
+        source does not name its client country, so this draft does not attribute it publicly to Singapore.
+      </p>
+    </aside>
+  </main>
+  <style>
+    .review {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #000;
+    }
+    .review header {
+      max-width: 660px;
+      margin-bottom: 32px;
+    }
+    .review h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin: 12px 0 16px;
+      font-weight: 400;
+    }
+    .review p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .review a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      text-decoration: underline;
+    }
+    .review h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .views {
+      display: flex;
+      align-items: start;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .views section {
+      min-width: 0;
+      max-width: 100%;
+    }
+    .views iframe {
+      display: block;
+      border: 1px solid #9a9c97;
+      box-sizing: content-box;
+      max-width: 100%;
+      background: #f3f3f0;
+    }
+    .views p {
+      max-width: 380px;
+    }
+    .review aside {
+      max-width: 650px;
+      margin-top: 40px;
+    }
+  </style>
+</Foundation>

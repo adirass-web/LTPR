@@ -1,0 +1,383 @@
+/* A3 review only. Semantic roles, a single source order, no outlet-specific layout. */
+.a3-surface {
+  --a3-paper: #f3f3f0;
+  --a3-ink: #000;
+  --a3-secondary: #555752;
+  --a3-accent: #02291f;
+  --a3-rule: #9a9c97;
+  --a3-space-caption: 0.5rem;
+  --a3-space-element: 1rem;
+  --a3-space-group: 2rem;
+  --a3-space-chapter: 3.5rem;
+  --a3-gutter: clamp(1.5rem, 4vw, 4rem);
+  --a3-document-max: 22rem;
+  --a3-context-max: 16.625rem;
+  --a3-heading: 1.625rem;
+  --a3-title: 1.25rem;
+  --a3-body: 1rem;
+  --a3-detail: 0.8125rem;
+  background: var(--a3-paper);
+  color: var(--a3-ink);
+  font-weight: 400;
+  min-block-size: 100dvh;
+}
+body:has(.a3-surface) {
+  background: #f3f3f0;
+  overflow-x: visible;
+  min-inline-size: 0;
+}
+.a3-surface :is(h1, h2, h3, p, figure, ul) {
+  margin: 0;
+}
+.a3-surface :is(h1, h2, h3, strong, b) {
+  font-weight: 400;
+}
+.a3-surface a {
+  color: inherit;
+  text-decoration: none;
+}
+.a3-surface a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--a3-accent);
+  text-underline-offset: 0.2em;
+}
+.a3-surface :focus-visible {
+  outline: 2px solid var(--a3-accent);
+  outline-offset: 5px;
+}
+.a3-surface picture,
+.a3-surface img {
+  display: block;
+  max-inline-size: 100%;
+}
+.a3-header,
+.a3-page,
+.a3-footer {
+  inline-size: min(calc(100% - 2 * var(--a3-gutter)), 58rem);
+  margin-inline: auto;
+}
+.a3-header {
+  padding-block: 1.5rem;
+  font-size: 0.9375rem;
+}
+.a3-header a {
+  display: inline-flex;
+  min-block-size: 2.75rem;
+  align-items: center;
+}
+.a3-page {
+  container: a3-page / inline-size;
+}
+.a3-page > * {
+  min-inline-size: 0;
+}
+.a3-hero {
+  padding-block: 1rem var(--a3-space-chapter);
+}
+.a3-eyebrow {
+  font-size: var(--a3-detail);
+  color: var(--a3-secondary);
+}
+.a3-hero h1 {
+  max-inline-size: 16ch;
+  margin-block: 1rem 1.25rem;
+  font-size: clamp(2.125rem, 10cqi, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.a3-intro {
+  max-inline-size: 36ch;
+  font-size: var(--a3-body);
+  line-height: 1.5;
+}
+.a3-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 1.5rem;
+  margin-block-start: 2rem;
+}
+.a3-role {
+  flex: 1 1 6rem;
+  font-size: var(--a3-detail);
+  line-height: 1.45;
+  min-inline-size: 0;
+}
+.a3-role > span {
+  display: block;
+}
+.a3-role > span + span {
+  margin-block-start: 0.625rem;
+  color: var(--a3-secondary);
+}
+.a3-portrait {
+  flex: 0 1 12rem;
+  min-inline-size: 0;
+  aspect-ratio: 2 / 3;
+}
+.a3-portrait img {
+  inline-size: 100%;
+  block-size: auto;
+}
+.a3-chapter {
+  margin-block-end: var(--a3-space-chapter);
+}
+.a3-chapter h2 {
+  font-size: var(--a3-heading);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-block-end: 1.5rem;
+}
+.a3-chapter p {
+  font-size: var(--a3-body);
+  line-height: 1.5;
+  max-inline-size: 52ch;
+}
+.a3-public__items {
+  display: grid;
+  gap: 1.75rem;
+}
+.a3-source-link {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  font-size: var(--a3-detail);
+  gap: 0.4rem;
+}
+.a3-source-link span {
+  color: var(--a3-accent);
+}
+.a3-public h3 {
+  font-size: var(--a3-title);
+  line-height: 1.25;
+  max-inline-size: 28ch;
+  margin-block: 0.25rem 0.625rem;
+}
+.a3-public p.a3-disclosure {
+  margin-block-start: 1.5rem;
+  font-size: var(--a3-detail);
+  color: var(--a3-secondary);
+}
+.a3-cluster {
+  display: grid;
+  gap: var(--a3-space-group);
+  margin-block: 0 var(--a3-space-chapter);
+}
+.a3-evidence {
+  inline-size: min(calc(100% - 1rem), var(--a3-document-max));
+  min-inline-size: 0;
+}
+.a3-evidence a {
+  display: block;
+}
+.a3-evidence img {
+  inline-size: 100%;
+  block-size: auto;
+}
+.a3-evidence--document {
+  justify-self: start;
+}
+.a3-evidence--broadcast,
+.a3-evidence--context {
+  inline-size: min(100%, var(--a3-context-max));
+  justify-self: end;
+}
+.a3-evidence figcaption {
+  padding-block-start: var(--a3-space-caption);
+  font-size: var(--a3-detail);
+  line-height: 1.4;
+}
+.a3-evidence__source {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  color: var(--a3-secondary);
+}
+.a3-evidence__caption {
+  display: block;
+  margin-block-start: 0.25rem;
+}
+.a3-evidence__caption > span {
+  color: var(--a3-accent);
+}
+.a3-book {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+.a3-book > img {
+  inline-size: 6.5rem;
+  block-size: auto;
+  flex: 0 0 6.5rem;
+}
+.a3-book > span {
+  min-inline-size: 0;
+  flex: 1 1 8rem;
+}
+.a3-book__title {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+.a3-book__detail {
+  display: block;
+  margin-block-start: 0.75rem;
+  font-size: var(--a3-detail);
+  color: var(--a3-secondary);
+}
+.a3-areas {
+  display: grid;
+  gap: 1.5rem;
+}
+.a3-areas h3 {
+  font-size: var(--a3-title);
+  line-height: 1.25;
+  margin-block-end: 0.5rem;
+  max-inline-size: 30ch;
+}
+.a3-method p {
+  font-size: clamp(1.375rem, 6cqi, 1.75rem);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  max-inline-size: 35ch;
+}
+.a3-forums ul {
+  list-style: none;
+  padding: 0;
+  border-block-start: 1px solid var(--a3-rule);
+}
+.a3-forums li {
+  border-block-end: 1px solid var(--a3-rule);
+}
+.a3-forums a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.875rem;
+  min-block-size: 2.75rem;
+  font-size: var(--a3-detail);
+  line-height: 1.4;
+}
+.a3-forums a > span {
+  min-inline-size: 0;
+}
+.a3-forums a > span:last-child {
+  color: var(--a3-accent);
+}
+.a3-footer {
+  border-block-start: 1px solid var(--a3-ink);
+  padding-block: 1.5rem 2rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: var(--a3-detail);
+}
+.a3-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 2.75rem;
+  justify-self: start;
+  overflow-wrap: anywhere;
+}
+.a3-contact-rail {
+  display: none;
+}
+.a3-skip {
+  position: absolute;
+  inset-block-start: -5rem;
+  inset-inline-start: 1rem;
+  padding: 0.75rem;
+  background: var(--a3-paper);
+}
+.a3-skip:focus {
+  inset-block-start: 1rem;
+  z-index: 1;
+}
+@container a3-page (min-width: 42rem) {
+  .a3-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16.25rem;
+    column-gap: 4rem;
+    padding-block: 2rem 4rem;
+  }
+  .a3-eyebrow,
+  .a3-hero h1,
+  .a3-intro {
+    grid-column: 1;
+  }
+  .a3-identity {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    gap: 1rem;
+  }
+  .a3-portrait {
+    flex: none;
+    inline-size: 100%;
+  }
+  .a3-role {
+    flex: none;
+  }
+  .a3-public__items,
+  .a3-areas {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+  }
+  .a3-cluster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: start;
+    margin-block-end: 4rem;
+  }
+  .a3-evidence--broadcast,
+  .a3-evidence--context {
+    --a3-context-max: 18.75rem;
+    margin-block-start: 2rem;
+  }
+  .a3-evidence--document {
+    inline-size: min(100%, var(--a3-document-max));
+  }
+  .a3-israel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 17rem;
+    column-gap: 3rem;
+  }
+  .a3-israel h2,
+  .a3-israel > p {
+    grid-column: 1;
+  }
+  .a3-book {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+  .a3-forums ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .a3-contact-rail {
+    display: inline-flex;
+    position: fixed;
+    inset-inline-end: 1.5rem;
+    inset-block-start: 50%;
+    min-block-size: 2.75rem;
+    align-items: center;
+    font-size: var(--a3-detail);
+    writing-mode: vertical-rl;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.a3-surface) {
+    scroll-behavior: auto;
+  }
+}
