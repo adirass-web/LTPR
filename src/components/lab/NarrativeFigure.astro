@@ -1,0 +1,39 @@
+---
+import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
+import type { NarrativeEvidence } from '~/data/narrativeReview';
+interface Props {
+  item: NarrativeEvidence;
+}
+const { item } = Astro.props;
+const Tag = item.url ? 'a' : 'div';
+const sizes =
+  item.role === 'document'
+    ? '(min-width: 440px) 352px, calc(100vw - 64px)'
+    : '(min-width: 440px) 300px, calc(100vw - 88px)';
+---
+
+<Tag
+  class:list={['nl-figure', `nl-figure--${item.role}`]}
+  href={item.url}
+  target={item.url ? '_blank' : undefined}
+  rel={item.url ? 'noopener noreferrer' : undefined}
+  aria-label={item.url
+    ? `${item.outlet}: ${item.caption}, ${item.year}. Open original source in a new tab.`
+    : undefined}
+  data-evidence={item.id}
+>
+  <figure>
+    <ResponsiveMediaImage image={item.image} sizes={sizes} />
+    {
+      item.companion && (
+        <div class="nl-figure__context">
+          <ResponsiveMediaImage image={item.companion} sizes="160px" />
+        </div>
+      )
+    }
+    <figcaption>
+      <span class="nl-figure__source"><span>{item.outlet}</span><span>{item.year}</span></span>
+      <span>{item.caption}{item.url && <span aria-hidden="true"> ↗</span>}</span>
+    </figcaption>
+  </figure>
+</Tag>

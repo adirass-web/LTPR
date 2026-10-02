@@ -2,7 +2,7 @@
 
 Date: 2 October 2026
 
-Status: developed design for owner review; not implemented
+Status: storyboard approved; implementation in a separate local review route
 
 Baseline: local A3 commit `b4f378e` on `codex/a3-mobile-review`
 
@@ -64,13 +64,13 @@ End the argument with the existing principle: “The point is not another assess
 
 Keep the international forum records as compact linked endnotes, with the institution and event type where available. They demonstrate international participation, not client relationships or endorsements. They do not become a Stages chapter. Finish with name and email. Retain footer-only mobile contact and a discreet desktop edge link.
 
-## Image editing decision for approval
+## Image policy — owner override
 
-The old six-to-eight-image target is distinct from the now-superseded cluster structure. **This proposal asks to relax that numerical target as well.** Start with three supporting media images—NTV, Le Figaro, RAI—in addition to the portrait and book. Retain another image only if it introduces evidence or context the story otherwise lacks. This is a proposal, not an already-approved deletion or a new three-image quota.
+**Owner override: NO IMAGE LIMIT.** The proposed three-image reduction is rejected and withdrawn. There is no numerical ceiling, quota or fixed mix for the primary page, including no separate cap on face-led evidence. Selection follows relevance, variety, source integrity and storytelling. Media types are a resource taxonomy, not layout slots. Do not silently reintroduce a cap through data slicing, mobile hiding or an arbitrary selection target.
 
-POLITICO, France 24 and the network-art still remain available in the source inventory and unchanged Media archive. The first two introduce separate geopolitical topics; the network still currently repeats the systems idea more than it adds evidence. Keeping them all would require either a longer narrative or another gallery. No asset files are deleted.
+Both supplied ZIPs were inspected as asset archives. Their embedded briefs are historical reference, not authority to restore the old twelve-item Media page, Heebo, navigation, publication restrictions or release instructions. Existing poster derivatives are byte-identical to the handoff; use these current copies without overwriting improved assets. Raw masters remain outside the served site.
 
-This creates five substantial image moments, including portrait and book, while reducing repeated face imagery and travel through the page. If that feels too spare when rendered, revisit selection and scale before adding decorative imagery. Article/broadcast quality improvements are deferred by the owner and do not block this composition review.
+The narrative revision draws more broadly on RAI/network context, NTV, Le Figaro, undersea-infrastructure commentary, POLITICO's supply-chain discussion, Channel Economy, NRC and France 24. Their appearances are attached to relevant ideas, not assembled into compulsory clusters. All other material remains eligible; inclusion is not constrained by that first selection. Article/broadcast quality improvements remain deferred and do not block composition review.
 
 ## Concrete mobile composition to test
 
@@ -106,7 +106,7 @@ At 320px, or when enlarged text no longer fits, the opening unit stacks in sourc
 
 ## Review and verification
 
-The first owner review is of this story, including the proposed relaxation of the image count. The next review is the complete 390/430 rendering, not isolated component thumbnails.
+The owner has approved this story and explicitly removed image limits. The next review is the complete 390/430 rendering, not isolated component thumbnails. No further storyboard approval is required.
 
 When implemented, test 320, 390, 430, 768 and 1440px; enlarged text; all image loads; external source targets; focus order; no horizontal overflow; noindex and sitemap exclusion. Run the project checks and production build. Do not claim these tests have passed for this unimplemented revision.
 
@@ -120,4 +120,12 @@ Perceptual checks: Does the opening read as one person with a position? Does the
 - [PROGRESS field record](https://rcrl.tau.ac.il/progress_jcp_jan25), checked 2 October 2026: supports World Bank collaboration, four sectors and application across 11 economies; its implementation statement is a 2025 report, not a newly measured outcome.
 - GoogleChrome Modern Web Guidance `css-layout`, retrieved 2 October 2026: intrinsic layout, container sizing, logical properties, preserved source order and layout stability. The local skill wrapper is outdated; the guide itself was retrieved afresh.
 
-Self-review completed: no asset sourcing added; no invented results; original A3 preserved; source quality deferred; numerical image-target change explicitly presented for approval; mobile dimensions described as test proposals; no new production or PR authority inferred. The design-planning workflow's written-spec approval gate is the next step before implementation.
+Self-review completed: no external asset sourcing added; no invented results; original A3 preserved; source quality deferred; all image limits removed; mobile dimensions are test proposals; no new production or PR authority inferred. The owner passed the written-spec approval gate. The writing-plans helper is not installed; the implementation checklist below is the fallback.
+
+## Implementation checklist
+
+1. Inspect the supplied archive, compare assets with current files, and preserve masters outside public.
+2. Add a separate narrative page, typed evidence selection and semantic figure styling; preserve A3.
+3. Update the review board to show the narrative at 390/430 and retain access to the prior experiment.
+4. Record moved/shortened copy and archive provenance.
+5. Run checks/build and responsive/keyboard/image validation; report local review only, without deployment.

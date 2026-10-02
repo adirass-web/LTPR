@@ -74,3 +74,16 @@ All detail remains visible in the unchanged Media archive.
 ## Media metadata — retained in archive
 
 Full article titles, exact dates, languages and descriptive notes stay in the original data and Media archive. A3 uses outlet/year plus short proposed labels: “Technology, intelligence and the pager operation”, “Artificial intelligence enters the battlefield”, “The art of connection”, “Universities and innovation ecosystems” and “NSO and the Israeli state”. These are editorial labels, not quotations or asserted original headlines.
+
+## Integrated narrative revision — 2 October 2026
+
+This separate lab route preserves the original A3 and production copy. The owner approved the storyboard and explicitly rejected all image limits. Archive assets are associated with relevant narrative passages, without compulsory clusters or numeric quotas.
+
+- Hero category, headline and shortened standfirst retained. The current university role moves from the hero to the book/provenance passage, unchanged.
+- Public-work order changes to World Bank / PROGRESS, then national strategy. World Bank description changes to “Work across energy, healthcare, digital infrastructure and financial services translated sector-wide analysis into tailored recommendations.” This avoids implying newly measured results from a 2025 source.
+- National-strategy description becomes “Research and analysis developed into a strategic vision, guiding principles and tailored policy recommendations.” The original Singapore label is preserved above and in production. The linked public biography does not name the nation, so the new review shows “Strategic advisory” pending confirmation of public attribution.
+- Israel heading becomes “Technology is only part of the system.” The two original paragraphs become “Israel’s cyber advantage grew through connections between government, industry and universities. My work examines what can be transferred from that experience—and what cannot.”
+- Full original AI and critical-systems descriptions are restored within the narrative; their separate service-style headings are not used. National-capability material is represented by the practical strategy record rather than a duplicate practice-area entry.
+- The method principle and forum institution labels remain unchanged. The forums are styled as supporting endnotes, not a Stages chapter.
+- New editorial connective passages are review copy, not quotations or additional claims of work: “Innovation depends on the relationships between institutions, not just the technologies inside them”; “From undersea cables to device supply chains, digital dependence has physical consequences”; and the three short passages about platform responsibility, surveillance institutions and statecraft in `src/pages/lab/single/narrative.astro`.
+- New captions explicitly distinguish interview, commentary and expert analysis from delivery or operational involvement. The original Media data, detailed metadata and archive remain intact.
