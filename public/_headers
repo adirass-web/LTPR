@@ -3,3 +3,9 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), geolocation=(), microphone=()
+
+# The noindex comparison board frames only same-origin lab pages.
+/lab/*
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self'
+  X-Robots-Tag: noindex, nofollow
