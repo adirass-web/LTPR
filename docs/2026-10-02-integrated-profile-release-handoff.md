@@ -2,13 +2,13 @@
 
 Date: 2 October 2026
 
-Status: owner approved release from PR #23 to `main`
+Status: owner approved production release. PR #23 merged to `main`; the actual English route is promoted in the follow-up release branch.
 
 ## Release decision
 
 The English homepage direction is an integrated editorial profile. Its role is to establish intellectual authority and demonstrated practical success through hierarchy, public work and provenance. It is not a consulting sales page, a résumé or a gallery of press appearances.
 
-The deployment source is draft PR [#23](https://github.com/adirass-web/LTPR/pull/23), `codex/a3-mobile-review` into `main`. The release does not extend to Hebrew. The dedicated Media archive remains a separate English page.
+The design source was PR [#23](https://github.com/adirass-web/LTPR/pull/23), `codex/a3-mobile-review` into `main`. That PR intentionally created a review route only. The follow-up release branch promotes the approved shared profile component to the actual `/en/` route. The release does not extend to Hebrew. The dedicated Media archive remains a separate English page.
 
 ## Editorial decisions now in force
 
@@ -35,8 +35,8 @@ The deployment source is draft PR [#23](https://github.com/adirass-web/LTPR/pull
 
 ## Operational state after release
 
-- Production target: `main`; Cloudflare deployment should follow the merge.
-- The old review branch and draft PR can be closed or retained only after production health is verified. The archive tags are the recovery points and must not be deleted.
+- Production target: `main`; Cloudflare deployment should follow the homepage-promotion merge.
+- PR #23 is merged. The follow-up homepage-promotion branch must be merged and production verified before any review branch is archived. The archive tags are the recovery points and must not be deleted.
 - Existing unrelated untracked local folders, `.playwright-cli/` and `output/`, are not release material and were deliberately left untouched.
 
 ## Likely next work
