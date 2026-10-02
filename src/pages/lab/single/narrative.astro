@@ -60,8 +60,8 @@ const portraitSet = (format: string) =>
             >
             <h3>Four critical sectors across 11 countries</h3>
             <p>
-              Work across energy, healthcare, digital infrastructure and financial services translated sector-wide
-              analysis into tailored recommendations.
+              Across energy, healthcare, digital infrastructure and financial services, the work produced tailored
+              recommendations that the 2025 field record describes as being implemented.
             </p>
           </article>
           <article>
@@ -82,6 +82,10 @@ const portraitSet = (format: string) =>
         <div class="nl-passage">
           <div class="nl-prose">
             <h2 id="systems-title">Technology is only part of the system.</h2>
+            <p>
+              National cyber capability is more than a strategy document. It depends on institutions able to set
+              priorities, coordinate responsibility and sustain action.
+            </p>
             <p>
               Israel’s cyber advantage grew through connections between government, industry and universities. My work
               examines what can be transferred from that experience—and what cannot.
@@ -141,8 +145,8 @@ const portraitSet = (format: string) =>
           <div class="nl-prose">
             <h2 id="responsibility-title">Capability brings responsibility.</h2>
             <p>
-              Platforms, institutions and states make different decisions. Understanding where responsibility sits is
-              part of understanding the system.
+              Across platforms, surveillance systems and state technology choices, capability raises the same questions:
+              who can act, under what authority, and who is accountable?
             </p>
           </div>
           <NarrativeFigure item={evidence.platforms} />
@@ -150,25 +154,26 @@ const portraitSet = (format: string) =>
         <div class="nl-passage">
           <div class="nl-prose nl-observation">
             <p>
-              Surveillance makes these relationships visible: between an industry, the institutions that use it, and the
-              people affected.
+              Surveillance technology tests the boundaries between industry, state institutions and the people affected.
             </p>
           </div>
           <NarrativeFigure item={evidence.institutions} />
         </div>
         <div class="nl-passage">
           <div class="nl-prose nl-observation">
-            <p>
-              Technology is also part of statecraft. Technical possibility and institutional judgment are not the same
-              thing.
-            </p>
+            <p>Technical possibility does not settle how a state should use a capability. That requires judgment.</p>
           </div>
           <NarrativeFigure item={evidence.statecraft} />
         </div>
       </section>
 
-      <section class="nl-closing" aria-label="Approach and international record">
+      <section class="nl-closing" aria-label="Approach, media and international record">
+        <p class="nl-method">{homeV3.method.paragraphs[0]}</p>
         <p class="nl-principle">{homeV3.method.paragraphs[1]}</p>
+        <p class="nl-archive">
+          Interviews and commentary are a separate public record.
+          <a href={`${import.meta.env.BASE_URL}en/media/`}>Explore the full Media archive ↗</a>
+        </p>
         <h2 class="nl-eyebrow">Selected international forums</h2>
         <ul class="nl-forums">
           {

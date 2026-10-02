@@ -129,3 +129,15 @@ Self-review completed: no external asset sourcing added; no invented results; or
 3. Update the review board to show the narrative at 390/430 and retain access to the prior experiment.
 4. Record moved/shortened copy and archive provenance.
 5. Run checks/build and responsive/keyboard/image validation; report local review only, without deployment.
+
+## Approved content reconciliation after preview comparison
+
+The owner approved a focused content pass after comparing the review preview with production and `main`. The review route remains separate until a later release decision. The previous narrative specification still governs structure, image selection and visual design; the following copy decisions supersede narrower wording above:
+
+1. Date the World Bank / PROGRESS implementation claim to the 2025 field record instead of omitting it or presenting it as a newly measured outcome.
+2. Explicitly name national cyber capability as institutional priority-setting, coordination and sustained action within the Israel/system passage.
+3. Restore the existing systems-thinking method sentence before the closing principle.
+4. Make the responsibility passage specific to authority and accountability across platforms, surveillance and state technology choices. Keep every media appearance clearly distinct from documented project delivery.
+5. Preserve `/en/media/` as a separate, deeper archive and link to it from the review narrative. Keep the national-strategy client unnamed until public attribution is substantiated.
+
+This is a copy reconciliation, not authority to merge or deploy the review to production, change Hebrew, or reduce the number of images.

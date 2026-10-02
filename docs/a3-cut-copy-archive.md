@@ -87,3 +87,14 @@ This separate lab route preserves the original A3 and production copy. The owner
 - The method principle and forum institution labels remain unchanged. The forums are styled as supporting endnotes, not a Stages chapter.
 - New editorial connective passages are review copy, not quotations or additional claims of work: “Innovation depends on the relationships between institutions, not just the technologies inside them”; “From undersea cables to device supply chains, digital dependence has physical consequences”; and the three short passages about platform responsibility, surveillance institutions and statecraft in `src/pages/lab/single/narrative.astro`.
 - New captions explicitly distinguish interview, commentary and expert analysis from delivery or operational involvement. The original Media data, detailed metadata and archive remain intact.
+
+## Focused content pass — 2 October 2026
+
+The owner approved a content-only reconciliation of the integrated narrative with production. This pass changes the review route, not the live English homepage or the deeper Media page.
+
+- The World Bank / PROGRESS paragraph now states that the 2025 field record describes the tailored recommendations as being implemented. This restores practical outcome evidence while dating the claim; it does not assert measured improvement.
+- The Israeli-experience passage now explicitly explains national cyber capability as institutional priority-setting, coordination and sustained action. It remains integrated prose, not a restored service-card grid.
+- The original systems-thinking method sentence returns before the existing closing principle.
+- The responsibility passage now frames the three public examples through authority and accountability. Its observations remain editorial interpretations, not claims that these media appearances document client delivery.
+- A direct link to `/en/media/` identifies interviews and commentary as a separate public record. The full Media archive stays on its existing page; it is not folded into or replaced by the homepage.
+- The national-strategy client remains unnamed in the review copy. The public university biography supports the work but does not identify the nation; the current production “Singapore” label should not be imported without separate confirmation.
