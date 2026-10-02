@@ -1,4 +1,4 @@
-/* Local editorial review. Content associations are in data, never outlet selectors. */
+/* Local editorial profile review. */
 .nl-surface {
   --nl-paper: #f3f3f0;
   --nl-ink: #000;
@@ -6,11 +6,7 @@
   --nl-accent: #02291f;
   --nl-rule: #9a9c97;
   --nl-gutter: clamp(1.5rem, 4vw, 4rem);
-  --nl-near: 1rem;
-  --nl-related: 1.5rem;
   --nl-turn: 3rem;
-  --nl-document: 22rem;
-  --nl-broadcast: 18.75rem;
   background: var(--nl-paper);
   color: var(--nl-ink);
   font-weight: 400;
@@ -115,41 +111,56 @@ body:has(.nl-surface) {
   max-inline-size: 27ch;
 }
 .nl-work {
+  border-block-start: 1px solid var(--nl-rule);
+  padding-block-start: 1.25rem;
   padding-block-end: var(--nl-turn);
 }
-.nl-records {
-  display: grid;
-  gap: 1.5rem;
-  margin-block: 1.5rem;
-}
-.nl-records article {
-  display: grid;
-  align-content: start;
-  gap: 0.625rem;
-}
-.nl-page .nl-note {
+.nl-work h2 {
   font-size: 0.8125rem;
   line-height: 1.45;
   color: var(--nl-muted);
 }
-.nl-story {
-  padding-block: var(--nl-turn) 0;
-}
-.nl-passage {
+.nl-records {
   display: grid;
-  gap: var(--nl-related);
+  gap: 2rem;
+  margin-block-start: 1.25rem;
 }
-.nl-passage + .nl-passage {
-  margin-block-start: 2rem;
-}
-.nl-prose {
+.nl-records article {
   display: grid;
   align-content: start;
-  gap: var(--nl-near);
-  max-inline-size: 42ch;
+  gap: 0.75rem;
+  border-block-start: 1px solid var(--nl-rule);
+  padding-block-start: 0.875rem;
 }
-.nl-observation {
-  max-inline-size: 36ch;
+.nl-records h3 {
+  font-size: clamp(1.5rem, 5cqi, 1.875rem);
+  line-height: 1.18;
+}
+.nl-records .nl-eyebrow,
+.nl-thinking-heading .nl-eyebrow {
+  color: var(--nl-muted);
+}
+.nl-thinking {
+  border-block-start: 1px solid var(--nl-rule);
+}
+.nl-thinking-row {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+}
+.nl-thinking-row + .nl-thinking-row {
+  border-block-start: 1px solid var(--nl-rule);
+}
+.nl-thinking-heading {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+}
+.nl-thinking-body {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  max-inline-size: 46ch;
 }
 .nl-book {
   display: flex;
@@ -174,42 +185,9 @@ body:has(.nl-surface) {
   line-height: 1.5;
   color: var(--nl-muted);
 }
-.nl-figure {
-  display: block;
-  inline-size: 100%;
-  justify-self: end;
-}
-.nl-figure--document {
-  max-inline-size: min(calc(100% - 1rem), var(--nl-document));
-}
-.nl-figure--broadcast {
-  max-inline-size: min(calc(100% - 2.5rem), var(--nl-broadcast));
-}
-.nl-figure picture,
-.nl-figure img {
-  inline-size: 100%;
-}
-.nl-figure__context {
-  inline-size: min(60%, 10rem);
-  margin-block-start: 0.75rem;
-  margin-inline-start: auto;
-}
-.nl-figure figcaption {
-  display: grid;
-  gap: 0.25rem;
-  margin-block-start: 0.5rem;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-}
-.nl-figure__source {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem;
-  color: var(--nl-muted);
-}
 .nl-closing {
-  padding-block: 3.5rem 2.5rem;
+  border-block-start: 1px solid var(--nl-rule);
+  padding-block: 3rem 2.5rem;
 }
 .nl-page .nl-method {
   max-inline-size: 42ch;
@@ -221,45 +199,12 @@ body:has(.nl-surface) {
   line-height: 1.35;
   margin-block-end: 2.5rem;
 }
-.nl-page .nl-archive {
-  max-inline-size: 42ch;
-  margin-block-end: 2.5rem;
-  font-size: 0.9375rem;
-}
-.nl-archive a {
+.nl-surface a.nl-archive {
   display: inline-block;
+  font-size: 0.9375rem;
   text-decoration: underline;
   text-decoration-color: var(--nl-accent);
   text-underline-offset: 0.2em;
-}
-.nl-page h2.nl-eyebrow {
-  font-size: 0.8125rem;
-  max-inline-size: none;
-  color: var(--nl-muted);
-  margin-block-end: 1rem;
-}
-.nl-forums {
-  list-style: none;
-  padding: 0;
-  display: grid;
-}
-.nl-forums li {
-  border-block-start: 1px solid var(--nl-rule);
-}
-.nl-forums a {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 0.875rem;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-}
-.nl-forums a > span:first-child {
-  overflow-wrap: anywhere;
-}
-.nl-forums a > [aria-hidden] {
-  flex: 0 0 auto;
 }
 .nl-footer {
   display: flex;
@@ -272,9 +217,6 @@ body:has(.nl-surface) {
 }
 .nl-footer a {
   overflow-wrap: anywhere;
-}
-.nl-contact-rail {
-  display: none;
 }
 .nl-skip {
   position: absolute;
@@ -314,30 +256,9 @@ body:has(.nl-surface) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
   }
-  .nl-passage {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: center;
-  }
-  .nl-passage + .nl-passage {
-    margin-block-start: 2.5rem;
-  }
-  .nl-story {
-    padding-block-start: 3.5rem;
-  }
-  .nl-forums {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .nl-contact-rail {
-    display: block;
-    position: fixed;
-    inset-inline-end: 1.25rem;
-    inset-block-start: 50%;
-    writing-mode: vertical-rl;
-    font-size: 0.8125rem;
-    padding: 0.75rem;
+  .nl-thinking-row {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 4rem;
+    padding-block: 3.5rem;
   }
 }

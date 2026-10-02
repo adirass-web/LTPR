@@ -1,11 +1,8 @@
 ---
 import Foundation from '~/layouts/Foundation.astro';
 import BookCover from '~/components/BookCover.astro';
-import NarrativeFigure from '~/components/lab/NarrativeFigure.astro';
-import { narrativeEvidence as evidence } from '~/data/narrativeReview';
 import { homeV3 } from '~/content/en-v3';
 import { sources } from '~/content/sources';
-import { internationalForums } from '~/data/internationalForums';
 import '~/assets/styles/narrative-review.css';
 const portraitRoot = `${import.meta.env.BASE_URL}images/portraits/lior-tabansky-portrait-2x3`;
 const portraitSet = (format: string) =>
@@ -60,8 +57,8 @@ const portraitSet = (format: string) =>
             >
             <h3>Four critical sectors across 11 countries</h3>
             <p>
-              Across energy, healthcare, digital infrastructure and financial services, the work produced tailored
-              recommendations that the 2025 field record describes as being implemented.
+              Energy, healthcare, digital infrastructure and financial services. The 2025 field record describes the
+              tailored recommendations as being implemented.
             </p>
           </article>
           <article>
@@ -75,13 +72,15 @@ const portraitSet = (format: string) =>
             </p>
           </article>
         </div>
-        <p class="nl-note">{homeV3.publicWork.disclosure}</p>
       </section>
 
-      <section class="nl-story" aria-labelledby="systems-title">
-        <div class="nl-passage">
-          <div class="nl-prose">
+      <section class="nl-thinking" aria-label="Perspective and method">
+        <div class="nl-thinking-row">
+          <div class="nl-thinking-heading">
+            <p class="nl-eyebrow">Perspective</p>
             <h2 id="systems-title">Technology is only part of the system.</h2>
+          </div>
+          <div class="nl-thinking-body">
             <p>
               National cyber capability is more than a strategy document. It depends on institutions able to set
               priorities, coordinate responsibility and sustain action.
@@ -101,97 +100,24 @@ const portraitSet = (format: string) =>
               >{homeV3.hero.role.title}<br />{homeV3.hero.role.institution} ↗</a
             >
           </div>
-          <NarrativeFigure item={evidence.ecosystems} />
         </div>
-        <div class="nl-passage">
-          <div class="nl-prose nl-observation">
-            <p>Innovation depends on the relationships between institutions, not just the technologies inside them.</p>
-            <p class="nl-note">
-              A public conversation on digital life, alongside the programme’s network-science artwork.
-            </p>
-          </div>
-          <NarrativeFigure item={evidence.codice} />
-        </div>
-      </section>
-
-      <section class="nl-story" aria-labelledby="decisions-title">
-        <div class="nl-passage">
-          <div class="nl-prose">
+        <div class="nl-thinking-row">
+          <div class="nl-thinking-heading">
+            <p class="nl-eyebrow">AI / strategic method</p>
             <h2 id="decisions-title">Start with the decision.</h2>
+          </div>
+          <div class="nl-thinking-body">
             <p>{homeV3.work.areas[1].description}</p>
           </div>
-          <NarrativeFigure item={evidence.decisions} />
         </div>
       </section>
 
-      <section class="nl-story" aria-labelledby="infrastructure-title">
-        <div class="nl-passage">
-          <div class="nl-prose">
-            <h2 id="infrastructure-title">The systems behind everyday life.</h2>
-            <p>{homeV3.work.areas[2].description}</p>
-          </div>
-          <NarrativeFigure item={evidence.infrastructure} />
-        </div>
-        <div class="nl-passage">
-          <div class="nl-prose nl-observation">
-            <p>From undersea cables to device supply chains, digital dependence has physical consequences.</p>
-          </div>
-          <NarrativeFigure item={evidence.supplyChains} />
-        </div>
-      </section>
-
-      <section class="nl-story" aria-labelledby="responsibility-title">
-        <div class="nl-passage">
-          <div class="nl-prose">
-            <h2 id="responsibility-title">Capability brings responsibility.</h2>
-            <p>
-              Across platforms, surveillance systems and state technology choices, capability raises the same questions:
-              who can act, under what authority, and who is accountable?
-            </p>
-          </div>
-          <NarrativeFigure item={evidence.platforms} />
-        </div>
-        <div class="nl-passage">
-          <div class="nl-prose nl-observation">
-            <p>
-              Surveillance technology tests the boundaries between industry, state institutions and the people affected.
-            </p>
-          </div>
-          <NarrativeFigure item={evidence.institutions} />
-        </div>
-        <div class="nl-passage">
-          <div class="nl-prose nl-observation">
-            <p>Technical possibility does not settle how a state should use a capability. That requires judgment.</p>
-          </div>
-          <NarrativeFigure item={evidence.statecraft} />
-        </div>
-      </section>
-
-      <section class="nl-closing" aria-label="Approach, media and international record">
+      <section class="nl-closing" aria-label="Approach and public record">
         <p class="nl-method">{homeV3.method.paragraphs[0]}</p>
         <p class="nl-principle">{homeV3.method.paragraphs[1]}</p>
-        <p class="nl-archive">
-          Interviews and commentary are a separate public record.
-          <a href={`${import.meta.env.BASE_URL}en/media/`}>Explore the full Media archive ↗</a>
-        </p>
-        <h2 class="nl-eyebrow">Selected international forums</h2>
-        <ul class="nl-forums">
-          {
-            internationalForums.map((forum) => (
-              <li>
-                <a href={forum.url} target="_blank" rel="noopener noreferrer">
-                  <>
-                    <span>{forum.institution}</span>
-                    <span aria-hidden="true">↗</span>
-                  </>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <a class="nl-archive" href={`${import.meta.env.BASE_URL}en/media/`}>Media &amp; international record ↗</a>
       </section>
     </main>
-    <a class="nl-contact-rail" href="mailto:liortabansky@gmail.com">Contact ↗</a>
     <footer class="nl-footer">
       <span>Dr. Lior Tabansky</span><a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com ↗</a>
     </footer>

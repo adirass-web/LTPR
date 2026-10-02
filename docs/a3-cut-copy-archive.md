@@ -98,3 +98,9 @@ The owner approved a content-only reconciliation of the integrated narrative wit
 - The responsibility passage now frames the three public examples through authority and accountability. Its observations remain editorial interpretations, not claims that these media appearances document client delivery.
 - A direct link to `/en/media/` identifies interviews and commentary as a separate public record. The full Media archive stays on its existing page; it is not folded into or replaced by the homepage.
 - The national-strategy client remains unnamed in the review copy. The public university biography supports the work but does not identify the nation; the current production “Singapore” label should not be imported without separate confirmation.
+
+## Approved profile / archive separation — 2 October 2026
+
+The review profile now gives the two existing public-work records prominence immediately after the opening. The World Bank paragraph is shortened without adding a result: the 2025 field record is still the attributed source for recommendations described as being implemented. The public-work disclosure is removed from display but preserved in `src/content/en-v3.ts` and above in this archive.
+
+The Israel passage, book and laboratory affiliation remain on the profile. The AI paragraph is retained verbatim under the explicit eyebrow “AI / strategic method,” separate from the delivered-work records. The critical-systems and responsibility passages, their associated broadcast/article figures, and the six forum endnotes are removed from the profile; their source records remain in the Media archive and its data. This is not an image quota. The profile's former explanatory Media paragraph is reduced to one link, “Media & international record.” The fixed desktop “Contact” rail is removed; the discreet footer email remains. Production and Hebrew copy are unchanged.

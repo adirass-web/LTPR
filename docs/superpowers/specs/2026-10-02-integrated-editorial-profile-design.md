@@ -76,18 +76,18 @@ The narrative revision draws more broadly on RAI/network context, NTV, Le Figaro
 
 These are art-direction starting dimensions, not formal universal ratios or results already measured in a browser.
 
-| Element | 390px view | 430px view |
-|---|---|---|
-| Outer gutter / reading width | 24px / 342px | 24px / 382px |
-| Opening portrait | 144 × 216px | 160 × 240px |
-| Opening headline column / gap | 178px / 20px | 202px / 20px |
-| Headline | about 30px, natural wrapping | about 32px, natural wrapping |
-| Intro and body copy | 16px / 24px line height | 16px / 24px line height |
-| Section heading | 23–24px, 400 weight | 23–24px, 400 weight |
-| Captions / source notes | 13px / approximately 18px | same |
-| Broadcast annotation | 280px maximum, inset | 300px maximum, inset |
-| Document annotation | 326px maximum | 352px maximum |
-| Book cover | about 80px, original ratio | about 80px, original ratio |
+| Element                       | 390px view                   | 430px view                   |
+| ----------------------------- | ---------------------------- | ---------------------------- |
+| Outer gutter / reading width  | 24px / 342px                 | 24px / 382px                 |
+| Opening portrait              | 144 × 216px                  | 160 × 240px                  |
+| Opening headline column / gap | 178px / 20px                 | 202px / 20px                 |
+| Headline                      | about 30px, natural wrapping | about 32px, natural wrapping |
+| Intro and body copy           | 16px / 24px line height      | 16px / 24px line height      |
+| Section heading               | 23–24px, 400 weight          | 23–24px, 400 weight          |
+| Captions / source notes       | 13px / approximately 18px    | same                         |
+| Broadcast annotation          | 280px maximum, inset         | 300px maximum, inset         |
+| Document annotation           | 326px maximum                | 352px maximum                |
+| Book cover                    | about 80px, original ratio   | about 80px, original ratio   |
 
 Use 8px for image-to-caption, 16px for paragraph relationships, 24px within an argument, and 40–48px between narrative movements. A source annotation stays closer to the sentence it supports than to the next topic. Do not assign the same large space above and below every picture.
 
@@ -141,3 +141,15 @@ The owner approved a focused content pass after comparing the review preview wit
 5. Preserve `/en/media/` as a separate, deeper archive and link to it from the review narrative. Keep the national-strategy client unnamed until public attribution is substantiated.
 
 This is a copy reconciliation, not authority to merge or deploy the review to production, change Hebrew, or reduce the number of images.
+
+## Approved editorial separation — 2 October 2026
+
+The owner approved a second, more restrained content pass on the review route. This supersedes the earlier narrative-page image selections and forum endnotes, not the asset archive or the no-image-quota policy.
+
+- The profile's two existing work records sit directly after the opening and carry the practical record. Their source links stay visible; no clients, roles, outcomes or metrics are added.
+- The subsequent material is explicitly perspective and method. AI is presented as a way of thinking about consequential decisions, not as a third delivered project or as a claim established by an AI-related press appearance.
+- The profile retains Israeli provenance through the existing book and laboratory affiliation. It omits repeated broadcast, article and forum figures. Those remain on the deeper `/en/media/` page as evidence of public and international reach, not evidence of project delivery.
+- The profile has one quiet link to that archive and an unobtrusive footer email. The prior fixed desktop “Contact” rail is removed. No service menu, new call to action or additional publicly supportable claims are introduced.
+- The original A3 route, main branch, production site and Hebrew pages remain unchanged. The review branch and preview are the only publication targets for this pass.
+
+This separation is editorial, not a numerical image limit: the archive remains rich, and the profile keeps its portrait and book cover.
