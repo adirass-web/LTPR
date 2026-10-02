@@ -1,0 +1,149 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import BookCover from '~/components/BookCover.astro';
+import A3Evidence from '~/components/lab/A3Evidence.astro';
+import { homeV3 } from '~/content/en-v3';
+import { internationalForums } from '~/data/internationalForums';
+import { a3Copy, clusters } from '~/data/a3Review';
+import '~/assets/styles/a3-review.css';
+
+const portrait = {
+  base: '',
+  widths: [],
+  width: 1024,
+  height: 1536,
+  alt: 'Dr. Lior Tabansky',
+};
+const portraitRoot = `${import.meta.env.BASE_URL}images/portraits/lior-tabansky-portrait-2x3`;
+const portraitSet = (format: string) =>
+  [480, 720, 1024].map((width) => `${portraitRoot}-${width}.${format} ${width}w`).join(', ');
+---
+
+<Foundation
+  lang="en"
+  dir="ltr"
+  title="A3 review · Dr. Lior Tabansky"
+  description="Mobile-first editorial design review."
+  canonicalPath="/lab/single/a3/"
+  noindex
+>
+  <div class="a3-surface">
+    <a class="a3-skip" href="#content">Skip to content</a>
+    <header class="a3-header"><a href="#content">Dr. Lior Tabansky</a></header>
+    <main id="content" class="a3-page" tabindex="-1">
+      <section class="a3-hero" aria-labelledby="a3-title">
+        <p class="a3-eyebrow">{homeV3.hero.category}</p>
+        <h1 id="a3-title">{homeV3.hero.title}</h1>
+        <p class="a3-intro">{a3Copy.standfirst}</p>
+        <div class="a3-identity">
+          <a class="a3-role" href={homeV3.hero.role.url} target="_blank" rel="noopener noreferrer">
+            <span>{homeV3.hero.role.title}</span><span
+              >{homeV3.hero.role.institution} <span aria-hidden="true">↗</span></span
+            >
+          </a>
+          <figure class="a3-portrait">
+            <picture>
+              <source type="image/avif" srcset={portraitSet('avif')} sizes="(min-width: 800px) 260px, 192px" />
+              <source type="image/webp" srcset={portraitSet('webp')} sizes="(min-width: 800px) 260px, 192px" />
+              <img
+                src={`${portraitRoot}-480.jpg`}
+                srcset={portraitSet('jpg')}
+                sizes="(min-width: 800px) 260px, 192px"
+                width={portrait.width}
+                height={portrait.height}
+                alt={portrait.alt}
+                fetchpriority="high"
+                loading="eager"
+              />
+            </picture>
+          </figure>
+        </div>
+      </section>
+
+      <section class="a3-chapter a3-public" aria-labelledby="public-title">
+        <h2 id="public-title">Public work</h2>
+        <div class="a3-public__items">
+          {
+            homeV3.publicWork.items.map((item) => (
+              <article class="a3-public__item">
+                <a class="a3-source-link" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  {item.label}
+                  <span aria-hidden="true"> ↗</span>
+                </a>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))
+          }
+        </div>
+        <p class="a3-disclosure">{homeV3.publicWork.disclosure}</p>
+      </section>
+      <section class="a3-cluster" aria-label="Broadcast and international reporting">
+        {clusters[0].map((item) => <A3Evidence item={item} />)}
+      </section>
+
+      <section class="a3-chapter a3-israel" aria-labelledby="israel-title">
+        <h2 id="israel-title">{homeV3.israelExperience.title}</h2>
+        <p>{homeV3.israelExperience.paragraphs[0]}</p>
+        <a class="a3-book" href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer">
+          <BookCover alt={homeV3.israelExperience.book.alt} />
+          <span
+            ><span class="a3-book__title">{homeV3.israelExperience.book.title}</span><span class="a3-book__detail"
+              >{homeV3.israelExperience.book.detail}<span aria-hidden="true"> ↗</span></span
+            ></span
+          >
+        </a>
+      </section>
+      <section class="a3-cluster" aria-label="Artificial intelligence and networks">
+        {clusters[1].map((item) => <A3Evidence item={item} />)}
+      </section>
+
+      <section class="a3-chapter a3-practice" aria-labelledby="practice-title">
+        <h2 id="practice-title">{homeV3.work.title}</h2>
+        <div class="a3-areas">
+          {
+            a3Copy.work.map((area) => (
+              <article>
+                <>
+                  <h3>{area.title}</h3>
+                  <p>{area.description}</p>
+                </>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+      <section class="a3-cluster" aria-label="Innovation and technology policy">
+        {clusters[2].map((item) => <A3Evidence item={item} />)}
+      </section>
+
+      <section class="a3-chapter a3-method" aria-labelledby="method-title">
+        <h2 id="method-title">{homeV3.method.title}</h2>
+        <p>{homeV3.method.paragraphs[1]}</p>
+      </section>
+      <section class="a3-chapter a3-forums" aria-labelledby="forums-title">
+        <h2 id="forums-title">International forums</h2>
+        <ul>
+          {
+            internationalForums.map((forum) => (
+              <li>
+                <a href={forum.url} target="_blank" rel="noopener noreferrer">
+                  <>
+                    <span>{forum.institution}</span>
+                    <span aria-hidden="true">↗</span>
+                  </>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <a class="a3-contact-rail" href="mailto:liortabansky@gmail.com">Contact ↗</a>
+    <footer class="a3-footer">
+      <span>Dr. Lior Tabansky</span><a href="mailto:liortabansky@gmail.com"
+        >liortabansky@gmail.com <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+  </div>
+</Foundation>

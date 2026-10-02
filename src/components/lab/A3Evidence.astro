@@ -1,0 +1,29 @@
+---
+import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
+import type { A3Evidence } from '~/data/a3Review';
+interface Props {
+  item: A3Evidence;
+}
+const { item } = Astro.props;
+const sizes =
+  item.role === 'document'
+    ? '(min-width: 800px) 352px, (min-width: 400px) 350px, calc(100vw - 64px)'
+    : '(min-width: 800px) 300px, 266px';
+---
+
+<a
+  class:list={['a3-evidence', `a3-evidence--${item.role}`]}
+  data-evidence={item.id}
+  href={item.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${item.outlet}: ${item.caption}, ${item.year}. Opens original source in a new tab.`}
+>
+  <figure>
+    <ResponsiveMediaImage image={item.image} sizes={sizes} />
+    <figcaption>
+      <span class="a3-evidence__source"><span>{item.outlet}</span><span>{item.year}</span></span>
+      <span class="a3-evidence__caption">{item.caption}<span aria-hidden="true"> ↗</span></span>
+    </figcaption>
+  </figure>
+</a>
