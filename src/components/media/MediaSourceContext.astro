@@ -1,0 +1,18 @@
+---
+import { mediaSources } from '~/data/mediaSources';
+
+interface Props {
+  outlet: string;
+}
+
+const { outlet } = Astro.props;
+const source = mediaSources[outlet];
+if (!source) throw new Error(`Missing publisher context for ${outlet}`);
+---
+
+<p class="media-source-context" lang="en" dir="ltr">
+  <span>{source.description}</span>
+  <a href={source.url} target="_blank" rel="noopener noreferrer">
+    {source.linkLabel}<span class="sr-only">, opens in a new tab</span><span aria-hidden="true"> ↗</span>
+  </a>
+</p>

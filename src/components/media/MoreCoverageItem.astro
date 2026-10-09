@@ -1,6 +1,7 @@
 ---
 import type { MediaArchiveItem } from '~/data/media';
 import type { Locale } from '~/content/site';
+import MediaSourceContext from './MediaSourceContext.astro';
 
 interface Props {
   item: MediaArchiveItem;
@@ -15,18 +16,21 @@ const accessibleLabel =
     : `${item.outlet}: ${item.title}, opens in a new tab`;
 ---
 
-<a class="media-coverage-item" href={item.url} target="_blank" rel="noopener noreferrer" aria-label={accessibleLabel}>
-  <span class="media-coverage-item__date"><bdi>{item.date}</bdi></span>
-  <span class="media-coverage-item__copy">
-    <span class="eyebrow" lang="en" dir="ltr">{item.outlet}</span>
-    <span class="media-coverage-item__title" lang={titleLang} dir="auto">{item.title}</span>
-    {
-      item.note && (
-        <span class="media-meta" dir="auto">
-          {item.note}
-        </span>
-      )
-    }
-  </span>
-  <span class="media-arrow" aria-hidden="true">↗</span>
-</a>
+<article class="media-coverage-entry">
+  <a class="media-coverage-item" href={item.url} target="_blank" rel="noopener noreferrer" aria-label={accessibleLabel}>
+    <span class="media-coverage-item__date"><bdi>{item.date}</bdi></span>
+    <span class="media-coverage-item__copy">
+      <span class="eyebrow" lang="en" dir="ltr">{item.outlet}</span>
+      <span class="media-coverage-item__title" lang={titleLang} dir="auto">{item.title}</span>
+      {
+        item.note && (
+          <span class="media-meta" dir="auto">
+            {item.note}
+          </span>
+        )
+      }
+    </span>
+    <span class="media-arrow" aria-hidden="true">↗</span>
+  </a>
+  {locale === 'en' && <MediaSourceContext outlet={item.outlet} />}
+</article>

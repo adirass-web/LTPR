@@ -4,6 +4,7 @@ import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro'
 import MediaVideoCard from '~/components/media/MediaVideoCard.astro';
 import MediaPressCard from '~/components/media/MediaPressCard.astro';
 import MoreCoverageItem from '~/components/media/MoreCoverageItem.astro';
+import MediaSourceContext from '~/components/media/MediaSourceContext.astro';
 import { pressKit } from '~/data/media';
 import { archive, lead, press, videos } from '~/data/mediaPrestige';
 import { internationalForums } from '~/data/internationalForums';
@@ -46,9 +47,10 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
           <p class="media-outlet">{lead.outlet}</p>
           <h2 id="media-lead-title">{lead.title}</h2>
           <p class="media-meta">{lead.date} · {lead.meta}</p>
-          <p class="media-lead__source">RAI 1 broadcast · Watch on YouTube</p>
+          <p class="media-lead__source">Owner-supplied recording · Watch on YouTube</p>
         </div>
       </a>
+      <div class="media-lead__copy"><MediaSourceContext outlet={lead.outlet} /></div>
     </section>
 
     <section class="media-section" aria-labelledby="broadcast-title">
@@ -86,6 +88,7 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
               >
                 <span class="media-stage-list__copy">
                   <span>{forum.institution}</span>
+                  <span class="media-institution-context">{forum.context}</span>
                 </span>
                 <span class="media-stage-list__city">{forum.detail}</span>
                 <span class="media-arrow" aria-hidden="true">

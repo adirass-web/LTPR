@@ -1,5 +1,6 @@
 ---
 import ResponsiveMediaImage from './ResponsiveMediaImage.astro';
+import MediaSourceContext from './MediaSourceContext.astro';
 import type { MediaVideoItem } from '~/data/media';
 import type { Locale } from '~/content/site';
 
@@ -49,4 +50,5 @@ const wrapperProps = item.url
       <p class="media-meta"><bdi>{item.date}{item.meta ? ` · ${item.meta}` : ''}</bdi></p>
     </div>
   </Wrapper>
+  {locale === 'en' && <MediaSourceContext outlet={item.outlet} />}
 </article>

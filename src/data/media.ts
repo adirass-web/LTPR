@@ -343,14 +343,14 @@ export const pressKit: PressKitItem[] = [
   {
     id: 'book',
     label: 'Cybersecurity in Israel',
-    detail: 'Book details · Springer',
+    detail: 'Springer · Academic publisher · Book details',
     kind: 'external',
     url: 'https://link.springer.com/book/10.1007/978-3-319-18986-4',
   },
   {
     id: 'world-bank-scmm',
     label: 'Sectoral Cybersecurity Maturity Model',
-    detail: 'World Bank publication',
+    detail: 'World Bank · International development institution · Publication',
     kind: 'external',
     url: 'https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392',
   },
