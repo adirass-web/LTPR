@@ -2,6 +2,8 @@
 
 ## Approved scope
 
+Subsequent owner-approved homepage and research changes are recorded in [the editorial audit follow-up](editorial-audit-follow-up-2026-10-09.md). The paragraph below describes the initial archive-only scope.
+
 Apply recognisable names, visible plain-English context and official links throughout the English Media archive, not just to less familiar institutions. Preserve the separate Media archive. The homepage bridge wording remains pending; no homepage or Hebrew copy changes are included.
 
 ## Implementation

@@ -1,5 +1,7 @@
 # Personal-site editorial revision
 
+Reconciliation note, 9 October 2026: the owner confirmed PR #27's composition and electricity example as approved. PR #28 adds approved interview-led flagship copy, compact official-record links and institutional context while retaining this composition and its single publications section. The later explicit instruction removes the unfinished bio promise, superseding its exclusion below. See [the audit follow-up](../../editorial-audit-follow-up-2026-10-09.md).
+
 9 October 2026. The owner requested the complete site revision following the five-role assessment and successive copy drafts. This implements the already agreed composition and sequence, including subsequent owner corrections. It supersedes the older slogan, government-only opening, anonymous strategy label and method/closing claims in the October 2 specification. Release remains a separate step.
 
 ## Profile

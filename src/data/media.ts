@@ -361,10 +361,4 @@ export const pressKit: PressKitItem[] = [
     kind: 'contact',
     url: 'mailto:liortabansky@gmail.com',
   },
-  {
-    id: 'bio-pdf',
-    label: 'Downloadable bio PDF',
-    detail: 'Coming soon',
-    kind: 'todo',
-  },
 ];

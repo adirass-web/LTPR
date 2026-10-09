@@ -48,6 +48,29 @@ const portraitSet = (format: string) =>
       </p>
       <div class="profile-record-intro">
         <p>Much of my work is private. These accounts and my public record offer a window onto it.</p>
+        <ul class="nl-public-records" aria-label="Selected public records">
+          <li>
+            <a href={sources.sectoralCybersecurityMaturityModel.url} target="_blank" rel="noopener noreferrer"
+              >World Bank · Cyber-resilience research<span class="sr-only">, opens in a new tab</span> ↗</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Danish Parliament · Expert hearing<span class="sr-only">, opens in a new tab</span> ↗</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Associated Press · International reporting<span class="sr-only">, opens in a new tab</span> ↗</a
+            >
+          </li>
+        </ul>
         <a class="nl-archive" href={recordPath}>Publications, media and international forums →</a>
       </div>
     </section>
@@ -59,8 +82,8 @@ const portraitSet = (format: string) =>
           <p class="nl-eyebrow">National cybersecurity strategy</p>
           <h3>Singapore</h3>
           <p>
-            I developed Singapore’s national cybersecurity strategy, leading the research and analysis and producing a
-            report with a strategic vision, guiding principles and tailored policy recommendations.
+            I helped a new national cybersecurity agency define its vision and strategic choices—including what not to
+            do—so cybersecurity would advance digital transformation and wider national priorities.
           </p>
           <a
             class="profile-evidence-link"
@@ -73,9 +96,8 @@ const portraitSet = (format: string) =>
           <p class="nl-eyebrow">World Bank / PROGRESS</p>
           <h3>Four sectors across 11 countries</h3>
           <p>
-            I helped implement and refine the PROGRESS model and coauthored the 2025 paper on its use in World Bank work
-            across energy, healthcare, digital infrastructure and financial services. The 2025 field record reports that
-            the recommendations are being put into practice.
+            With colleagues, I developed PROGRESS to build cyber resilience across whole sectors. We applied and refined
+            it alongside local teams; the resulting recommendations are being implemented.
           </p>
           <a class="profile-evidence-link" href={`${recordPath}#critical-infrastructure`}
             >Read the paper and field record →</a
@@ -91,24 +113,26 @@ const portraitSet = (format: string) =>
       </div>
       <div class="profile-story">
         <p>
-          Power engineers would still answer for the electricity supply. Yet a proposed cyber unit, staffed by
-          outsiders, would change how they ran it. They resisted.
+          The power engineers were responsible for keeping electricity flowing. A proposed cyber unit, staffed by
+          outsiders, would change how they ran it while leaving them answerable for the supply. Their resistance had a
+          practical reason.
         </p>
         <p>
-          A new national cyber agency brought me in as a foreign expert to get protection moving. I drew on local
-          interviews, focus groups and knowledge of electricity and cyber practices elsewhere. My recommendation was to
-          keep the power engineers in charge, with cyber specialists working alongside them.
+          A new national cyber agency brought me in as a foreign expert to help start critical-infrastructure protection
+          in the electricity sector. I studied local arrangements through interviews and focus groups, drawing on
+          electricity and cyber practices in other countries. My recommendation was to keep the engineers in charge and
+          have cyber specialists work alongside them.
         </p>
         <p>
-          The engineers helped devise tools, workarounds and operating changes, and checked the risks to electricity
+          The engineers helped devise tools, workarounds and operating changes, and reviewed the risks to electricity
           service. Within weeks, the sector accepted my recommendations. Their involvement removed the internal
-          opposition that threatened progress. The approach also avoided the cost of establishing and staffing a
-          separate unit and duplicating systems.
+          opposition that had threatened progress. It also avoided the cost of establishing and staffing a separate unit
+          and duplicating systems.
         </p>
         <p>
-          Cyber specialists implemented tools to see data and processes across industrial control systems and IT. They
-          could compare activity, establish what normal operation looked like, flag anomalies and raise alerts. That
-          gave them a basis for measuring performance and deciding what to improve.
+          Cyber specialists implemented tools that made data and processes visible across industrial control systems and
+          IT. They could compare activity across both, establish what normal operation looked like, and flag anomalies
+          or raise alerts. This gave them a basis for measuring performance and deciding what to improve.
         </p>
         <a class="profile-evidence-link" href={`${recordPath}#critical-infrastructure`}
           >Related work on critical-infrastructure resilience →</a
@@ -134,7 +158,6 @@ const portraitSet = (format: string) =>
             civilian infrastructure exposed to destructive cyberattacks. I argue that AI, robotics and geopolitical
             disorder make institutional change more urgent: who is responsible, how money is spent and how people work.
           </p>
-          <p>I also study what can be transferred from Israel’s cyber experience and what cannot.</p>
           <a class="nl-book" href={`${recordPath}#innovation`}>
             <BookCover alt="Cover of Cybersecurity in Israel by Lior Tabansky and Isaac Ben-Israel" />
             <span><span>Cybersecurity in Israel</span><small>Springer, with Isaac Ben-Israel →</small></span>

@@ -13,14 +13,14 @@ export const selectedPublications: SelectedPublication[] = [
   {
     id: 'innovation',
     source: sources.cybersecurityInIsrael,
-    citation: 'Coauthored book · with Isaac Ben-Israel · Springer · 2015',
+    citation: 'Coauthored book · with Isaac Ben-Israel · Springer, academic publisher · 2015',
     description: "Israel's cyber development, innovation ecosystem, strategy and military cyber warfare.",
     kind: 'authored',
   },
   {
     id: 'cybered-conflict',
     source: sources.cyberPower,
-    citation: 'Authored paper · CyCon 2016',
+    citation: 'Authored paper · International Conference on Cyber Conflict (CyCon) · 2016',
     description:
       'A framework connecting strategic objectives, ways and technological means, using Israel to examine innovation and the economic and military dimensions of cyber power.',
     kind: 'authored',
