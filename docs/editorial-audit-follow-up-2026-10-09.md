@@ -2,6 +2,23 @@
 
 ## Governing decision
 
+### Reconciliation with approved PR #27
+
+The owner explicitly confirmed PR #27 is approved and asked to incorporate this chat's approved wording and links without duplicating research sections. PR #27 is the base, including the named Singapore record, flagship order, electricity-sector example, factual hero, research emphasis and publications-first archive. The electricity example is an approved exception, not a demand for further anonymised cases.
+
+The compact official-record links now sit in PR #27's existing introduction-to-archive connection. Both flagship descriptions use the interview-led copy approved here. The country heading and source links from PR #27 stay. Its single Selected publications list covers all three proposed research records plus the two additional approved publications; the redundant list, data file and styles from this branch are removed. Publisher and institutional explanations remain visible. The unfinished bio promise is removed under the later explicit instruction in this chat, superseding PR #27's earlier exclusion of that item.
+
+The latest request is to integrate, verify and advise on deployment. Do not merge to production as part of this reconciliation turn. The initial design and check notes below record the earlier iteration, not the combined release status.
+
+### Combined-branch verification
+
+- Astro (44 files), ESLint and Prettier pass. Normal and GitHub Pages builds pass (12 routes each).
+- No horizontal overflow at 390, 430, 768 or 1440 pixels in the checked profile/archive views. Desktop flagship columns remain equal width (456 pixels each at 1440); bridge links fit one line at desktop and wrap at narrower sizes.
+- Profile-to-publication navigation reaches the existing critical-infrastructure entry. Archive fragment targets resolve. Five publication records appear in one section; the redundant research section is absent.
+- All 16 publisher-context blocks and six institutional-context blocks remain. No Coming soon promise remains.
+- The electricity example matches approved main text exactly (whitespace-normalised comparison). No changes to Hebrew content or the PR #27 hero wording.
+- Visible keyboard focus is retained on the bridge links; no browser-console errors observed on the checked profile.
+
 The owner approved a compact line of named, linked records, tighter descriptions of the existing two selected-work examples, immediate removal of the unfinished bio promise, and a small Selected research path within the deeper Media archive.
 
 The original five-person audit remains historical feedback, not a requirements list. The following suggestions are explicitly rejected and must not be reintroduced as outstanding work:
@@ -30,7 +47,7 @@ The owner's answer clarifies that the conceptual approach and operational method
 
 The review copy now makes co-development and local application explicit. It does not imply sole authorship, personal implementation of every recommendation, or quantified impact. The implementation wording already in the profile remains supported by the existing linked field record. No confidential details are included.
 
-The next interview question concerns the central problem and the owner's contribution to the existing national cybersecurity strategy example. No new case study, career chronology or confidential mandate is being requested.
+The owner subsequently explained the national-strategy contribution and approved this copy: “I helped a new national cybersecurity agency define its vision and strategic choices—including what not to do—so cybersecurity would advance digital transformation and wider national priorities.” Internal deliberations and meeting counts are not included in the site.
 
 ## Completed checks
 

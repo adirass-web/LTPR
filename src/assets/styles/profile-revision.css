@@ -1,0 +1,119 @@
+.profile-revision .nl-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+
+.profile-revision .nl-header a:last-child {
+  font-size: 0.8125rem;
+  color: var(--nl-muted);
+}
+
+.profile-identity-copy {
+  display: grid;
+  align-content: center;
+  gap: 1.25rem;
+}
+
+.profile-revision .nl-category {
+  margin-block-end: 0 !important;
+}
+
+.profile-revision .nl-intro {
+  max-inline-size: 62ch;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  margin-block-start: 1.75rem !important;
+}
+
+.profile-applied {
+  display: grid;
+  gap: 1.5rem;
+  background: #e7eae4;
+  border-inline-start: 3px solid var(--nl-accent);
+  margin-block: 1rem 3rem;
+  padding: clamp(1.25rem, 3cqi, 2rem);
+}
+
+.profile-record-intro {
+  display: grid;
+  gap: 0.75rem;
+  margin-block-start: 1.25rem;
+}
+
+.profile-record-intro > p {
+  max-inline-size: 62ch;
+}
+
+.profile-record-intro .nl-public-records {
+  margin-block-end: 0 !important;
+}
+
+.profile-section-heading,
+.profile-story {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.profile-section-heading .nl-eyebrow {
+  color: var(--nl-muted);
+}
+
+.profile-story {
+  max-inline-size: 62ch;
+}
+
+.profile-revision .profile-story p {
+  line-height: 1.65;
+}
+
+.profile-revision a.profile-inline-link,
+.profile-revision a.profile-evidence-link {
+  text-decoration: underline;
+  text-decoration-color: var(--nl-rule);
+  text-underline-offset: 0.2em;
+}
+
+.profile-revision a.profile-evidence-link {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--nl-muted);
+}
+
+.profile-revision .nl-closing p {
+  max-inline-size: 52ch;
+  margin-block-end: 1.25rem;
+}
+
+.profile-revision :is(section[id], h2[id]) {
+  scroll-margin-block-start: 1.5rem;
+}
+
+@container narrative (min-width: 18.5rem) {
+  .profile-revision .nl-identity {
+    grid-template-columns: minmax(0, 1fr) clamp(8rem, 40cqi, 9rem);
+  }
+
+  .profile-revision .nl-portrait {
+    inline-size: 100%;
+  }
+}
+
+@container narrative (min-width: 42rem) {
+  .profile-revision .nl-identity {
+    grid-template-columns: minmax(0, 18rem) 13.5rem;
+  }
+
+  .profile-applied {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2.5rem;
+    padding-block: 2.5rem;
+  }
+
+  .profile-revision .nl-opening {
+    max-inline-size: none;
+  }
+}
