@@ -208,6 +208,23 @@ body:has(.nl-surface) {
   line-height: 1.35;
   margin-block-end: 2.5rem;
 }
+.nl-public-records {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-block-end: 1.25rem !important;
+}
+.nl-public-records a {
+  display: inline-block;
+  padding-block: 0.25rem;
+  color: var(--nl-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 .nl-surface a.nl-archive {
   display: inline-block;
   font-size: 0.9375rem;

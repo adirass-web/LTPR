@@ -8,6 +8,7 @@ import MediaSourceContext from '~/components/media/MediaSourceContext.astro';
 import { pressKit } from '~/data/media';
 import { archive, lead, press, videos } from '~/data/mediaPrestige';
 import { internationalForums } from '~/data/internationalForums';
+import { selectedResearch } from '~/data/selectedResearch';
 import '~/assets/styles/media.css';
 
 const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -91,6 +92,30 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
                   <span class="media-institution-context">{forum.context}</span>
                 </span>
                 <span class="media-stage-list__city">{forum.detail}</span>
+                <span class="media-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="media-section media-section--research" aria-labelledby="research-title">
+      <h2 id="research-title">Selected research</h2>
+      <ul class="media-research-list">
+        {
+          selectedResearch.map((item) => (
+            <li>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                <span>
+                  <>
+                    <span class="media-research-list__title">{item.title}</span>
+                    <span class="media-meta">{item.detail}</span>
+                  </>
+                </span>
+                <span class="sr-only">, opens in a new tab</span>
                 <span class="media-arrow" aria-hidden="true">
                   ↗
                 </span>
