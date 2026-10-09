@@ -4,7 +4,7 @@
 
 ### Reconciliation with PR #29 and the latest editorial direction
 
-The latest owner instruction preserves the Singapore and World Bank descriptions currently on main, superseding this branch's alternative flagship wording below. Keep PR #29's accepted defense paragraph, CSA strategy link and enlarged cover. Retain this branch's compact official-record links, publication-label explanations and removal of the unfinished bio placeholder. The earlier decisions below remain historical context.
+The owner clarified that the preferred Singapore and World Bank descriptions are the interview-led passages from this branch, not the older wording on main. Restore those passages verbatim. Keep PR #29's accepted defense paragraph, CSA strategy link and enlarged cover. Retain this branch's compact official-record links, publication-label explanations and removal of the unfinished bio placeholder. The earlier decisions below remain historical context.
 
 After reconciliation, prepare the approved warmer electricity story and remove the Israel-learning sentence. Keep the accepted declarative defense passage, flagship descriptions and opening unchanged. Optional archive prose rewrites remain outside this release. The prepared branch is for final deployment review.
 
