@@ -7,9 +7,18 @@ import MoreCoverageItem from '~/components/media/MoreCoverageItem.astro';
 import { pressKit } from '~/data/media';
 import { archive, lead, press, videos } from '~/data/mediaPrestige';
 import { internationalForums } from '~/data/internationalForums';
+import { selectedPublications } from '~/data/selectedPublications';
 import '~/assets/styles/media.css';
 
 const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+const pressTopics: Record<string, string> = {
+  'politico-pagers-2024': 'The Hezbollah pager operation.',
+  'figaro-ai-war-2023': 'Artificial intelligence in the Israel–Hamas war.',
+  'ap-iran-steel-2022': 'Cyberattack disruption of steel production in Iran.',
+  'nrc-surveillance-2022': "Israel's surveillance industry and the Pegasus scandal.",
+  'france24-nso-2021': 'NSO and its relationship with Israeli authorities.',
+  'repubblica-israel-iran-2020': 'Israel–Iran conflict in cyberspace.',
+};
 ---
 
 <SiteShell
@@ -22,10 +31,60 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 >
   <article class="media-page">
     <header class="media-page__intro">
-      <h1>Media</h1>
+      <h1>Research &amp; public record</h1>
+      <p class="media-page__description">
+        Selected publications on innovation, cybersecurity and warfare, followed by broadcast commentary, international
+        press coverage and invited forums.
+      </p>
+      <nav class="media-page__index" aria-label="On this page">
+        <a href="#publications">Publications</a>
+        <a href="#broadcast-title">Broadcast</a>
+        <a href="#press-title">Press</a>
+        <a href="#forums-title">Forums</a>
+        <a href="#public-record-contact">Contact</a>
+      </nav>
     </header>
 
-    <section class="media-section media-section--lead" aria-labelledby="media-lead-title">
+    <section class="media-section media-section--publications" aria-labelledby="publications">
+      <h2 id="publications">Selected publications</h2>
+      <p class="media-section__intro">
+        Authored and coauthored work, with a supporting World Bank institutional reference.
+      </p>
+      <ol class="media-publication-list">
+        {
+          selectedPublications.map((publication) => (
+            <li id={publication.id} class={`media-publication media-publication--${publication.kind}`}>
+              <p class="media-publication__citation">{publication.citation}</p>
+              <h3>
+                <a href={publication.source.url} target="_blank" rel="noopener noreferrer">
+                  {publication.source.label}
+                  <span class="media-publication__arrow" aria-hidden="true">
+                    {' '}
+                    ↗
+                  </span>
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              </h3>
+              <p class="media-publication__description">{publication.description}</p>
+              {publication.supportingSource && (
+                <a
+                  class="media-publication__record"
+                  href={publication.supportingSource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Institutional field record ↗<span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="media-section media-section--broadcast" aria-labelledby="broadcast-title">
+      <h2 id="broadcast-title">Broadcast commentary</h2>
+      <p class="media-section__intro">Television interviews and commentary, in their original languages.</p>
       <a
         class="media-lead"
         href={lead.url}
@@ -38,21 +97,18 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
             image={lead.image}
             loading="eager"
             fetchpriority="high"
-            sizes="(min-width: 70rem) 78rem, 100vw"
+            sizes="(min-width: 48rem) 60vw, 100vw"
           />
           <span class="media-play" aria-hidden="true">▶</span>
         </div>
         <div class="media-lead__copy">
           <p class="media-outlet">{lead.outlet}</p>
-          <h2 id="media-lead-title">{lead.title}</h2>
+          <h3 id="media-lead-title" lang="it">{lead.title}</h3>
           <p class="media-meta">{lead.date} · {lead.meta}</p>
+          <p class="media-lead__context">Italian technology programme · owner-archived broadcast</p>
           <p class="media-lead__source">RAI 1 broadcast · Watch on YouTube</p>
         </div>
       </a>
-    </section>
-
-    <section class="media-section" aria-labelledby="broadcast-title">
-      <h2 id="broadcast-title">Broadcast</h2>
       <div class="media-grid media-grid--video">
         {videos.map((item) => <MediaVideoCard item={item} />)}
       </div>
@@ -60,8 +116,16 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
     <section class="media-section" aria-labelledby="press-title">
       <h2 id="press-title">International press</h2>
+      <p class="media-section__intro">Interviews and quoted commentary in international reporting.</p>
       <div class="media-grid media-grid--press">
-        {press.map((item) => <MediaPressCard item={item} />)}
+        {
+          press.map((item) => (
+            <div class="media-press-record">
+              <MediaPressCard item={item} />
+              {pressTopics[item.id] && <p class="media-press-record__topic">{pressTopics[item.id]}</p>}
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -74,6 +138,7 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
     <section class="media-section media-section--stages" aria-labelledby="forums-title">
       <h2 id="forums-title">Selected international forums</h2>
+      <p class="media-section__intro">Conference contributions, expert hearings and workshops.</p>
       <ul class="media-stage-list">
         {
           internationalForums.map((forum) => (
@@ -98,7 +163,12 @@ const publicPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
       </ul>
     </section>
 
-    <details class="media-press-kit">
+    <section class="media-contact" aria-labelledby="public-record-contact">
+      <h2 id="public-record-contact">Contact</h2>
+      <a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a>
+    </section>
+
+    <details id="press-kit" class="media-press-kit">
       <summary class="media-press-kit__summary">
         <span class="media-press-kit__title">Press kit</span>
         <span class="media-press-kit__description">Headshots, selected references and contact</span>

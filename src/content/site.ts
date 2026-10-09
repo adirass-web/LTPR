@@ -21,13 +21,13 @@ export const siteContent: Record<Locale, LocaleContent> = {
         nav: 'Profile',
         title: 'Dr. Lior Tabansky — Strategic technology adviser',
         description:
-          'Strategic technology adviser to governments and institutions working across cyber, AI, critical systems and national capability.',
+          'Lior Tabansky advises companies and public institutions on cybersecurity, AI and critical infrastructure, with work across advanced and developing economies.',
       },
       media: {
-        nav: 'Media',
-        title: 'Media — Dr. Lior Tabansky',
+        nav: 'Public record',
+        title: 'Research & public record — Dr. Lior Tabansky',
         description:
-          'Selected interviews, television appearances and international press coverage on innovation systems, AI, cybersecurity and national resilience.',
+          'Selected publications, interviews and international forums on innovation, defense, warfare and critical-infrastructure cybersecurity.',
       },
       about: {
         nav: 'Profile',

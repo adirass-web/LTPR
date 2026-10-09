@@ -1,22 +1,29 @@
 ---
 import BookCover from '~/components/BookCover.astro';
-import { homeV3 } from '~/content/en-v3';
 import { sources } from '~/content/sources';
 import '~/assets/styles/narrative-review.css';
+import '~/assets/styles/profile-revision.css';
 
-const portraitRoot = `${import.meta.env.BASE_URL}images/portraits/lior-tabansky-portrait-2x3`;
+const base = import.meta.env.BASE_URL;
+const recordPath = `${base}en/media/`;
+const portraitRoot = `${base}images/portraits/lior-tabansky-portrait-2x3`;
 const portraitSet = (format: string) =>
   [480, 720, 1024].map((width) => `${portraitRoot}-${width}.${format} ${width}w`).join(', ');
 ---
 
-<div class="nl-surface">
+<div class="nl-surface profile-revision">
   <a class="nl-skip" href="#content">Skip to content</a>
-  <header class="nl-header"><a href="#content">Dr. Lior Tabansky</a></header>
+  <header class="nl-header">
+    <a href="#profile">Dr. Lior Tabansky</a>
+    <a href={recordPath}>Research &amp; public record</a>
+  </header>
   <main id="content" class="nl-page" tabindex="-1">
-    <section class="nl-opening" aria-labelledby="profile-title">
-      <p class="nl-category">{homeV3.hero.category}</p>
+    <section id="profile" class="nl-opening" aria-labelledby="profile-title">
       <div class="nl-identity">
-        <h1 id="profile-title">{homeV3.hero.title}</h1>
+        <div class="profile-identity-copy">
+          <h1 id="profile-title">Dr. Lior Tabansky</h1>
+          <p class="nl-category">Strategic technology adviser</p>
+        </div>
         <figure class="nl-portrait">
           <picture>
             <source type="image/avif" srcset={portraitSet('avif')} sizes="(min-width: 800px) 216px, 160px" />
@@ -35,80 +42,107 @@ const portraitSet = (format: string) =>
         </figure>
       </div>
       <p class="nl-intro">
-        I work with governments and institutions to turn difficult technology and security problems into capabilities
-        that work.
+        I advise companies and public institutions on cybersecurity, AI and critical infrastructure. I have worked with
+        and within enterprises in advanced and developing economies, including assignments undertaken with the World
+        Bank.
       </p>
     </section>
 
+    <section class="profile-applied" aria-labelledby="applied-title">
+      <div class="profile-section-heading">
+        <p class="nl-eyebrow">Applied work</p>
+        <h2 id="applied-title">Keeping power engineers in charge</h2>
+      </div>
+      <div class="profile-story">
+        <p>
+          The engineers responsible for generating, transmitting and distributing electricity were resisting a proposed
+          cyber unit staffed by outsiders. They would still answer for the power supply, while the new unit would change
+          how they operated it.
+        </p>
+        <p>
+          A new national cyber agency brought me in as a foreign expert to get protection moving. I drew on local
+          interviews, focus groups and knowledge of electricity and cyber practices elsewhere. My recommendation was to
+          keep the power engineers in charge, with cyber specialists working alongside them.
+        </p>
+        <p>
+          The engineers helped devise tools, workarounds and operating changes, and checked the risks to electricity
+          service. Within weeks, the sector accepted my directions. Their involvement removed the internal opposition
+          that threatened progress. The approach also avoided the cost of establishing and staffing a separate unit and
+          duplicating systems.
+        </p>
+        <p>
+          Cyber specialists then implemented measures that let them see data and processes across industrial control
+          systems and IT. They could study the activity together, learn what normal operation looked like, flag
+          anomalies and raise alerts. That gave them a way to measure what was happening and decide what to improve.
+        </p>
+        <a class="profile-evidence-link" href={`${recordPath}#critical-infrastructure`}
+          >Related work on critical-infrastructure resilience →</a
+        >
+      </div>
+    </section>
+
     <section class="nl-work" aria-labelledby="work-title">
-      <h2 id="work-title">Selected work</h2>
+      <h2 id="work-title">Selected public work</h2>
       <div class="nl-records">
         <article>
-          <a class="nl-eyebrow" href={sources.progressFieldRecord.url} target="_blank" rel="noopener noreferrer"
-            >World Bank / PROGRESS ↗</a
-          >
-          <h3>Four critical sectors across 11 countries</h3>
+          <p class="nl-eyebrow">National cybersecurity strategy</p>
+          <h3>Singapore</h3>
           <p>
-            Energy, healthcare, digital infrastructure and financial services. The 2025 field record describes the
-            tailored recommendations as being implemented.
+            I developed Singapore’s national cybersecurity strategy, leading the research and analysis and producing a
+            report with a strategic vision, guiding principles and tailored policy recommendations.
           </p>
+          <a
+            class="profile-evidence-link"
+            href={sources.strategicAdvisoryRecord.url}
+            target="_blank"
+            rel="noopener noreferrer">University record of the research and advisory work ↗</a
+          >
         </article>
         <article>
-          <a class="nl-eyebrow" href={sources.strategicAdvisoryRecord.url} target="_blank" rel="noopener noreferrer"
-            >Strategic advisory ↗</a
-          >
-          <h3>National cybersecurity strategy</h3>
+          <p class="nl-eyebrow">World Bank / PROGRESS</p>
+          <h3>Four sectors across 11 countries</h3>
           <p>
-            Research and analysis developed into a strategic vision, guiding principles and tailored policy
-            recommendations.
+            I helped implement and refine the PROGRESS model and coauthored the 2025 paper on its use in World Bank work
+            across energy, healthcare, digital infrastructure and financial services. The 2025 field record reports
+            tailored recommendations being implemented.
           </p>
+          <a class="profile-evidence-link" href={`${recordPath}#critical-infrastructure`}
+            >Read the paper and field record →</a
+          >
         </article>
       </div>
-      <p class="nl-work-note">Almost all of my work is not public. These records are a small public window onto it.</p>
     </section>
 
-    <section class="nl-thinking" aria-label="Perspective and method">
+    <section class="nl-thinking" aria-labelledby="research-title">
       <div class="nl-thinking-row">
         <div class="nl-thinking-heading">
-          <p class="nl-eyebrow">Perspective</p>
-          <h2 id="systems-title">Technology is only part of the system.</h2>
+          <p class="nl-eyebrow">Research and perspective</p>
+          <h2 id="research-title">Innovation, defense and warfare</h2>
         </div>
         <div class="nl-thinking-body">
           <p>
-            National cyber capability is more than a strategy document. It depends on institutions able to set
-            priorities, coordinate responsibility and sustain action.
+            Alongside advisory work, I research <a class="profile-inline-link" href={`${recordPath}#innovation`}
+              >innovation</a
+            >,
+            <a class="profile-inline-link" href={`${recordPath}#cybered-conflict`}>defense and warfare</a>. My published
+            work on <a class="profile-inline-link" href={`${recordPath}#cybered-conflict`}>cybered conflict</a> examines the
+            relationship between technological means, strategic objectives and institutions.
           </p>
-          <p>
-            Israel’s cyber advantage grew through connections between government, industry and universities. My work
-            examines what can be transferred from that experience—and what cannot.
-          </p>
-          <a class="nl-book" href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer">
-            <BookCover alt={homeV3.israelExperience.book.alt} />
-            <span
-              ><span>{homeV3.israelExperience.book.title}</span><small>{homeV3.israelExperience.book.detail} ↗</small
-              ></span
-            >
+          <p>I also study what can be transferred from Israel’s cyber experience and what cannot.</p>
+          <a class="nl-book" href={`${recordPath}#innovation`}>
+            <BookCover alt="Cover of Cybersecurity in Israel by Lior Tabansky and Isaac Ben-Israel" />
+            <span><span>Cybersecurity in Israel</span><small>Springer, with Isaac Ben-Israel →</small></span>
           </a>
-          <a class="nl-affiliation" href={homeV3.hero.role.url} target="_blank" rel="noopener noreferrer"
-            >{homeV3.hero.role.title}<br />{homeV3.hero.role.institution} ↗</a
+          <a class="nl-affiliation" href={sources.cyberResilienceLabTeam.url} target="_blank" rel="noopener noreferrer"
+            >Head, Cyber Resilience Laboratory<br />Tel Aviv University ↗</a
           >
         </div>
       </div>
-      <div class="nl-thinking-row">
-        <div class="nl-thinking-heading">
-          <p class="nl-eyebrow">AI / strategic method</p>
-          <h2 id="decisions-title">Start with the decision.</h2>
-        </div>
-        <div class="nl-thinking-body">
-          <p>{homeV3.work.areas[1].description}</p>
-        </div>
-      </div>
     </section>
 
-    <section class="nl-closing" aria-label="Approach and public record">
-      <p class="nl-method">{homeV3.method.paragraphs[0]}</p>
-      <p class="nl-principle">{homeV3.method.paragraphs[1]}</p>
-      <a class="nl-archive" href={`${import.meta.env.BASE_URL}en/media/`}>Media &amp; international record ↗</a>
+    <section class="nl-closing" aria-label="Public record">
+      <p>Much of my work is private. These accounts and my public record offer a window onto it.</p>
+      <a class="nl-archive" href={recordPath}>Publications, media and international forums →</a>
     </section>
   </main>
   <footer class="nl-footer">
