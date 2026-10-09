@@ -4,7 +4,7 @@
 
 ## Profile
 
-Name, professional description, portrait and factual opening carry the hero. State companies and public institutions, and enterprise work in advanced and developing economies including World Bank assignments. Remove the method sentence expressly deleted by the owner. Applied work precedes selected public records and research.
+Name, professional description, portrait and factual opening carry the hero. Use the owner-approved “I solve problems” opening and enterprise/public-institution work in advanced and emerging economies including World Bank assignments. Place the private-work explanation and public-record link directly after the opening. Remove the method sentence expressly deleted by the owner. The two flagship records (Singapore and World Bank) precede the electricity vignette, followed by research. Distinguish the vignette with a muted shaded background, forest rule and generous reading spacing; keep its facts unchanged.
 
 The electricity account describes legitimate engineering concerns, the owner's recommendation to retain engineers' authority, their participation, accepted directions within weeks, removed opposition, avoided separate-unit staffing/duplicate-system costs, and specialists' implemented visibility across OT/ICS and IT. Describe enabled correlation, normal baselines, anomalies/alerts, measurement and improvement. Do not invent cost figures, deployment timing, detected incidents, prevented outages or achieved optimisation results. The anonymous commissioner remains a new national cyber agency. The separate unit was a prior proposal, not the owner's recommendation.
 
