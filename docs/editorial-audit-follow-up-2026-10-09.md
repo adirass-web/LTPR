@@ -26,7 +26,11 @@ Check formatting, Astro and lint; run normal and GitHub Pages builds. Review mob
 
 ## Interview
 
-First question: What did the owner personally bring to World Bank / PROGRESS that changed the approach or made it work in practice? Rough notes are welcome; confidential details are not requested. Until answered, the copy does not add a new claim about individual ownership or outcomes.
+The owner's answer clarifies that the conceptual approach and operational methodology were developed collaboratively before the World Bank engagement. The engagement enabled much broader application and refinement. The team worked alongside local teams and projects to identify practical changes capable of strengthening sectoral capability. The World Bank subsequently published its SCMM version.
+
+The review copy now makes co-development and local application explicit. It does not imply sole authorship, personal implementation of every recommendation, or quantified impact. The implementation wording already in the profile remains supported by the existing linked field record. No confidential details are included.
+
+The next interview question concerns the central problem and the owner's contribution to the existing national cybersecurity strategy example. No new case study, career chronology or confidential mandate is being requested.
 
 ## Completed checks
 
