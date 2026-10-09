@@ -6,6 +6,8 @@
 
 The latest owner instruction preserves the Singapore and World Bank descriptions currently on main, superseding this branch's alternative flagship wording below. Keep PR #29's accepted defense paragraph, CSA strategy link and enlarged cover. Retain this branch's compact official-record links, publication-label explanations and removal of the unfinished bio placeholder. The earlier decisions below remain historical context.
 
+After reconciliation, prepare the approved warmer electricity story and remove the Israel-learning sentence. Keep the accepted declarative defense passage, flagship descriptions and opening unchanged. Optional archive prose rewrites remain outside this release. The prepared branch is for final deployment review.
+
 ### Reconciliation with approved PR #27
 
 The owner explicitly confirmed PR #27 is approved and asked to incorporate this chat's approved wording and links without duplicating research sections. PR #27 is the base, including the named Singapore record, flagship order, electricity-sector example, factual hero, research emphasis and publications-first archive. The electricity example is an approved exception, not a demand for further anonymised cases.
