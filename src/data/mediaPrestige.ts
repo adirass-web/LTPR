@@ -39,6 +39,7 @@ const videoOverrides: Record<string, Partial<MediaVideoItem>> = {
   },
   'channel-economy-2026': {
     title: 'Platform responsibility for fraudulent advertising',
+    meta: 'Hebrew · owner-supplied recording',
   },
 };
 
@@ -108,7 +109,7 @@ export const archive: MediaArchiveItem[] = [
     title: 'Tutti i rischi delle identità digitali',
     date: '6 June 2020',
     url: 'https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf',
-    note: 'Industria 4.0 · digital identity and data',
+    note: 'Digital identity and data · Article reproduction hosted by AssoSoftware, Italy’s software industry association',
     status: 'verified',
     originalLang: 'it',
   },
