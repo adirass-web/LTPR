@@ -1,6 +1,6 @@
 # Completed layout and asset QA
 
-Status: pass within the tested scope. Review-only local preview; no push, merge or production deployment. Faces, source photographs and existing image pixels remain unchanged.
+Status: passed before release; the tested layout was subsequently deployed through PR #30. This report records the original layout test scope, before the separate approved cosmetic photo release in PR #31. See [current handoff](2026-10-12-current-site-handoff.md).
 
 ## Changes
 
@@ -10,12 +10,12 @@ Two factual hero entries: Singapore — National cybersecurity strategy; World B
 
 Baseline is the last approved refined pair, not the older production pages.
 
-| View | Approved before | Updated | Less height |
-| --- | ---: | ---: | ---: |
-| desktop profile | 3,994 px | 3,952 px | 1% |
-| desktop media | 5,207 px | 4,837 px | 7% |
-| mobile profile | 5,602 px | 5,520 px | 1% |
-| mobile media | 11,460 px | 10,191 px | 11% |
+| View            | Approved before |   Updated | Less height |
+| --------------- | --------------: | --------: | ----------: |
+| desktop profile |        3,994 px |  3,952 px |          1% |
+| desktop media   |        5,207 px |  4,837 px |          7% |
+| mobile profile  |        5,602 px |  5,520 px |          1% |
+| mobile media    |       11,460 px | 10,191 px |         11% |
 
 Metadata comparison — representative NRC item:
 

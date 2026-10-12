@@ -3,6 +3,7 @@ import EditorialComposition from '~/components/EditorialComposition.astro';
 import WholeSiteMedia from '~/components/WholeSiteMedia.astro';
 import Foundation from '~/layouts/Foundation.astro';
 import { siteContent } from '~/content/site';
+import '~/assets/styles/ambient-media.css';
 const base = import.meta.env.BASE_URL;
 const metadata = siteContent.en.pages.media;
 ---
@@ -18,7 +19,9 @@ const metadata = siteContent.en.pages.media;
     alt: 'Dr. Lior Tabansky on RAI’s Codice: la vita è digitale',
   }}
 >
-  <EditorialComposition>
-    <WholeSiteMedia compact profilePath={`${base}en/`} />
-  </EditorialComposition>
+  <div class="ambient-b">
+    <EditorialComposition>
+      <WholeSiteMedia compact profilePath={`${base}en/`} />
+    </EditorialComposition>
+  </div>
 </Foundation>

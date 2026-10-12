@@ -2,7 +2,7 @@
 
 Date: 2 October 2026
 
-Status: released and verified in production on 2 October 2026.
+Historical handoff: released on 2 October 2026. Current live state and next steps are in the [12 October handoff](2026-10-12-current-site-handoff.md). Preserve this document as release history.
 
 ## Release decision
 
@@ -39,8 +39,6 @@ The design source was PR [#23](https://github.com/adirass-web/LTPR/pull/23), `co
 - The live page contains the approved AI/method language, links to the separate Media archive, has no broken visible images and reports no browser-console errors. PR #23 and PR #24 are merged. The archive tags are the recovery points and must not be deleted.
 - Existing unrelated untracked local folders, `.playwright-cli/` and `output/`, are not release material and were deliberately left untouched.
 
-## Likely next work
+## Next-work status
 
-1. Verify the production home page after Cloudflare deploy.
-2. Keep `/en/media/` as the fuller public record and resume asset/editorial improvements there independently of the profile.
-3. Treat Hebrew as a later, separately approved localization effort.
+The historical follow-up has been superseded by the 12 October releases and current handoff. Production verification and the English media redesign are complete. Hebrew remains a separately approved localization effort. Next active work is the owner-supplied personal-photo batch, in local review only.
