@@ -1,0 +1,638 @@
+{
+  "description": "Exact allowlist of reviewed public derivatives. Limits are pixel dimensions, inclusive.",
+  "categories": {
+    "ambient": {
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "portrait": {
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "media": {
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "publication-cover": {
+      "maxWidth": 1024,
+      "maxHeight": 1600
+    }
+  },
+  "assets": {
+    "public/images/ambient/city-night-1920.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/city-night-2560.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/city-night-960.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/wooded-island-1920.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/wooded-island-960.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/media/channel-economy-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel-economy-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel-economy-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel-economy-640w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel-economy-640w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel-economy-640w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel10-2015-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/channel14-2022-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-1024w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-1024w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-1024w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-2020-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-1024w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-1024w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-1024w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/codice-network-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/ntv-2021-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ap-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-1024w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-1024w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-1024w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-figaro-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-france24-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-ilgiornale-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-nrc-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-1016w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-1016w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-1016w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-politico-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/press-repubblica-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-480w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-480w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-480w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-768w.avif": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-768w.jpg": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/media/rainews-2019-768w.webp": {
+      "category": "media",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-1024.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-1024.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-1024.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-480.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-480.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-480.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-720.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-720.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-720.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-960.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-960.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-2x3-960.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-320.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-320.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-320.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-640.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-640.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-640.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-960.avif": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-960.jpg": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/portraits/lior-tabansky-portrait-square-960.webp": {
+      "category": "portrait",
+      "maxWidth": 1024,
+      "maxHeight": 1536
+    },
+    "public/images/publications/cybersecurity-in-israel.jpg": {
+      "category": "publication-cover",
+      "maxWidth": 1024,
+      "maxHeight": 1600
+    }
+  }
+}

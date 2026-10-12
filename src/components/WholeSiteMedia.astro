@@ -1,0 +1,169 @@
+---
+import currentMarkup from '~/content/media-review-snapshot.html?raw';
+import '~/assets/styles/whole-site-media.css';
+import { ELEMENT_NODE, TEXT_NODE, h, parse, renderSync, type ElementNode, type Node } from 'ultrahtml';
+import { querySelector, querySelectorAll } from 'ultrahtml/selector';
+
+interface Props {
+  compact: boolean;
+  profilePath: string;
+}
+
+const { compact, profilePath } = Astro.props;
+let markup = currentMarkup.replaceAll('__PROFILE_PATH__', profilePath);
+if (compact) {
+  // Astro already ships UltraHTML. Transform the frozen, trusted snapshot as
+  // a tree, retaining source copy and attributes instead of matching HTML with
+  // regex. Missing expected fields fail the review build visibly.
+  const tree: Node = parse(markup);
+  const required = (parent: Node, selector: string): ElementNode => {
+    const node = querySelector(parent, selector);
+    if (!node || node.type !== ELEMENT_NODE) throw new Error(`Media review missing ${selector}`);
+    return node as ElementNode;
+  };
+  const detach = (parent: ElementNode, ...nodes: ElementNode[]) => {
+    parent.children = parent.children.filter((child) => !nodes.includes(child as ElementNode));
+  };
+  const append = (parent: ElementNode, ...nodes: ElementNode[]) => {
+    nodes.forEach((node) => (node.parent = parent));
+    parent.children.push(...nodes);
+  };
+  const reference = (title: ElementNode, date: ElementNode, broadcast = false) => {
+    // The external arrow remains inside the original link. The date follows
+    // it in the same flow and may wrap at any natural word boundary.
+    date.name = 'span';
+    title.name = broadcast ? 'h3' : 'span';
+    title.attributes.class = 'reference-title';
+    const block = h('div', { class: 'source-reference' }, title, ' · ', date);
+    block.children.forEach((child) => (child.parent = block));
+    return block;
+  };
+
+  const identities = querySelectorAll(tree, '.identity');
+  if (identities.length !== 16) throw new Error('Media review identity inventory changed');
+  identities.forEach((identity) => {
+    const element = identity as ElementNode;
+    const country = required(element, '.country');
+    const outlet = required(element, 'h3');
+    const context = required(element, '.publisher-context');
+    outlet.name = 'p';
+    outlet.attributes.class = 'outlet';
+    // Outlet first, followed by country and the complete publisher context.
+    element.children = [];
+    append(element, outlet, country, context);
+  });
+
+  const lead = required(tree, '.lead');
+  const caption = required(lead, '.lead-caption');
+  const identity = required(caption, '.identity');
+  detach(caption, identity);
+  const identityHeader = h('div', { class: 'lead-identity' }, identity);
+  identity.parent = identityHeader;
+  identityHeader.parent = lead;
+  lead.children.unshift(identityHeader);
+  const leadTitle = required(caption, 'h4');
+  const leadDate = required(caption, '.date');
+  const leadTopic = required(caption, '.topic');
+  const leadAction = required(caption, '.action');
+  leadTitle.name = 'h2';
+  leadTitle.attributes.class = 'reference-title';
+  leadDate.name = 'span';
+  const leadReference = h('div', { class: 'source-reference' }, leadTitle, ' · ', leadDate);
+  leadReference.children.forEach((child) => (child.parent = leadReference));
+  caption.children = [];
+  append(caption, h('p', { class: 'featured-label' }, 'Featured broadcast'), leadReference, leadTopic, leadAction);
+
+  const pressItems = querySelectorAll(tree, '.media-item.press');
+  if (pressItems.length !== 6) throw new Error('Media review press inventory changed');
+  pressItems.forEach((item) => {
+    const article = item as ElementNode;
+    const appearance = required(article, '.appearance');
+    const originalTitle = required(appearance, 'h4');
+    const sourceLink = required(originalTitle, 'a');
+    const date = required(appearance, '.date');
+    const topic = required(appearance, '.topic');
+    const proof = required(article, 'button[data-proof]');
+    const image = required(proof, 'img');
+    const enlargeLabel = required(proof, '.enlarge');
+    const action = required(article, '.action');
+    topic.name = 'h3';
+    topic.attributes.class = 'entry-title';
+    appearance.children = [];
+    append(appearance, topic, reference(originalTitle, date));
+    const imageLink = h('a', { ...sourceLink.attributes, class: 'visual article-image' }, image);
+    image.parent = imageLink;
+    proof.attributes.class = 'excerpt-control';
+    proof.attributes.type = 'button';
+    proof.children = [enlargeLabel];
+    enlargeLabel.parent = proof;
+    const evidence = h('div', { class: 'evidence-pair' }, imageLink, proof);
+    imageLink.parent = evidence;
+    proof.parent = evidence;
+    const position = article.children.indexOf(proof);
+    article.children.splice(position, 1, evidence);
+    evidence.parent = article;
+    detach(article, action);
+  });
+
+  const broadcasts = querySelectorAll(tree, '.media-item.video');
+  if (broadcasts.length !== 5) throw new Error('Media review broadcast inventory changed');
+  broadcasts.forEach((item) => {
+    const appearance = required(item, '.appearance');
+    const title = required(appearance, 'h4');
+    const date = required(appearance, '.date');
+    appearance.children = [];
+    append(appearance, reference(title, date, true));
+  });
+
+  querySelectorAll(tree, '.coverage-grid article').forEach((item) => {
+    const article = item as ElementNode;
+    const identity = required(article, '.identity');
+    const title = required(article, 'h4');
+    const date = required(article, '.date');
+    const topic = required(article, '.topic');
+    topic.name = 'h3';
+    topic.attributes.class = 'entry-title';
+    let hostingContext: ElementNode | undefined;
+    if (required(identity, 'a').attributes.href === 'https://www.ilsole24ore.com/') {
+      const fullTopic = topic.children
+        .map((child) => {
+          if (child.type !== TEXT_NODE) throw new Error('Il Sole 24 Ore topic structure changed');
+          return child.value;
+        })
+        .join('');
+      const separator = ' · Article reproduction hosted by ';
+      const position = fullTopic.indexOf(separator);
+      if (position < 0) throw new Error('Il Sole 24 Ore hosting context missing');
+      topic.children = h('h3', null, fullTopic.slice(0, position).trim()).children;
+      topic.children.forEach((child) => (child.parent = topic));
+      hostingContext = h('p', { class: 'source-context' }, fullTopic.slice(position + 3).trim());
+    }
+    article.children = [];
+    append(article, identity, topic, reference(title, date));
+    if (hostingContext) append(article, hostingContext);
+  });
+  markup = renderSync(tree);
+}
+---
+
+<div class:list={['whole-media', 'variant-a', { compact }]}>
+  <Fragment set:html={markup} />
+</div>
+
+<script>
+  let proofTrigger: HTMLButtonElement | null = null;
+  document.querySelectorAll<HTMLButtonElement>('[data-proof]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const dialog = document.querySelector<HTMLDialogElement>('.proof-dialog');
+      const visual = dialog?.querySelector<HTMLImageElement>('.proof-full');
+      const title = dialog?.querySelector<HTMLElement>('.proof-title');
+      if (!dialog || !visual || !title) return;
+      visual.src = button.dataset.proof ?? '';
+      title.textContent = button.dataset.title ?? '';
+      visual.alt = button.dataset.title ?? 'Enlarged article excerpt';
+      proofTrigger = button;
+      dialog.showModal();
+    });
+  });
+  document.querySelector<HTMLDialogElement>('.proof-dialog')?.addEventListener('close', () => proofTrigger?.focus());
+</script>
