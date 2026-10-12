@@ -1,6 +1,6 @@
 # Full-site composition review
 
-Review-only scope: approved cinematic profile and latest revised aligned media study as current; a tighter proposed pair as refined. No production route promotion, merge or deployment is authorized by this pass. Both pairs use identical approved facts and source destinations, apart from review-local cross-page links.
+Historical review scope (subsequently approved, deployed through PR #30 and superseded by the [current handoff](2026-10-12-current-site-handoff.md)): approved cinematic profile and latest revised aligned media study as current; a tighter proposed pair as refined. No production route promotion, merge or deployment is authorized by this pass. Both pairs use identical approved facts and source destinations, apart from review-local cross-page links.
 
 ## Design plan review
 
@@ -20,12 +20,12 @@ Record measured page heights, section positions and content-retention checks, th
 
 ## Final results
 
-| View | Before | After | Reduction |
-| --- | ---: | ---: | ---: |
-| Desktop profile | 4,727 px | 3,994 px | 16% |
-| Desktop media | 7,285 px | 5,207 px | 29% |
-| Mobile profile | 6,134 px | 5,602 px | 9% |
-| Mobile media | 12,012 px | 11,460 px | 5% |
+| View            |    Before |     After | Reduction |
+| --------------- | --------: | --------: | --------: |
+| Desktop profile |  4,727 px |  3,994 px |       16% |
+| Desktop media   |  7,285 px |  5,207 px |       29% |
+| Mobile profile  |  6,134 px |  5,602 px |        9% |
+| Mobile media    | 12,012 px | 11,460 px |        5% |
 
 All eight full captures and eight opening captures were rendered through the existing in-app browser harness at 1440×900 and 390×844. Screenshot dimensions were verified from the actual files. Capture-only scrollbar suppression avoids the harness omitting the scrollbar gutter from the requested image width. Normal previews retain normal scrollbar behavior. Full-page profile capture preserves the 900/844 px opening rather than letting screenshot expansion stretch the viewport-based hero.
 

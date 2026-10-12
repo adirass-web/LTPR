@@ -633,6 +633,26 @@
       "category": "publication-cover",
       "maxWidth": 1024,
       "maxHeight": 1600
+    },
+    "public/images/ambient/city-transit-field.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/power-grid-field.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/canopy-fragment-1280.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
+    },
+    "public/images/ambient/engine-fragment-912.webp": {
+      "category": "ambient",
+      "maxWidth": 2560,
+      "maxHeight": 1800
     }
   }
 }
