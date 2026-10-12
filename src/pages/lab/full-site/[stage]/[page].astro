@@ -1,0 +1,56 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import CinematicProfile from '~/components/CinematicProfile.astro';
+import WholeSiteMedia from '~/components/WholeSiteMedia.astro';
+import EditorialComposition from '~/components/EditorialComposition.astro';
+
+export function getStaticPaths() {
+  if (process.env.INCLUDE_LAYOUT_REVIEW !== '1') return [];
+  return ['current', 'refined'].flatMap((stage) => ['profile', 'media'].map((page) => ({ params: { stage, page } })));
+}
+
+const { stage, page } = Astro.params;
+const compact = stage === 'refined';
+const reviewRoot = `${import.meta.env.BASE_URL}lab/full-site/${stage}/`;
+const isMedia = page === 'media';
+---
+
+<Foundation
+  lang="en"
+  dir="ltr"
+  title={`${compact ? 'Refined' : 'Current'} ${isMedia ? 'public record' : 'profile'} — Dr. Lior Tabansky`}
+  canonicalPath={`${reviewRoot}${page}/`}
+  noindex
+>
+  <EditorialComposition refined={compact}>
+    {
+      isMedia ? (
+        <WholeSiteMedia compact={compact} profilePath={`${reviewRoot}profile/`} />
+      ) : (
+        <CinematicProfile
+          compact={compact}
+          recordPath={`${reviewRoot}media/`}
+          bookSrc={`${import.meta.env.BASE_URL}images/publications/cybersecurity-in-israel.jpg`}
+        />
+      )
+    }
+  </EditorialComposition>
+</Foundation>
+
+<script>
+  // Review capture URLs freeze the opening at the requested viewport height.
+  // Normal working previews keep the original responsive viewport behavior.
+  const reviewParams = new URLSearchParams(window.location.search);
+  const captureHeight = reviewParams.get('capture');
+  const enlargedReview = reviewParams.get('zoom') === '200';
+  if (!enlargedReview && (captureHeight === '900' || captureHeight === '844')) {
+    document.documentElement.dataset.reviewCapture = 'true';
+    document.documentElement.style.setProperty('--review-viewport-height', `${captureHeight}px`);
+    document.querySelectorAll<HTMLImageElement>('img').forEach((image) => {
+      image.loading = 'eager';
+    });
+  }
+  // QA-only CSS zoom/reflow simulation for review browsers without native
+  // zoom controls. Normal URLs and production routes do not use this hook.
+  if (enlargedReview) document.documentElement.style.zoom = '2';
+</script>

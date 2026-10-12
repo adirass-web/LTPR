@@ -1,6 +1,8 @@
 ---
 import CinematicProfile from '~/components/CinematicProfile.astro';
+import EditorialComposition from '~/components/EditorialComposition.astro';
 import Foundation from '~/layouts/Foundation.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Foundation
@@ -10,5 +12,11 @@ import Foundation from '~/layouts/Foundation.astro';
   description="Lior Tabansky advises companies and public institutions on cybersecurity, AI and critical infrastructure, with work across advanced and developing economies."
   canonicalPath="/en/"
 >
-  <CinematicProfile />
+  <EditorialComposition>
+    <CinematicProfile
+      compact
+      recordPath={`${base}en/media/`}
+      bookSrc={`${base}images/publications/cybersecurity-in-israel.jpg`}
+    />
+  </EditorialComposition>
 </Foundation>

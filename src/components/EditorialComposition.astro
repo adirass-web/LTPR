@@ -1,0 +1,25 @@
+---
+import '~/assets/styles/whole-site-review.css';
+
+interface Props {
+  refined?: boolean;
+}
+const { refined = true } = Astro.props;
+---
+
+<div class:list={['whole-review', { refined }]}>
+  <slot />
+</div>
+
+<script>
+  // Reserve the intrinsic fixed-header height when text grows or wraps.
+  // offsetHeight stays in CSS pixels, including at enlarged browser zoom.
+  document.querySelectorAll<HTMLElement>('.whole-review.refined').forEach((composition) => {
+    const header = composition.querySelector<HTMLElement>('.profile-masthead, .masthead');
+    if (!header) return;
+    const updateHeaderHeight = () =>
+      composition.style.setProperty('--review-header-height', `${header.offsetHeight}px`);
+    new ResizeObserver(updateHeaderHeight).observe(header);
+    updateHeaderHeight();
+  });
+</script>

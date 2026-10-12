@@ -1,7 +1,15 @@
 ---
 import '~/assets/styles/cinematic-profile.css';
 const base = import.meta.env.BASE_URL;
-const recordPath = `${base}en/media/`;
+interface Props {
+  recordPath?: string;
+  bookSrc?: string;
+  compact?: boolean;
+}
+const compact = Astro.props.compact ?? false;
+const recordPath = Astro.props.recordPath ?? `${base}en/media/`;
+const bookSrc =
+  Astro.props.bookSrc ?? 'https://media.springernature.com/full/springer-static/cover-hires/book/978-3-319-18986-4';
 ---
 
 <div class="cinematic-profile option-b combined">
@@ -17,8 +25,8 @@ const recordPath = `${base}en/media/`;
           width="4096"
           height="1840"
           fetchpriority="high"
-          alt="Night panorama of a city, photographed by Lior Tabansky"
-        /><figcaption>Photograph by Lior Tabansky</figcaption>
+          alt="Night panorama of a city"
+        />
       </figure><div class="hero-inner">
         <div class="hero-heading">
           <p class="profile-kicker">Strategic technology adviser</p><h1>Dr. Lior<br />Tabansky</h1>
@@ -31,6 +39,28 @@ const recordPath = `${base}en/media/`;
             >Publications, media and international forums ↗</a
           >
         </div>
+        {
+          compact && (
+            <ul class="hero-evidence" aria-label="Selected public work">
+              <li>
+                <a href="#work">
+                  <>
+                    <span>Singapore</span>
+                    <span>National cybersecurity strategy →</span>
+                  </>
+                </a>
+              </li>
+              <li>
+                <a href={`${recordPath}#critical-infrastructure`}>
+                  <>
+                    <span>World Bank</span>
+                    <span>Four sectors across 11 countries →</span>
+                  </>
+                </a>
+              </li>
+            </ul>
+          )
+        }
       </div>
     </section><section id="profile" class="profile wrap">
       <div class="portrait">
@@ -67,8 +97,8 @@ const recordPath = `${base}en/media/`;
           width="3137"
           height="1651"
           loading="lazy"
-          alt="A wooded island reflected in still water, photographed by Lior Tabansky"
-        /><figcaption>Photograph by Lior Tabansky</figcaption>
+          alt="A wooded island reflected in still water"
+        />
       </figure>
     </section><section id="work" class="work wrap">
       <div class="section-label"><span>01</span><h2>Selected public work</h2></div><div class="engagements">
@@ -130,7 +160,7 @@ const recordPath = `${base}en/media/`;
           <h2>Innovation,<br />defense<br />and warfare</h2><a class="book" href={`${recordPath}#innovation`}
             ><img
               class="actual-book"
-              src="https://media.springernature.com/full/springer-static/cover-hires/book/978-3-319-18986-4"
+              src={bookSrc}
               loading="lazy"
               alt="Cover of Cybersecurity in Israel by Lior Tabansky and Isaac Ben-Israel"
               width="827"

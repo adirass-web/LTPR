@@ -1,5 +1,24 @@
 ---
-import MediaPage from '~/components/MediaPage.astro';
+import EditorialComposition from '~/components/EditorialComposition.astro';
+import WholeSiteMedia from '~/components/WholeSiteMedia.astro';
+import Foundation from '~/layouts/Foundation.astro';
+import { siteContent } from '~/content/site';
+const base = import.meta.env.BASE_URL;
+const metadata = siteContent.en.pages.media;
 ---
 
-<MediaPage />
+<Foundation
+  lang="en"
+  dir="ltr"
+  title={metadata.title}
+  description={metadata.description}
+  canonicalPath={`${base}en/media/`}
+  socialImage={{
+    path: `${base}images/media/codice-2020-1024w.jpg`,
+    alt: 'Dr. Lior Tabansky on RAI’s Codice: la vita è digitale',
+  }}
+>
+  <EditorialComposition>
+    <WholeSiteMedia compact profilePath={`${base}en/`} />
+  </EditorialComposition>
+</Foundation>

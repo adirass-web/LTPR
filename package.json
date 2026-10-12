@@ -8,14 +8,16 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/check-image-assets.mjs --public --tracked && astro build && node scripts/check-image-assets.mjs --dist",
     "preview": "astro preview",
-    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
+    "check": "npm run check:assets && npm run check:astro && npm run check:eslint && npm run check:prettier",
+    "check:assets": "node scripts/check-image-assets.mjs --public --tracked && node scripts/test-image-assets.mjs",
+    "audit:assets:history": "node scripts/audit-image-history.mjs",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
-    "check:prettier": "prettier --check src .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
+    "check:prettier": "prettier --check src scripts config docs/image-asset-workflow.md .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
     "fix:eslint": "eslint . --fix",
-    "fix:prettier": "prettier --write src .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
+    "fix:prettier": "prettier --write src scripts config docs/image-asset-workflow.md .github/workflows astro.config.ts eslint.config.js prettier.config.mjs package.json",
     "fix": "npm run fix:eslint && npm run fix:prettier"
   },
   "dependencies": {
