@@ -1,0 +1,13 @@
+---
+import PageHead from '~/components/PageHead.astro';
+import '~/assets/styles/forest-shared.css';
+import type { ComponentProps } from 'astro/types';
+type Props = ComponentProps<typeof PageHead> & { pageClass: string };
+const { pageClass, ...metadata } = Astro.props;
+---
+
+<!doctype html>
+<html lang={metadata.lang} dir={metadata.dir}>
+  <head><PageHead {...metadata} themeColor="#102d28" /></head>
+  <body class={pageClass}><slot /></body>
+</html>
