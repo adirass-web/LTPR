@@ -1,25 +1,17 @@
 ---
-import CinematicProfile from '~/components/CinematicProfile.astro';
-import EditorialComposition from '~/components/EditorialComposition.astro';
-import Foundation from '~/layouts/Foundation.astro';
-import '~/assets/styles/ambient-profile.css';
-const base = import.meta.env.BASE_URL;
+import ForestProfile from '~/components/ForestProfile.astro';
+import Forest from '~/layouts/Forest.astro';
+import { siteContent } from '~/content/site';
+const metadata = siteContent.en.pages.home;
 ---
 
-<Foundation
+<Forest
   lang="en"
   dir="ltr"
-  title="Dr. Lior Tabansky — Strategic technology adviser"
-  description="Lior Tabansky advises companies and public institutions on cybersecurity, AI and critical infrastructure, with work across advanced and developing economies."
+  title={metadata.title}
+  description={metadata.description}
   canonicalPath="/en/"
+  pageClass="full-profile"
 >
-  <div class="ambient-profile">
-    <EditorialComposition>
-      <CinematicProfile
-        compact
-        recordPath={`${base}en/media/`}
-        bookSrc={`${base}images/publications/cybersecurity-in-israel.jpg`}
-      />
-    </EditorialComposition>
-  </div>
-</Foundation>
+  <ForestProfile />
+</Forest>

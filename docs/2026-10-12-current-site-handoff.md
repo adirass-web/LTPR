@@ -1,5 +1,11 @@
 # Current site handoff — updated 13 October 2026
 
+## Current release: static Forest
+
+The owner approved extending the atmospheric Forest opening to both complete English pages, then explicitly authorized implementation and deployment. See [Forest release validation](2026-10-13-forest-static-release.md). This supersedes the ambient composition described below: the current profile uses only night-city atmosphere, and media uses quieter evidence hierarchy. Forest colors, Plex, centered fixed header and the approved complete-preview copy govern this release. No motion is included.
+
+The new `ForestProfile` and `ForestMedia` components and `Forest` layout own the English production pages. Metadata is shared through `PageHead`; earlier components remain for historical/localized routes. Keep the selected portrait level 5 and RAI still level 4 derivatives and existing image guards. No further design or copy changes are implied by this publication.
+
 ## Earlier verified releases
 
 - Profile: https://cyberdrtabansky.pages.dev/en/

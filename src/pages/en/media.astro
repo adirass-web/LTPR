@@ -1,27 +1,21 @@
 ---
-import EditorialComposition from '~/components/EditorialComposition.astro';
-import WholeSiteMedia from '~/components/WholeSiteMedia.astro';
-import Foundation from '~/layouts/Foundation.astro';
+import ForestMedia from '~/components/ForestMedia.astro';
+import Forest from '~/layouts/Forest.astro';
 import { siteContent } from '~/content/site';
-import '~/assets/styles/ambient-media.css';
-const base = import.meta.env.BASE_URL;
 const metadata = siteContent.en.pages.media;
 ---
 
-<Foundation
+<Forest
   lang="en"
   dir="ltr"
   title={metadata.title}
   description={metadata.description}
-  canonicalPath={`${base}en/media/`}
+  canonicalPath="/en/media/"
+  pageClass="static-media"
   socialImage={{
-    path: `${base}images/media/codice-2020-1024w.jpg`,
+    path: '/images/media/codice-2020-1024w.jpg',
     alt: 'Dr. Lior Tabansky on RAI’s Codice: la vita è digitale',
   }}
 >
-  <div class="ambient-b">
-    <EditorialComposition>
-      <WholeSiteMedia compact profilePath={`${base}en/`} />
-    </EditorialComposition>
-  </div>
-</Foundation>
+  <ForestMedia />
+</Forest>

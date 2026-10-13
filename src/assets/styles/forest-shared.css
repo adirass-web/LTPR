@@ -1,0 +1,161 @@
+@font-face {
+  font-family: Plex;
+  src: url('/fonts/plex.woff2') format('woff2');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --forest: #102d28;
+  --paper: #edece4;
+  --muted: #c0cdc4;
+  --deep: #0c251f;
+  --focus: #e2ce90;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 84px;
+}
+body {
+  margin: 0;
+  background: var(--forest);
+  color: var(--paper);
+  font:
+    16px/1.5 Plex,
+    Arial,
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  text-decoration-color: var(--focus);
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 5px;
+}
+p,
+h1,
+h2,
+h3,
+figure {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.wrap {
+  width: min(1312px, calc(100% - 128px));
+  margin-inline: auto;
+}
+.name-header {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 64px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--forest);
+  font-size: 19px;
+}
+.name-header a {
+  text-decoration: none;
+}
+.skip {
+  position: fixed;
+  left: 14px;
+  top: -100px;
+  z-index: 50;
+  padding: 10px 15px;
+  background: var(--paper);
+  color: var(--forest);
+}
+.skip:focus {
+  top: 10px;
+}
+.small {
+  font-size: 14px;
+  color: var(--muted);
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-block: 24px 30px;
+  font-size: 14px;
+}
+.proof-dialog {
+  background: var(--paper);
+  color: var(--forest);
+  border: 0;
+  padding: 20px;
+  max-width: min(1100px, 94vw);
+  max-height: 92vh;
+  overflow: auto;
+}
+.proof-dialog::backdrop {
+  background: #061d19de;
+}
+.proof-dialog img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.proof-dialog .dialog-close {
+  position: sticky;
+  top: 0;
+  margin: 0 0 14px auto;
+  display: block;
+  border: 1px solid currentColor;
+  padding: 8px 14px;
+  color: var(--forest);
+  background: var(--paper);
+  font:
+    16px Plex,
+    Arial;
+  cursor: pointer;
+}
+.proof-dialog h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.proof-dialog a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+  .name-header {
+    height: 54px;
+    font-size: 17px;
+  }
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  footer {
+    padding-block: 22px;
+    font-size: 14px;
+  }
+}
