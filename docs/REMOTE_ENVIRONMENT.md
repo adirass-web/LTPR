@@ -2,6 +2,46 @@
 
 Audit date: 25 October 2026.
 
+## Cloud execution on 25 October 2026
+
+The existing `/workspace/LTPR` checkout was moved to the pushed setup branch
+`codex/editorial-cloud-workspace` at `ad7394e32088ed94d0f71de2a418cd9fad95cec7`.
+Before checkout, all 20 untracked discovery, skill and media-inventory files were
+archived outside the repository at `/workspace/ltpr-preservation-2026-10-25/`;
+every archived file passed a SHA-256 comparison. The original untracked files
+remain in the checkout. This is workspace preservation, not a GitHub backup.
+
+The cloud machine ran Node 24.19.0 and npm 11.9.0. With
+`npm_config_cache=/tmp/ltpr-npm-cache` and `ASTRO_TELEMETRY_DISABLED=1`,
+`bash scripts/cloud-setup.sh` passed: 545 packages installed from the lockfile,
+image checks and fixtures passed, Astro checked 55 files with zero diagnostics,
+ESLint and Prettier passed, and the static build produced 12 pages. Local Astro
+dev on port 4321 and built preview on port 4173 each returned HTTP 200 for
+`/en/` and `/en/media/`, with expected page titles. In this cloud image, direct
+`npm run dev` and `npm run preview` without the telemetry setting fail while
+trying to create `/home/agent/.config/astro`.
+
+The managed environment reports current observations for spec revision 7.
+`api.github.com` appears in the published configuration (no pending draft) and
+in the executor's restricted policy; an authenticated GitHub API read of draft
+PR #35 succeeded. The policy state field reports `unknown`, so API success is
+the operational evidence. The preview hostname currently receives a proxy
+CONNECT 403 from this cloud task; it requires a reviewed egress rule before
+this task can inspect the hosted page directly.
+
+GitHub's Cloudflare Pages check succeeded on `ad7394e`, with deployment
+`23faa2cf-efa7-4963-8806-573919ffd3fe` and commit preview
+`https://23faa2cf.cyberdrtabansky.pages.dev`. Its branch alias is
+`https://codex-editorial-cloud-worksp.cyberdrtabansky.pages.dev`.
+The Astro production build check also passed. The source setup task reported
+browser checks of `/en/` and `/en/media/` on that non-production preview,
+including a 390×844 media view with no failed sourced images or horizontal
+overflow; this cloud task could not repeat those hosted requests because of
+the proxy denial. The remote `main` SHA remained
+`ef5e01f487dc92bc2a3ccdcf6a451d6cbe195939`. This task's GitHub integration
+received HTTP 403 reading branch protection, and Cloudflare dashboard branch
+policy remains uninspected here. No production setting was changed.
+
 ## Reuse decision
 
 Continue the existing cloud task "Set up LTPR" (01a16aa7-ef4d-701a-8697-781ba8070068), whose reported repository is /workspace/LTPR. Do not start a replacement until its work is preserved and its actual readiness is checked.
