@@ -6,3 +6,9 @@ dist/
 .dev.vars*
 .DS_Store
 *.log
+
+# Private editorial sources and local secrets
+.media-sources/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,16 @@
+{
+  "name": "LTPR editorial and web development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci",
+  "forwardPorts": [4321, 4173],
+  "portsAttributes": {
+    "4173": {
+      "label": "LTPR built preview",
+      "onAutoForward": "notify"
+    },
+    "4321": {
+      "label": "LTPR development",
+      "onAutoForward": "notify"
+    }
+  }
+}
