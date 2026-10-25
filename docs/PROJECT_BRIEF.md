@@ -1,6 +1,6 @@
 # LTPR project brief
 
-Updated 25 October 2026.
+Updated 25 October 2026. Start with [CURRENT_STATE.md](CURRENT_STATE.md) for reconciled status and recovery instructions.
 
 ## Objective
 
@@ -9,7 +9,7 @@ One continuing cloud task for editorial work, design, development and testing, b
 ## Architecture and ownership
 
 - GitHub: adirass-web/LTPR, durable source of code and approved technical/editorial records.
-- Cloud continuation: existing "Set up LTPR" task, ID 01a16aa7-ef4d-701a-8697-781ba8070068. Reuse it; preserve its uncommitted inventory/discovery work before synchronizing.
+- Cloud continuation: existing "Set up LTPR" task, ID 01a16aa7-ef4d-701a-8697-781ba8070068. Reuse it for continuity. Inventory/discovery records and the reproducible comparison pack are saved on the development branch.
 - ChatGPT: existing "LT PR" project discovered, ID g-p-6a5e09c861048191a65625a5b8c77802. Desired name: LTPR — Editorial & Web Design. Rename/consolidation has not been performed.
 - Browser IDE: optional Dev Container configuration supports VS Code/Codespaces. Creating a Codespace is a separate infrastructure choice; no instance has been provisioned.
 - Preview: use the existing hosting integration's non-production branch deployment if available. Never treat the live production URL as an experimental preview.

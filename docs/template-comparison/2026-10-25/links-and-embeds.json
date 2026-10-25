@@ -1,0 +1,1227 @@
+[
+  {
+    "page": "/en/",
+    "label": "Skip to content",
+    "url": "#content",
+    "kind": "a",
+    "attributes": {
+      "class": "skip",
+      "href": "#content"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Dr. Lior Tabansky",
+    "url": "/en/#top",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/#top"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Publications, media and international forums ↗",
+    "url": "/en/media/",
+    "kind": "a",
+    "attributes": {
+      "class": "public-link",
+      "href": "/en/media/"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "National cybersecurity strategy ↗",
+    "url": "https://www.csa.gov.sg/resources/publications/singapore-s-cybersecurity-strategy-2016/",
+    "kind": "a",
+    "attributes": {
+      "href": "https://www.csa.gov.sg/resources/publications/singapore-s-cybersecurity-strategy-2016/"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Four sectors across 11 countries ↗",
+    "url": "/en/media/#critical-infrastructure",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/media/#critical-infrastructure"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Singapore’s Cybersecurity Strategy 2016 · CSA ↗",
+    "url": "https://www.csa.gov.sg/resources/publications/singapore-s-cybersecurity-strategy-2016/",
+    "kind": "a",
+    "attributes": {
+      "class": "textlink small",
+      "href": "https://www.csa.gov.sg/resources/publications/singapore-s-cybersecurity-strategy-2016/"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Read the paper and field record →",
+    "url": "/en/media/#critical-infrastructure",
+    "kind": "a",
+    "attributes": {
+      "class": "textlink small",
+      "href": "/en/media/#critical-infrastructure"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "World Bank · Cyber-resilience research ↗",
+    "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392",
+    "kind": "a",
+    "attributes": {
+      "href": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Danish Parliament · Expert hearing ↗",
+    "url": "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed",
+    "kind": "a",
+    "attributes": {
+      "href": "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Associated Press · International reporting ↗",
+    "url": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+    "kind": "a",
+    "attributes": {
+      "href": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Publications, media and international forums →",
+    "url": "/en/media/",
+    "kind": "a",
+    "attributes": {
+      "class": "textlink",
+      "href": "/en/media/"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Related work on critical-infrastructure resilience →",
+    "url": "/en/media/#critical-infrastructure",
+    "kind": "a",
+    "attributes": {
+      "class": "textlink small",
+      "href": "/en/media/#critical-infrastructure"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Cybersecurity in IsraelSpringer, with Isaac Ben-Israel →",
+    "url": "/en/media/#innovation",
+    "kind": "a",
+    "attributes": {
+      "class": "book",
+      "href": "/en/media/#innovation"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "innovation",
+    "url": "/en/media/#innovation",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/media/#innovation"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "defense and warfare",
+    "url": "/en/media/#cybered-conflict",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/media/#cybered-conflict"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "Head, Cyber Resilience LaboratoryTel Aviv University ↗",
+    "url": "https://en-cyber.tau.ac.il/our_team_rcrl",
+    "kind": "a",
+    "attributes": {
+      "class": "textlink small",
+      "href": "https://en-cyber.tau.ac.il/our_team_rcrl"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/",
+    "label": "liortabansky@gmail.com ↗",
+    "url": "mailto:liortabansky@gmail.com",
+    "kind": "a",
+    "attributes": {
+      "href": "mailto:liortabansky@gmail.com"
+    },
+    "source_component": "src/components/ForestProfile.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Skip to content",
+    "url": "#content",
+    "kind": "a",
+    "attributes": {
+      "class": "skip",
+      "href": "#content"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Dr. Lior Tabansky",
+    "url": "/en/",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "← Profile",
+    "url": "/en/",
+    "kind": "a",
+    "attributes": {
+      "href": "/en/"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "RAI 1 ↗",
+    "url": "https://www.rai.it/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.rai.it/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://youtu.be/pb8YD_ic1xE",
+    "kind": "a",
+    "attributes": {
+      "class": "lead-visual visual",
+      "href": "https://youtu.be/pb8YD_ic1xE",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Codice: la vita è digitale from RAI 1"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Codice: la vita è digitale ↗",
+    "url": "https://youtu.be/pb8YD_ic1xE",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://youtu.be/pb8YD_ic1xE",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://link.springer.com/book/10.1007/978-3-319-18986-4",
+    "kind": "a",
+    "attributes": {
+      "class": "book",
+      "href": "https://link.springer.com/book/10.1007/978-3-319-18986-4",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Cybersecurity in Israel ↗",
+    "url": "https://link.springer.com/book/10.1007/978-3-319-18986-4",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://link.springer.com/book/10.1007/978-3-319-18986-4",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Associated Press ↗",
+    "url": "#press-title",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "#press-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Le Figaro ↗",
+    "url": "#press-title",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "#press-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "NRC ↗",
+    "url": "#press-title",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "#press-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Publications",
+    "url": "#publications",
+    "kind": "a",
+    "attributes": {
+      "href": "#publications"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Broadcast",
+    "url": "#broadcast-title",
+    "kind": "a",
+    "attributes": {
+      "href": "#broadcast-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Press",
+    "url": "#press-title",
+    "kind": "a",
+    "attributes": {
+      "href": "#press-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Forums",
+    "url": "#forums-title",
+    "kind": "a",
+    "attributes": {
+      "href": "#forums-title"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Contact",
+    "url": "#public-record-contact",
+    "kind": "a",
+    "attributes": {
+      "href": "#public-record-contact"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Towards a Theory of Cyber Power: The Israeli Experience with Innovation and Strategy ↗",
+    "url": "https://ccdcoe.org/uploads/2018/10/Art-04-Towards-a-Theory-of-Cyber-Power-the-Israeli-Experience-with-Innovation-and-Strategy.pdf",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://ccdcoe.org/uploads/2018/10/Art-04-Towards-a-Theory-of-Cyber-Power-the-Israeli-Experience-with-Innovation-and-Strategy.pdf",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Making PROGRESS: a sectoral approach to cyber resilience and its application in sustainable development ↗",
+    "url": "https://doi.org/10.1080/23738871.2025.2451779",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://doi.org/10.1080/23738871.2025.2451779",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Institutional field record ↗",
+    "url": "https://rcrl.tau.ac.il/progress_jcp_jan25",
+    "kind": "a",
+    "attributes": {
+      "class": "action",
+      "href": "https://rcrl.tau.ac.il/progress_jcp_jan25",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "PROGRESS: the sectoral approach to cyber resilience ↗",
+    "url": "https://doi.org/10.1007/s10207-024-00910-3",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://doi.org/10.1007/s10207-024-00910-3",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Sectoral Cybersecurity Maturity Model ↗",
+    "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "NTV ↗",
+    "url": "https://www.ntv.ru/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ntv.ru/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://www.ntv.ru/novosti/2642205/",
+    "kind": "a",
+    "attributes": {
+      "class": "visual",
+      "href": "https://www.ntv.ru/novosti/2642205/",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Innovation ecosystems: universities, technology clusters and the Israeli model from NTV"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Innovation ecosystems: universities, technology clusters and the Israeli model ↗",
+    "url": "https://www.ntv.ru/novosti/2642205/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ntv.ru/novosti/2642205/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "RaiNews 24 ↗",
+    "url": "https://www.rainews.it/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.rainews.it/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+    "kind": "a",
+    "attributes": {
+      "class": "visual",
+      "href": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Russia and national cybersecurity strategy from RaiNews 24"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Russia and national cybersecurity strategy ↗",
+    "url": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Channel 10 ↗",
+    "url": "https://13tv.co.il/writer/tentv_writer_1568823827/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://13tv.co.il/writer/tentv_writer_1568823827/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://youtu.be/EyymYGiIbxg",
+    "kind": "a",
+    "attributes": {
+      "class": "visual",
+      "href": "https://youtu.be/EyymYGiIbxg",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Russia, undersea cables and internet infrastructure from Channel 10 · London et Kirschenbaum"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Russia, undersea cables and internet infrastructure ↗",
+    "url": "https://youtu.be/EyymYGiIbxg",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://youtu.be/EyymYGiIbxg",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Channel 14 ↗",
+    "url": "https://www.c14.co.il/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.c14.co.il/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://youtu.be/6e5bnT04vO8",
+    "kind": "a",
+    "attributes": {
+      "class": "visual",
+      "href": "https://youtu.be/6e5bnT04vO8",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Pegasus and police access to private phones from Channel 14"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Pegasus and police access to private phones ↗",
+    "url": "https://youtu.be/6e5bnT04vO8",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://youtu.be/6e5bnT04vO8",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Channel Economy ↗",
+    "url": "https://tv10.co.il/about/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://tv10.co.il/about/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "▶",
+    "url": "https://youtu.be/-M2fTsR8YC8",
+    "kind": "a",
+    "attributes": {
+      "class": "visual",
+      "href": "https://youtu.be/-M2fTsR8YC8",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "aria-label": "Watch Platform responsibility for fraudulent advertising from Channel Economy"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Platform responsibility for fraudulent advertising ↗",
+    "url": "https://youtu.be/-M2fTsR8YC8",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://youtu.be/-M2fTsR8YC8",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "POLITICO Europe ↗",
+    "url": "https://www.politico.eu/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.politico.eu/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-politico-1016w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-politico-1016w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-politico-1016w.webp",
+      "data-title": "POLITICO Europe · How did Israel blow up Hezbollah pagers?",
+      "aria-label": "Enlarge POLITICO Europe article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "How did Israel blow up Hezbollah pagers? ↗",
+    "url": "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Le Figaro ↗",
+    "url": "https://www.lefigaro.fr/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.lefigaro.fr/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-figaro-1024w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-figaro-1024w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-figaro-1024w.webp",
+      "data-title": "Le Figaro · Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille",
+      "aria-label": "Enlarge Le Figaro article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille ↗",
+    "url": "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Associated Press ↗",
+    "url": "https://www.ap.org/about/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ap.org/about/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-ap-768w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-ap-768w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-ap-768w.webp",
+      "data-title": "Associated Press · Cyberattack forces Iran steel company to halt production",
+      "aria-label": "Enlarge Associated Press article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Cyberattack forces Iran steel company to halt production ↗",
+    "url": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "NRC ↗",
+    "url": "https://www.nrc.nl/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.nrc.nl/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-nrc-768w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-nrc-768w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-nrc-768w.webp",
+      "data-title": "NRC · Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal",
+      "aria-label": "Enlarge NRC article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal ↗",
+    "url": "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "France 24 ↗",
+    "url": "https://www.francemediasmonde.com/en/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.francemediasmonde.com/en/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-france24-768w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-france24-768w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-france24-768w.webp",
+      "data-title": "France 24 · Entre NSO et le pouvoir israélien, des liens troubles",
+      "aria-label": "Enlarge France 24 article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Entre NSO et le pouvoir israélien, des liens troubles ↗",
+    "url": "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "la Repubblica ↗",
+    "url": "https://www.repubblica.it/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.repubblica.it/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "",
+    "url": "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/",
+    "kind": "a",
+    "attributes": {
+      "class": "visual article-image",
+      "href": "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "View excerpt +",
+    "url": "/images/media/press-repubblica-768w.webp",
+    "kind": "a",
+    "attributes": {
+      "href": "/images/media/press-repubblica-768w.webp",
+      "class": "excerpt-control",
+      "data-proof": "/images/media/press-repubblica-768w.webp",
+      "data-title": "la Repubblica · Israele vs Iran: il nuovo fronte di guerra è il cyberspazio",
+      "aria-label": "Enlarge la Repubblica article excerpt"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Israele vs Iran: il nuovo fronte di guerra è il cyberspazio ↗",
+    "url": "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Le Figaro ↗",
+    "url": "https://www.lefigaro.fr/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.lefigaro.fr/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Attaque massive au Liban: une opération spectaculaire et complexe à organiser ↗",
+    "url": "https://www.lefigaro.fr/international/attaque-massive-au-liban-une-operation-spectaculaire-et-complexe-a-organiser-20240918",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.lefigaro.fr/international/attaque-massive-au-liban-une-operation-spectaculaire-et-complexe-a-organiser-20240918",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Newsweek ↗",
+    "url": "https://www.newsweek.com/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.newsweek.com/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Trump Team Leaks About Israel’s Hack of Kaspersky Lab Could Further “Damage” Ties, Experts Warn ↗",
+    "url": "https://www.newsweek.com/trump-team-leaks-about-israels-hack-kaspersky-lab-could-further-damage-ties-686500",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.newsweek.com/trump-team-leaks-about-israels-hack-kaspersky-lab-could-further-damage-ties-686500",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Il Sole 24 Ore ↗",
+    "url": "https://www.ilsole24ore.com/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ilsole24ore.com/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Tutti i rischi delle identità digitali ↗",
+    "url": "https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Il Giornale ↗",
+    "url": "https://www.ilgiornale.it/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ilgiornale.it/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Difesa e cyber-sicurezza, l’Italia è in ritardo di 10 anni ↗",
+    "url": "https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "NATO Cooperative Cyber Defence Centre of Excellence ↗",
+    "url": "https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Danish Parliament · Defence Committee ↗",
+    "url": "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "University of Oxford · Netherlands Defence Academy ↗",
+    "url": "https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "S. Rajaratnam School of International Studies ↗",
+    "url": "https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "Italian Chamber of Deputies · NATO Parliamentary Assembly delegation ↗",
+    "url": "https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "World Bank · Digital Development Global Practice ↗",
+    "url": "https://www.worldbank.org/en/events/2023/06/21/cybertalk-on-securing-critical-infrastructure1#3",
+    "kind": "a",
+    "attributes": {
+      "class": "",
+      "href": "https://www.worldbank.org/en/events/2023/06/21/cybertalk-on-securing-critical-infrastructure1#3",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  },
+  {
+    "page": "/en/media/",
+    "label": "liortabansky@gmail.com ↗",
+    "url": "mailto:liortabansky@gmail.com",
+    "kind": "a",
+    "attributes": {
+      "href": "mailto:liortabansky@gmail.com"
+    },
+    "source_component": "src/components/ForestMedia.astro",
+    "verification": "destination retained; external reachability not retested"
+  }
+]

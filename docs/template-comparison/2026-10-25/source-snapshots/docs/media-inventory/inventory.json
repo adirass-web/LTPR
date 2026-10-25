@@ -1,0 +1,2143 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-24",
+  "status": "local_import_report_received_awaiting_expanded_register_transfer",
+  "provenance": {
+    "handoff_archive_sha256": "bce242d56b20945ace607f46967d7d1206ff435bbbad30b065d826eb3f10faf9",
+    "supplied_records_sha256": "042eff19cde9083bbda0d39538d57c72d3b4679ba607665d98a40a07b1de29b0",
+    "repository_head": "ef5e01f487dc92bc2a3ccdcf6a451d6cbe195939",
+    "historical_source_manifest_sha256": "cc9bf0b03110dfa7c52c2ea13dcd9e598c3db9faf7e42ee476d05344b36a64ee",
+    "input_consistency": "Supplied records JSON equals embedded inventory; every CSV field/row agrees.",
+    "verification_scope": "Supplied metadata and current local source only; no fresh remote source retrieval, source-folder file inspection, or footage review."
+  },
+  "source_coverage": [
+    {
+      "id": "uploaded-handoff",
+      "status": "imported",
+      "archive_file_count": 48,
+      "record_count": 23,
+      "contains_original_source_media": false
+    },
+    {
+      "id": "site-source-folder",
+      "status": "not_transferred",
+      "files_imported": 0,
+      "actual_folder_file_count": null,
+      "local_subfolder_import_report": {
+        "scope": "TV grab",
+        "files": 20,
+        "broader_parent_coverage_verified": false
+      }
+    },
+    {
+      "id": "pr-source-folder",
+      "status": "not_transferred",
+      "files_imported": 0,
+      "actual_folder_file_count": null,
+      "local_subfolder_import_report": {
+        "scope": "press subfolder",
+        "files": 73,
+        "broader_parent_coverage_verified": false
+      }
+    }
+  ],
+  "summary": {
+    "recording_records": 23,
+    "broadcast_candidate_records": 20,
+    "talk_records": 3,
+    "recordings_linked_to_current_site": 6,
+    "current_site_records_by_kind": {
+      "broadcast": 6,
+      "publication": 5,
+      "press": 6,
+      "press_archive": 4,
+      "forum": 6
+    },
+    "historically_declared_assets_not_supplied": 8,
+    "unique_appearance_total": null,
+    "complete_overall_inventory": false
+  },
+  "recordings": [
+    {
+      "id": "68SBtqPIcGQ",
+      "kind": "Broadcast",
+      "title_original": "המהדורה הכלכלית 14.10.2026",
+      "topic_working": "Digital supply-chain disruption",
+      "event_date": "2026-10-14",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2026-10-15T08:14:34Z",
+      "outlet_or_event": "Channel Economy",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "7:01",
+      "length_seconds": 420,
+      "url": "https://www.youtube.com/watch?v=68SBtqPIcGQ",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Topic from channel description; excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "68SBtqPIcGQ",
+        "title": "המהדורה הכלכלית 14.10.2026",
+        "description": "ד\"ר ליאור טבנסקי מאוניברסיטת תל אביב על הפגיעה בשרשרת האספקה הדיגיטלית, אצל נעמה קדוש, המהדורה הכלכלית, ערוץ הכלכלה.",
+        "published_at": "2026-10-15T08:14:34Z",
+        "length_seconds": 420,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "EyymYGiIbxg",
+      "kind": "Broadcast excerpt",
+      "title_original": "ספינות רוסיות ינתקו לנו את האינטרנט? עם מוטי קירשנבאום",
+      "topic_working": "Undersea cables and Russian ships",
+      "event_date": "2015-10-27",
+      "event_date_basis": "Description and current-site record",
+      "youtube_upload_date_utc": "2026-08-22T19:54:46Z",
+      "outlet_or_event": "Channel 10 / London et Kirschenbaum",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "0:11",
+      "length_seconds": 10,
+      "url": "https://www.youtube.com/watch?v=EyymYGiIbxg",
+      "in_current_site": "Yes",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Only 10 seconds; check whether a longer interview exists",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "channel10-undersea-2015",
+      "current_site_source_urls": [
+        "https://13tv.co.il/writer/tentv_writer_1568823827/",
+        "https://youtu.be/EyymYGiIbxg"
+      ],
+      "historical_asset_ids": [
+        "broadcast-master-03"
+      ],
+      "supplied_metadata": {
+        "video_id": "EyymYGiIbxg",
+        "title": "ספינות רוסיות ינתקו לנו את האינטרנט? עם מוטי קירשנבאום",
+        "description": "27/10/2015",
+        "published_at": "2026-08-22T19:54:46Z",
+        "length_seconds": 10,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "gcMpVGqQV-w",
+      "kind": "Broadcast",
+      "title_original": "ליאור טבנסקי: למי אכפת ש\"חמאס תקף אתרים ישראלים\"?",
+      "topic_working": "Significance of Hamas attacks on Israeli websites",
+      "event_date": "",
+      "event_date_basis": "Description says 13/07/2024 but also 'Protective Edge—day six'; unresolved",
+      "youtube_upload_date_utc": "2026-07-04T07:57:37Z",
+      "outlet_or_event": "Keshet / Channel 2 or 12 — confirm historical identity",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "5:43",
+      "length_seconds": 343,
+      "url": "https://www.youtube.com/watch?v=gcMpVGqQV-w",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Description's date/context conflict; do not silently correct to 2014 or publish as 2024",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "gcMpVGqQV-w",
+        "title": "ליאור טבנסקי: למי אכפת ש\"חמאס תקף אתרים ישראלים\"?",
+        "description": "@Keshet12 \n13/07/2024\n\nליאור טבנסקי @אגודתידידיאוניברסיטתתלאביב \n\"צוק איתן\" - היום השישי.",
+        "published_at": "2026-07-04T07:57:37Z",
+        "length_seconds": 343,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "unresolved",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "CcIEQJTuVBY",
+      "kind": "Broadcast panel",
+      "title_original": "על ניצול הזדמנויות: ישראל נגד חזבאללה. בין מבצעים מיוחדים להישגים אסטרטגיים",
+      "topic_working": "Israel–Hezbollah: special operations and strategic achievement",
+      "event_date": "2024-09-21",
+      "event_date_basis": "Channel description",
+      "youtube_upload_date_utc": "2026-07-04T07:46:53Z",
+      "outlet_or_event": "i24NEWS Hebrew",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "15:05",
+      "length_seconds": 904,
+      "url": "https://www.youtube.com/watch?v=CcIEQJTuVBY",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "This Hebrew item does not resolve the older missing English i24 appearance",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "CcIEQJTuVBY",
+        "title": "על ניצול הזדמנויות: ישראל נגד חזבאללה. בין מבצעים מיוחדים להישגים אסטרטגיים",
+        "description": "@i24NEWS_HE  \n\nד\"ר ליאור טבנסקי \nפרופ' עוזי רבי\nאלוף במיל' גרשון הכהן\n21/09/2024",
+        "published_at": "2026-07-04T07:46:53Z",
+        "length_seconds": 904,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "sB4r1v4iVng",
+      "kind": "Broadcast",
+      "title_original": "\"מטה הסייבר באזהרה דחופה\"",
+      "topic_working": "National Cyber Directorate's role and urgent warnings",
+      "event_date": "2026-04-15",
+      "event_date_basis": "Channel description",
+      "youtube_upload_date_utc": "2026-07-04T07:41:30Z",
+      "outlet_or_event": "Channel Economy / TV10",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "7:53",
+      "length_seconds": 472,
+      "url": "https://www.youtube.com/watch?v=sB4r1v4iVng",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Description explicitly concerns whether the directorate should act as a police force",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "sB4r1v4iVng",
+        "title": "\"מטה הסייבר באזהרה דחופה\"",
+        "description": "@tv10israel \n\n\nמטה הסייבר הלאומי לא נועד להיות שוטר. ד\"ר טבנסקי מדבר על הסיבות והמשמעויות עם נעמה קדוש.\n15/04/2026",
+        "published_at": "2026-07-04T07:41:30Z",
+        "length_seconds": 472,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "D-zjzQF0UTM",
+      "kind": "Broadcast",
+      "title_original": "ערוץ הכלכלה 2026 06 29 19 30 43 19 34 20",
+      "topic_working": "Health Ministry restrictions on generative AI in hospitals",
+      "event_date": "2026-06-29",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2026-07-04T07:36:20Z",
+      "outlet_or_event": "Channel Economy / TV10",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "3:38",
+      "length_seconds": 218,
+      "url": "https://www.youtube.com/watch?v=D-zjzQF0UTM",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Channel description provides topic; potential narrative relevance to AI and institutional decisions",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "D-zjzQF0UTM",
+        "title": "ערוץ הכלכלה 2026 06 29 19 30 43 19 34 20",
+        "description": "@tv10israel \n\n\nמשרד הבריאות חוסם גישה לכלי Gen-AI בבתי חולים",
+        "published_at": "2026-07-04T07:36:20Z",
+        "length_seconds": 218,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "ia8hKfw6e9Q",
+      "kind": "Broadcast",
+      "title_original": "ערוץ 1 פוליטיקה עם עודד שחר Jan 03  2012",
+      "topic_working": "Topic not stated in available metadata",
+      "event_date": "2012-01-03",
+      "event_date_basis": "Title and description",
+      "youtube_upload_date_utc": "2022-01-26T19:00:15Z",
+      "outlet_or_event": "Channel 1 / Politika with Oded Shahar",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "22:00",
+      "length_seconds": 1320,
+      "url": "https://www.youtube.com/watch?v=ia8hKfw6e9Q",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Requires viewing for useful topical description",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "ia8hKfw6e9Q",
+        "title": "ערוץ 1 פוליטיקה עם עודד שחר Jan 03  2012",
+        "description": "שידור חי\nערוץ 1\n20120103",
+        "published_at": "2022-01-26T19:00:15Z",
+        "length_seconds": 1320,
+        "caption_tracks": [],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "9SKfqDEu9mE",
+      "kind": "Broadcast programme",
+      "title_original": "Лиор Табанский, ”Несокрушимая скала” 9 Канал ТВ, Израиль. July 7, 2014",
+      "topic_working": "Operation Protective Edge",
+      "event_date": "",
+      "event_date_basis": "Title says July 7, 2014; description says 20140714",
+      "youtube_upload_date_utc": "2022-01-19T16:52:26Z",
+      "outlet_or_event": "Channel 9",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Russian",
+      "duration_display": "52:56",
+      "length_seconds": 3175,
+      "url": "https://www.youtube.com/watch?v=9SKfqDEu9mE",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "LOGIN_REQUIRED",
+      "captions": "",
+      "duplicate_group": "protective-edge-channel9-unresolved",
+      "review_notes": "Date conflict; possible overlap with 14:13 upload; login required for playback",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "9SKfqDEu9mE",
+        "title": "Лиор Табанский, ”Несокрушимая скала” 9 Канал ТВ, Израиль. July 7, 2014",
+        "description": "”Несокрушимая скала” - 9 Канал ТВ Израиль \n\nמבצע צוק איתן\nOperation Protective Edge\n\n20140714",
+        "published_at": "2022-01-19T16:52:26Z",
+        "length_seconds": 3175,
+        "caption_tracks": [],
+        "playability_status": "LOGIN_REQUIRED",
+        "playability_reason": "This video may be inappropriate for some users."
+      },
+      "event_date_precision": "unresolved",
+      "unique_appearance_status": "possible_overlap_unresolved",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "_4FKfxnDSJU",
+      "kind": "Broadcast report",
+      "title_original": "Силиконовая долина в Москве: как создают научно технологический центр МГУ. HTB СЕГОДНЯ 08.12.2021",
+      "topic_working": "Innovation ecosystems, universities and technology clusters",
+      "event_date": "2021-12-08",
+      "event_date_basis": "Title, description and current-site record",
+      "youtube_upload_date_utc": "2022-01-19T12:47:46Z",
+      "outlet_or_event": "NTV / Segodnya",
+      "outlet_country_or_event_country": "Russia",
+      "language": "Russian",
+      "duration_display": "4:31",
+      "length_seconds": 271,
+      "url": "https://www.youtube.com/watch?v=_4FKfxnDSJU",
+      "in_current_site": "Yes",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Russian (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Same appearance as canonical NTV link on site",
+      "broadcaster_country": "Russia",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "ntv-innovation-2021",
+      "current_site_source_urls": [
+        "https://www.ntv.ru/",
+        "https://www.ntv.ru/novosti/2642205/"
+      ],
+      "historical_asset_ids": [
+        "broadcast-master-05"
+      ],
+      "supplied_metadata": {
+        "video_id": "_4FKfxnDSJU",
+        "title": "Силиконовая долина в Москве: как создают научно технологический центр МГУ. HTB СЕГОДНЯ 08.12.2021",
+        "description": "#innovation systems\n«Долина МГУ»: ядром для создаваемой долины главного вуза страны станут центры прикладных исследований.\n\nНа юго-западе Москвы через два года должна появиться российская Силиконовая долина. Так уже называют научно-технологический центр МГУ \"Воробьёвы горы\".\n\nЧтобы сократить путь новейших технологий от лаборатории до массового производства, нужны новые условия. Уже создан научный парк МГУ для развития стартапов, но стало понятно - нужно нечто большее.\n\nВиктор Садовничий, ректор МГУ: \"Изучив опыт, имеющийся в мире, я бывал в Силиконовой долине, я пришел к выводу, что надо эту идею модернизировать, обновить, создать долину, которая находится в непосредственной близости от университета\".\n\nСиликоновая долина - самый знаменитый пример научно-технологического кластера. Его пример подробно изучен Тель-Авивским университетом. \n\nЛиор Табански, эксперт по развитию инновационных систем, Тель-Авивский университет: \"Страны, которые развивают свою экономику, пытаются перенять эту модель и создать условия для совместной работы в одном и том же месте специалистов из разных областей, акционеров, и тем самым достичь схожего эффекта, который мог бы оказать положительное влияние на развитие страны\".\n\nИзначально то, что сейчас называется Кремниевой долиной, было стремлением Стэндфордского университета заработать на сдаче земли в аренду под офисы. В них приходили в основном высокотехнологичные компании, и выпускники университета получили возможность найти работу рядом с альма-матер, а компаниям стало легче искать квалифицированных сотрудников. Другой пример - Кембриджский научный парк, там сразу пошли по пути научно-практическому, минуя финансовый вопрос.\n\nСобирая лучший опыт, создатели долины МГУ пришли к выводу, что ядром новой долины станут центры прикладных исследований: межфакультетские и междисциплинарные лаборатории. Яркий пример необходимости работать вместе ученым сильно разных направлений - пандемия.\n\nВиктор Садовничий, ректор МГУ: \"Казалось бы, вирус, а сколько там вопросов смежных. Это и биология, и химия, и математика, это и компьютерные технологии\".\n\nДолина МГУ пока в процессе строительства, но инновационный бизнес уже в ней заинтересован. Так, уже подписан договор о создании на территории долины центра совместно с АФК \"Система\".\n\nhttp://www.ntv.ru/novosti/2642205/\n\nСЕГОДНЯ\n08.12.2021\nhttps://www.ntv.ru/peredacha/segodnya/m23700/o678481/video/",
+        "published_at": "2022-01-19T12:47:46Z",
+        "length_seconds": 271,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "ru",
+            "name": "Russian (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "6e5bnT04vO8",
+      "kind": "Broadcast",
+      "title_original": "ערוץ 14, כנסת עכשיו עם יערה זרד. משטרת ישראל, איסוף מודיעין מניידים, 19/01/2022",
+      "topic_working": "Police phone access, intelligence gathering and Pegasus",
+      "event_date": "2022-01-19",
+      "event_date_basis": "Title, description and current-site record",
+      "youtube_upload_date_utc": "2022-01-19T12:38:27Z",
+      "outlet_or_event": "Channel 14 / Knesset Now",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "6:18",
+      "length_seconds": 378,
+      "url": "https://www.youtube.com/watch?v=6e5bnT04vO8",
+      "in_current_site": "Yes",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Content/excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "channel14-pegasus-2022",
+      "current_site_source_urls": [
+        "https://www.c14.co.il/",
+        "https://youtu.be/6e5bnT04vO8"
+      ],
+      "historical_asset_ids": [
+        "broadcast-master-01"
+      ],
+      "supplied_metadata": {
+        "video_id": "6e5bnT04vO8",
+        "title": "ערוץ 14, כנסת עכשיו עם יערה זרד. משטרת ישראל, איסוף מודיעין מניידים, 19/01/2022",
+        "description": "פגסוס \n#Pegasus\nכנסת עכשיו\nיערה זרד \n19/01/2022",
+        "published_at": "2022-01-19T12:38:27Z",
+        "length_seconds": 378,
+        "caption_tracks": [],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "Le9BfObjy8Q",
+      "kind": "Broadcast",
+      "title_original": "ערוץ 20 20211006 על נזקי פייסבוק ואינסטגרם",
+      "topic_working": "Harms of Facebook and Instagram",
+      "event_date": "2021-10-06",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2021-10-07T16:13:03Z",
+      "outlet_or_event": "Channel 20",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "7:31",
+      "length_seconds": 450,
+      "url": "https://www.youtube.com/watch?v=Le9BfObjy8Q",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Content/excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "Le9BfObjy8Q",
+        "title": "ערוץ 20 20211006 על נזקי פייסבוק ואינסטגרם",
+        "description": "Will people stop and rethink the damage of Instagram & Facebook? The recent downtime was a good opportunity to raise this topic on Channel 20.",
+        "published_at": "2021-10-07T16:13:03Z",
+        "length_seconds": 450,
+        "caption_tracks": [],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "bImQyId6LOo",
+      "kind": "Talk",
+      "title_original": "Book launch - Cybersecurity in Israel - Lior Tabansky. 24.11.2015",
+      "topic_working": "Cybersecurity in Israel — book launch",
+      "event_date": "2015-11-24",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2018-06-10T16:46:42Z",
+      "outlet_or_event": "Book launch — venue to confirm",
+      "outlet_country_or_event_country": "",
+      "language": "Unverified",
+      "duration_display": "23:27",
+      "length_seconds": 1407,
+      "url": "https://www.youtube.com/watch?v=bImQyId6LOo",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Do not treat recording as television appearance; language/venue need metadata or viewing",
+      "broadcaster_country": null,
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "bImQyId6LOo",
+        "title": "Book launch - Cybersecurity in Israel - Lior Tabansky. 24.11.2015",
+        "description": "",
+        "published_at": "2018-06-10T16:46:42Z",
+        "length_seconds": 1407,
+        "caption_tracks": [],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "bPga8vpseM8",
+      "kind": "Talk",
+      "title_original": "Cyber Defense of Homeland: Where are our Armed Forces? Norwegian Air Force Academy, Trondheim, 2018",
+      "topic_working": "Cyber Defense of Homeland: Where are our Armed Forces?",
+      "event_date": "2018-02",
+      "event_date_basis": "Description says February 2018",
+      "youtube_upload_date_utc": "2018-06-07T17:04:41Z",
+      "outlet_or_event": "Norwegian Air Force Academy, Trondheim",
+      "outlet_country_or_event_country": "Norway",
+      "language": "English (ASR indication; confirm by viewing)",
+      "duration_display": "28:31",
+      "length_seconds": 1711,
+      "url": "https://www.youtube.com/watch?v=bPga8vpseM8",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "English (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Country denotes event venue, not broadcaster; language pending",
+      "broadcaster_country": null,
+      "event_venue_country": "Norway",
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "bPga8vpseM8",
+        "title": "Cyber Defense of Homeland: Where are our Armed Forces? Norwegian Air Force Academy, Trondheim, 2018",
+        "description": "En verden i endring – grunnlaget for Multi-Domain Battle\nAirpower in Future Joint Operations – a Multi-Domain Battle \nNorwegian Air Force Academy, Trondheim, Norway\nFebruary 2018\nHvorfor væpnede styrker ikke forsvarer nasjonale mål mot cyberangrep",
+        "published_at": "2018-06-07T17:04:41Z",
+        "length_seconds": 1711,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "en",
+            "name": "English (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "month",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "DKeEJvCr4Og",
+      "kind": "Broadcast",
+      "title_original": "ערוץ 2 חדשות הלילה 08.07.2015",
+      "topic_working": "NYSE trading halt caused by a computer fault",
+      "event_date": "2015-07-08",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2015-07-13T15:48:57Z",
+      "outlet_or_event": "Channel 2 / Night News",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "2:20",
+      "length_seconds": 140,
+      "url": "https://www.youtube.com/watch?v=DKeEJvCr4Og",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Topic stated in description; exact on-air argument needs viewing",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "DKeEJvCr4Og",
+        "title": "ערוץ 2 חדשות הלילה 08.07.2015",
+        "description": "על הפסקת המסחר ב-NYSE עקב תקלת מחשב",
+        "published_at": "2015-07-13T15:48:57Z",
+        "length_seconds": 140,
+        "caption_tracks": [],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "ZP-okj5sxQ0",
+      "kind": "Broadcast excerpt",
+      "title_original": "Лиор Табанский, ”Несокрушимая скала” - 9 Канал ТВ Израиль מבצע צוק איתן",
+      "topic_working": "Operation Protective Edge",
+      "event_date": "2014-07-14",
+      "event_date_basis": "Channel description",
+      "youtube_upload_date_utc": "2014-11-25T16:35:52Z",
+      "outlet_or_event": "Channel 9",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Russian",
+      "duration_display": "14:13",
+      "length_seconds": 853,
+      "url": "https://www.youtube.com/watch?v=ZP-okj5sxQ0",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Ukrainian (auto-generated)",
+      "duplicate_group": "protective-edge-channel9-unresolved",
+      "review_notes": "Possible excerpt of 52:56 upload; Russian title/description, but ASR labels Ukrainian—do not treat ASR as authoritative",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "ZP-okj5sxQ0",
+        "title": "Лиор Табанский, ”Несокрушимая скала” - 9 Канал ТВ Израиль מבצע צוק איתן",
+        "description": "”Несокрушимая скала” - 9 Канал ТВ Израиль / 14 07 2014\n9tv.co.il\nמבצע צוק איתן\nOperation Protective Edge\nhttps://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%C2%AB%D0%9D%D0%B5%D1%80%D1%83%D1%88%D0%B8%D0%BC%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%BB%D0%B0%C2%BB",
+        "published_at": "2014-11-25T16:35:52Z",
+        "length_seconds": 853,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "uk",
+            "name": "Ukrainian (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "possible_overlap_unresolved",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "ASiViHPWJR0",
+      "kind": "Broadcast",
+      "title_original": "9TVcoil  09082014 2109 Война глазами блоггера",
+      "topic_working": "War through a blogger's eyes",
+      "event_date": "2014-08-09",
+      "event_date_basis": "Date embedded in upload title",
+      "youtube_upload_date_utc": "2014-11-23T19:59:41Z",
+      "outlet_or_event": "Channel 9",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Russian",
+      "duration_display": "6:59",
+      "length_seconds": 419,
+      "url": "https://www.youtube.com/watch?v=ASiViHPWJR0",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "LOGIN_REQUIRED",
+      "captions": "",
+      "duplicate_group": "",
+      "review_notes": "Content/excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "ASiViHPWJR0",
+        "title": "9TVcoil  09082014 2109 Война глазами блоггера",
+        "description": "",
+        "published_at": "2014-11-23T19:59:41Z",
+        "length_seconds": 419,
+        "caption_tracks": [],
+        "playability_status": "LOGIN_REQUIRED",
+        "playability_reason": "This video may be inappropriate for some users."
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "ZkLBiAhkiPo",
+      "kind": "Broadcast",
+      "title_original": "פוליטיקה עם עודד שחר,  ערוץ 1, 29/07/2014",
+      "topic_working": "Topic not stated in available metadata",
+      "event_date": "2014-07-29",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2014-11-20T19:35:12Z",
+      "outlet_or_event": "Channel 1 / Politika with Oded Shahar",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "11:07",
+      "length_seconds": 667,
+      "url": "https://www.youtube.com/watch?v=ZkLBiAhkiPo",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Hebrew (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Content/excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "ZkLBiAhkiPo",
+        "title": "פוליטיקה עם עודד שחר,  ערוץ 1, 29/07/2014",
+        "description": "ליאור טבנסקי - ממובילי כנס הסייבר הבינ\"ל, אונ' ת\"א\n\nhttp://www.ifat.com/VT/Trans.aspx?ID=5810134&CID=100105",
+        "published_at": "2014-11-20T19:35:12Z",
+        "length_seconds": 667,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "7ONQeAXc8bg",
+      "kind": "Talk",
+      "title_original": "Lior Tabansky",
+      "topic_working": "Academic Perspectives on Cyber Security Challenges",
+      "event_date": "",
+      "event_date_basis": "Conference edition specified; upload 2014-10-06 is not event date",
+      "youtube_upload_date_utc": "2014-10-06T08:30:54Z",
+      "outlet_or_event": "4th Annual International Cybersecurity Conference / Tel Aviv University ICRC",
+      "outlet_country_or_event_country": "Israel (institutional context)",
+      "language": "Unverified; ASR says Bulgarian and may be wrong",
+      "duration_display": "9:27",
+      "length_seconds": 566,
+      "url": "https://www.youtube.com/watch?v=7ONQeAXc8bg",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Bulgarian (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Description identifies a conference talk, not a broadcast; event date and spoken language need confirmation",
+      "broadcaster_country": null,
+      "event_venue_country": null,
+      "institutional_country_context": "Israel",
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "7ONQeAXc8bg",
+        "title": "Lior Tabansky",
+        "description": "Academic Perspectives on Cyber Security Challenges \n\n The 4th Annual International Cybersecurity Conference by the Israeli National Cyber Bureau and the Tel Aviv University Interdisciplinary Cyber Research Center (ICRC)",
+        "published_at": "2014-10-06T08:30:54Z",
+        "length_seconds": 566,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "bg",
+            "name": "Bulgarian (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "unresolved",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "CEIOqKXH_Rs",
+      "kind": "Broadcast",
+      "title_original": "Лиор Табанский,  \"Одиночество в сети\"  9 Канал ТВ Израиль. September 14, 2014",
+      "topic_working": "Loneliness on the Net",
+      "event_date": "2014-09-14",
+      "event_date_basis": "Upload title",
+      "youtube_upload_date_utc": "2014-10-06T08:09:53Z",
+      "outlet_or_event": "Channel 9",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Russian",
+      "duration_display": "3:10",
+      "length_seconds": 190,
+      "url": "https://www.youtube.com/watch?v=CEIOqKXH_Rs",
+      "in_current_site": "No",
+      "evidence_level": "YouTube listing and upload metadata; content not watched",
+      "playability_status": "OK",
+      "captions": "Russian (auto-generated)",
+      "duplicate_group": "",
+      "review_notes": "Content/excerpt review pending",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": {
+        "video_id": "CEIOqKXH_Rs",
+        "title": "Лиор Табанский,  \"Одиночество в сети\"  9 Канал ТВ Израиль. September 14, 2014",
+        "description": "9TV Channel 9, Israel\n\nЛиор Табанский, кибернетическое пространство, киберпространство,\n20140914\n2306\nCyberWeek.tau.ac.il",
+        "published_at": "2014-10-06T08:09:53Z",
+        "length_seconds": 190,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "ru",
+            "name": "Russian (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    },
+    {
+      "id": "rai-codice-2020",
+      "kind": "Broadcast excerpt",
+      "title_original": "Codice: la vita è digitale",
+      "topic_working": "Programme context spans digital society; exact excerpt synopsis to confirm",
+      "event_date": "2020-05-10",
+      "event_date_basis": "Current site and historical owner-source manifest",
+      "outlet_or_event": "RAI 1 / Codice",
+      "outlet_country_or_event_country": "Italy",
+      "language": "Italian",
+      "duration_display": "1:25 (historical source master)",
+      "length_seconds": 85.2,
+      "url": "https://youtu.be/pb8YD_ic1xE",
+      "in_current_site": "Yes",
+      "evidence_level": "Current-site record and historical manifest; link not freshly checked",
+      "review_notes": "Not returned in supplied channel's Videos listing; original file not in mounted workspace",
+      "broadcaster_country": "Italy",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "rai-codice-2020",
+      "current_site_source_urls": [
+        "https://www.rai.it/",
+        "https://youtu.be/pb8YD_ic1xE"
+      ],
+      "historical_asset_ids": [
+        "broadcast-master-04"
+      ],
+      "supplied_metadata": null,
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "channel-economy-2026-08",
+      "kind": "Broadcast",
+      "title_original": "20260818 ד\"ר טבנסקי על תביעת בנק לאומי נגד מטא ישראל, וגיוס הון של חברת וידאו היגספילד.",
+      "topic_working": "Platform responsibility for fraudulent advertising; Higgsfield video-company fundraising",
+      "event_date": "2026-08-18",
+      "event_date_basis": "Current site and historical owner-source manifest",
+      "outlet_or_event": "Channel Economy",
+      "outlet_country_or_event_country": "Israel",
+      "language": "Hebrew",
+      "duration_display": "6:37 (historical source master)",
+      "length_seconds": 397,
+      "url": "https://youtu.be/-M2fTsR8YC8",
+      "in_current_site": "Yes",
+      "evidence_level": "Fresh YouTube metadata plus current-site and historical source records",
+      "review_notes": "Unlisted upload on owner channel, omitted from public Videos list. Second topic from title; footage review pending.",
+      "youtube_upload_date_utc": "2026-08-19T14:45:26Z",
+      "playability_status": "OK",
+      "broadcaster_country": "Israel",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "channel-economy-2026",
+      "current_site_source_urls": [
+        "https://tv10.co.il/about/",
+        "https://youtu.be/-M2fTsR8YC8"
+      ],
+      "historical_asset_ids": [
+        "broadcast-master-02"
+      ],
+      "supplied_metadata": {
+        "video_id": "-M2fTsR8YC8",
+        "title": "20260818 ד\"ר טבנסקי על תביעת בנק לאומי נגד מטא ישראל, וגיוס הון של חברת וידאו היגספילד.",
+        "description": "ערוץ 10 עם נעמה קדוש\n\n\n2026.08.18",
+        "published_at": "2026-08-19T14:45:26Z",
+        "length_seconds": 397,
+        "caption_tracks": [
+          {
+            "is_translatable": true,
+            "kind": "asr",
+            "language_code": "iw",
+            "name": "Hebrew (auto-generated)"
+          }
+        ],
+        "playability_status": "OK",
+        "playability_reason": null,
+        "is_unlisted": true
+      },
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "rainews-russia-2019",
+      "kind": "Broadcast",
+      "title_original": "Russia and national cybersecurity strategy",
+      "topic_working": "National cybersecurity strategy / Russia",
+      "event_date": "2019-05-12",
+      "event_date_basis": "Current-site record",
+      "outlet_or_event": "RaiNews 24",
+      "outlet_country_or_event_country": "Italy",
+      "language": "Italian",
+      "url": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+      "in_current_site": "Yes",
+      "evidence_level": "Current-site record; link not freshly checked",
+      "review_notes": "Off-channel source; footage quality and duration pending",
+      "broadcaster_country": "Italy",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": "rainews-russia-2019",
+      "current_site_source_urls": [
+        "https://www.rainews.it/",
+        "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html"
+      ],
+      "historical_asset_ids": [],
+      "supplied_metadata": null,
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json",
+        "current local Astro template/data"
+      ]
+    },
+    {
+      "id": "rai-codice-2017",
+      "kind": "Broadcast",
+      "title_original": "Cybersicurezza, esperti a confronto",
+      "topic_working": "Cybersecurity expert discussion",
+      "event_date": "2017-08-18",
+      "event_date_basis": "Historical archive record before curation",
+      "outlet_or_event": "RAI / Codice",
+      "outlet_country_or_event_country": "Italy",
+      "language": "Italian",
+      "url": "https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html",
+      "in_current_site": "No — previously removed",
+      "evidence_level": "Recovered historical source record; link not freshly checked",
+      "review_notes": "Reopened candidate, not automatically restored or counted as current-site item",
+      "broadcaster_country": "Italy",
+      "event_venue_country": null,
+      "institutional_country_context": null,
+      "subject_geographies": [],
+      "subject_geography_status": "not separately classified; topic text is retained without assuming broadcaster country equals subject geography",
+      "spoken_language_confirmed_by_listening": null,
+      "language_verification": "supplied metadata/site claim only; ASR labels are not authoritative",
+      "footage_review_status": "not_watched",
+      "current_site_record_id": null,
+      "current_site_source_urls": [],
+      "historical_asset_ids": [],
+      "supplied_metadata": null,
+      "event_date_precision": "day",
+      "unique_appearance_status": "not_deduplicated_against_missing_folder_sources",
+      "provenance": [
+        "supplied media-inventory/records.json",
+        "supplied media-inventory/inventory.json"
+      ]
+    }
+  ],
+  "current_site_records": [
+    {
+      "id": "rai-codice-2020",
+      "kind": "broadcast",
+      "title_as_displayed": "Codice: la vita è digitale ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "RAI 1 ↗",
+      "country_or_location_as_displayed": "Italy",
+      "publisher_context_as_displayed": "Italy’s public broadcaster · Television channel",
+      "date_as_displayed": "10 May 2020 · Italian",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://youtu.be/pb8YD_ic1xE",
+      "public_links_as_displayed": [
+        "https://www.rai.it/",
+        "https://youtu.be/pb8YD_ic1xE"
+      ],
+      "image_paths": [
+        "/images/media/codice-2020-1024w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "innovation",
+      "kind": "publication",
+      "title_as_displayed": "Cybersecurity in Israel ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "",
+      "publisher_context_as_displayed": "",
+      "date_as_displayed": "",
+      "citation_as_displayed": "Coauthored book · with Isaac Ben-Israel · Springer, academic publisher · 2015",
+      "description_as_displayed": "Israel's cyber development, innovation ecosystem, strategy and military cyber warfare.",
+      "primary_source_url": "https://link.springer.com/book/10.1007/978-3-319-18986-4",
+      "public_links_as_displayed": [
+        "https://link.springer.com/book/10.1007/978-3-319-18986-4"
+      ],
+      "image_paths": [
+        "/images/publications/cybersecurity-in-israel.jpg"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "innovation",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "cybered-conflict",
+      "kind": "publication",
+      "title_as_displayed": "Towards a Theory of Cyber Power: The Israeli Experience with Innovation and Strategy ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "",
+      "publisher_context_as_displayed": "",
+      "date_as_displayed": "",
+      "citation_as_displayed": "Authored paper · International Conference on Cyber Conflict (CyCon) · 2016",
+      "description_as_displayed": "A framework connecting strategic objectives, ways and technological means, using Israel to examine innovation and the economic and military dimensions of cyber power.",
+      "primary_source_url": "https://ccdcoe.org/uploads/2018/10/Art-04-Towards-a-Theory-of-Cyber-Power-the-Israeli-Experience-with-Innovation-and-Strategy.pdf",
+      "public_links_as_displayed": [
+        "https://ccdcoe.org/uploads/2018/10/Art-04-Towards-a-Theory-of-Cyber-Power-the-Israeli-Experience-with-Innovation-and-Strategy.pdf"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "cybered-conflict",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "critical-infrastructure",
+      "kind": "publication",
+      "title_as_displayed": "Making PROGRESS: a sectoral approach to cyber resilience and its application in sustainable development ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "",
+      "publisher_context_as_displayed": "",
+      "date_as_displayed": "",
+      "citation_as_displayed": "Coauthored paper · Journal of Cyber Policy · 2025",
+      "description_as_displayed": "World Bank work across 11 countries in energy, healthcare, digital infrastructure and financial services. The institutional field record describes tailored recommendations as being implemented.",
+      "primary_source_url": "https://doi.org/10.1080/23738871.2025.2451779",
+      "public_links_as_displayed": [
+        "https://doi.org/10.1080/23738871.2025.2451779",
+        "https://rcrl.tau.ac.il/progress_jcp_jan25"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "critical-infrastructure",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "sectoral-cyber-resilience",
+      "kind": "publication",
+      "title_as_displayed": "PROGRESS: the sectoral approach to cyber resilience ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "",
+      "publisher_context_as_displayed": "",
+      "date_as_displayed": "",
+      "citation_as_displayed": "Coauthored paper · International Journal of Information Security · 2025",
+      "description_as_displayed": "A sectoral capability-maturity model connecting organizations, regulators, IT/OT supply chains and national cyber capabilities.",
+      "primary_source_url": "https://doi.org/10.1007/s10207-024-00910-3",
+      "public_links_as_displayed": [
+        "https://doi.org/10.1007/s10207-024-00910-3"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "sectoral-cyber-resilience",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "sectoral-maturity-model",
+      "kind": "publication",
+      "title_as_displayed": "Sectoral Cybersecurity Maturity Model ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "",
+      "publisher_context_as_displayed": "",
+      "date_as_displayed": "",
+      "citation_as_displayed": "Supporting institutional record · World Bank · June 2023 consultation draft",
+      "description_as_displayed": "A methodology for assessing sector cybersecurity maturity, interdependencies and critical-service resilience. Tabansky is credited in the cooperating Tel Aviv University research team.",
+      "primary_source_url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392",
+      "public_links_as_displayed": [
+        "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099062623085028392"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "sectoral-maturity-model",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "ntv-innovation-2021",
+      "kind": "broadcast",
+      "title_as_displayed": "Innovation ecosystems: universities, technology clusters and the Israeli model ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "NTV ↗",
+      "country_or_location_as_displayed": "Russia",
+      "publisher_context_as_displayed": "Russian television broadcaster",
+      "date_as_displayed": "8 December 2021 · Russian · national broadcast",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.ntv.ru/novosti/2642205/",
+      "public_links_as_displayed": [
+        "https://www.ntv.ru/",
+        "https://www.ntv.ru/novosti/2642205/"
+      ],
+      "image_paths": [
+        "/images/media/ntv-2021-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "ntv-innovation-2021",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "rainews-russia-2019",
+      "kind": "broadcast",
+      "title_as_displayed": "Russia and national cybersecurity strategy ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "RaiNews 24 ↗",
+      "country_or_location_as_displayed": "Italy",
+      "publisher_context_as_displayed": "RAI’s rolling news channel · Italy’s public broadcaster",
+      "date_as_displayed": "12 May 2019 · Interview by Annamaria Esposito · Italian",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html",
+      "public_links_as_displayed": [
+        "https://www.rainews.it/",
+        "https://www.rainews.it/archivio-rainews/media/La-Russia-e-le-strategie-informatiche-per-la-sicurezza-nazionale-intervista-a-Lior-Tabansky-0b82acc3-a13f-4956-83d7-eccd5bee6229.html"
+      ],
+      "image_paths": [
+        "/images/media/rainews-2019-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "rainews-russia-2019",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "channel10-undersea-2015",
+      "kind": "broadcast",
+      "title_as_displayed": "Russia, undersea cables and internet infrastructure ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "Channel 10 ↗",
+      "country_or_location_as_displayed": "Israel",
+      "publisher_context_as_displayed": "London et Kirschenbaum · Israeli current-affairs programme on the former Channel 10",
+      "date_as_displayed": "27 October 2015 · Hebrew · owner archive",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://youtu.be/EyymYGiIbxg",
+      "public_links_as_displayed": [
+        "https://13tv.co.il/writer/tentv_writer_1568823827/",
+        "https://youtu.be/EyymYGiIbxg"
+      ],
+      "image_paths": [
+        "/images/media/channel10-2015-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "channel10-undersea-2015",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "channel14-pegasus-2022",
+      "kind": "broadcast",
+      "title_as_displayed": "Pegasus and police access to private phones ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "Channel 14 ↗",
+      "country_or_location_as_displayed": "Israel",
+      "publisher_context_as_displayed": "Israeli television news channel",
+      "date_as_displayed": "19 January 2022 · Hebrew · owner archive",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://youtu.be/6e5bnT04vO8",
+      "public_links_as_displayed": [
+        "https://www.c14.co.il/",
+        "https://youtu.be/6e5bnT04vO8"
+      ],
+      "image_paths": [
+        "/images/media/channel14-2022-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "channel14-pegasus-2022",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "channel-economy-2026",
+      "kind": "broadcast",
+      "title_as_displayed": "Platform responsibility for fraudulent advertising ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "Channel Economy ↗",
+      "country_or_location_as_displayed": "Israel",
+      "publisher_context_as_displayed": "Israeli business and financial news channel · Now TV10",
+      "date_as_displayed": "18 August 2026 · Hebrew · owner-supplied recording",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://youtu.be/-M2fTsR8YC8",
+      "public_links_as_displayed": [
+        "https://tv10.co.il/about/",
+        "https://youtu.be/-M2fTsR8YC8"
+      ],
+      "image_paths": [
+        "/images/media/channel-economy-640w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "channel-economy-2026",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "politico-pagers-2024",
+      "kind": "press",
+      "title_as_displayed": "How did Israel blow up Hezbollah pagers? ↗",
+      "working_subject_as_displayed": "The Hezbollah pager operation.",
+      "outlet_as_displayed": "POLITICO Europe ↗",
+      "country_or_location_as_displayed": "Europe",
+      "publisher_context_as_displayed": "European politics and policy news publication",
+      "date_as_displayed": "19 September 2024",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/",
+      "public_links_as_displayed": [
+        "https://www.politico.eu/",
+        "https://www.politico.eu/article/israel-pagers-hezbollah-lebanon-health-ministry/"
+      ],
+      "image_paths": [
+        "/images/media/press-politico-1016w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "politico-pagers-2024",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "figaro-ai-war-2023",
+      "kind": "press",
+      "title_as_displayed": "Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille ↗",
+      "working_subject_as_displayed": "Artificial intelligence in the Israel–Hamas war.",
+      "outlet_as_displayed": "Le Figaro ↗",
+      "country_or_location_as_displayed": "France",
+      "publisher_context_as_displayed": "French national daily newspaper",
+      "date_as_displayed": "4 December 2023",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204",
+      "public_links_as_displayed": [
+        "https://www.lefigaro.fr/",
+        "https://www.lefigaro.fr/international/guerre-hamas-israel-tsahal-fait-entrer-l-intelligence-artificielle-dans-la-bataille-20231204"
+      ],
+      "image_paths": [
+        "/images/media/press-figaro-1024w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "figaro-ai-war-2023",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "ap-iran-steel-2022",
+      "kind": "press",
+      "title_as_displayed": "Cyberattack forces Iran steel company to halt production ↗",
+      "working_subject_as_displayed": "Cyberattack disruption of steel production in Iran.",
+      "outlet_as_displayed": "Associated Press ↗",
+      "country_or_location_as_displayed": "United States · International",
+      "publisher_context_as_displayed": "International news agency",
+      "date_as_displayed": "27 June 2022",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1",
+      "public_links_as_displayed": [
+        "https://www.ap.org/about/",
+        "https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1"
+      ],
+      "image_paths": [
+        "/images/media/press-ap-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "ap-iran-steel-2022",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "nrc-surveillance-2022",
+      "kind": "press",
+      "title_as_displayed": "Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal ↗",
+      "working_subject_as_displayed": "Israel's surveillance industry and the Pegasus scandal.",
+      "outlet_as_displayed": "NRC ↗",
+      "country_or_location_as_displayed": "Netherlands",
+      "publisher_context_as_displayed": "Dutch national newspaper",
+      "date_as_displayed": "4 January 2022",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654",
+      "public_links_as_displayed": [
+        "https://www.nrc.nl/",
+        "https://www.nrc.nl/nieuws/2022/01/04/surveillance-industrie-israel-in-schijnwerpers-door-pegasus-schandaal-a4075654"
+      ],
+      "image_paths": [
+        "/images/media/press-nrc-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "nrc-surveillance-2022",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "france24-nso-2021",
+      "kind": "press",
+      "title_as_displayed": "Entre NSO et le pouvoir israélien, des liens troubles ↗",
+      "working_subject_as_displayed": "NSO and its relationship with Israeli authorities.",
+      "outlet_as_displayed": "France 24 ↗",
+      "country_or_location_as_displayed": "France",
+      "publisher_context_as_displayed": "France’s international news channel",
+      "date_as_displayed": "21 July 2021",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles",
+      "public_links_as_displayed": [
+        "https://www.francemediasmonde.com/en/",
+        "https://www.france24.com/fr/moyen-orient/20210721-entre-nso-et-le-pouvoir-isra%C3%A9lien-des-liens-troubles"
+      ],
+      "image_paths": [
+        "/images/media/press-france24-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "france24-nso-2021",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "repubblica-israel-iran-2020",
+      "kind": "press",
+      "title_as_displayed": "Israele vs Iran: il nuovo fronte di guerra è il cyberspazio ↗",
+      "working_subject_as_displayed": "Israel–Iran conflict in cyberspace.",
+      "outlet_as_displayed": "la Repubblica ↗",
+      "country_or_location_as_displayed": "Italy",
+      "publisher_context_as_displayed": "Italian national daily newspaper",
+      "date_as_displayed": "20 May 2020",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/",
+      "public_links_as_displayed": [
+        "https://www.repubblica.it/",
+        "https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/"
+      ],
+      "image_paths": [
+        "/images/media/press-repubblica-768w.webp"
+      ],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": "repubblica-israel-iran-2020",
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "figaro-pagers-2024",
+      "kind": "press_archive",
+      "title_as_displayed": "Attaque massive au Liban: une opération spectaculaire et complexe à organiser ↗",
+      "working_subject_as_displayed": "Supply-chain sabotage and technological warfare",
+      "outlet_as_displayed": "Le Figaro ↗",
+      "country_or_location_as_displayed": "France",
+      "publisher_context_as_displayed": "French national daily newspaper",
+      "date_as_displayed": "18 September 2024",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.lefigaro.fr/international/attaque-massive-au-liban-une-operation-spectaculaire-et-complexe-a-organiser-20240918",
+      "public_links_as_displayed": [
+        "https://www.lefigaro.fr/",
+        "https://www.lefigaro.fr/international/attaque-massive-au-liban-une-operation-spectaculaire-et-complexe-a-organiser-20240918"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "newsweek-kaspersky-2017",
+      "kind": "press_archive",
+      "title_as_displayed": "Trump Team Leaks About Israel’s Hack of Kaspersky Lab Could Further “Damage” Ties, Experts Warn ↗",
+      "working_subject_as_displayed": "US–Israel intelligence sharing and Kaspersky Lab",
+      "outlet_as_displayed": "Newsweek ↗",
+      "country_or_location_as_displayed": "United States",
+      "publisher_context_as_displayed": "US news magazine and digital publication",
+      "date_as_displayed": "17 October 2017",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.newsweek.com/trump-team-leaks-about-israels-hack-kaspersky-lab-could-further-damage-ties-686500",
+      "public_links_as_displayed": [
+        "https://www.newsweek.com/",
+        "https://www.newsweek.com/trump-team-leaks-about-israels-hack-kaspersky-lab-could-further-damage-ties-686500"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "ilsole24ore-digital-identity-2020",
+      "kind": "press_archive",
+      "title_as_displayed": "Tutti i rischi delle identità digitali ↗",
+      "working_subject_as_displayed": "Digital identity and data",
+      "outlet_as_displayed": "Il Sole 24 Ore ↗",
+      "country_or_location_as_displayed": "Italy",
+      "publisher_context_as_displayed": "Italian business and financial newspaper",
+      "date_as_displayed": "6 June 2020",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf",
+      "public_links_as_displayed": [
+        "https://www.ilsole24ore.com/",
+        "https://www.assosoftware.it/attachments/article/2642/AssoSoftwareDayPress06062020.pdf"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "ilgiornale-italy-2018",
+      "kind": "press_archive",
+      "title_as_displayed": "Difesa e cyber-sicurezza, l’Italia è in ritardo di 10 anni ↗",
+      "working_subject_as_displayed": "Full interview on defence and cybersecurity",
+      "outlet_as_displayed": "Il Giornale ↗",
+      "country_or_location_as_displayed": "Italy",
+      "publisher_context_as_displayed": "Italian national daily newspaper",
+      "date_as_displayed": "7 July 2018",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html",
+      "public_links_as_displayed": [
+        "https://www.ilgiornale.it/",
+        "https://www.ilgiornale.it/news/politica/difesa-e-cyber-sicurezza-litalia-ritardo-10-anni-1549933.html"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-01",
+      "kind": "forum",
+      "title_as_displayed": "NATO Cooperative Cyber Defence Centre of Excellence ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Tallinn · Estonia",
+      "publisher_context_as_displayed": "International Conference on Cyber Conflict (CyCon)",
+      "date_as_displayed": "Tallinn · Towards a Theory of Cyber Power · 2016",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/",
+      "public_links_as_displayed": [
+        "https://ccdcoe.org/library/publications/8th-international-conference-on-cyber-conflict-proceedings-2016/"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-02",
+      "kind": "forum",
+      "title_as_displayed": "Danish Parliament · Defence Committee ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Copenhagen · Denmark",
+      "publisher_context_as_displayed": "Parliamentary scrutiny of defence and military affairs",
+      "date_as_displayed": "Copenhagen · Expert hearing on military cybersecurity · 2019",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed",
+      "public_links_as_displayed": [
+        "https://www.ft.dk/aktuelt/nyheder/2019/09/20190911-fou-militaer-cybersikkerhed"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-03",
+      "kind": "forum",
+      "title_as_displayed": "University of Oxford · Netherlands Defence Academy ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Amsterdam · Netherlands",
+      "publisher_context_as_displayed": "British university and Dutch military higher-education institution",
+      "date_as_displayed": "Amsterdam · Future of War Conference · 2022",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8",
+      "public_links_as_displayed": [
+        "https://faculteitmilitairewetenschappen.nl/attachment/e03b6308-a385-4ceb-97cd-366cc6231af8"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-04",
+      "kind": "forum",
+      "title_as_displayed": "S. Rajaratnam School of International Studies ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Singapore",
+      "publisher_context_as_displayed": "School of international affairs at Nanyang Technological University, Singapore",
+      "date_as_displayed": "Asia-Pacific Programme for Senior National Security Officers · 2018",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/",
+      "public_links_as_displayed": [
+        "https://rsis.edu.sg/rsis-news-article/rsis/appsno-2018/"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-05",
+      "kind": "forum",
+      "title_as_displayed": "Italian Chamber of Deputies · NATO Parliamentary Assembly delegation ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Rome · Italy",
+      "publisher_context_as_displayed": "Italy’s lower house of parliament · Delegation to the alliance’s interparliamentary forum",
+      "date_as_displayed": "Rome · Italian–Israeli cybersecurity session · 2015",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417",
+      "public_links_as_displayed": [
+        "https://www.camera.it/leg17/1131?shadow_comunicatostampa=9417"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    },
+    {
+      "id": "forum-06",
+      "kind": "forum",
+      "title_as_displayed": "World Bank · Digital Development Global Practice ↗",
+      "working_subject_as_displayed": "",
+      "outlet_as_displayed": "",
+      "country_or_location_as_displayed": "Washington, DC · United States",
+      "publisher_context_as_displayed": "The development institution’s digital-development team",
+      "date_as_displayed": "Washington, DC · Expert workshop on critical-infrastructure cyber resilience · 2023",
+      "citation_as_displayed": "",
+      "description_as_displayed": "",
+      "primary_source_url": "https://www.worldbank.org/en/events/2023/06/21/cybertalk-on-securing-critical-infrastructure1#3",
+      "public_links_as_displayed": [
+        "https://www.worldbank.org/en/events/2023/06/21/cybertalk-on-securing-critical-infrastructure1#3"
+      ],
+      "image_paths": [],
+      "source_template": "src/components/ForestMedia.astro",
+      "existing_fragment_id": null,
+      "verification": "Current local template/data reconciliation; remote sources and live rendering not rechecked."
+    }
+  ],
+  "historical_asset_declarations": [
+    {
+      "id": "broadcast-master-01",
+      "kind": "video_master",
+      "record_ids": [
+        "6e5bnT04vO8"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_bytes": 36961543,
+      "historically_reported_width": 960,
+      "historically_reported_height": 540,
+      "historically_reported_fps": 30.0,
+      "historically_reported_duration_seconds": 377.813,
+      "historically_reported_sha256": "b7172f9c1195383c4c0a0414b88d2cc3206ad557a9915aa5220349f4cfe2e4a8",
+      "historical_role": "Channel 14, 19 Jan 2022; poster ~330s",
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "supplied historical-source-manifest.md; historical claims are not freshly verified file measurements",
+      "repository_disposition": "Keep source master outside Git/public output; metadata only is prepared for repository review."
+    },
+    {
+      "id": "broadcast-master-02",
+      "kind": "video_master",
+      "record_ids": [
+        "channel-economy-2026-08"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_bytes": 15298497,
+      "historically_reported_width": 640,
+      "historically_reported_height": 360,
+      "historically_reported_fps": 25.0,
+      "historically_reported_duration_seconds": 397.201,
+      "historically_reported_sha256": "fd95f81c08d2ae830a7baf8fc948086caf619facc3875abce5f5a7252cc1c1f0",
+      "historical_role": "Channel Economy, 18 Aug 2026; poster 372–374s, selected 373s",
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "supplied historical-source-manifest.md; historical claims are not freshly verified file measurements",
+      "repository_disposition": "Keep source master outside Git/public output; metadata only is prepared for repository review."
+    },
+    {
+      "id": "broadcast-master-03",
+      "kind": "video_master",
+      "record_ids": [
+        "EyymYGiIbxg"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_bytes": 3189608,
+      "historically_reported_width": 1280,
+      "historically_reported_height": 720,
+      "historically_reported_fps": 25.0,
+      "historically_reported_duration_seconds": 10.36,
+      "historically_reported_sha256": "91734883561cbf1a4fb4ae7a9c40f14d2f0f5502b99e355a0d2be4034b194bbf",
+      "historical_role": "Channel 10 / London et Kirschenbaum, 27 Oct 2015; poster ~1s",
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "supplied historical-source-manifest.md; historical claims are not freshly verified file measurements",
+      "repository_disposition": "Keep source master outside Git/public output; metadata only is prepared for repository review."
+    },
+    {
+      "id": "broadcast-master-04",
+      "kind": "video_master",
+      "record_ids": [
+        "rai-codice-2020"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_bytes": 21379914,
+      "historically_reported_width": 1024,
+      "historically_reported_height": 576,
+      "historically_reported_fps": 25.0,
+      "historically_reported_duration_seconds": 85.2,
+      "historically_reported_sha256": "6ab57176af7c42042349c598acbde2fed0f3c7ba0cd1ee5fc8dac5d1d427bf4b",
+      "historical_role": "MAIN 2020 RAI Codice; primary 41s, network secondary 15s",
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "supplied historical-source-manifest.md; historical claims are not freshly verified file measurements",
+      "repository_disposition": "Keep source master outside Git/public output; metadata only is prepared for repository review."
+    },
+    {
+      "id": "broadcast-master-05",
+      "kind": "video_master",
+      "record_ids": [
+        "_4FKfxnDSJU"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_bytes": 54116587,
+      "historically_reported_width": 1280,
+      "historically_reported_height": 720,
+      "historically_reported_fps": 25.0,
+      "historically_reported_duration_seconds": 270.605,
+      "historically_reported_sha256": "36f2a5a69a290be83ccece2e6080f3ab53274cb30b010c543e69b8d058319a23",
+      "historical_role": "NTV feature; poster ~120s",
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "supplied historical-source-manifest.md; historical claims are not freshly verified file measurements",
+      "repository_disposition": "Keep source master outside Git/public output; metadata only is prepared for repository review."
+    },
+    {
+      "id": "reference-document-01",
+      "kind": "reference_pdf",
+      "record_ids": [
+        "france24-nso-2021"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_sha256": null,
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "Historical source manifest names a PDF; this uploaded ZIP contains no PDF originals.",
+      "repository_disposition": "Keep original outside Git/public output pending content/rights review; public source links and neutral metadata can be reviewed separately."
+    },
+    {
+      "id": "reference-document-02",
+      "kind": "reference_pdf",
+      "record_ids": [
+        "repubblica-israel-iran-2020"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_sha256": null,
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "Historical source manifest names a PDF; this uploaded ZIP contains no PDF originals.",
+      "repository_disposition": "Keep original outside Git/public output pending content/rights review; public source links and neutral metadata can be reviewed separately."
+    },
+    {
+      "id": "reference-document-03",
+      "kind": "reference_pdf",
+      "record_ids": [
+        "historical-ynet-2007"
+      ],
+      "availability": "not_supplied",
+      "historically_reported_sha256": null,
+      "current_file_verification": "not_possible_without_file",
+      "evidence_source": "Historical source manifest names a PDF; this uploaded ZIP contains no PDF originals.",
+      "repository_disposition": "Keep original outside Git/public output pending content/rights review; public source links and neutral metadata can be reviewed separately."
+    }
+  ],
+  "historical_leads": [
+    {
+      "id": "historical-ynet-2007",
+      "kind": "press_lead",
+      "outlet": "Ynet",
+      "reported_date": "2007-07-04",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-3421276,00.html",
+      "status": "historical metadata only; not fetched or reviewed in this import"
+    },
+    {
+      "id": "historical-jerusalem-post-2021",
+      "kind": "press_lead",
+      "outlet": "Jerusalem Post",
+      "reported_date": "2021-07-22",
+      "url": null,
+      "status": "historical NSO/surveillance lead; exact source and content unresolved"
+    },
+    {
+      "id": "i24-english-unresolved",
+      "kind": "unresolved_recording_lead",
+      "outlet": "i24 English",
+      "reported_date": null,
+      "url": null,
+      "status": "Source missing; distinct from supplied Hebrew 2024 i24 panel; not counted as an appearance"
+    }
+  ],
+  "open_issues": [
+    {
+      "id": "SRC-01",
+      "record_ids": [],
+      "issue": "Local task reports 20 TV-grab files imported by hash; coverage of the broader site-source parent and delivery of expanded registers to this checkout remain unverified.",
+      "resolution": "Transfer the latest local review package and audit broader-parent coverage against its manifests. Do not repeat completed TV-grab hashing without a specific reason."
+    },
+    {
+      "id": "SRC-02",
+      "record_ids": [],
+      "issue": "Local task reports 73 files in the press subfolder imported by hash; coverage of the broader PR parent and expanded-register transfer remain unverified.",
+      "resolution": "Transfer the latest local review package and compare its precise scope with the broader parent requested here. Keep raw originals local."
+    },
+    {
+      "id": "DATE-01",
+      "record_ids": [
+        "gcMpVGqQV-w"
+      ],
+      "issue": "Description states 13/07/2024 and Operation Protective Edge, day six. Event date remains unresolved.",
+      "resolution": "Check footage/source documents; preserve conflicting evidence rather than silently changing the year."
+    },
+    {
+      "id": "DATE-02",
+      "record_ids": [
+        "9SKfqDEu9mE"
+      ],
+      "issue": "Title says July 7, 2014; description says 20140714.",
+      "resolution": "Verify event date from recording/source evidence."
+    },
+    {
+      "id": "DUP-01",
+      "record_ids": [
+        "9SKfqDEu9mE",
+        "ZP-okj5sxQ0"
+      ],
+      "issue": "52:56 and 14:13 Channel 9 uploads may overlap. They remain separate upload records, not two established appearances.",
+      "resolution": "Compare actual footage and any folder masters before appearance counting."
+    },
+    {
+      "id": "LANG-01",
+      "record_ids": [
+        "ZP-okj5sxQ0",
+        "bPga8vpseM8",
+        "7ONQeAXc8bg"
+      ],
+      "issue": "ASR labels may be wrong; neither Bulgarian/Ukrainian labels nor the English ASR track establish spoken language.",
+      "resolution": "Confirm by listening; keep broadcaster country, subject geography, venue, and language separate."
+    },
+    {
+      "id": "TOPIC-01",
+      "record_ids": [
+        "ia8hKfw6e9Q",
+        "ZkLBiAhkiPo"
+      ],
+      "issue": "Available metadata lacks a useful topic.",
+      "resolution": "Review actual broadcasts before topic classification or excerpt proposals."
+    },
+    {
+      "id": "ASSET-01",
+      "record_ids": [
+        "EyymYGiIbxg"
+      ],
+      "issue": "The cloud record is about ten seconds. The local task reports a Channel 10 family with 50 numbered files and 47 distinct payloads, including a historical hash match; complete programme continuity is not established.",
+      "resolution": "Use the local asset register to resolve order, exact duplicates, overlaps, and owner-speaking windows before calling the family a complete interview."
+    },
+    {
+      "id": "SOURCE-01",
+      "record_ids": [
+        "rai-codice-2020"
+      ],
+      "issue": "Fresh metadata fetch failed in the handoff session; official full episode/source verification is still unresolved.",
+      "resolution": "Retain labelled historical/current-site source evidence; verify once actual sources are accessible."
+    },
+    {
+      "id": "SOURCE-02",
+      "record_ids": [
+        "rai-codice-2017"
+      ],
+      "issue": "Historical RAI 2017 source is reopened as a candidate, not a selection. Source has not been freshly checked.",
+      "resolution": "Verify source and inspect footage before considering placement."
+    },
+    {
+      "id": "SOURCE-03",
+      "record_ids": [
+        "i24-english-unresolved"
+      ],
+      "issue": "The English i24 appearance is still missing; the Hebrew panel does not resolve it.",
+      "resolution": "Look for the English recording in the source folders."
+    },
+    {
+      "id": "REVIEW-01",
+      "record_ids": [
+        "68SBtqPIcGQ",
+        "EyymYGiIbxg",
+        "gcMpVGqQV-w",
+        "CcIEQJTuVBY",
+        "sB4r1v4iVng",
+        "D-zjzQF0UTM",
+        "ia8hKfw6e9Q",
+        "9SKfqDEu9mE",
+        "_4FKfxnDSJU",
+        "6e5bnT04vO8",
+        "Le9BfObjy8Q",
+        "bImQyId6LOo",
+        "bPga8vpseM8",
+        "DKeEJvCr4Og",
+        "ZP-okj5sxQ0",
+        "ASiViHPWJR0",
+        "ZkLBiAhkiPo",
+        "7ONQeAXc8bg",
+        "CEIOqKXH_Rs",
+        "rai-codice-2020",
+        "channel-economy-2026-08",
+        "rainews-russia-2019",
+        "rai-codice-2017"
+      ],
+      "issue": "The cloud recording annotations remain metadata/site based. The local task reports sampled frames/contact-sheet inspection, but no systematic full viewing/listening or excerpt-boundary verification.",
+      "resolution": "Continue footage/document reconciliation locally using the completed inventory; do not treat sampled frames as full review."
+    },
+    {
+      "id": "DATE-03",
+      "record_ids": [
+        "rai-codice-2020"
+      ],
+      "issue": "Local task reports that the familiar short RAI clip appears in a longer local episode whose screenshots are dated 30 June 2023, conflicting with the inherited 10 May 2020 record.",
+      "resolution": "Inspect the expanded local register and episode/source evidence to establish whether this is a rebroadcast relationship or an inherited date error; retain both trails until resolved."
+    }
+  ],
+  "local_task_report": {
+    "title": "Continue from LTPR handoff",
+    "evidence": "Referenced local thread read successfully; successful local import verification output and handoff creation observed. Windows registers and source files have not been directly opened in this cloud session.",
+    "reported_source_imports": [
+      {
+        "scope": "press subfolder",
+        "files": 73,
+        "bytes": 356913455,
+        "sha256_matches": 73
+      },
+      {
+        "scope": "TV grab subfolder",
+        "files": 20,
+        "bytes": 23551808,
+        "sha256_matches": 20
+      }
+    ],
+    "reported_initial_index": {
+      "indexed_entries_including_archive_containers_and_members": 239,
+      "distinct_payloads_including_zip_containers": 160,
+      "distinct_mp4_payloads": 56,
+      "distinct_document_payloads": 48,
+      "working_appearance_talk_lead_rows": 28
+    },
+    "registers_transferred_to_this_checkout": false,
+    "broader_parent_folder_coverage": "not established by the visible subfolder import report; inspect expanded manifests",
+    "local_git_destination": "Separate initialized folder; no commits, remote, or application source reported",
+    "next_transfer": "docs/media-inventory/2026-10-24/ltpr-inventory-review-pack.zip from the referenced local task; latest handoff reports 13 package files"
+  }
+}

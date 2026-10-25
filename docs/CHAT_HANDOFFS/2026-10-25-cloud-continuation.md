@@ -1,5 +1,7 @@
 # Cloud continuation handoff
 
+> Historical handoff/audit snapshot. Read [CURRENT_STATE.md](../CURRENT_STATE.md) for completed setup, durable pack recovery and remaining work. Pending-work statements here are not the current task list.
+
 Continue "Set up LTPR"; preserve all uncommitted work at /workspace/LTPR.
 
 1. Inspect status/remotes/branch and applicable instructions. Save untracked discovery and inventory work before bringing in the setup branch.

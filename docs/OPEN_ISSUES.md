@@ -1,19 +1,16 @@
 # Open issues
 
-Updated 25 October 2026.
+Reconciled 25 October 2026. See CURRENT_STATE.md for the operational baseline.
 
-| Priority | Issue                                                         | Evidence / next step                                                                                                                                                      | State                                         |
-| -------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| High     | Cloud checkout contains uncommitted work absent from GitHub   | All 20 untracked files were preserved in place and in a SHA-256-verified archive at `/workspace/ltpr-preservation-2026-10-25/`. They still need a separate reviewed GitHub sync or durable backup. | Preserved locally; remote sync pending |
-| High     | Latest decision files and A/B preview bundle missing in cloud | See CHAT_HANDOFFS source register. No matching CURRENT-DECISIONS.md or MEDIA-PAGE-OPTIONS.md recovered in the targeted local folders inspected during this audit.         | Pending recovery/transfer                     |
-| High     | Hosted preview policy/settings                                | Cloudflare's check for `ad7394e` passed and gave a non-production preview URL. Source task reported browser inspection. This cloud task's preview request gets proxy CONNECT 403; Cloudflare dashboard production-branch policy remains uninspected. | Preview exists; dashboard policy and cloud egress pending |
-| High     | Dependency advisories                                         | npm ci on the unchanged lockfile reports 14 vulnerabilities: 1 moderate, 12 high, 1 critical. Existing Dependabot PR #34 is open. Do not apply an uncontrolled audit fix. | Separate dependency review                    |
-| Medium   | ChatGPT consolidation                                         | Existing project "LT PR" found. No available project-create/rename API; browser settings reached login. Requested name/migration not completed.                           | Pending supported management access           |
-| Medium   | Media A/B and RAI 2017 placement                              | Handoff says neither layout selected; frame approval does not select layout.                                                                                              | Owner decision after concrete previews        |
-| Medium   | Redesign references                                           | URLs absent from inspected handoff.                                                                                                                                       | Await references when design track needs them |
-| Medium   | Broader historical chat coverage                              | Read cloud setup and known local inventory/workspace chats; complete project history has not been enumerated.                                                             | Partial consolidation                         |
-| Medium   | Browser IDE runtime                                           | Dev Container supplied; no Codespace provisioned or Dev Container runtime tested.                                                                                         | Configuration only                            |
+| Issue | Verified scope and remaining action |
+| --- | --- |
+| Missing media decisions/private previews | The five media-selection documents, approved RAI 2017 frame and private A/B board remain absent. Reconcile existing local records when accessible; do not reselect frames or request all originals again. |
+| Expanded source register | Local reports cover 73 press and 20 TV-grab files. Expanded registers and full parent-folder coverage remain unverified in cloud. |
+| Media composition | A/B and the role of the reported RAI 2017 frame remain unselected. Review actual previews/reference before choosing. |
+| Reference assessment | Aspen Search URL supplied and reachable. Visual analysis pending; the old “await owner URLs” blocker is superseded. |
+| Hosting policy visibility | Actual Cloudflare branch previews exist. Proxy access is now working. Dashboard production-branch controls remain unverified; this task's GitHub integration cannot reread branch protection (403). Earlier authorized audit reported main protection. |
+| Dependency advisories | Earlier local npm report: 14 advisories; GitHub default-branch alert total differs. Dependabot PR #34 is separate. No dependency upgrades in this work. |
+| ChatGPT consolidation | Existing “LT PR” project found earlier. Rename/migration and complete chat-history enumeration remain unfinished; no project-management tool is available here. |
+| Dev Container | Configuration supplied, runtime untested. |
 
-Completed checks: main protection includes admins, strict required Astro production build, force-push/deletion disabled. Existing main Astro and Cloudflare checks successful. Local unchanged baseline passes npm run check and npm run build (12 routes). These do not establish remote environment readiness.
-
-Cloud continuation on 25 October 2026: the published environment includes `api.github.com` and the GitHub API read works. Node 24.19.0 install/check/build and local dev/preview HTTP checks passed. The current task's integration could not reread branch-protection settings (HTTP 403). See REMOTE_ENVIRONMENT.md for command and preview evidence.
+Resolved: cloud executor access; GitHub API access; preview/reference HTTP egress; portable content extraction; preservation and Git-backed recovery of discovery/inventory and comparison-pack material. The pack excludes private originals. Its exact counts and recovery command are in template-comparison/README.md.

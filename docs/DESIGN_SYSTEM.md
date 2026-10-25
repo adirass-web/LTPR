@@ -15,7 +15,7 @@ References: 2026-10-12-current-site-handoff.md and 2026-10-13-forest-static-rele
 
 ## Next redesign: unresolved
 
-The later supplied handoff says a full colors/grid/layout redesign is intended after the owner provides reference URLs. Those URLs were not supplied in the inspected handoff. Forest is the existing production baseline, not approval of the next design.
+The later supplied handoff says a full colors/grid/layout redesign is intended after the owner provides reference URLs. The owner subsequently supplied https://www.edoardolunardi.dev/works/aspen-search#f156c3d66c45 in the cloud chat. It is a reference to assess, not a selected design. Forest is the existing production baseline, not approval of the next design.
 
 Media A and B remain proposals. The reported RAI 2017 frame approval is separate from card count, placement and motion. Do not promote either composition or any moving excerpt without the owner's actual selection.
 

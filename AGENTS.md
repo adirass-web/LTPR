@@ -1,6 +1,6 @@
 # LTPR working instructions
 
-Read docs/PROJECT_BRIEF.md, docs/DECISION_LOG.md and docs/OPEN_ISSUES.md first.
+Read docs/CURRENT_STATE.md, docs/PROJECT_BRIEF.md, docs/DECISION_LOG.md and docs/OPEN_ISSUES.md first.
 Use docs/REMOTE_ENVIRONMENT.md for commands and environment status.
 
 - GitHub holds durable technical specifications and decisions. Keep full conversation exports outside this public repository.

@@ -16,3 +16,9 @@ Updated 25 October 2026. Approval applies only to the stated scope.
 | D10 | 25 Oct 2026    | Reuse existing cloud task and reconcile missing materials                                | Current audit recommendation                                              | Implementation recommendation                                                    | Remote readiness still requires verification                      |
 
 For every new decision retain the exact source/turn or repository commit, date if known, approval scope and any superseding instruction. Preserve historical records.
+
+## Subsequent owner instructions, 25 October 2026
+
+- D11 — Owner supplied the Aspen Search URL in this cloud chat as a media-page reference to consider. Reference received; no layout approval. Supersedes D08's “references absent” status and dated planning documents' wait-for-links statements.
+- D12 — Delegated owner request authorized a portable copy/assets pack for comparing templates with facts and content held constant. Extraction completed: 199 copy blocks, 92 link/embed occurrences, 127 inventoried images, 17 packaged public derivatives. This does not approve replacement copy or a design.
+- D13 — Direct owner instruction: “save to durable . study the repo and reconcile state, clean up what's stale.” Authorizes GitHub persistence and documentation reconciliation on the development branch. Frozen historical snapshots retain their original evidence; CURRENT_STATE.md governs current workflow. No production merge/deployment or private-original publication is included.

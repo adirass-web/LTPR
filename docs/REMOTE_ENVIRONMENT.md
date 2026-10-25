@@ -2,6 +2,11 @@
 
 Audit date: 25 October 2026.
 
+## Latest reconciliation
+
+After environment publication/resume, authenticated GitHub access works and HTTPS requests to the immutable preview at `https://f98c3cf5.cyberdrtabansky.pages.dev/en/` and the supplied Aspen Search reference both returned HTTP 200. The earlier proxy denial below is historical and resolved. Runtime metadata still reports phase `starting` and policy state `unknown` despite a functioning command executor; do not substitute that label for direct operational checks. Cloudflare dashboard production-branch controls remain unverified here. The current state and portable-pack recovery procedure are in CURRENT_STATE.md.
+
+
 ## Cloud execution on 25 October 2026
 
 The existing `/workspace/LTPR` checkout was moved to the pushed setup branch

@@ -1,5 +1,7 @@
 # Historical handoff source register
 
+> Historical handoff/audit snapshot. Read [CURRENT_STATE.md](../CURRENT_STATE.md) for completed setup, durable pack recovery and remaining work. Pending-work statements here are not the current task list.
+
 Compiled 25 October 2026. This is a decision index, not a full chat-history import.
 
 | Source                          | Identifier                                                    | Read in this audit                                        | Coverage / authority                                                                                          |
