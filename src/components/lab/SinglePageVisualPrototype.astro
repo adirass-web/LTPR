@@ -1,0 +1,69 @@
+---
+import Foundation from '~/layouts/Foundation.astro';
+import Portrait from '~/components/Portrait.astro';
+import BookCover from '~/components/BookCover.astro';
+import ResponsiveMediaImage from '~/components/media/ResponsiveMediaImage.astro';
+import { homeV3 } from '~/content/en-v3';
+import { lead, press, videos } from '~/data/mediaPrestige';
+import { internationalForums } from '~/data/internationalForums';
+
+interface Props { variant: 'a2' | 'b2'; }
+const { variant } = Astro.props;
+const visualPress = press.filter((item) => item.image).slice(0, 4);
+const visualVideo = videos.filter((item) => item.image).slice(0, 2);
+const forums = internationalForums.slice(0, 6);
+---
+
+<Foundation lang="en" dir="ltr" title={`Single-page prototype ${variant.toUpperCase()} · Dr. Lior Tabansky`} description="Noindex image-led structural prototype." canonicalPath={`/lab/single/${variant}/`} noindex>
+  <header class="sv-header"><a href="#top">Dr. Lior Tabansky</a><nav><a href="#work">Work</a><a href="#record">Record</a><a href="#contact">Contact</a></nav></header>
+  <main id="top" class:list={['sv', `sv-${variant}`]}>
+    <section class="sv-hero">
+      <div><p class="sv-kicker">{homeV3.hero.category}</p><h1>{homeV3.hero.title}</h1><p class="sv-standfirst">{homeV3.hero.standfirst}</p><a class="sv-role" href={homeV3.hero.role.url} target="_blank" rel="noopener noreferrer">{homeV3.hero.role.title} · {homeV3.hero.role.institution} ↗</a></div>
+      <Portrait variant="2x3" alt="Dr. Lior Tabansky" priority />
+    </section>
+
+    {variant === 'a2' ? (
+      <>
+        <section id="work" class="sv-section sv-work">
+          <header><span>01</span><h2>{homeV3.publicWork.title}</h2></header>
+          <div class="sv-proof-grid">{homeV3.publicWork.items.map((item) => <article><p class="sv-kicker">{item.label}</p><h3>{item.title}</h3><p>{item.description}</p><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceLabel} ↗</a></article>)}</div>
+        </section>
+
+        <section class="sv-image-band sv-image-band--broadcast" aria-label="Selected broadcast appearances">
+          <a href={lead.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={lead.image} sizes="55vw" /><span><b>{lead.outlet}</b>{lead.date}</span></a>
+          {visualVideo.map((item) => item.image && <a href={item.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={item.image} sizes="24vw" /><span><b>{item.outlet}</b>{item.date}</span></a>)}
+        </section>
+
+        <section class="sv-section sv-israel">
+          <header><span>02</span><h2>{homeV3.israelExperience.title}</h2></header>
+          <div class="sv-book"><a href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a><div>{homeV3.israelExperience.paragraphs.map((p) => <p>{p}</p>)}</div></div>
+        </section>
+
+        <section id="record" class="sv-section sv-record">
+          <header><span>03</span><h2>Selected public record</h2></header>
+          <div class="sv-press-mosaic">{visualPress.map((item, index) => item.image && <a class:list={[`sv-press-${index + 1}`]} href={item.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={item.image} sizes={index === 0 ? '45vw' : '28vw'} /><div><p class="sv-kicker">{item.outlet}</p><h3>{item.title}</h3><p>{item.date}</p></div></a>)}</div>
+        </section>
+
+        <section class="sv-section sv-practice"><header><span>04</span><h2>{homeV3.work.title}</h2></header><div class="sv-area-grid">{homeV3.work.areas.map((area) => <article><h3>{area.title}</h3><p>{area.description}</p></article>)}</div><blockquote>{homeV3.method.paragraphs[1]}</blockquote></section>
+        <section class="sv-section sv-forums"><header><span>05</span><h2>Selected international forums</h2></header><div>{forums.map((forum) => <a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><small>{forum.detail}</small></a>)}</div></section>
+      </>
+    ) : (
+      <>
+        <section id="work" class="sv-chapter"><p class="sv-number">01 / Public work</p><h2>{homeV3.publicWork.title}</h2><div class="sv-proof-grid">{homeV3.publicWork.items.map((item) => <article><p class="sv-kicker">{item.label}</p><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
+        <figure class="sv-full-image"><a href={lead.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={lead.image} sizes="72vw" /></a><figcaption>{lead.outlet} · {lead.date}</figcaption></figure>
+        <section class="sv-chapter sv-chapter-book"><p class="sv-number">02 / The Israeli experience</p><h2>{homeV3.israelExperience.title}</h2><div><a href={homeV3.israelExperience.book.url} target="_blank" rel="noopener noreferrer"><BookCover alt={homeV3.israelExperience.book.alt} /></a><div>{homeV3.israelExperience.paragraphs.map((p) => <p>{p}</p>)}</div></div></section>
+        <div class="sv-spread">{visualPress.slice(0, 2).map((item) => item.image && <a href={item.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={item.image} sizes="42vw" /><span><b>{item.outlet}</b>{item.title}</span></a>)}</div>
+        <section class="sv-chapter"><p class="sv-number">03 / Practice</p><h2>{homeV3.work.title}</h2><div class="sv-area-list">{homeV3.work.areas.map((area) => <article><h3>{area.title}</h3><p>{area.description}</p></article>)}</div><blockquote>{homeV3.method.paragraphs[1]}</blockquote></section>
+        <div class="sv-spread sv-spread--three">{visualVideo.map((item) => item.image && <a href={item.url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={item.image} sizes="30vw" /><span><b>{item.outlet}</b>{item.title}</span></a>)}{visualPress[2]?.image && <a href={visualPress[2].url} target="_blank" rel="noopener noreferrer"><ResponsiveMediaImage image={visualPress[2].image} sizes="30vw" /><span><b>{visualPress[2].outlet}</b>{visualPress[2].title}</span></a>}</div>
+        <section id="record" class="sv-chapter"><p class="sv-number">04 / Public record</p><h2>Selected public record</h2><div class="sv-record-lines">{visualPress.map((item) => <a href={item.url} target="_blank" rel="noopener noreferrer"><strong>{item.outlet}</strong><span>{item.title}</span></a>)}</div><div class="sv-record-lines sv-record-lines--forums">{forums.map((forum) => <a href={forum.url} target="_blank" rel="noopener noreferrer"><strong>{forum.institution}</strong><span>{forum.detail}</span></a>)}</div></section>
+      </>
+    )}
+  </main>
+  <footer id="contact" class="sv-footer"><span>Dr. Lior Tabansky</span><a href="mailto:liortabansky@gmail.com">liortabansky@gmail.com</a></footer>
+</Foundation>
+
+<style is:global>
+.sv-header,.sv-footer,.sv{inline-size:min(calc(100% - 2*var(--gutter)),var(--page-max));margin-inline:auto}.sv-header{position:sticky;z-index:20;top:0;display:flex;justify-content:space-between;align-items:center;min-height:4rem;background:color-mix(in srgb,var(--canvas) 96%,transparent);backdrop-filter:blur(10px);font-size:.78rem}.sv-header nav{display:flex;gap:1.25rem}.sv-header a,.sv-footer a,.sv a{color:inherit;text-decoration:none}.sv p{margin:0;color:var(--ink-soft)}.sv h1,.sv h2,.sv h3{margin:0;font-weight:500}.sv-kicker,.sv-number{color:var(--forest)!important;font-size:.72rem;letter-spacing:.025em}.sv-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(13rem,.42fr);gap:clamp(3rem,7vw,8rem);padding-block:4rem 4.5rem}.sv-hero h1{max-width:12ch;margin-top:1rem;font-size:clamp(3.4rem,6vw,6.5rem);line-height:.96;letter-spacing:-.035em}.sv-standfirst{max-width:38rem;margin-top:1.35rem!important;font-size:1.12rem;line-height:1.55}.sv-role{display:inline-block;margin-top:1.25rem;font-size:.78rem}.sv-hero .color-portrait{inline-size:min(100%,18rem);justify-self:end}.sv-section,.sv-chapter{padding-block:4rem;border-top:1px solid var(--line)}.sv-section>header{display:grid;grid-template-columns:3rem 1fr;gap:1rem;margin-bottom:2rem}.sv-section h2,.sv-chapter h2{font-size:clamp(2rem,3.2vw,3.4rem);line-height:1}.sv-proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4rem;max-width:65rem}.sv-proof-grid h3{margin-top:.55rem;font-size:clamp(1.5rem,2.2vw,2.3rem);line-height:1.08}.sv-proof-grid article>p:not(.sv-kicker){margin-top:.8rem;line-height:1.55}.sv-proof-grid article>a{display:inline-block;margin-top:.8rem;font-size:.76rem}.sv-image-band{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;padding-block:1.5rem 4rem}.sv-image-band a,.sv-spread a{display:block}.sv-image-band img,.sv-spread img,.sv-full-image img,.sv-press-mosaic img{width:100%;height:100%;object-fit:cover}.sv-image-band a{display:grid;grid-template-rows:auto auto}.sv-image-band picture{display:block;aspect-ratio:16/9;overflow:hidden}.sv-image-band span,.sv-spread span{display:grid;gap:.2rem;padding-top:.55rem;color:var(--ink-soft);font-size:.72rem}.sv-image-band b,.sv-spread b{color:var(--ink);font-weight:500}.sv-book{display:grid;grid-template-columns:14rem minmax(0,38rem);gap:5rem;align-items:center;margin-left:4rem}.sv-book p:first-child{color:var(--ink);font-size:1.7rem;line-height:1.2}.sv-book p+p{margin-top:1rem}.sv-press-mosaic{display:grid;grid-template-columns:1.25fr .75fr;gap:1rem 3rem;margin-left:4rem}.sv-press-mosaic>a{display:grid;grid-template-columns:minmax(0,1fr) minmax(13rem,.7fr);gap:2rem;align-items:start;padding-bottom:2rem}.sv-press-mosaic picture{aspect-ratio:8/5;overflow:hidden}.sv-press-mosaic h3{margin-top:.4rem;font-size:1.25rem;line-height:1.15}.sv-press-mosaic div>p:last-child{margin-top:.5rem;font-size:.72rem}.sv-press-1{grid-column:1/-1;grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr)!important}.sv-area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-left:4rem}.sv-area-grid h3{color:var(--forest);font-size:1.25rem}.sv-area-grid p{margin-top:.7rem;line-height:1.5}.sv-practice blockquote,.sv-chapter blockquote{max-width:46rem;margin:2.5rem 0 0 4rem;font-size:1.8rem;line-height:1.18}.sv-forums>div{display:grid;grid-template-columns:repeat(3,1fr);gap:0 2rem;margin-left:4rem}.sv-forums a,.sv-record-lines a{display:grid;gap:.3rem;padding-block:1rem;border-top:1px solid var(--line)}.sv-forums small{color:var(--ink-soft)}.sv-footer{display:flex;justify-content:space-between;padding-block:2rem;border-top:1px solid var(--line);font-size:.76rem}
+.sv-b2{max-width:80rem}.sv-b2 .sv-hero{border-bottom:1px solid var(--line)}.sv-chapter{max-width:52rem;margin-inline:auto}.sv-chapter>h2{margin:.5rem 0 2rem}.sv-full-image{max-width:70rem;margin:0 auto;padding-block:1rem 5rem}.sv-full-image picture{display:block;aspect-ratio:16/9;overflow:hidden}.sv-full-image figcaption{margin-top:.5rem;color:var(--ink-soft);font-size:.72rem}.sv-chapter-book>div{display:grid;grid-template-columns:11rem 1fr;gap:3rem;align-items:start}.sv-chapter-book>div>div p:first-child{color:var(--ink);font-size:1.45rem;line-height:1.25}.sv-chapter-book>div>div p+p{margin-top:1rem}.sv-spread{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:72rem;margin:0 auto;padding-block:1rem 5rem}.sv-spread picture{display:block;aspect-ratio:8/5;overflow:hidden}.sv-spread--three{grid-template-columns:repeat(3,1fr)}.sv-spread--three picture{aspect-ratio:16/9}.sv-area-list article{display:grid;grid-template-columns:14rem 1fr;gap:2rem;padding-block:1rem;border-top:1px solid var(--line)}.sv-area-list h3{font-size:1.15rem}.sv-area-list p{line-height:1.5}.sv-chapter blockquote{margin-left:0}.sv-record-lines{margin-top:2rem}.sv-record-lines a{grid-template-columns:10rem 1fr;gap:1rem}.sv-record-lines strong{font-weight:500}.sv-record-lines span{color:var(--ink-soft)}.sv-record-lines--forums{margin-top:3rem}
+@media(max-width:52.49rem){.sv-header{min-height:3.6rem}.sv-header nav a:first-child{display:none}.sv{--gutter:1.15rem}.sv-hero{grid-template-columns:1fr 6.5rem;gap:1.25rem;padding-block:2.5rem 3rem}.sv-hero h1{font-size:2.2rem;line-height:1.02}.sv-standfirst{font-size:1rem;line-height:1.42}.sv-hero .color-portrait{inline-size:6.5rem}.sv-section,.sv-chapter{padding-block:2.75rem}.sv-section>header{grid-template-columns:2rem 1fr;margin-bottom:1.5rem}.sv-section h2,.sv-chapter h2{font-size:1.7rem}.sv-proof-grid{grid-template-columns:1fr;gap:2rem}.sv-proof-grid h3{font-size:1.4rem}.sv-image-band{grid-template-columns:1.4fr 1fr;gap:.75rem;padding-bottom:2.75rem}.sv-image-band>a:nth-child(3){display:none}.sv-book,.sv-press-mosaic,.sv-area-grid,.sv-forums>div{margin-left:0}.sv-book{grid-template-columns:7.5rem 1fr;gap:1.25rem}.sv-book p:first-child{font-size:1.15rem}.sv-press-mosaic{grid-template-columns:1fr;gap:1.5rem}.sv-press-mosaic>a,.sv-press-1{grid-column:auto;grid-template-columns:1fr!important;gap:.75rem}.sv-press-mosaic picture{aspect-ratio:16/10}.sv-area-grid,.sv-forums>div{grid-template-columns:1fr}.sv-practice blockquote{margin:2rem 0 0;font-size:1.35rem}.sv-chapter{max-width:none}.sv-full-image,.sv-spread{padding-block:0 2.75rem}.sv-chapter-book>div{grid-template-columns:7rem 1fr;gap:1.25rem}.sv-spread,.sv-spread--three{grid-template-columns:1fr 1fr;gap:.75rem}.sv-spread>a:nth-child(n+3){display:none}.sv-area-list article{grid-template-columns:1fr;gap:.45rem}.sv-record-lines a{grid-template-columns:6.5rem 1fr;gap:.75rem}.sv-footer{flex-direction:column;gap:.4rem}}
+</style>
