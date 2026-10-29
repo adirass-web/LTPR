@@ -1,6 +1,6 @@
 # LTPR current state
 
-Reconciled 25 October 2026 in the existing cloud task. This is the operational entry point; dated handoffs and frozen pack snapshots preserve history.
+Reconciled 29 October 2026 in the existing cloud task. This is the operational entry point; dated handoffs and frozen pack snapshots preserve history.
 
 ## Durable content and recovery
 
@@ -8,6 +8,7 @@ The development branch is `codex/editorial-cloud-workspace`, reviewed through dr
 
 - [Portable pack and recovery command](template-comparison/README.md): 199 English copy blocks, 92 link/embed occurrences, 127 public-image manifest entries and 17 reusable public derivatives. Exact source snapshots and approval qualifications accompany normalized text.
 - [Current media metadata inventory](media-inventory/README.md): 23 original recording rows, 27 current-site semantic records, 8 historically declared missing source assets. These are different units, not additive appearance counts.
+- [Editorial source-media recovery and provenance register](media-inventory/source-recovery-register-2026-10-29.md): cross-reference of the private W3LTPR archive, LTPR inventories, comparison manifest, decision log, missing-source register and checked Git history. The RAI 2017 recording is preserved; the reported 04:45.000 frame approval remains unsupported by its original files.
 - [Approval ledger](DECISION_LOG.md) and [approved copy register](APPROVED_COPY.md) distinguish production approval, reported later decisions and proposals.
 - The two 24 October discovery documents are retained as historical planning snapshots. Project-local skills retain their upstream attribution and licenses.
 
@@ -19,7 +20,9 @@ The owner wants striking, purposeful design that conveys discovery of a hidden g
 
 Owner-supplied reference: https://www.edoardolunardi.dev/works/aspen-search#f156c3d66c45 . Its HTML is reachable (HTTP 200); no visual assessment or selection has been completed. Earlier statements that no reference was supplied are superseded. Do not independently research additional design references unless requested.
 
-Media A/B remain unselected. RAI 2017 04:45.000 approval is reported by a handoff, with original decision/frame files still absent. Frame approval does not approve placement, card count, motion or publication. Private A/B previews and original masters were not recovered by the portable-pack extraction. Reported local imports cover 73 press and 20 TV-grab files; expanded manifests and broader-parent coverage still need reconciliation. Do not repeat source collection or claim those originals were imported into this cloud task.
+Media A/B remain unselected. LTPR's 25 October handoff reports RAI 2017 A0198 at 04:45.000 approved as an image only; the original frame and approval decision file remain unrecovered. The private W3LTPR archive does preserve a hash-catalogued RAI 2017 recording and reports clean-clone restoration, but that does not authenticate the missing frame or approval. Frame approval does not authorize composition, placement, crop, card count, motion, video edit or publication. See the [recovery and provenance register](media-inventory/source-recovery-register-2026-10-29.md) for the exact archive object, absent paths, bounded search scope and next recovery actions. No approval status or composition choice was changed by this record. W3LTPR PR #1 records selection of the AstroWind starter only; it does not implement or publish the redesign. W3LTPR PR #1/#2 and LTPR PR #35 were open and unmerged at the 29 October check.
+
+The comparison manifest and archive report identify the supplied roots that were checked. They do not establish a search of all earlier local workspaces or backups. The earlier local inventory task and its updated package remain a possible recovery location; see the [local-task synchronization record](media-inventory/local-task-sync.md). Do not repeat source collection or hashing without a specific uncovered scope or integrity reason.
 
 ## Environment and next work
 
