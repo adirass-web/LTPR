@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cyberdrtabansky.com/sitemap-index.xml
