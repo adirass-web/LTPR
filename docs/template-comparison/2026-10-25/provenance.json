@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-25",
+  "head": "24ec46633387aceed6b53b324c4b1ba5cfd2feb8",
+  "baseline": "ef5e01f487dc92bc2a3ccdcf6a451d6cbe195939",
+  "source_diff_from_baseline": [],
+  "pages": [
+    {
+      "route": "/en/",
+      "component": "src/components/ForestProfile.astro",
+      "blocks": 38
+    },
+    {
+      "route": "/en/media/",
+      "component": "src/components/ForestMedia.astro",
+      "blocks": 161
+    }
+  ],
+  "copy_blocks": 199,
+  "links_and_embeds": 92,
+  "inventoried_images": 127,
+  "packaged_images": 17,
+  "unresolved_referenced_images": [],
+  "extraction": "Displayed wording retained; whitespace normalized in block text. Exact source files and rendered HTML retained. Metadata and unselected data records remain in source snapshots; not automatically approved for display."
+}

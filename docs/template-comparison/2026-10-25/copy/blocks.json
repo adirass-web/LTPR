@@ -1,0 +1,1793 @@
+[
+  {
+    "id": "profile-001",
+    "tag": "a",
+    "text": "Skip to content",
+    "section_anchor": null,
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-002",
+    "tag": "a",
+    "text": "Dr. Lior Tabansky",
+    "section_anchor": null,
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-003",
+    "tag": "p",
+    "text": "Strategic technology adviser",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-004",
+    "tag": "h1",
+    "text": "I solve problems in cybersecurity, AI and critical infrastructure with and within enterprises and public institutions.",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-005",
+    "tag": "p",
+    "text": "My work spans advanced and emerging economies, including assignments undertaken with the World Bank.",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-006",
+    "tag": "a",
+    "text": "Publications, media and international forums ↗",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-007",
+    "tag": "h2",
+    "text": "Singapore",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-008",
+    "tag": "a",
+    "text": "National cybersecurity strategy ↗",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-009",
+    "tag": "h2",
+    "text": "World Bank",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-010",
+    "tag": "a",
+    "text": "Four sectors across 11 countries ↗",
+    "section_anchor": "top",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-011",
+    "tag": "h2",
+    "text": "Selected public work",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-012",
+    "tag": "p",
+    "text": "National cybersecurity strategy",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-013",
+    "tag": "h3",
+    "text": "Singapore",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-014",
+    "tag": "p",
+    "text": "I helped a new national cybersecurity agency define its vision and strategic choices—including what not to do—so cybersecurity would advance digital transformation and wider national priorities.",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-015",
+    "tag": "a",
+    "text": "Singapore’s Cybersecurity Strategy 2016 · CSA ↗",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-016",
+    "tag": "p",
+    "text": "World Bank / PROGRESS",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-017",
+    "tag": "h3",
+    "text": "Four sectors across 11 countries",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-018",
+    "tag": "p",
+    "text": "With colleagues, I developed PROGRESS to build cyber resilience across whole sectors. We applied and refined it alongside local teams; the resulting recommendations are being implemented.",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-019",
+    "tag": "a",
+    "text": "Read the paper and field record →",
+    "section_anchor": "work",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-020",
+    "tag": "p",
+    "text": "Much of my work is private. These accounts and my public record offer a window onto it.",
+    "section_anchor": "profile",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-021",
+    "tag": "li",
+    "text": "World Bank · Cyber-resilience research ↗",
+    "section_anchor": "profile",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-022",
+    "tag": "li",
+    "text": "Danish Parliament · Expert hearing ↗",
+    "section_anchor": "profile",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-023",
+    "tag": "li",
+    "text": "Associated Press · International reporting ↗",
+    "section_anchor": "profile",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-024",
+    "tag": "a",
+    "text": "Publications, media and international forums →",
+    "section_anchor": "profile",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-025",
+    "tag": "p",
+    "text": "Applied work",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-026",
+    "tag": "h2",
+    "text": "Keeping power engineers in charge",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-027",
+    "tag": "p",
+    "text": "Power engineers were responsible for keeping electricity flowing. A proposed cyber unit, staffed by outsiders, would change their operations while leaving them accountable. They resisted.",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-028",
+    "tag": "p",
+    "text": "A new national cyber agency brought me in as a foreign expert. After studying local arrangements and interviewing sector professionals, I recommended keeping the engineers in charge, with cyber specialists alongside them.",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-029",
+    "tag": "p",
+    "text": "Within weeks, the sector accepted my recommendations. Engineers helped design and review the changes, removing opposition and avoiding the cost of establishing and staffing a separate unit and duplicating systems.",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-030",
+    "tag": "p",
+    "text": "New tools gave cyber specialists visibility across industrial control systems and IT: data they could correlate, use to establish normal behaviour, and monitor for anomalies—a foundation for measuring performance and deciding what to improve.",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-031",
+    "tag": "a",
+    "text": "Related work on critical-infrastructure resilience →",
+    "section_anchor": "applied",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-032",
+    "tag": "p",
+    "text": "Research and perspective",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-033",
+    "tag": "h2",
+    "text": "Innovation,defenseand warfare",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-034",
+    "tag": "a",
+    "text": "Cybersecurity in IsraelSpringer, with Isaac Ben-Israel →",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-035",
+    "tag": "p",
+    "text": "Alongside advisory work, I research innovation, defense and warfare.",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-036",
+    "tag": "p",
+    "text": "My defense research examines why states with advanced technology and well-funded armed forces still leave civilian infrastructure exposed to destructive cyberattacks. I argue that AI, robotics and geopolitical disorder make institutional change more urgent: who is responsible, how money is spent and how people work.",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-037",
+    "tag": "a",
+    "text": "Head, Cyber Resilience LaboratoryTel Aviv University ↗",
+    "section_anchor": "research",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "profile-038",
+    "tag": "a",
+    "text": "liortabansky@gmail.com ↗",
+    "section_anchor": "contact",
+    "source_component": "src/components/ForestProfile.astro",
+    "rendered_source": "rendered/en/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-001",
+    "tag": "a",
+    "text": "Skip to content",
+    "section_anchor": null,
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-002",
+    "tag": "a",
+    "text": "Dr. Lior Tabansky",
+    "section_anchor": null,
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-003",
+    "tag": "h1",
+    "text": "Research &public record",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-004",
+    "tag": "p",
+    "text": "Selected publications on innovation, cybersecurity and warfare, followed by broadcast commentary, international press coverage and invited forums.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-005",
+    "tag": "a",
+    "text": "← Profile",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-006",
+    "tag": "p",
+    "text": "RAI 1 ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-007",
+    "tag": "p",
+    "text": "Italy",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-008",
+    "tag": "p",
+    "text": "Italy’s public broadcaster · Television channel",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-009",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-010",
+    "tag": "p",
+    "text": "Featured broadcast",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-011",
+    "tag": "h2",
+    "text": "Codice: la vita è digitale ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-012",
+    "tag": "p",
+    "text": "Italian technology programme · owner-archived broadcast",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-013",
+    "tag": "p",
+    "text": "Coauthored book · with Isaac Ben-Israel · Springer, academic publisher · 2015",
+    "section_anchor": "innovation",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-014",
+    "tag": "h3",
+    "text": "Cybersecurity in Israel ↗",
+    "section_anchor": "innovation",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-015",
+    "tag": "p",
+    "text": "Israel's cyber development, innovation ecosystem, strategy and military cyber warfare.",
+    "section_anchor": "innovation",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-016",
+    "tag": "p",
+    "text": "Associated Press ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-017",
+    "tag": "p",
+    "text": "United States · International",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-018",
+    "tag": "p",
+    "text": "International news agency",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-019",
+    "tag": "p",
+    "text": "Le Figaro ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-020",
+    "tag": "p",
+    "text": "France",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-021",
+    "tag": "p",
+    "text": "French national daily newspaper",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-022",
+    "tag": "p",
+    "text": "NRC ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-023",
+    "tag": "p",
+    "text": "Netherlands",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-024",
+    "tag": "p",
+    "text": "Dutch national newspaper",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-025",
+    "tag": "a",
+    "text": "Publications",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-026",
+    "tag": "a",
+    "text": "Broadcast",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-027",
+    "tag": "a",
+    "text": "Press",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-028",
+    "tag": "a",
+    "text": "Forums",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-029",
+    "tag": "a",
+    "text": "Contact",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-030",
+    "tag": "h2",
+    "text": "Selected publications",
+    "section_anchor": "publications",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-031",
+    "tag": "p",
+    "text": "Books and papers, alongside the World Bank record of the research.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-032",
+    "tag": "p",
+    "text": "Authored paper · International Conference on Cyber Conflict (CyCon) · 2016",
+    "section_anchor": "cybered-conflict",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-033",
+    "tag": "h3",
+    "text": "Towards a Theory of Cyber Power: The Israeli Experience with Innovation and Strategy ↗",
+    "section_anchor": "cybered-conflict",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-034",
+    "tag": "p",
+    "text": "A framework connecting strategic objectives, ways and technological means, using Israel to examine innovation and the economic and military dimensions of cyber power.",
+    "section_anchor": "cybered-conflict",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-035",
+    "tag": "p",
+    "text": "Coauthored paper · Journal of Cyber Policy · 2025",
+    "section_anchor": "critical-infrastructure",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-036",
+    "tag": "h3",
+    "text": "Making PROGRESS: a sectoral approach to cyber resilience and its application in sustainable development ↗",
+    "section_anchor": "critical-infrastructure",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-037",
+    "tag": "p",
+    "text": "World Bank work across 11 countries in energy, healthcare, digital infrastructure and financial services. The institutional field record describes tailored recommendations as being implemented.",
+    "section_anchor": "critical-infrastructure",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-038",
+    "tag": "a",
+    "text": "Institutional field record ↗",
+    "section_anchor": "critical-infrastructure",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-039",
+    "tag": "p",
+    "text": "Coauthored paper · International Journal of Information Security · 2025",
+    "section_anchor": "sectoral-cyber-resilience",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-040",
+    "tag": "h3",
+    "text": "PROGRESS: the sectoral approach to cyber resilience ↗",
+    "section_anchor": "sectoral-cyber-resilience",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-041",
+    "tag": "p",
+    "text": "A sectoral capability-maturity model connecting organizations, regulators, IT/OT supply chains and national cyber capabilities.",
+    "section_anchor": "sectoral-cyber-resilience",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-042",
+    "tag": "p",
+    "text": "Supporting institutional record · World Bank · June 2023 consultation draft",
+    "section_anchor": "sectoral-maturity-model",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-043",
+    "tag": "h3",
+    "text": "Sectoral Cybersecurity Maturity Model ↗",
+    "section_anchor": "sectoral-maturity-model",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-044",
+    "tag": "p",
+    "text": "A methodology for assessing sector cybersecurity maturity, interdependencies and critical-service resilience. Tabansky is credited in the cooperating Tel Aviv University research team.",
+    "section_anchor": "sectoral-maturity-model",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-045",
+    "tag": "h2",
+    "text": "Broadcast commentary",
+    "section_anchor": "broadcast-title",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-046",
+    "tag": "p",
+    "text": "Television interviews and commentary, in their original languages.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-047",
+    "tag": "p",
+    "text": "NTV ↗",
+    "section_anchor": "ntv-innovation-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-048",
+    "tag": "p",
+    "text": "Russia",
+    "section_anchor": "ntv-innovation-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-049",
+    "tag": "p",
+    "text": "Russian television broadcaster",
+    "section_anchor": "ntv-innovation-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-050",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "ntv-innovation-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-051",
+    "tag": "h3",
+    "text": "Innovation ecosystems: universities, technology clusters and the Israeli model ↗",
+    "section_anchor": "ntv-innovation-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-052",
+    "tag": "p",
+    "text": "RaiNews 24 ↗",
+    "section_anchor": "rainews-russia-2019",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-053",
+    "tag": "p",
+    "text": "Italy",
+    "section_anchor": "rainews-russia-2019",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-054",
+    "tag": "p",
+    "text": "RAI’s rolling news channel · Italy’s public broadcaster",
+    "section_anchor": "rainews-russia-2019",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-055",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "rainews-russia-2019",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-056",
+    "tag": "h3",
+    "text": "Russia and national cybersecurity strategy ↗",
+    "section_anchor": "rainews-russia-2019",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-057",
+    "tag": "p",
+    "text": "Channel 10 ↗",
+    "section_anchor": "channel10-undersea-2015",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-058",
+    "tag": "p",
+    "text": "Israel",
+    "section_anchor": "channel10-undersea-2015",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-059",
+    "tag": "p",
+    "text": "London et Kirschenbaum · Israeli current-affairs programme on the former Channel 10",
+    "section_anchor": "channel10-undersea-2015",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-060",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "channel10-undersea-2015",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-061",
+    "tag": "h3",
+    "text": "Russia, undersea cables and internet infrastructure ↗",
+    "section_anchor": "channel10-undersea-2015",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-062",
+    "tag": "p",
+    "text": "Channel 14 ↗",
+    "section_anchor": "channel14-pegasus-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-063",
+    "tag": "p",
+    "text": "Israel",
+    "section_anchor": "channel14-pegasus-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-064",
+    "tag": "p",
+    "text": "Israeli television news channel",
+    "section_anchor": "channel14-pegasus-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-065",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "channel14-pegasus-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-066",
+    "tag": "h3",
+    "text": "Pegasus and police access to private phones ↗",
+    "section_anchor": "channel14-pegasus-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-067",
+    "tag": "p",
+    "text": "Channel Economy ↗",
+    "section_anchor": "channel-economy-2026",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-068",
+    "tag": "p",
+    "text": "Israel",
+    "section_anchor": "channel-economy-2026",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-069",
+    "tag": "p",
+    "text": "Israeli business and financial news channel · Now TV10",
+    "section_anchor": "channel-economy-2026",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-070",
+    "tag": "a",
+    "text": "▶",
+    "section_anchor": "channel-economy-2026",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-071",
+    "tag": "h3",
+    "text": "Platform responsibility for fraudulent advertising ↗",
+    "section_anchor": "channel-economy-2026",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-072",
+    "tag": "h2",
+    "text": "International press",
+    "section_anchor": "press-title",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-073",
+    "tag": "p",
+    "text": "Interviews and quoted commentary in international reporting.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-074",
+    "tag": "p",
+    "text": "POLITICO Europe ↗",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-075",
+    "tag": "p",
+    "text": "Europe",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-076",
+    "tag": "p",
+    "text": "European politics and policy news publication",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-077",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-078",
+    "tag": "h3",
+    "text": "The Hezbollah pager operation.",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-079",
+    "tag": "a",
+    "text": "How did Israel blow up Hezbollah pagers? ↗",
+    "section_anchor": "politico-pagers-2024",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-080",
+    "tag": "p",
+    "text": "Le Figaro ↗",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-081",
+    "tag": "p",
+    "text": "France",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-082",
+    "tag": "p",
+    "text": "French national daily newspaper",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-083",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-084",
+    "tag": "h3",
+    "text": "Artificial intelligence in the Israel–Hamas war.",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-085",
+    "tag": "a",
+    "text": "Guerre Hamas-Israël: Tsahal fait entrer l’intelligence artificielle dans la bataille ↗",
+    "section_anchor": "figaro-ai-war-2023",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-086",
+    "tag": "p",
+    "text": "Associated Press ↗",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-087",
+    "tag": "p",
+    "text": "United States · International",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-088",
+    "tag": "p",
+    "text": "International news agency",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-089",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-090",
+    "tag": "h3",
+    "text": "Cyberattack disruption of steel production in Iran.",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-091",
+    "tag": "a",
+    "text": "Cyberattack forces Iran steel company to halt production ↗",
+    "section_anchor": "ap-iran-steel-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-092",
+    "tag": "p",
+    "text": "NRC ↗",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-093",
+    "tag": "p",
+    "text": "Netherlands",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-094",
+    "tag": "p",
+    "text": "Dutch national newspaper",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-095",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-096",
+    "tag": "h3",
+    "text": "Israel's surveillance industry and the Pegasus scandal.",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-097",
+    "tag": "a",
+    "text": "Surveillance-industrie Israël in schijnwerpers door Pegasus-schandaal ↗",
+    "section_anchor": "nrc-surveillance-2022",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-098",
+    "tag": "p",
+    "text": "France 24 ↗",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-099",
+    "tag": "p",
+    "text": "France",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-100",
+    "tag": "p",
+    "text": "France’s international news channel",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-101",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-102",
+    "tag": "h3",
+    "text": "NSO and its relationship with Israeli authorities.",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-103",
+    "tag": "a",
+    "text": "Entre NSO et le pouvoir israélien, des liens troubles ↗",
+    "section_anchor": "france24-nso-2021",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-104",
+    "tag": "p",
+    "text": "la Repubblica ↗",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-105",
+    "tag": "p",
+    "text": "Italy",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-106",
+    "tag": "p",
+    "text": "Italian national daily newspaper",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-107",
+    "tag": "a",
+    "text": "View excerpt +",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-108",
+    "tag": "h3",
+    "text": "Israel–Iran conflict in cyberspace.",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-109",
+    "tag": "a",
+    "text": "Israele vs Iran: il nuovo fronte di guerra è il cyberspazio ↗",
+    "section_anchor": "repubblica-israel-iran-2020",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-110",
+    "tag": "h2",
+    "text": "More coverage",
+    "section_anchor": "coverage-title",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-111",
+    "tag": "p",
+    "text": "Further interviews and quoted commentary.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-112",
+    "tag": "p",
+    "text": "Le Figaro ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-113",
+    "tag": "p",
+    "text": "France",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-114",
+    "tag": "p",
+    "text": "French national daily newspaper",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-115",
+    "tag": "h3",
+    "text": "Supply-chain sabotage and technological warfare",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-116",
+    "tag": "a",
+    "text": "Attaque massive au Liban: une opération spectaculaire et complexe à organiser ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-117",
+    "tag": "p",
+    "text": "Newsweek ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-118",
+    "tag": "p",
+    "text": "United States",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-119",
+    "tag": "p",
+    "text": "US news magazine and digital publication",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-120",
+    "tag": "h3",
+    "text": "US–Israel intelligence sharing and Kaspersky Lab",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-121",
+    "tag": "a",
+    "text": "Trump Team Leaks About Israel’s Hack of Kaspersky Lab Could Further “Damage” Ties, Experts Warn ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-122",
+    "tag": "p",
+    "text": "Il Sole 24 Ore ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-123",
+    "tag": "p",
+    "text": "Italy",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-124",
+    "tag": "p",
+    "text": "Italian business and financial newspaper",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-125",
+    "tag": "h3",
+    "text": "Digital identity and data",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-126",
+    "tag": "a",
+    "text": "Tutti i rischi delle identità digitali ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-127",
+    "tag": "p",
+    "text": "Article reproduction hosted by AssoSoftware, Italy’s software industry association",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-128",
+    "tag": "p",
+    "text": "Il Giornale ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-129",
+    "tag": "p",
+    "text": "Italy",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-130",
+    "tag": "p",
+    "text": "Italian national daily newspaper",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-131",
+    "tag": "h3",
+    "text": "Full interview on defence and cybersecurity",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-132",
+    "tag": "a",
+    "text": "Difesa e cyber-sicurezza, l’Italia è in ritardo di 10 anni ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-133",
+    "tag": "h2",
+    "text": "Selected international forums",
+    "section_anchor": "forums-title",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-134",
+    "tag": "p",
+    "text": "Conference contributions, expert hearings and workshops.",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-135",
+    "tag": "p",
+    "text": "Tallinn · Estonia",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-136",
+    "tag": "h3",
+    "text": "NATO Cooperative Cyber Defence Centre of Excellence ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-137",
+    "tag": "p",
+    "text": "International Conference on Cyber Conflict (CyCon)",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-138",
+    "tag": "p",
+    "text": "Tallinn · Towards a Theory of Cyber Power · 2016",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-139",
+    "tag": "p",
+    "text": "Copenhagen · Denmark",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-140",
+    "tag": "h3",
+    "text": "Danish Parliament · Defence Committee ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-141",
+    "tag": "p",
+    "text": "Parliamentary scrutiny of defence and military affairs",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-142",
+    "tag": "p",
+    "text": "Copenhagen · Expert hearing on military cybersecurity · 2019",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-143",
+    "tag": "p",
+    "text": "Amsterdam · Netherlands",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-144",
+    "tag": "h3",
+    "text": "University of Oxford · Netherlands Defence Academy ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-145",
+    "tag": "p",
+    "text": "British university and Dutch military higher-education institution",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-146",
+    "tag": "p",
+    "text": "Amsterdam · Future of War Conference · 2022",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-147",
+    "tag": "p",
+    "text": "Singapore",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-148",
+    "tag": "h3",
+    "text": "S. Rajaratnam School of International Studies ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-149",
+    "tag": "p",
+    "text": "School of international affairs at Nanyang Technological University, Singapore",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-150",
+    "tag": "p",
+    "text": "Asia-Pacific Programme for Senior National Security Officers · 2018",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-151",
+    "tag": "p",
+    "text": "Rome · Italy",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-152",
+    "tag": "h3",
+    "text": "Italian Chamber of Deputies · NATO Parliamentary Assembly delegation ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-153",
+    "tag": "p",
+    "text": "Italy’s lower house of parliament · Delegation to the alliance’s interparliamentary forum",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-154",
+    "tag": "p",
+    "text": "Rome · Italian–Israeli cybersecurity session · 2015",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-155",
+    "tag": "p",
+    "text": "Washington, DC · United States",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-156",
+    "tag": "h3",
+    "text": "World Bank · Digital Development Global Practice ↗",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-157",
+    "tag": "p",
+    "text": "The development institution’s digital-development team",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-158",
+    "tag": "p",
+    "text": "Washington, DC · Expert workshop on critical-infrastructure cyber resilience · 2023",
+    "section_anchor": "content",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-159",
+    "tag": "p",
+    "text": "Dr. Lior Tabansky",
+    "section_anchor": "public-record-contact",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-160",
+    "tag": "a",
+    "text": "liortabansky@gmail.com ↗",
+    "section_anchor": "public-record-contact",
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  },
+  {
+    "id": "media-161",
+    "tag": "button",
+    "text": "Close ×",
+    "section_anchor": null,
+    "source_component": "src/components/ForestMedia.astro",
+    "rendered_source": "rendered/en/media/index.html",
+    "approval_state": "production baseline verified against repository release record; not a new layout approval"
+  }
+]

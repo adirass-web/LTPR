@@ -1,0 +1,31 @@
+# LTPR current state
+
+Reconciled 29 October 2026 in the existing cloud task. This is the operational entry point; dated handoffs and frozen pack snapshots preserve history.
+
+## Durable content and recovery
+
+The development branch is `codex/editorial-cloud-workspace`, reviewed through draft PR #35. Production remains `main` at `ef5e01f487dc92bc2a3ccdcf6a451d6cbe195939` as checked during reconciliation. No merge or production release is authorized.
+
+- [Portable pack and recovery command](template-comparison/README.md): 199 English copy blocks, 92 link/embed occurrences, 127 public-image manifest entries and 17 reusable public derivatives. Exact source snapshots and approval qualifications accompany normalized text.
+- [Current media metadata inventory](media-inventory/README.md): 23 original recording rows, 27 current-site semantic records, 8 historically declared missing source assets. These are different units, not additive appearance counts.
+- [Editorial source-media recovery and provenance register](media-inventory/source-recovery-register-2026-10-29.md): cross-reference of the private W3LTPR archive, LTPR inventories, comparison manifest, decision log, missing-source register and checked Git history. The RAI 2017 recording is preserved; the reported 04:45.000 frame approval remains unsupported by its original files.
+- [Approval ledger](DECISION_LOG.md) and [approved copy register](APPROVED_COPY.md) distinguish production approval, reported later decisions and proposals.
+- The two 24 October discovery documents are retained as historical planning snapshots. Project-local skills retain their upstream attribution and licenses.
+
+A fresh remote task can clone/check out this development branch and run `python3 scripts/export-template-pack.py /tmp/ltpr-comparison.zip`. No previous chat's `/workspace/outputs` folder is required. GitHub stores the pack's text; existing tracked public images supply the image payloads. The original cloud archive and untracked-file preservation archive remain supplemental copies, not recovery dependencies.
+
+## Current decisions and outstanding evidence
+
+The owner wants striking, purposeful design that conveys discovery of a hidden gem with a substantial track record, without direct selling. Content and design should be separable for controlled template comparisons.
+
+Owner-supplied reference: https://www.edoardolunardi.dev/works/aspen-search#f156c3d66c45 . Its HTML is reachable (HTTP 200); no visual assessment or selection has been completed. Earlier statements that no reference was supplied are superseded. Do not independently research additional design references unless requested.
+
+Media A/B remain unselected. LTPR's 25 October handoff reports RAI 2017 A0198 at 04:45.000 approved as an image only; the original frame and approval decision file remain unrecovered. The private W3LTPR archive does preserve a hash-catalogued RAI 2017 recording and reports clean-clone restoration, but that does not authenticate the missing frame or approval. Frame approval does not authorize composition, placement, crop, card count, motion, video edit or publication. See the [recovery and provenance register](media-inventory/source-recovery-register-2026-10-29.md) for the exact archive object, absent paths, bounded search scope and next recovery actions. No approval status or composition choice was changed by this record. W3LTPR PR #1 records the owner-selected AstroWind starter and was merged into the private repository's `main` as setup scaffolding at `de328137c34084d0f9d1220ac714977813734ec1`. The demo remains intact; no W3LTPR page implementation, source-content/media import, preview, or deployment is included. W3LTPR PR #2 was merged into the private repository's `main` at `181aee454d6935a39e7aa27e02a3f7f2107606d6`. LTPR PR #35 remains an open draft. Neither W3LTPR merge changes LTPR editorial selections or publication authority.
+
+The comparison manifest and archive report identify the supplied roots that were checked. They do not establish a search of all earlier local workspaces or backups. The earlier local inventory task and its updated package remain a possible recovery location; see the [local-task synchronization record](media-inventory/local-task-sync.md). Do not repeat source collection or hashing without a specific uncovered scope or integrity reason.
+
+## Environment and next work
+
+The existing cloud executor works. Install/check/build and local HTTP startup were validated on Node 24.19.0. GitHub API and hosted-preview/reference HTTP access work after publication/resume. Provider phase/policy metadata remains inconsistent with operational access; Cloudflare dashboard branch controls are not verified here. The optional Dev Container is untested.
+
+Next: assess the supplied reference and use the same content subset across isolated template comparisons. Discuss and select composition before applying production-source changes. Keep missing evidence explicitly labelled. Follow OPEN_ISSUES.md for unresolved work; do not restart completed setup or inventory hashing.

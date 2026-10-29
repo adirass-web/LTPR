@@ -1,1 +1,5 @@
 * text=auto eol=lf
+# Frozen export payloads must retain the bytes recorded in their SHA-256 manifest.
+docs/template-comparison/2026-10-25/** -text whitespace=cr-at-eol
+# Preserve this vendored upstream skill verbatim, including its trailing space.
+.agents/skills/webapp-testing/SKILL.md whitespace=-blank-at-eol
