@@ -1,5 +1,7 @@
 # W3LTPR English review snapshot
 
-Static noindex output from tested source commit f53512ebca6883cc8e7c365fb93a95b006e886da. This dedicated review branch contains website output, dependency-free build verification and third-party license notices. It is not a production merge candidate. No private originals or project documents are included.
+Aspen-inspired editorial iteration, authorized 29 October 2026.
 
-The owner authorized publishing a review URL on 29 October 2026. This branch uses the existing Cloudflare Pages preview integration; production main is unchanged.
+Source: private W3LTPR commit `49d1c34f540c3f105068caaf99e35f609baf7fdf`, PR #5. Only compiled public pages/assets are included. No private originals or private documents.
+
+This orphan branch serves a Cloudflare Pages review deployment; it is not a production merge candidate. Run `npm run build` to verify the manifest and copy public to dist. No dependencies. Production main is unchanged. Pages have noindex metadata/headers.
