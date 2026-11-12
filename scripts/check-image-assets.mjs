@@ -1,3 +1,4 @@
+import { verifiedReleaseFiles } from './verify-release-bundle.mjs';
 import { execFileSync } from 'node:child_process';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -152,8 +153,19 @@ async function main() {
     else if (target === '--dist') errors.push(...(await validate(path.join(repo, 'dist'), layout, 'dist')));
     else if (target === '--tracked') {
       const tracked = execFileSync('git', ['ls-files', '-z'], { cwd: repo }).toString().split('\0').filter(Boolean);
+      let releaseFiles = new Set();
+      if (tracked.some((file) => file.startsWith('release/english/') && rasterExt.test(file))) {
+        releaseFiles = await verifiedReleaseFiles(repo);
+        const assets = Object.fromEntries(
+          [...releaseFiles]
+            .filter((file) => rasterExt.test(file))
+            .map((file) => [file.slice('release/english/'.length), {}])
+        );
+        errors.push(...(await validate(path.join(repo, 'release/english'), { assets }, 'release')));
+      }
       for (const file of tracked.filter((name) => rasterExt.test(name))) {
-        if (!file.startsWith('public/')) errors.push(`tracked: raster outside public is forbidden: ${file}`);
+        if (!file.startsWith('public/') && !releaseFiles.has(file))
+          errors.push(`tracked: raster outside public is forbidden: ${file}`);
       }
     } else {
       errors.push(`Unknown option: ${target}`);

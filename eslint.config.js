@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import typescriptParser from '@typescript-eslint/parser';
 
 export default [
+  { ignores: ['release/english/**', '.english-build-*/**'] },
   js.configs.recommended,
   ...eslintPluginAstro.configs['flat/recommended'],
   ...tseslint.configs.recommended,

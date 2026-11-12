@@ -1,1 +1,4 @@
 * text=auto eol=lf
+
+# SHA-256-pinned generated artifacts must not undergo line-ending conversion.
+release/english/** -text
