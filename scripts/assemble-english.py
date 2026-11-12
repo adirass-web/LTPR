@@ -40,7 +40,7 @@ def rewrite_preview_social_images(html, origin):
     def rewrite(match):
         tag = match.group(0)
         attrs = {name.lower(): value for name, quote, value in re.findall(r"([\w:-]+)\s*=\s*([\"'])(.*?)\2", tag)}
-        if attrs.get('property', attrs.get('name')) not in ('og:image', 'twitter:image') or attrs.get('content') != brand_url:
+        if attrs.get('property', attrs.get('name')) not in ('og:image', 'og:image:url', 'twitter:image') or attrs.get('content') != brand_url:
             return tag
         return re.sub(r"(\bcontent\s*=\s*)([\"'])(.*?)\2", lambda content: content[1] + content[2] + origin + '/images/brand/social.jpg' + content[2], tag, count=1)
     return re.sub(r'<meta\b[^>]*>', rewrite, html, flags=re.IGNORECASE)
