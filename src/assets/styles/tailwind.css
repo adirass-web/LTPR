@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@source not '../../../release/english';
+@source not '../../../.english-build-*';
 @import '@fontsource/ibm-plex-sans/400.css';
 @import '@fontsource/ibm-plex-sans/500.css';
 @import '@fontsource/ibm-plex-sans-hebrew/400.css';

@@ -15,14 +15,26 @@ concurrency:
 
 jobs:
   build:
-    name: Astro production build
-    runs-on: ubuntu-latest
+    name: Verify ${{ matrix.mode }} overlay
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [preview, production]
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+      LTPR_ENGLISH_RELEASE_MODE: ${{ matrix.mode }}
+      # Artifact construction only; this workflow has no deployment step.
+      LTPR_PRODUCTION_ARTIFACT_APPROVED: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22.23.4'
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - run: npm ci
       - run: npm run check
       - run: npm run build

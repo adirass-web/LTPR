@@ -6,3 +6,7 @@ dist/
 .dev.vars*
 .DS_Store
 *.log
+
+# Local release verification output
+.english-build-*
+english-overlay-report.json
